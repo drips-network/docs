@@ -11,9 +11,9 @@
 const siteConfig = {
   title: "Radicle docs",
   tagline: "A peer-to-peer stack for building software together.",
-  url: "https://docs.radicle.xyz",
+  url: "https://drips.radicle.network",
   baseUrl: "/",
-  projectName: "radicle-docs",
+  projectName: "radicle-drips-docs",
   organizationName: "radicle-dev",
   headerLinks: [],
   headerIcon: "img/radicle.svg",

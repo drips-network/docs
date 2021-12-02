@@ -1,12 +1,12 @@
-# Welcome to Radicle Docs 👋
+# Welcome to Radicle Drips Docs 👋
 
 This is the repository for the Radicle documentation site
-[docs.radicle.xyz][wi]. radicle-docs accepts contributions via Radicle patches
+[drips.radicle.network][wi]. radicle-docs accepts contributions via Radicle patches
 and GitHub pull requests. This document outlines some contributing guidelines,
 contact points, and other resources to make it easier to contribute to
 radicle-docs.
 
-[docs.radicle.xyz][wi] was created with [Docusaurus][do]. Full Docusaurus
+[drips.radicle.network][wi] was created with [Docusaurus][do]. Full Docusaurus
 documentation can be found on their [website][do].
 
 If you've run into a problem or have a suggestion, browse the open [issues][is]
@@ -30,15 +30,8 @@ our issues.
   (i.e. if you answered the question, be sure to capture the outcome in the
   relevant documentation).
 
-- If a piece of unaddressed feedback is given more than three times, a ![][fe]
-  issue should be created and added to the [Feedback Hub][fh] to be prioritized
-  in the following weekly sync.
-
 - ![][im] issues should be created to capture upcoming documentation work
   related to new features or releases.
-
-- Issues will be reviewed on a rolling basis and triaged weekly by
-  @abbey-titcomb.
 
 # How to Contribute
 
@@ -160,4 +153,4 @@ Message body:
 [na]: https://docusaurus.io/docs/en/navigation
 [qu]: https://img.shields.io/badge/-question-C0EE59
 [tr]: https://img.shields.io/badge/-troubleshooting-%23FBCA04
-[wi]: https://docs.radicle.xyz/docs/what-is-radicle.html
+[wi]: https://drips.radicle.network
