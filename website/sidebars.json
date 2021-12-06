@@ -1,40 +1,32 @@
 {
   "docs": {
     "Introduction": [
-      "what-is-radicle",
+      "what-is-drips",
       "getting-started"
     ],
-    "Using Radicle": [
-      "using-radicle/overview",
-      "using-radicle/creating-projects",
-      "using-radicle/sharing-projects",
-      "using-radicle/pushing-changes",
-      "using-radicle/tracking-and-viewing",
-      "using-radicle/creating-patches",
-      "using-radicle/viewing-and-merging-patches",
-      "using-radicle/adding-a-seed-node",
-      "using-radicle/running-a-seed-node"
+    "Using Drips": [
+      "using-drips/overview",
+      "using-drips/creating-projects",
+      "using-drips/sharing-projects",
+      "using-drips/pushing-changes",
+      "using-drips/tracking-and-viewing",
+      "using-drips/creating-patches",
+      "using-drips/viewing-and-merging-patches",
+      "using-drips/adding-a-seed-node",
+      "using-drips/running-a-seed-node"
     ],
-    "Connecting to Ethereum": [
-      "connecting-to-ethereum/overview",
-      "connecting-to-ethereum/setting-up-wallet",
-      "connecting-to-ethereum/obtaining-rad",
-      "connecting-to-ethereum/creating-an-org",
-      "connecting-to-ethereum/anchoring-projects",
-      "connecting-to-ethereum/adding-members",
-      "connecting-to-ethereum/registering-a-name",
-      "connecting-to-ethereum/setting-up-a-name"
+    "Understanding Drips": [
+      "understanding-drips/why-drips",
+      "understanding-drips/how-it-works",
+      "understanding-drips/troubleshooting",
+      "understanding-drips/glossary",
+      "understanding-drips/faq"
     ],
-    "Understanding Radicle": [
-      "understanding-radicle/why-radicle",
-      "understanding-radicle/how-it-works",
-      "understanding-radicle/troubleshooting",
-      "understanding-radicle/glossary",
-      "understanding-radicle/faq"
+    "For Developers": [
+      "for-developers/overview"
     ],
     "Get Involved": [
-      "get-involved/join-the-community",
-      "get-involved/radicle-garden"
+      "get-involved/join-the-community"
     ]
   }
 }
