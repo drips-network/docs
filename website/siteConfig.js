@@ -9,8 +9,8 @@
 // site configuration options.
 
 const siteConfig = {
-  title: "Radicle docs",
-  tagline: "A peer-to-peer stack for building software together.",
+  title: "Drips docs",
+  tagline: "When you drip I drip we drip.",
   url: "https://drips.radicle.network",
   baseUrl: "/",
   projectName: "radicle-drips-docs",

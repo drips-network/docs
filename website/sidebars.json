@@ -1,32 +1,25 @@
 {
   "docs": {
     "Introduction": [
-      "what-is-drips",
-      "getting-started"
+      "whats-a-drip"
     ],
     "Using Drips": [
-      "using-drips/overview",
-      "using-drips/creating-projects",
-      "using-drips/sharing-projects",
-      "using-drips/pushing-changes",
-      "using-drips/tracking-and-viewing",
-      "using-drips/creating-patches",
-      "using-drips/viewing-and-merging-patches",
-      "using-drips/adding-a-seed-node",
-      "using-drips/running-a-seed-node"
+      "using-drips/create-a-community",
+      "using-drips/setting-up-benefits",
+      "using-drips/purchase-a-membership"
     ],
     "Understanding Drips": [
-      "understanding-drips/why-drips",
       "understanding-drips/how-it-works",
-      "understanding-drips/troubleshooting",
+      "understanding-drips/how-drips-is-different",
       "understanding-drips/glossary",
       "understanding-drips/faq"
     ],
     "For Developers": [
-      "for-developers/overview"
+      "for-developers/technical-overview",
+      "for-developers/smart-contract-details"
     ],
     "Get Involved": [
-      "get-involved/join-the-community"
+      "get-involved/join-the-drips-community"
     ]
   }
 }

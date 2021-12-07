@@ -1,4 +1,5 @@
 .DS_Store
+archive
 node_modules
 website/translated_docs
 website/build/

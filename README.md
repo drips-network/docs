@@ -1,10 +1,10 @@
-# Welcome to Radicle Drips Docs 👋
+# Welcome to Drips Docs 👋
 
-This is the repository for the Radicle documentation site
-[drips.radicle.network][wi]. radicle-docs accepts contributions via Radicle patches
+This is the repository for the Drips documentation site
+[drips.radicle.network][wi]. drips-docs accepts contributions via Radicle patches
 and GitHub pull requests. This document outlines some contributing guidelines,
 contact points, and other resources to make it easier to contribute to
-radicle-docs.
+drips-docs.
 
 [drips.radicle.network][wi] was created with [Docusaurus][do]. Full Docusaurus
 documentation can be found on their [website][do].
