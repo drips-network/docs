@@ -3,7 +3,7 @@ id: whats-a-drip
 title: What's a Drip?
 sidebar_label: What's a Drip?
 ---
-*"When you drip I drip we drip"*
+*"When I drip you drip we drip"*
 
 Drips is a new Ethereum protocol that allows any creator to generate continuous income from their communities without relying on bank accounts or extracting platforms. 
 

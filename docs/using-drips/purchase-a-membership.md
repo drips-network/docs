@@ -1,24 +1,24 @@
 ---
 id: purchase-a-membership
-title: Purchase A Membership
+title: Purchase a Membership
 ---
 
-Using Drips, it's easy to set up a Community and raise funds from your supporters.
-If you wish, you can also specify and configure any benefits that your members will
-receive.
+Once a creator or developer has created a Community it's easy for any user to
+purchase a membership and receive an NFT membership token, along with any benefits
+the membership unlocks.
 
-Let's jump in and see how it works!
+If you're interested in becoming a supporter, but don't have a specific Community
+in mind, you can head over to the [Explore Page][da] to browse the different Communities
+which have memberships available for purchase on Drips.
 
-## Create a Community
+The rest of this guide will assume that you've selected a Community you wish
+to purchase a membership for, and will walk through the steps required to do so.
 
-First, you'll want to open another tab and navigate to [https://drips.radicle.network/][da].
+Ready to see how it works? Let's go!
 
-To create a Community, click on the 'Create' button at the top right of the page.
+## Purchase a Membership
 
-
-
-
-
+*coming soon...*
 
 
 [da]: https://drips.radicle.network/
