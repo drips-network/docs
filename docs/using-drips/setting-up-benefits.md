@@ -8,9 +8,9 @@ Drips and are interested in offering benefits to members.
 
 > If you're a community member who is interested in how to use benefits offered
 by a community that you hold a member token for, you should instead head over to
-our [Accessing Benefits][ab] guid to learn more.
+our [Accessing Benefits][ab] guide to learn more.
 
-With that out of the way, let's dive into how to set up benefits for your Community! 
+Let's dive into how to set up benefits for your Community. 
 This is exciting, because it's a way for you as a creator or developer to give back
 and incentivize the community members who support you!
 
@@ -35,6 +35,11 @@ Second, offering access to a resource outside of Drips (e.g. a Discord server or
 benefit, requires that the project creator be willing to set up and maintain that resource. This guide explains 
 how to connect Drips memberships to a Discord Server or a Snapshot Space, but a full discussion of how to
 set up, maintain and use those resources is beyond the scope of this guide.
+
+Finally, many other types of benefits are possible beyond those outlined in this guide. All benefits
+in Drips are governed through ownership of Member Token NFTs, so benefits can literally be anything 
+that ownershhip of an NFT can unlock. With that in mind, be on the lookout for more web2 and web3
+apps to offer more types of resources and benefits that can be governed by NFTs in the near future!
 
 ## Benefit: Set Up Access to a Private Channel on Discord
 
@@ -64,7 +69,7 @@ a new server and use your existing server instead.
   - For the token contract address, you will need to use the contract address specific to your Community.
   You can find this by navigating to your drips Community page in the web app and finding the address
   after the "/" at the end of the URL
-</br>  
+  
 ![Find Contract Address][s3]
 
   - For the min amount of tokens, you should choose 1
@@ -101,7 +106,7 @@ guide in the Snapshot docs.
 
 - Note that when you come to the "Strategies" part of step 3, you will want to choose the strategy '' (TBD). For
 the "address" parameter, you will want to enter the address of your Community. You can find this by navigating to your drips Community page in the web app and looking for the address after the "/" at the end of the URL
-</br>  
+  
 ![Find Contract Address][s3]
 
 That's it! Your snapshot spacee should be all set up. Head over to Snapshot and [create a proposal][cp] and let your
