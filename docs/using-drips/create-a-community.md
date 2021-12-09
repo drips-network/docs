@@ -3,7 +3,8 @@ id: create-a-community
 title: Create a Community
 ---
 
-This is a guide for creators or developers who wish to set up a Community and raise funds from their fans.
+This is a guide for creators or developers who wish to set up a Community and issue member NFT tokens to
+raise funds from their fans.
 
 Let's jump in and see how it works!
 

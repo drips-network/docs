@@ -3,8 +3,8 @@ id: setting-up-benefits
 title: Setting Up Benefits
 ---
 
-This guide is intended for a creator or developer who has set up a Community on
-Drips and is interested in offering benefits to their members.
+This guide is intended for creators or developers who have set up a Community on
+Drips and are interested in offering benefits to members.
 
 > If you're a community member who is interested in how to use benefits offered
 by a community that you hold a member token for, you should instead head over to
@@ -15,40 +15,42 @@ This is exciting, because it's a way for you as a creator or developer to give b
 and incentivize the community members who support you!
 
 This guide will provide high-level details on how to set up two common types of 
-benefits that you might wish to offer to your members:
+benefits that you might wish to offer your members:
 
-(1) access to a gated (private) channel on the community's Discord server (if one exists) and
+(1) access to a gated (private) channel on the community's Discord server (if one exists)
 
 (2) access to voting on community issues and polls in Snapshot.
 
 ## Understanding Capabilities and Limitations of Benefits
 
-A few important notes about member benefits:
+Before we explain how to set up benefits, there are a couple of points about benefits that are
+good to consider.
 
 First, offering benefits is entirely optional and not all creators / Communities will choose to do so. Users
 can see a description of the benefits offered as part of the process of [purchasing a membership][pu]
 and should carefully read the description there to understand the benefits being offered before completing
 the purchase of a membership.
 
-Second, offering access to a resource outside of Drips (e.g. a Discord server or Snapshot space) as a
-benefit requires that the project creator be willing to set up and maintain that resource. This guide 
-only explains how to connect Drips memberships to Discord and Snapshot. A full discussion of how to
-set up, maintain and use them is beyond the scope of this guide, and users should pursue product-specific
-documentation for complete details.
+Second, offering access to a resource outside of Drips (e.g. a Discord server or Snapshot space), as a
+benefit, requires that the project creator be willing to set up and maintain that resource. This guide explains 
+how to connect Drips memberships to a Discord Server or a Snapshot Space, but a full discussion of how to
+set up, maintain and use those resources is beyond the scope of this guide.
 
 ## Benefit: Set Up Access to a Private Channel on Discord
 
-If a Community has a [Discord][di] server, one type of benefit that the creator can offer to members is 
-access to one or more private channels on that server, governed by holding a member token for the Community.
+If a Community has a [Discord][di] server (or is interested in setting up a Discord server) one type of 
+benefit that the creator can offer members is access to one or more private channels on that server.
+The access will be governed by holding a member token for the Community, so that any user who holds a
+token will be able to automatically gain access the channel. This "gated" access is managed using a 
+Discord bot devloped by [Collab.land][cl].
 
-The gated access can be set up and managed using a Discord bot devloped by [Collab.land][cl].
+You can set up gated access to your Community's Discord by taking the following steps:
 
-Setting up the bot consists of the following steps:
-
-1. Create your discord server, install the bot and set up private channels.
+1. Create your Discord server, install the bot and set up private channels.
 
 - Follow instructions [here][s1].
-- Note that if your Community already has a Discord server, you should skip the step related to creating
+
+- If your Community already has a Discord server, you can skip the step related to creating
 a new server and use your existing server instead.
 
 2. Configure token-permissioned roles using the Collab.land bot.
@@ -60,7 +62,7 @@ a new server and use your existing server instead.
 - In step 4 when entering parameters:
 
   - For the token contract address, you will need to use the contract address specific to your Community.
-  You can find this by navigating to your drips Community page in the web app and looking for the address
+  You can find this by navigating to your drips Community page in the web app and finding the address
   after the "/" at the end of the URL
 </br>  
 ![Find Contract Address][s3]
