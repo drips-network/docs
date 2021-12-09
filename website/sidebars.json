@@ -3,11 +3,16 @@
     "Introduction": [
       "whats-a-drip"
     ],
-    "Using Drips": [
+    "Raise Funds With Drips": [
       "using-drips/create-a-community",
       "using-drips/setting-up-benefits",
+      "using-drips/raise-funds-without-a-community"
+    ],
+    "Fund Creators With Drips": [
       "using-drips/purchase-a-membership",
-      "using-drips/accessing-benefits"
+      "using-drips/accessing-benefits",
+      "using-drips/drip-directly-to-any-address",
+      "using-drips/share-a-percentage"
     ],
     "Understanding Drips": [
       "understanding-drips/how-it-works",
