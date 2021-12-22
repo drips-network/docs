@@ -16,7 +16,7 @@ const siteConfig = {
   projectName: "radicle-drips-docs",
   organizationName: "radicle-dev",
   headerLinks: [],
-  headerIcon: "img/radicle.svg",
+  headerIcon: "img/drips-logo2.png",
   favicon: "img/favicon.ico",
   colors: {
     primaryColor: "#5555ff",
