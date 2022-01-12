@@ -7,7 +7,8 @@
     "Raise Funds With Drips": [
       "using-drips/create-a-community",
       "using-drips/setting-up-benefits",
-      "using-drips/raise-funds-without-memberships"
+      "using-drips/raise-funds-without-memberships",
+      "using-drips/using-a-gnosis-safe-with-drips"
     ],
     "Fund Creators With Drips": [
       "using-drips/purchase-a-membership",

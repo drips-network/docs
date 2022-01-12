@@ -9,9 +9,8 @@ need is a public Ethereum address that you want to use to receieve the funds.
 
 Let's dive in and see how it works!
 
-> Note: for the current version of Drips, it is recommended that users use a single-signature
-address rather than multi-sig (like Gnosis Safe) for the address where they will receive
-funds. Native support for Gnosis Safe will be added in a future version of Drips.
+> Note: if you would like to use a Gnosis Safe instead of an ordinary Ethereum address,
+please [see here][gs] for details on how to connect and use a Gnosis Safe with Drips.
 
 ### How to Receive Drips to An Ethereum Address
 
@@ -40,6 +39,7 @@ be available in your Ethereum account alongside any other tokens you have there.
 It's as simple as that to receive recurring funds to an ordinary Etheruem address using Drips!
 
 [cw]: connect-a-wallet.md
+[gs]: using-drips/using-a-gnosis-safe.md
 [dd]: using-drips/drip-directly-to-any-address.md
 [r1]: /img/drips_raise1.png
 [r2]: /img/drips_raise2.png

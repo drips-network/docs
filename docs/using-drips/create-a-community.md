@@ -11,6 +11,9 @@ First, open a new browser tab and navigate to [https://drips.radicle.network/][d
 > Note: we recommended that you [Connect a Wallet][cw] before you start creating a community. You'll
 need to have a wallet connected to complete the process and it's easiest to do it first.
 
+> Note: if you would like to use a Gnosis Safe instead of an ordinary Ethereum address,
+please [see here][gs] for details on how to connect and use a Gnosis Safe with Drips.
+
 Once you have a wallet connected, click on the 'Create' button.
   
 ![Click Create][c1]
@@ -66,6 +69,7 @@ For instructions on how set up benefits for your members, check out our guide on
 
 [da]: https://drips.radicle.network/
 [cw]: connect-a-wallet.md
+[gs]: using-drips/using-a-gnosis-safe.md
 [c1]: /img/drips_create1.png
 [c2]: /img/drips_create2.png
 [c3]: /img/drips_create3.png
