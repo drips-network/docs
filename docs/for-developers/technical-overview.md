@@ -57,9 +57,9 @@ The Graph nodes to query graphQL.
 
 <i>Code for the Radicle/Drips subgraph can be found in the <a href="https://github.com/radicle-dev/radicle-subgraph">Radicle-Subgraph</a> repository.</i>
 
-Drips utilizes a graphQL "subgraph" that contains indexed Ethereum data for efficient qurying based on <a href="https://thegraph.com/">The Graph's</a> prootcol. For simplicity of curation/indexing, the drips subgraph is part of the same subgraph that is used by Radicle orgs.
+Drips utilizes a graphQL "subgraph" that contains indexed Ethereum data for efficient querying based on <a href="https://thegraph.com/">The Graph's</a> protocol. For simplicity of curation/indexing, the drips subgraph is part of the same subgraph that is used by Radicle orgs.
 
-For Drips, the subgraph is used solely by the Drips Webapp to allow for efficient calcualtion of historical values, summary statistics and for queries that scope over multiple Communities or Users at oncee.
+For Drips, the subgraph is used solely by the Drips Webapp to allow for efficient calculation of historical values, summary statistics and for queries that scope over multiple Communities or Users at once.
 
 ## IPFS and Piñata
 
