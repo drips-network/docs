@@ -19,7 +19,7 @@ title: How it Works
 <tr style="border: 0px;"><td style="border: 0px;"><br/> </td><td style="border: 0px;"> </td></tr>
 <tr style="border: 0px;">
 <td style="border: 0px; width: 15%;"><img src="/img/drips_how3.png"></td>
-<td style="border: 0px; vertical-align: top;"><b>3</b> - Supporters who wish to purchase memberships and "Drip" to the creator can do so by navigating to the page for the new Community in the Drips web app and clicking "Fund". They will then be prompted to choose an amount of DAI they would like to donate and also an amount of DIA that they would like to set aside in advance to use for payment. An NFT membership badge is minted and sent to their Ethereum address. The NFT serves as both a badge of support and also a key that unlocks access to the benefits offered.
+<td style="border: 0px; vertical-align: top;"><b>3</b> - Supporters who wish to purchase memberships and "Drip" to the creator can do so by navigating to the page for the new Community in the Drips web app and clicking "Fund". They will then be prompted to choose an amount of DAI they would like to donate and also an amount of DAI that they would like to set aside in advance to use for payment. An NFT membership badge is minted and sent to their Ethereum address. The NFT serves as both a badge of support and also a key that unlocks access to the benefits offered.
 </td>
 </tr>
 <tr style="border: 0px;"><td style="border: 0px;"><br/> </td><td style="border: 0px;"> </td></tr>
