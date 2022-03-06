@@ -11,7 +11,7 @@ All you need is a recipient's Ethereum address to set up a recurring transfer of
 
 Let's see how it works!
 
-To get started, open a new browser tab and head over to the Drips webapp at [drips.radicle.xyz][dw].
+To get started, open a new browser tab and head over to the Drips webapp at [drips.network][dw].
 
 > Note -- you'll need to [Connect a Wallet][cw] before you can set up any Drips. Make sure you
 have a wallet connected before proceeding.
@@ -61,7 +61,7 @@ be returned to your account page where you should see the Drips you created.
 
 Nice work -- your recurring funds transfer is all set up!
 
-[dw]: https://drips.radicle.xyz
+[dw]: https://www.drips.network/
 [cw]: connect-a-wallet.md
 [d1]: /img/drips_direct1.png
 [d2]: /img/drips_direct2.png

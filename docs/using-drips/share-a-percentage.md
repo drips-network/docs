@@ -11,7 +11,7 @@ the user depends on.
 
 We'll show you how it works below.
 
-To get started, open a new browser tab and head over to the Drips webapp at [drips.radicle.xyz][dw].
+To get started, open a new browser tab and head over to the Drips webapp at [drips.network][dw].
 
 >If you haven't done so already, the first thing you'll want to do is [Connect a Wallet][cw] so that
 you can see any funds you've received and also manage the Drips setup for your account. Make sure 
@@ -49,7 +49,7 @@ be returned to your account page.
 Nice work -- your Drip sharing rules are all set up!
 
 [rf]: using-drips/raise-funds-without-a-membership.md
-[dw]: https://drips.radicle.xyz
+[dw]: https://www.drips.network/
 [cw]: connect-a-wallet.md
 [d1]: /img/drips_direct1.png
 [d2]: /img/drips_direct2.png

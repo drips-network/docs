@@ -70,7 +70,7 @@ To see the member tokens you currently hold, toggle the slider on the right from
 
 That's it! You're now a token-holding member of the Community!
 
-[da]: https://drips.radicle.network/
+[da]: https://app.drips.network/explore
 [cw]: connect-a-wallet.md
 [c8]: /img/drips_create8.png
 [p1]: /img/drips_purchase1.png

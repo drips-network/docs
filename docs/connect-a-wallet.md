@@ -32,7 +32,7 @@ An example of what a user profile page looks like is shown below.
 If you see the icon and are able to click it to get to your user page, great job -- you're
 connected!
 
-[dw]: https://drips.radicle.xyz
+[dw]: https://www.drips.network/
 [d1]: /img/drips_connect1.png
 [d2]: /img/drips_connect2.png
 [d4]: /img/drips_connect4.png
