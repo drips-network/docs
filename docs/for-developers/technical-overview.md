@@ -13,6 +13,10 @@ In the following sections, we'll dive deeper into each of the different componen
 
 Before diving in however, an important point we would like to make is that Drips is entirely modular and there is no requirement for users to interact with the components in the way they are arranged above. For example, the Drips Webapp is offered only as a reference implementation and users are free to create their own web apps or even interact with the smart contracts directly using transactions issued directly using Etherscan or similar tools. Similarly, there is nothing to stop users from querying the Radicle/Drips subgraph and IPFS files using any applications or tools they desire. By designing Drips in this way, the goal of our team has been to build and offer up the world's most flexible and powerful open protocol for recurring payments and fundraising of any kind. With that in mind, our hope is that many future apps, protocols and tools will be able to build on Drips and use it to empower solutions we can't even imagine today.
 
+## Accounts and Balances
+
+For a deep dive into the details of how streaming is managed behind the scenes in DripsHub, please see <a href="https://github.com/radicle-dev/radicle-drips-hub/blob/master/docs/how_the_pool_works.md">here</a>.
+
 ## Ethereum Contracts
 
 ### The DaiDripsHub Smart Contract
