@@ -30,10 +30,10 @@ const siteConfig = {
   cleanUrl: true,
   ogImage: "img/undraw_online.svg",
   twitterImage: "img/undraw_tweetstorm.svg",
-  algolia: {
-    apiKey: "8bd6e28f1096b67612c18dbc3ba55438",
-    indexName: "radicle",
-  },
+  //algolia: {
+  //  apiKey: "8bd6e28f1096b67612c18dbc3ba55438",
+  //  indexName: "radicle",
+  //},
 };
 
 module.exports = siteConfig;
