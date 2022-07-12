@@ -1,7 +1,10 @@
 # Welcome to Drips Docs 👋
 
-This is the repository for the Drips documentation site
-[drips.radicle.network][wi]. drips-docs accepts contributions via Radicle patches
+This is the repository containing the Docusaurus code that is used to generate
+the docs for [drips.radicle.network][wi]. This branch (v0.2) is the branch
+for the v0.2 version of the documentation, which is deployed at XXXXXX.
+
+The drips-docs repo accepts contributions via Radicle patches
 and GitHub pull requests. This document outlines some contributing guidelines,
 contact points, and other resources to make it easier to contribute to
 drips-docs.
