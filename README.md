@@ -2,7 +2,7 @@
 
 This is the repository containing the Docusaurus code that is used to generate
 the docs for [drips.radicle.network][wi]. This branch (v0.2) is the branch
-for the v0.2 version of the documentation, which is deployed at XXXXXX.
+for the v0.2 version of the documentation, which is deployed at [v2.docs.drips.network][v2].
 
 The drips-docs repo accepts contributions via Radicle patches
 and GitHub pull requests. This document outlines some contributing guidelines,
@@ -13,16 +13,7 @@ drips-docs.
 documentation can be found on their [website][do].
 
 If you've run into a problem or have a suggestion, browse the open [issues][is]
-before opening a new one. We use the following [label system][la] to organize
-our issues.
-
-- ![][cr] for typos, broken links, and other quick fixes
-- ![][tr] for additions to the FAQ and Troubleshooting sections
-- ![][im] for revisions, rewrites, and larger improvements
-- ![][fe] for feedback on structure & content
-- ![][qu] for questions that can't be answered via documentation
-- ![][fi] for improvements and fixups related to the look and feel of the docs
-  site
+before opening a new one.
 
 ### Best practices for managing contributions
 
@@ -119,31 +110,6 @@ My new content here..
 
 For more information about adding new docs, click [here][na]
 
-## Contributing
-
-💡 We require all commits to be signed for a branch to be merged into master.
-Learn more on setting up commit signing [here][cs].
-
-Contributions to radicle-docs can be made via pull requests on GitHub or
-through Radicle. If opening a PR, please tag any associated parties and
-@abbey-titcomb for visibility.
-
-If contributing via Radicle, submit your patch for review by sending an email
-to abbey@monadic.xyz in the following format:
-
-```
-Subject line:
-
-  *[PATCH] Description of patch*
-
-Message body:
-
-  *[Device ID]*
-  *[Display name]*
-
-  *Description of patch and other relevant information*
-```
-
 [cr]: https://img.shields.io/badge/-fixup-critical
 [cs]: https://docs.github.com/en/github/authenticating-to-github/managing-commit-signature-verification/signing-commits
 [do]: https://docusaurus.io
@@ -157,3 +123,4 @@ Message body:
 [qu]: https://img.shields.io/badge/-question-C0EE59
 [tr]: https://img.shields.io/badge/-troubleshooting-%23FBCA04
 [wi]: https://drips.radicle.network
+[v2]: https:///v2.docs.drips.network

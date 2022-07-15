@@ -1,20 +1,23 @@
 ---
 id: whats-a-drip
-title: What's a Drip?
+title: What's a Drip 💧?
 sidebar_label: What's a Drip?
 ---
-*"When I drip you drip we drip"*
+*Note: these docs are for Drips v0.2. If you are looking for docs for Drips v1.0, you can find them [here][v1].*
 
-Drips is a new Ethereum protocol that allows any creator to generate continuous income from their communities without relying on bank accounts or extracting platforms. 
+Drips 💧 is an Ethereum protocol that allows users and web3 apps to continuously stream funds to others, with continuous settlement for use cases 
+like DAO salary payments, vesting, subscription memberships.
 
-Using Drips, creators & developers can issue monthly memberships and give their fans unique benefits in exchange for their recurring financial support. Using the permissionless financial infrastructure of Ethereum, Drips memberships are represented by Non-Fungible Tokens (NFTs). These memberships are available to anyone and can enable benefits across any application on the web that supports Ethereum (Discord, Telegram, Reddit, Snapshot, Radicle Upstream & many more).
+Drips also includes an integrated, fully-featured splitting protocol called Splits 💦, which allows for native on-chain splitting of both streamed funds
+and one-time transfers. Splits can be used by teams to share incoming funds among themselves, as well as to "spread the love" to other projects or creators
+ they depend on.
 
-Fans can support and engage with their favorite creators and communities by purchasing memberships and by “dripping” funds to any address in the network in recurring configurable intervals.
+## Status of Drips v0.2
 
-Finally, Drips allow creators to automatically spread the love every time they get paid by specifying a percentage of their incoming funds to be dripped to other users. The recipient could be a charity, another collective, or another software dependency or creator that makes their work possible. Sharing funds through Drips has the potential to become a new culture norm and building block for a sustainable crypto economy.
-
-> To get started raising funds from your communty and issuing membership NFTs to your supporters, click [here][cc].
-
+As of 7/15/2022, Drips v0.2 is currently available as an alpha pre-release, with smart contracts deployed on the Goerli testnet. Versions of the JS SDK and
+Subgraph for v0.2 are currently under development. The Drips Team plans to do a series of iterative deployments to Goerli over the coming weeks, which will add in a few additional features and bug fixes, leading up to a mainnet release in August or September 2022.
 
 
-[cc]: using-drips/create-a-community.md
+[v1]: https://docs.drips.network/
+
+

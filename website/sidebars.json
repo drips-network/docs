@@ -2,28 +2,17 @@
   "docs": {
     "Intro and Basics": [
       "whats-a-drip",
-      "connect-a-wallet"
+      "drips-v02-features"
     ],
-    "Raise Funds With Drips": [
-      "using-drips/create-a-community",
-      "using-drips/setting-up-benefits",
-      "using-drips/raise-funds-without-memberships",
-      "using-drips/using-a-gnosis-safe-with-drips"
-    ],
-    "Fund Creators With Drips": [
-      "using-drips/purchase-a-membership",
-      "using-drips/accessing-benefits",
-      "using-drips/drip-directly-to-any-address",
-      "using-drips/share-a-percentage"
+    "For Developers": [
+      "for-developers/technical-overview",
+      "for-developers/drips-sdk",
+      "for-developers/smart-contract-and-subgraph-details"
     ],
     "Understanding Drips": [
       "understanding-drips/how-it-works",
       "understanding-drips/how-drips-is-different",
       "understanding-drips/faq"
-    ],
-    "For Developers": [
-      "for-developers/technical-overview",
-      "for-developers/smart-contract-and-subgraph-details"
     ],
     "Get Involved": [
       "get-involved/join-the-drips-community"
