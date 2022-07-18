@@ -3,7 +3,7 @@ id: whats-a-drip
 title: What's a Drip 💧?
 sidebar_label: What's a Drip?
 ---
-*Note: these docs are for Drips v0.2. If you are looking for docs for Drips v1.0, you can find them [here][v1].*
+*Note: these docs are for Drips v0.2. If you are looking for docs for Drips v0.1, you can find them [here][v1].*
 
 Drips 💧 is an Ethereum protocol that allows users and web3 apps to continuously stream funds to others, with continuous settlement for use cases 
 like DAO salary payments, vesting, subscription memberships.
