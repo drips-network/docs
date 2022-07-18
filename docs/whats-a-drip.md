@@ -3,6 +3,8 @@ id: whats-a-drip
 title: What's a Drip?
 sidebar_label: What's a Drip?
 ---
+*Note: these docs are for Drips v0.1. If you are looking for docs for Drips v0.2, you can find them [here][v2].*
+
 *"When I drip you drip we drip"*
 
 Drips is a new Ethereum protocol that allows any creator to generate continuous income from their communities without relying on bank accounts or extracting platforms. 
@@ -16,5 +18,5 @@ Finally, Drips allow creators to automatically spread the love every time they g
 > To get started raising funds from your communty and issuing membership NFTs to your supporters, click [here][cc].
 
 
-
+[v2]: https://v2.docs.drips.network/
 [cc]: using-drips/create-a-community.md
