@@ -15,6 +15,7 @@ title: Smart Contract and Subgraph Details
 <tr><td>DripsHub logic</td><td>0x185686C95599d037f67BD11F478CD35f340CB99F</td></tr>
 <tr><td>DripsHub cycle seconds</td><td>604800</td></tr>
 <tr><td>AddressApp</td><td>0x60CfC3a7006e4bB6998042bdefa30607C36C9Ac1</td></tr>
+<tr><td>MetaData</td><td>0xC58cEa5a448A761d2dE80DFa8BfE298780e9dd66</td></tr>
 <tr><td>Commit hash</td><td>682ea8a0c21891622e2a952721ab4fc748306788</td></tr>
 </table>
 
