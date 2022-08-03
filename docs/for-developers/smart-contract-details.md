@@ -21,7 +21,15 @@ title: Smart Contract and Subgraph Details
 
 #### Subgraph Details
 
-Coming soon....
+Subgraph page on The Graph's website:
+https://thegraph.com/hosted-service/subgraph/gh0stwheel/drips-v02-on-goerli
+
+Subgraph endpoints:
+Queries (HTTP):     https://api.thegraph.com/subgraphs/name/gh0stwheel/drips-v02-on-goerli
+Subscriptions (WS): wss://api.thegraph.com/subgraphs/name/gh0stwheel/drips-v02-on-goerli
+
+Corresponding commit hash in the repo:
+https://github.com/gh0stwheel/drips-subgraph-mainnet-v2/tree/0a16b0a2b23e5b2f201576f87fb35191c7fcae13
 
 #### How to Get Testnet Eth and DAI
 
@@ -37,7 +45,6 @@ To get DAI on Goerli:
 3. Click on `DAI`, select `Withdraw` and scroll down to a `Faucet` link.
 
 
-
-
 [gf]: https://goerlifaucet.com/
 [gp]: https://goerli-faucet.pk910.de/
+[sb]: https://goerlifaucet.com/
