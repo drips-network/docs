@@ -15,11 +15,9 @@ In Drips v0.1, only DAI was supported. Drips v0.2 allows streaming of any ERC20 
 Some streaming protocols require users to first wrap thier tokens, introducing additional contracts as well as assumptions around trust and solvency. 
 Drips v0.2 allows users to natively stream any ERC20 token -- no wrapped tokens required.
 
-### Gas-Optimized for N:1 and 1:1
+### Gas-Optimized for Many-to-One Subscriptions and Memberships
 
-Drips v0.2 is architected to be extremely gas-efficient for both n:1 and 1:1 streaming. While many streaming protocols have focused exclusively on  1:1 streaming, 
-Drips is optimized for n:1 as well, to support low gas costs for use cases like subscription memeberships where large numbers
-of followers are streaming funds to a developer or creator.
+In reality, most web3 streaming protocols only allow users to receive streams from small numbers of other users, and cannot practically support designs like subscription memberships at the scale of hundreds or thousands of subscribers. However Drips v0.2, by contrast, is architected to be extremely gas-efficient for both 1:1 streaming and many-to-one streaming use cases (like subscription memberships) at real-world scales, targeting Ethereum mainnet.
 
 ### Scheduled Drips
 

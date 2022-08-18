@@ -5,7 +5,7 @@ title: Smart Contract and Subgraph Details
   
 ## Goerli Testnet
 
-#### Smart Contract Details -- Testnet Deploy #2
+#### Smart Contract Details -- Testnet Deployment #2
 
 <table>
 <tr><td>Network</td><td>goerli</td></tr>
@@ -21,15 +21,18 @@ title: Smart Contract and Subgraph Details
 
 #### Subgraph Details
 
-Subgraph page on The Graph's website:
-https://thegraph.com/hosted-service/subgraph/gh0stwheel/drips-v02-on-goerli
+The repository for the subgraph's code can be found 
+<a href="https://github.com/radicle-dev/drips-subgraph/tree/v0.2" target="_blank">here</a>.
+
+Subgraph page on The Graph's Hosted Mode website:
+<br>https://thegraph.com/hosted-service/subgraph/gh0stwheel/drips-v02-on-goerli
 
 Subgraph endpoints:
-Queries (HTTP):     https://api.thegraph.com/subgraphs/name/gh0stwheel/drips-v02-on-goerli
-Subscriptions (WS): wss://api.thegraph.com/subgraphs/name/gh0stwheel/drips-v02-on-goerli
+Queries (HTTP):
+<br>https://api.thegraph.com/subgraphs/name/gh0stwheel/drips-v02-on-goerli
 
-Corresponding commit hash in the repo:
-https://github.com/gh0stwheel/drips-subgraph-mainnet-v2/tree/0a16b0a2b23e5b2f201576f87fb35191c7fcae13
+Subscriptions (WS):
+<br>wss://api.thegraph.com/subgraphs/name/gh0stwheel/drips-v02-on-goerli
 
 #### How to Get Testnet Eth and DAI
 
