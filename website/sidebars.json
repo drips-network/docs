@@ -2,7 +2,8 @@
   "docs": {
     "Intro and Basics": [
       "whats-a-drip",
-      "drips-v02-features"
+      "drips-v02-features",
+      "accessing-drips"
     ],
     "For Developers": [
       "for-developers/technical-overview",
