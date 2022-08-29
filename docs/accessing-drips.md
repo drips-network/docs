@@ -1,7 +1,7 @@
 ---
 id: accessing-drips
-title: Accessing Drips 💧?
-sidebar_label: Accessing Drips?
+title: Accessing Drips
+sidebar_label: Accessing Drips
 ---
 *Note: these docs are for Drips v0.2. If you are looking for docs for Drips v0.1, you can find them [here][v1].*
 
