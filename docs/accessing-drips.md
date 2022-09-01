@@ -7,17 +7,17 @@ sidebar_label: Accessing Drips
 
 The Drips protocol is a collection of public, open smart contracts deployed on EVM-based blockchains, equally accessible
 to every user
-and application. Because of this, there is no one single way of interacting with Drips. While the Drips App is
-one way of interacting with the Drips protocol, users can also access the full power and functionality of Drips in 
+and application. Because of this, there is no one single way of interacting with the Drips protocol. While the Drips App is
+one way of interacting with the Drips protocol, users can also access the full power and functionality of Drips contracts in 
 any of the following alternative ways as well:
 
-[The Drips SDK][sd] is a Javascript SDK that allows any application or user-created code to interact directly with the Drips smart contractsand utilize the full feature set of the protocol in whatever way they wish. Drips can be freely integrated into
+[The Drips SDK][sd] is a Javascript SDK that allows any application or user-created code to interact directly with the Drips smart contracts and utilize the full feature set of the protocol in whatever way they wish. Drips contracts can be freely integrated into
 any website, dapp or application at any time using the SDK.
 
 [Etherscan][es] is a block explorer and analytics platform for Ethereum. Other networks have similar block exploerers,
 often also operated by Etherscan. The Drips contracts can be accessed using these block explorers at the addresses
 specified on the [Smart Contract and Subgraph Details][sc] Page. For example, the DripsHub smart contract on the Goerli
-testnet can be acessed [here][dh].
+testnet can be acessed [here][dh]. Other networks have similar block explorers.
 
 [ethBuild][eb] is an educational sandbox for web3, including drag-and-drop programming and open source building blocks. With
 ethBuild, you can call a function on an Ethereum contract (for example, to create a Drip or Split configuration) by
