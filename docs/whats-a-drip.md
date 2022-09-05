@@ -7,7 +7,7 @@ sidebar_label: What's a Drip?
 
 *"When I drip you drip we drip"*
 
-Drips is a new Ethereum protocol that allows any creator to generate continuous income from their communities without relying on bank accounts or extracting platforms. 
+Drips is a new Ethereum protocol that allows any creator to source recurring token streams from their communities without relying on extractive platforms.
 
 Using Drips, creators & developers can issue monthly memberships and give their fans unique benefits in exchange for their recurring financial support. Using the permissionless financial infrastructure of Ethereum, Drips memberships are represented by Non-Fungible Tokens (NFTs). These memberships are available to anyone and can enable benefits across any application on the web that supports Ethereum (Discord, Telegram, Reddit, Snapshot, Radicle Upstream & many more).
 

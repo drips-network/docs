@@ -3,9 +3,10 @@ id: raise-funds-without-memberships
 title: Raise Funds Without Memberships
 ---
 
-If you're a creator, developers or other user who want to raise funds from fans 
-without issuing Member NFT Tokens, you can also do so easily using Drips. All you
-need is a public Ethereum address that you want to use to receieve the funds.
+If you're a creator, developer or other user who wants to raise crowd-sourced funds from fans without generating Member NFT Tokens, you can also do so easily using Drips. All you need is a public Ethereum address that you want to use to receive the funds.
+
+Let's dive in using the Drips webapp and see how it works! FYI, there are several ways to interact with the Drips protocols and components, as laid out [here][ad] and [here][to].
+
 
 Let's dive in and see how it works!
 
@@ -38,6 +39,8 @@ be available in your Ethereum account alongside any other tokens you have there.
 
 It's as simple as that to receive recurring funds to an ordinary Etheruem address using Drips!
 
+[ad]: accessing-drips.md
+[to]: for-developers/technical-overview.md
 [cw]: connect-a-wallet.md
 [gs]: using-drips/using-a-gnosis-safe.md
 [dd]: using-drips/drip-directly-to-any-address.md

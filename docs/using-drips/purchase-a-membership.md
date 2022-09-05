@@ -3,17 +3,15 @@ id: purchase-a-membership
 title: Purchase a Membership
 ---
 
-Using Drips, it's easy for any user to purchase a membership to a Community, receive 
-a NFT membership token and gain access to any benefits that the membership includes.
+Using Drips, it's easy for any user to access a membership to a Community, receive a NFT membership token and gain access to any benefits that the membership includes.
 
-If you're interested in becoming a supporter, but don't have a specific Community
-in mind, you can head over to the [Explore Page][da] to browse the different Communities
-which have memberships available for purchase on Drips.
+If you're interested in becoming a supporter, but don't have a specific Community in mind, you can head over to the [Explore Page][da] to browse the different Communities which have memberships available via the Drips webapp.
 
-The rest of this guide will assume that you've selected a Community you wish
-to purchase a membership for, and will walk through the steps required to do so.
+The rest of this guide will assume that you've selected a Community you wish to purchase a membership for, and will walk through the steps required to do so.
 
-Ready to see how it works? Let's go!
+FYI, there are several ways to interact with the Drips protocols and components, as laid out [here][ad] and [here][to].
+
+Ready to see how it works via the Drips webapp? Let's go! 
 
 > Note: we recommended that you [Connect a Wallet][cw] before you begin the process of 
 purchasing a membership. You'll need to have a wallet connected to complete the process 
@@ -70,6 +68,8 @@ To see the member tokens you currently hold, toggle the slider on the right from
 
 That's it! You're now a token-holding member of the Community!
 
+[ad]: accessing-drips.md
+[to]: for-developers/technical-overview.md
 [da]: https://app.drips.network/explore
 [cw]: connect-a-wallet.md
 [c8]: /img/drips_create8.png

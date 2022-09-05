@@ -11,7 +11,9 @@ The diagram below provides an overview of how Drips works under the hood. Drips 
   
 In the following sections, we'll dive deeper into each of the different components of Drips and explain the role that each one plays.
 
-Before diving in however, an important point we would like to make is that Drips is entirely modular and there is no requirement for users to interact with the components in the way they are arranged above. For example, the Drips Webapp is offered only as a reference implementation and users are free to create their own web apps or even interact with the smart contracts directly using transactions issued directly using Etherscan or similar tools. Similarly, there is nothing to stop users from querying the Radicle/Drips subgraph and IPFS files using any applications or tools they desire. By designing Drips in this way, the goal of our team has been to build and offer up the world's most flexible and powerful open protocol for recurring payments and fundraising of any kind. With that in mind, our hope is that many future apps, protocols and tools will be able to build on Drips and use it to empower solutions we can't even imagine today.
+Before diving in, it’s important to point out that Drips is entirely modular and there is no requirement for users to interact with the components in the way they are arranged above. For example, the Drips Webapp is offered only as a reference implementation and users are free to create their own web apps or even interact with the smart contracts directly using transactions issued directly using Etherscan or similar tools. Similarly, there is nothing to stop users from querying the Radicle/Drips subgraph and IPFS files using any applications or tools they desire. By designing Drips in this way, the goal of our team has been to build and offer the most flexible and powerful open protocol for recurring token streams and crowd-sourced fundraising of any kind. With that in mind, our hope is that many future apps, protocols and tools will be able to build on the Drips protocol.
+
+By designing Drips in this way, the goal of the Drips team has been to build and offer up the world's most flexible and powerful open protocol for recurring funding and fundraising of any kind. With that in mind, our hope is that many future apps, protocols and tools will be able to build on Drips.
 
 ## Accounts and Balances
 
@@ -48,22 +50,21 @@ owner of each DripsToken contract can interact with it directly to change parame
 
 <i>Code for the Dripps webapp can be found in the <a href="https://github.com/radicle-dev/drips-app">Drips-App</a> repository.</i>
 
-The Dripps webapp is a static web application written in HTML, CSS and Javascript. In this case, static means that
-the app does not have any dependencies on the server that delivers it, so that if users wish they can download
-and run the app on a local webserver (and verify all of the code).
+The Dripps webapp is a static web application written in HTML, CSS and Javascript. In this case, static means that the app does not have any dependencies on the server that delivers it, so that if users wish they can download and run the app on a local webserver (and verify all of the code).
 
-However, for ease of use, a copy of the Drips webapp is also available at <a href="https://drips.radicle.xyz">drips.radicle.xyz</a>
+However, for ease of use, a copy of the Drips webapp is also available at <a href="https://drips.network">drips.network</a>
 
 The Drips webapp interacts directly with Ethereum (via Infura), as well as IPFS (via Piñata pinning servers) and
 The Graph nodes to query graphQL.
 
 ## The Radicle/Drips GraphQL Subgraph
 
-<i>Code for the Radicle/Drips subgraph can be found in the <a href="https://github.com/radicle-dev/radicle-subgraph">Radicle-Subgraph</a> repository.</i>
+<i>Code for the Radicle/Drips subgraph can be found in the <a href="https://github.com/radicle-dev/drips-subgraph">Drips Subgraph</a> repository.</i>
 
-Drips utilizes a graphQL "subgraph" that contains indexed Ethereum data for efficient qurying based on <a href="https://thegraph.com/">The Graph's</a> prootcol. For simplicity of curation/indexing, the drips subgraph is part of the same subgraph that is used by Radicle orgs.
+Drips utilizes a graphQL "subgraph" that contains indexed Ethereum data for efficient querying based on <a href="https://thegraph.com/">The Graph's</a> protocol. For simplicity of curation/indexing, the drips subgraph is part of the same subgraph that is used by Radicle Orgs.
 
-For Drips, the subgraph is used solely by the Drips Webapp to allow for efficient calcualtion of historical values, summary statistics and for queries that scope over multiple Communities or Users at oncee.
+For Drips, the subgraph is used solely by the Drips Webapp to allow for efficient calculation of historical values, summary statistics and for queries that scope over multiple Communities or Users at once.
+
 
 ## IPFS and Piñata
 

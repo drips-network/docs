@@ -2,7 +2,8 @@
   "docs": {
     "Intro and Basics": [
       "whats-a-drip",
-      "connect-a-wallet"
+      "connect-a-wallet",
+      "accessing-drips"
     ],
     "Raise Funds With Drips": [
       "using-drips/create-a-community",

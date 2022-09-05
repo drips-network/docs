@@ -3,9 +3,10 @@ id: using-a-gnosis-safe-with-drips
 title: Using a Gnosis Safe With Drips
 ---
 
-For some teams using Drips, the team may prefer to use a Gnosis Safe rather than an individual 
-Ethereum account -- for instance, for creating and managing a Community,
-in the case that the team wants the Community to be owned by more than one account.
+For some teams using Drips, the team may prefer to use a Gnosis Safe rather than an individual Ethereum account -- for instance, for creating and managing a Community, in the case that the team wants the Community to be owned by more than one account.
+
+Connecting and using a Gnosis Safe with Drips is easy! Let's see how it works with the Drips webapp. FYI, there are several ways to interact with the Drips protocols and components, as laid out [here][ad] and [here][to].
+
 
 Connecting and using a Gnosis Safe with Drips is easy! Let's see how it works.
 
@@ -127,6 +128,8 @@ the Gnosis Safe App and then having enough members of the safe Confirm it so tha
 through).
 
 
+[ad]: accessing-drips.md
+[to]: for-developers/technical-overview.md
 [cw]: connect-a-wallet.md
 [cs]: https://help.gnosis-safe.io/en/articles/3876461-create-a-safe
 [ga]: https://gnosis-safe.io/app/

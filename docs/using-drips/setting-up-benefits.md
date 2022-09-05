@@ -3,8 +3,7 @@ id: setting-up-benefits
 title: Setting Up Benefits
 ---
 
-This guide is intended for creators or developers who have set up a Community on
-Drips and are interested in offering benefits to members.
+This guide is intended for creators or developers who have set up a Community on the Drips webapp and are interested in offering benefits to members. However, there are several ways to interact with the Drips protocols and components, as laid out [here][ad] and [here][to].
 
 > If you're a community member who is interested in how to use benefits offered
 by a community that you hold a member token for, you should instead head over to
@@ -112,6 +111,8 @@ the "address" parameter, you will want to enter the address of your Community. Y
 That's it! Your snapshot spacee should be all set up. Head over to Snapshot and [create a proposal][cp] and let your
 community members know that they can vote on it!
 
+[ad]: accessing-drips.md
+[to]: for-developers/technical-overview.md
 [ab]: using-drips/accessing-benefits.md
 [pu]: using-drips/purchase-a-membership.md
 [di]: https://discord.com/

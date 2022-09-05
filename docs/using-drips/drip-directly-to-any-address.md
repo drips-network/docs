@@ -9,7 +9,7 @@ Using Drips, it's easy to provide direct funding and support to any creator, pro
 or collaborator even if they haven't created an Community on Drips or issued member tokens. 
 All you need is a recipient's Ethereum address to set up a recurring transfer of funds to them.
 
-Let's see how it works!
+Let's see how it works in the Drips webapp! FYI, there are several ways to interact with the Drips protocols and components, as laid out [here][ad] and [here][to].
 
 To get started, open a new browser tab and head over to the Drips webapp at [drips.network][dw].
 
@@ -61,6 +61,8 @@ be returned to your account page where you should see the Drips you created.
 
 Nice work -- your recurring funds transfer is all set up!
 
+[ad]: accessing-drips.md
+[to]: for-developers/technical-overview.md
 [dw]: https://www.drips.network/
 [cw]: connect-a-wallet.md
 [d1]: /img/drips_direct1.png

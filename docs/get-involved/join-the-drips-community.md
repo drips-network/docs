@@ -3,7 +3,7 @@ id: join-the-drips-community
 title: Join the Drips Community
 ---
 
-The Drips community is a part of the greater [Radicle community][rc].
+The Drips community is a part of the greater [Radicle Project and community][rc].
 
 To get involved with the Drips community, you can find us in the #drips channel on the [Radicle Discord Server][rd].
 

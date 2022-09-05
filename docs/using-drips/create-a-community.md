@@ -3,8 +3,9 @@ id: create-a-community
 title: Create a Community
 ---
 
-This is a guide for creators or developers who wish to set up a Community and issue member NFT tokens to
-raise funds from their fans. Let's jump in and see how it works!
+This is a guide for creators or developers who wish to set up a Community and generate member NFT tokens to crowdsource funds from their fans. FYI, there are several ways to interact with the Drips protocols and components, as laid out [here][ad] and [here][to].
+
+Let's jump in and see how it works using the Drips webapp! 
 
 First, open a new browser tab and navigate to [https://drips.network/][da].
 
@@ -67,6 +68,8 @@ For a guide on how your supporters can purchase member tokens from your Communit
 
 For instructions on how set up benefits for your members, check out our guide on [Setting Up Benefits][sb].
 
+[ad]: accessing-drips.md
+[to]: for-developers/technical-overview.md
 [da]: https://www.drips.network/
 [cw]: connect-a-wallet.md
 [gs]: using-drips/using-a-gnosis-safe.md

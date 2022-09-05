@@ -9,7 +9,7 @@ funds to their [Ethereum address directly][rf], using Drips, can choose to set u
 who, for example, might be other collaborators, collectives or software libraries 
 the user depends on.
 
-We'll show you how it works below.
+We'll show you how it works below on the Drips webapp. FYI, there are several ways to interact with the Drips protocols and components, as laid out [here][ad] and [here][to].
 
 To get started, open a new browser tab and head over to the Drips webapp at [drips.network][dw].
 
@@ -48,6 +48,8 @@ be returned to your account page.
 
 Nice work -- your Drip sharing rules are all set up!
 
+[ad]: accessing-drips.md
+[to]: for-developers/technical-overview.md
 [rf]: using-drips/raise-funds-without-a-membership.md
 [dw]: https://www.drips.network/
 [cw]: connect-a-wallet.md
