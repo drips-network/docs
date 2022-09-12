@@ -3,7 +3,7 @@ id: accessing-drips
 title: Accessing Drips
 sidebar_label: Accessing Drips
 ---
-*Note: these docs are for Drips v0.2. If you are looking for docs for Drips v0.1, you can find them [here][v1].*
+*Note: these docs are for Drips v2. If you are looking for docs for Drips v1, you can find them [here][v1].*
 
 The Drips protocol is a collection of public, open smart contracts deployed on EVM-based blockchains, equally accessible
 to every user

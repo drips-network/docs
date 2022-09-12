@@ -3,29 +3,28 @@ id: technical-overview
 title: Technical Overview
 ---
 
-This page offers an introduction to the core mechanics of the Drips smart contracts. The implementation can be found on Github:
-
-https://github.com/radicle-dev/radicle-drips-hub
+This page offers an introduction to the core mechanics of the Drips smart contracts. The implementation can be found on [Github](https://github.com/radicle-dev/radicle-drips-hub):
 
 ## Drips Concepts
 
 ### Drips - The Protocol
 
-Drips is an Ethereum protocol that allows users to set up and manage streaming payments - continuous transfers of funds from one account to
-another over time. We refer to such streaming payments as "Drips". In some ways, streaming payments are similar to traditional recurring payments, but in other ways they are quite different and offer unique advantages.
+Drips is a protocol for any EVM-based blockchain that allows users to set up and manage streaming payments - continuous transfers of funds from one account to
+another over time. We refer to such streaming payments as "Drips".
 
 ![](https://i.imgur.com/L3XSop5.png)
 
-Technically, tokens that are Dripped are not sent directly to the recipient's address. Instead the `DripsHub` contract keeps track of the sender and recipient's balances and allows the receiver to collect funds whenever they wish.
+Technically, tokens that are dripped are not sent directly to the recipient's address. Instead, the `DripsHub` contract keeps track of the sender and recipient's balances and allows the receiver to collect funds whenever they wish.
 
 ### Attributes of Drips
 
-A drip is defined by the following attributes
+A drip is defined by the following attributes:
+
 - **sender** - A Drips user, typically an Ethereum address 
 - **receiver** - A Drips user, typically an Ethereum address
-- **amount per second** - uint
-- **start** - unix timestamp
-- **end** - unix timestamp
+- **amount per second** - (a uint) The amount per-second being dripped
+- **start** - The UNIX timestamp at which the drip will start
+- **duration** - Duration in milliseconds from the time it starts
 
 ### Scheduled Drips
 
@@ -41,6 +40,7 @@ The Drips protocol also includes built-in features for sharing of funds, or "Spl
 
 
 In the Drips protocol, a user can receive funds in three different ways:
+
 - Drips (streams).
 - A direct "Give" (one-time transfer).
 - From other Splits.

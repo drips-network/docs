@@ -25,7 +25,7 @@ The repository for the subgraph's code can be found
 <a href="https://github.com/radicle-dev/drips-subgraph/tree/v0.2" target="_blank">here</a>.
 
 Subgraph page on The Graph's Hosted Mode website:
-<br>https://thegraph.com/hosted-service/subgraph/gh0stwheel/drips-v02-on-goerli
+<br><a href="https://thegraph.com/hosted-service/subgraph/gh0stwheel/drips-v02-on-goerli" target="_blank">https://thegraph.com/hosted-service/subgraph/gh0stwheel/drips-v02-on-goerli</a>
 
 Subgraph endpoints:
 Queries (HTTP):
@@ -43,7 +43,7 @@ To get DAI on Goerli:
 
 1. First get testnet ETH from the faucet.
 
-2. Go to https://app.compound.finance/ and connect a wallet, then make sure your wallet is connected to the Goerli testnet.
+2. Go to <a href="https://app.compound.finance/" target="_blank">https://app.compound.finance/</a> and connect a wallet, then make sure your wallet is connected to the Goerli testnet.
 
 3. Click on `DAI`, select `Withdraw` and scroll down to a `Faucet` link.
 
