@@ -1,7 +1,7 @@
 # Welcome to Drips Docs 👋
 
 This is the repository for the Drips documentation site
-[docs.drips.network][wi]. drips-docs accepts contributions via Radicle patches
+[docs.drips.network][wi]. This repository accepts contributions via Radicle patches
 and GitHub pull requests. This document outlines some contributing guidelines,
 contact points, and other resources to make it easier to contribute to
 drips-docs.
@@ -153,4 +153,4 @@ Message body:
 [na]: https://docusaurus.io/docs/en/navigation
 [qu]: https://img.shields.io/badge/-question-C0EE59
 [tr]: https://img.shields.io/badge/-troubleshooting-%23FBCA04
-[wi]: https://drips.radicle.network
+[wi]: https://docs.drips.network
