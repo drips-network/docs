@@ -29,12 +29,11 @@ A drip is defined by the following attributes:
 ### Scheduled Drips
 
 When a Drip is configured, the sender can decide whether funds will start flowing immediately (i.e. in the same block that the transaction is processed)
-or whether the flow of funds will be **scheduled** to start at some future time. Similarly, the duration of the Drip can be set explicitly, or it can be configured
-to stream funds until the user either stops the Drip, or funds run out. We refer to Drips with an explicitly defined start time or duration as "scheduled".
+or whether the flow of funds will be **scheduled** to start at some future time. Similarly, a user can (optionally) choose to impose an explicit duration for how long funds will be streamed. We refer to Drips with an explicitly defined start time or duration as "scheduled".
 
 ### What are Splits?
 
-The Drips protocol also includes built-in features for sharing of funds, or "Splitting". When a user creates a Split, a percentage of all funds sent to them though the Drips protocol will be automatically split to another user of their choice. More precisely, an Ethereum address (the receiver) can define a set of split addresses with percentages:
+The Drips protocol also includes built-in features for sharing of funds, or "Splitting". When a user creates a Split, a percentage of all funds sent to them though the Drips protocol will be automatically split to another user of their choice. In Drips, "users" are referenced by user IDs and can be controlled by Ethereum addresses, but can also be governed in other ways, including by NFTs.
 
 ![](https://i.imgur.com/Cs8Dz0V.png)
 
@@ -45,7 +44,7 @@ In the Drips protocol, a user can receive funds in three different ways:
 - A direct "Give" (one-time transfer).
 - From other Splits.
 
-Each time a user collects funds sent to them, if they have chosen to define Splits for their account, then splitting is applied.
+Each time a user collects funds sent to them, if they have chosen to define Splits for their account, then splitting is applied. Users can also choose to split any funds they've currently received as a standalone action, without collecting, if they wish.
 
 ## DripsHub Smart Contract Architecture
 
@@ -61,13 +60,13 @@ Instead, to increase efficiency, `DripsHub` works internally with the concept of
 
 ### Drips Cycles
 
-A cycle has a fixed time interval so that every block is assigned to a cycle based on its timestamp. Cycles are numbered starting with zero.
+Each cycle defines a fixed time interval so that every block is assigned to exactly one cycle based on its timestamp. Cycles are indexed starting from 1 and cycle times and indexes are the same for all Drips users.
 
 ![](https://i.imgur.com/8yiM2Cq.png)
 
 ### Dripping Funds
 
-Any user can be a sender in Drips. The state of sender for a specific ERC20 token can be described with the following attributes:
+Any user can send funds using Drips, which we refer to as "Dripping" funds. The state of sender for a specific ERC20 token can be described with the following attributes:
  - **Balance** - balance of tokens that the sender holds in their account.
  - **Set of DripsConfigs** - configurations for Drips that the sender is streaming to other users (if any).
 
