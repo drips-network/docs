@@ -21,7 +21,7 @@ server, you can access them as follows:
 
 - Go to any public channel on the Discord server for the community and enter `!join`.
 
-- Complete the interactions with the Collab.land bot to verify that you hold a member token for thee
+- Complete the interactions with the Collab.land bot to verify that you hold a member token for the
 Community.
 
 ## Benefit: Voting on Snapshot
