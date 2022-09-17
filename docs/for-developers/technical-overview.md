@@ -20,11 +20,11 @@ Technically, tokens that are dripped are not sent directly to the recipient's ad
 
 A drip is defined by the following attributes:
 
-- **sender** - A Drips user, typically an Ethereum address 
-- **receiver** - A Drips user, typically an Ethereum address
-- **amount per second** - (a uint) The amount per-second being dripped
-- **start** - The UNIX timestamp at which the drip will start
-- **duration** - Duration in milliseconds from the time it starts
+- **sender** - A Drips user, typically an Ethereum address.
+- **receiver** - A Drips user, typically an Ethereum address.
+- **amount per second** - (a uint192) The amount per-second being dripped, with high decimal-precision to support all ERC-20 tokens.
+- **start** - The UNIX timestamp at which the drip will start.
+- **duration** - Duration in milliseconds from the time it starts.
 
 ### Scheduled Drips
 
@@ -65,7 +65,7 @@ A cycle has a fixed time interval so that every block is assigned to a cycle bas
 
 ![](https://i.imgur.com/8yiM2Cq.png)
 
-### Sending Funds
+### Dripping Funds
 
 Any user can be a sender in Drips. The state of sender for a specific ERC20 token can be described with the following attributes:
  - **Balance** - balance of tokens that the sender holds in their account.
@@ -148,14 +148,14 @@ Here we can see to represent the two senders in the timeline of the receiver, we
 
 ## Collecting
 
-The receiver can at any time collect the funds sent to it. The contract calculates the total amount and then transfers it out to the receiver's wallet. The collected amount is always everything available at a given moment, there's no way to limit it.
+The receiver can at any time collect the funds sent to them. The contract calculates the total amount and then transfers it out to the receiver's wallet. The collected amount is always everything available to be collected at the given moment.
 
-As shown in the previous sections, the collectable amount is described with deltas, one per cycle. The receiver stores the number of the first cycle, for which the funds haven't been collected yet. This assures that funds can be collected only once. The receiver also stores the amount, which was collected for the last collected cycle. This value is set to 0 if this is the first collection of the receiver. It's the initial value to which the deltas are added.
+As shown in the previous sections, the collectable amount is described with deltas, one per cycle. The receiver stores the number of the first cycle, for which the funds haven't been collected yet, which assures that funds can be collected only once.
 
 
 ### Updating or Cancelling Drips
 
-Of course it's quite likely that a sender may want to update their Drips at some point in the future, either to change the amount being Dripped, or perhaps to stop streaming entirely. It is important to know that while such changes are permitted, it is only possible to change Drips configurations for the future and never the past. Specifically, any funds already sent to another user in the past cannot be recovered by the sender if they change their mind. In technical terms, it is not possible to change the funding rate of a past cycle.
+Of course it's quite likely that a sender may want to update their Drips at some point in the future, either to change the amount being Dripped, or perhaps to stop streaming entirely. It is important to know that while such changes are permitted, it is only possible to change Drips configurations for the future and never the past. Specifically, any funds already sent to another user in the past cannot be recovered by the sender if they change their mind. In technical terms, it is not possible to change the funding rate of a past cycle, or for any time in the current cycle which has already passed.
 
 For simplification lets assume, each stream starts and end exactly at cycle beginning. In the real implementation, we need to split each delta into two individual ones.
 
