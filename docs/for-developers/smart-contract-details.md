@@ -5,18 +5,24 @@ title: Smart Contract and Subgraph Details
   
 ## Goerli Testnet
 
-#### Smart Contract Details -- Testnet Deployment #4
+#### Smart Contract Details -- Testnet Deployment #5
 
 <table>
 <tr><td>Network</td><td>goerli</td></tr>
 <tr><td>Deployer address</td><td>0x341a08926dCa7fa7D135F96E4d76b696e5f6d38d</td></tr>
-<tr><td>Reserve</td><td>0xb89c0849Ff7c279E195FA7576B532344Ca1d6083</td></tr>
-<tr><td>DripsHub</td><td>0x31b3905F6774D7Aa4E95a49784C53dD67ACC02cd</td></tr>
-<tr><td>DripsHub logic</td><td>0x68CFD1803E7dDDb7432348644E9441b8105172D2</td></tr>
+<tr><td>Reserve</td><td>0xABafF18f39373e70fD0119b7F1167A23Cfa59D91</td></tr>
+<tr><td>DripsHub</td><td>0x4Cf1B4B46840CdCE2198D5404f17A3b967dcDca8</td></tr>
+<tr><td>DripsHub logic</td><td>0xc904A8De767dddC27026391f853092ACB7DD8291</td></tr>
 <tr><td>DripsHub cycle seconds</td><td>604800</td></tr>
-<tr><td>AddressDriver</td><td>0x0749Ed6EB9De41F7bF77426d3128580E449744e1</td></tr>
-<tr><td>AddressDriver logic</td><td>0x9176b535C947bB9fDa7b003F8061B665fE8baCa5</td></tr>
+<tr><td>AddressDriver</td><td>0x77E51F4c1797231D20941101ff6aF28A4289e4dd</td></tr>
+<tr><td>AddressDriver logic</td><td>0x1c40531Abc65A8c16199E8cb7a940cB22F4Bc394</td></tr>
 <tr><td>AddressDriver ID</td><td>0</td></tr>
+<tr><td>NFTDriver</td><td>0xa12A25C4dda78B2e5a110017a8c82a3d30929115</td></tr>
+<tr><td>NFTDriver logic</td><td>0xCdC5dbB9a12F9A7Db25d0480cCcecCe8D9eA2a16</td></tr>
+<tr><td>NFTDriver ID</td><td>1</td></tr>
+<tr><td>ImmutableSplitsDriver</td><td>0x1d953Da768D442c367584c45210012Afc1206eFa</td></tr>
+<tr><td>ImmutableSplitsDriver logic</td><td>0xB48428bCa1519d72aF0F148c9B72e6c009a7AD70</td></tr>
+<tr><td>ImmutableSplitsDriver ID</td><td>2</td></tr>
 <tr><td>MetaData</td><td>0xC58cEa5a448A761d2dE80DFa8BfE298780e9dd66</td></tr>
 <tr><td>Commit hash</td><td>5992956f2c70db9cb5135c9aea0252d5041e83e8</td></tr>
 </table>
