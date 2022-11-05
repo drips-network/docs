@@ -14,7 +14,7 @@ any of the following alternative ways as well:
 [The Drips SDK][sd] is a Javascript SDK that allows any application or user-created code to interact directly with the Drips smart contracts and utilize the full feature set of the protocol in whatever way they wish. Drips contracts can be freely integrated into
 any website, dapp or application at any time using the SDK.
 
-[Etherscan][es] is a block explorer and analytics platform for Ethereum. Other networks have similar block exploerers,
+<a href="https://etherscan.io/" target="_blank">Etherscan</a> is a block explorer and analytics platform for Ethereum. Other networks have similar block exploerers,
 often also operated by Etherscan. The Drips contracts can be accessed using these block explorers at the addresses
 specified on the [Smart Contract and Subgraph Details][sc] Page. For example, the DripsHub smart contract on the Goerli
 testnet can be acessed [here][dh]. Other networks have similar block explorers.
@@ -33,9 +33,8 @@ Drips smart contracts.
 
 
 [v1]: https://docs.drips.network/
-[sd]: https://v2.docs.drips.network/docs/for-developers/drips-sdk
-[es]: https://etherscan.io/
-[sc]: https://v2.docs.drips.network/docs/for-developers/smart-contract-and-subgraph-details
+[sd]: /docs/js-sdk/drips-sdk
+[sc]: /docs/for-developers/smart-contract-and-subgraph-details
 [dh]: https://goerli.etherscan.io/address/0xB79663c5E27C1a2c93aeE2a35b273b0255638267#code
 [eb]: https://eth.build/
 [me]: https://www.myetherwallet.com/

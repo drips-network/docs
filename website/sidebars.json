@@ -3,15 +3,15 @@
     "Intro and Basics": [
       "whats-a-drip",
       "drips-v2-features",
-      "accessing-drips"
+      "accessing-drips",
+      "faq"
     ],
     "For Developers": [
       "for-developers/technical-overview",
-      "for-developers/drips-sdk",
       "for-developers/smart-contract-and-subgraph-details"
     ],
-    "Understanding Drips": [
-      "understanding-drips/faq"
+    "The Drips SDK": [
+      "js-sdk/drips-sdk"
     ],
     "Get Involved": [
       "get-involved/join-the-drips-community"

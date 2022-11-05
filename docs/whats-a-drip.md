@@ -14,8 +14,8 @@ and one-time transfers. Splits can be used by teams to share incoming funds amon
 
 ## Status of Drips v2
 
-As of 8/17/2022, Drips v2 is currently available as an alpha pre-release, with smart contracts deployed on the Goerli testnet. Versions of the JS SDK and
-Subgraph for v2 are currently under development. The Drips Team plans to do a series of iterative deployments to Goerli over the coming weeks, which will add in a few additional features and bug fixes, leading up to a mainnet release in August or September 2022.
+As of 11/4/2022, Drips v2 is currently available as an alpha pre-release, with smart contracts deployed on the Goerli testnet.
+We expect to deploy the smart contracts to Ethereum mainnet and other major EVM blockchains soon!
 
 
 [v1]: https://docs.drips.network/
