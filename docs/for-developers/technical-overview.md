@@ -3,7 +3,7 @@ id: technical-overview
 title: Technical Overview
 ---
 
-This page offers an introduction to the core mechanics of the Drips smart contracts. The implementation can be found on [Github](https://github.com/radicle-dev/radicle-drips-hub):
+This page offers an introduction to the core mechanics of the Drips smart contracts. The implementation can be found on [Github](https://github.com/radicle-dev/radicle-drips-hub).
 
 ## Drips Concepts
 

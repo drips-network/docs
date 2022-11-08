@@ -8,6 +8,7 @@
     ],
     "For Developers": [
       "for-developers/technical-overview",
+      "for-developers/user-identities-in-drips",
       "for-developers/smart-contract-and-subgraph-details"
     ],
     "The Drips SDK": [
