@@ -3,7 +3,7 @@ id: user-identities-in-drips
 title: User Identities In Drips
 ---
 
-In this section we take a look at the Drips Protocol's driver-based user identity model and review the two types of user identities, Etherem addresses and NFT-based sub accounts, that are available in Drips V2 today.
+In this section we take a look at the Drips Protocol's driver-based user identity model and review the two types of user identities, Ethereum addresses and NFT-based sub accounts, that are available in Drips V2 today.
 
 ## Background and Introduction
 
