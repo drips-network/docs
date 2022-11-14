@@ -6,13 +6,33 @@
       "accessing-drips",
       "faq"
     ],
-    "For Developers": [
-      "for-developers/technical-overview",
-      "for-developers/user-identities-in-drips",
-      "for-developers/smart-contract-and-subgraph-details"
+    "The Protocol": [
+      "the-protocol/technical-overview",
+      "the-protocol/user-identities-in-drips",
+      "the-protocol/smart-contract-and-subgraph-details"
     ],
-    "The Drips SDK": [
-      "js-sdk/drips-sdk"
+    "For Developers": [
+      "for-developers/drips-sdk",
+      {
+        "type": "subcategory",
+        "label": "Guides",
+        "ids": [
+          "for-developers/guides/installing",
+          "for-developers/guides/creating-a-drips-account",
+          "for-developers/guides/topping-up",
+          "for-developers/guides/starting-and-updating",
+          "for-developers/guides/configuring-splits",
+          "for-developers/guides/collecting"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Advanced Features",
+        "ids": [
+          "for-developers/additional/batching-with-caller",
+          "for-developers/additional/account-metadata"
+        ]
+      }
     ],
     "Get Involved": [
       "get-involved/join-the-drips-community"
