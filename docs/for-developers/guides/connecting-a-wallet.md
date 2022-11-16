@@ -1,0 +1,49 @@
+---
+id: connecting-a-wallet
+title: Connecting a Wallet
+---
+
+*Note: this guide builds on code and UI/UX elements from the SDK example apps. Therefore as a prerequisite to being able to follow the instructions in this guide yourself, you will need to first clone the Drips SDK repo and build the example apps as described [here][in].*
+
+## Start the NFT Example App
+
+Let's start the NFT example App. From inside the directory `nft-driver-examples`, run the command:
+
+`npm run dev`
+
+This will start up a lightweight Svelte webserver running the NFT example app on a local port (likely 5173). Open up a browser and
+navigate to "localhost:5173" to see it.
+
+## Connect a Wallet
+
+Now we're going to see how the example app allows the end user to connect a wallet that they control, which will be necessary for any interactions with the Drips contracts which require sending a transaction.
+
+Click the "Connect" button in the example app.
+
+![Connect 1][c1]
+
+We can see that the end user is being offered the option to connect their wallet. To see what's happening behind the scenes, you can open the file `nft-driver-examples/src/routes/Header.svelte` in your favorite editor. In particular, see the 
+<a href="https://github.com/radicle-dev/drips-js-sdk/blob/a2ad5226284e2e967e95d7f5d24fea79583222b9/nft-driver-examples/src/routes/Header.svelte#L35" target="_blank">function that is called</a> when the collect button is clicked:
+
+![Connect 2][c2]
+
+Here we can see that the function first *awaits* the result of the user completing their interaction with web3modal (the modal screen in the example app that allows the user to choose a wallet to connnect). Note that it is not required that your app work with web3modal to build on the
+Drips SDK. As we can see by looking at the next line in the code, all that is required to create a Web3Provider is to pass in a walletProvider and many different types of wallet providers are supported.
+
+In the next part of the connect function (lines 40-44), we can see that two different types of clients are created for interacting with the Drips SDK. The first is:
+
+`nftDriverClient: await NFTDriverClient.create(provider)`
+
+... which creates an NFTDriverClient. This client allows developer code to send transactions to the NFTDriver smart contract and perform actions like setting Drips or Splits and collecting funds from an NFT-based sub-account.
+
+The second is:
+
+
+
+
+
+[c1]: /img/drips_connect1.png
+[c2]: /img/drips_connect2.png
+[in]: installing.html
+
+

@@ -7,14 +7,13 @@ In this section we take a look at the Drips Protocol's driver-based user identit
 
 ## Background and Introduction
 
-When we started developing the Drips Protocol, a question came up around which kinds of user identities should be able to control an "account"
-in Drips. Different streaming protocols have chosen very different answers this question - with some protocols deciding, for instance, that an account will always correspond one-to-one with an Ethereum address, and others deciding that an account will always be governed by an NFT.
+Drips V2 comes with a driver-based user identity model, which opens the door to enabling many different types of user identities and accounts to exchange funds with one another in Drips.
 
-After looking at several of these options however, we found that it was hard for us to commit to a single approach. In certain cases, for example, we saw a clear benefit to being able to have a Drips account associated directly with an Ethereum address, while in other cases it seemed clear that NFT-based accounts could be very advantageous. In addition, we also explored some new ideas for radically different types of user identities, like accounts that could be governed by a Twitter handle or Github username, which have not been available in streaming protocols up to this point.
+What exactly does this mean? It means, for instance, that end-users can choose to Drip or Split funds from an "account" that is directly associated with their Ethereum address, similar to how an ordinary Ethereum wallet works. Or they can choose to create one or more NFT-based "sub accounts" that will each have its own separate balance and Drips and Splits configurations.
 
-Therefore, after reviewing a number of these identity designs, we decided that it didn't make sense for us to choose just a single type to support in Drips. Instead, we engineered a solution that supports multiple "identity drivers", which allow many different types of user identities, including Ethereum addresses, NFT-based accounts and more. While this approach gives a lot of power and flexibility to users and developers, with great power comes great complexity, so we'll be spending the rest of this section diving into the details.
+Under the hood, each of these account types is enabled by an identity "driver" which has been added into DripsHub by the Drips Team, and we expect that even more drivers will be deployed in the future to add support for new types of accounts.
 
-From a high-level though, the most important things to keep in mind are:
+We'll dive into all of the details below, but from a high-level the most important things to keep in mind are:
 
 - **In Drips, multiple types of user accounts are able to control funds, including Ethereum addresses and NFT-based accounts.**
 - **This is possible because of DripsHub's use of an extensible system "identity drivers", which govern the implementations of different user types through smart contracts.**

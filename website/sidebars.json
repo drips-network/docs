@@ -18,6 +18,7 @@
         "label": "Guides",
         "ids": [
           "for-developers/guides/installing",
+          "for-developers/guides/connecting-a-wallet",
           "for-developers/guides/creating-a-drips-account",
           "for-developers/guides/topping-up",
           "for-developers/guides/starting-and-updating",

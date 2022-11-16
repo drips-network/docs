@@ -2,7 +2,7 @@
 id: installing
 title: Installing the SDK and Running the Example Apps
 ---
-**Install Using NPM or Yarn**
+## Install the SDK Using NPM or Yarn
 You can include the Drips SDK directly into your project's package.json as a dependency by using the command:
 
 `npm install https://github.com/radicle-dev/drips-js-sdk#v2`
@@ -11,7 +11,7 @@ or
 
 `yarn add https://github.com/radicle-dev/drips-js-sdk#v2`
 
-**Clone the SDK Repo and Run the Address Driver Example App**
+## Clone the SDK Repo and Run the Address Driver Example App
 
 The SDK ships with two fully self-contained example web applications that illustrate how Drips can be incorporated into a web app. To get started exploring the Drips SDK through these examples, we recommend first cloning repository to your local machine:
 
@@ -40,7 +40,7 @@ A few notes:
 
 (3) There is a hosted version of the examples-app here.
 
-**Run the NFT Driver Example App**
+## Run the NFT Driver Example App
 
 Running the other example app `nft-driver-examples` works exactly the same way. Simply follow the same instructions as above, but replace `address-driver-examples` wherever it appears with `nft-driver-examples` to build and run the NFT examples app. This app shows how web apps can build on the SDK to allow an Ethereum address to create an unlimited number of NFT-based Drips "sub-accounts", each of which has its own account balance and Drips and Splits configuration distinct from the Ethereum address that controls it.
 
