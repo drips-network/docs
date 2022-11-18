@@ -30,7 +30,7 @@ With that out of the way, let's take a look at some more of the technical detail
 
 ## Drips User IDs
 
-As mentioned above, every user identity in Drips has a user ID. This user ID is a 32 bit number, where the bits in the number are used to encode two other "component" IDs, as shown below:
+As mentioned above, every user identity in Drips has a user ID. This user ID is a 32 byte number, where the bytes in the number are used to encode two other "component" IDs, as shown below:
 
 ![Diagram 1][u1]
 

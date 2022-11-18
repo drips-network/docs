@@ -31,7 +31,8 @@
         "label": "Advanced Features",
         "ids": [
           "for-developers/additional/batching-with-caller",
-          "for-developers/additional/account-metadata"
+          "for-developers/additional/account-metadata",
+          "for-developers/additional/squeezing-drips"
         ]
       }
     ],
