@@ -5,12 +5,7 @@ sidebar_label: What's a Drip?
 ---
 *Note: these docs are for Drips v2. If you are looking for docs for Drips v1, you can find them [here][v1].*
 
-Drips 💧 is an Ethereum protocol that allows users and web3 apps to continuously stream funds to others, with continuous settlement for use cases 
-like contributor payments, vesting and subscription memberships.
-
-Drips also includes an integrated, fully-featured splitting protocol called Splits 💦, which allows for native on-chain splitting of both streamed funds
-and one-time transfers. Splits can be used by teams to share incoming funds among themselves, as well as to "spread the love" to other projects or creators
- they depend upon.
+Drips 💧 is an Ethereum protocol for streaming and splitting tokens. Drips allows users and web3 apps to continuously stream funds to others, with continuous settlement for use cases like contributor payments, vesting and subscription memberships.
 
 ## Status of Drips v2
 

@@ -3,7 +3,7 @@ id: connecting-a-wallet
 title: Connecting a Wallet
 ---
 
-*Note: this guide builds on code and UI/UX elements from the SDK example apps. Therefore as a prerequisite to being able to follow the instructions in this guide yourself, you will need to first clone the Drips SDK repo and build the example apps as described [here][in]. Specifically, you must make sure you have run `npm install` once in the `nft-driver-examples` directory, in order to build the example app project.*
+*Note: this guide builds on code included with the NFT Driver example app from the Drips SDK repository. Therefore as a prerequisite to being able to follow the instructions in this guide yourself, you will need to first clone the Drips SDK repo and build the NFT Driver example app as described [here][in]. Specifically, you must make sure you have run `npm install` once in the `nft-driver-examples` directory, in order to build the example app project.*
 
 ## Start the NFT Example App
 
@@ -16,7 +16,7 @@ navigate to "localhost:5173" to see it.
 
 ## Connect a Wallet
 
-Now we're going to see how the example app allows the end user to connect a wallet that they control, which will be necessary for any interactions with the Drips contracts which require sending a transaction.
+Now we're going to see how the example app allows an end user to connect a wallet that they control to the app, which will be necessary for any interactions with the Drips contracts which require sending a transaction.
 
 Click the "Connect" button in the example app.
 
@@ -42,7 +42,7 @@ The second client that is created is a DripsSubgraphClient:
 
 This client assists application code in executing commonly used graphQL queries against the Drips Network's subgraph and formatting the results as Javascript objects.
 
-Now that we have a wallet connected, we're ready to see how we can create a Drips account using the SDK in the next guide.
+Now that we have a wallet connected, we're ready to see how a third-party app can allow a user to create an NFT-based Drips account using the SDK in the next guide.
 
 
 

@@ -7,7 +7,7 @@ The goal of Drips v2 is to deliver the most powerful and feature-complete protoc
 
 ### Multi-Token Support (Any ERC20)
 
-In Drips v1, only DAI was supported. Drips v2 allows streaming of any ERC20 token.
+Drips v2 allows streaming of any ERC20 token.
 
 ### No Wrapped Tokens
 
@@ -15,7 +15,7 @@ Some streaming protocols require users to first wrap their tokens, introducing a
 
 ### Gas-Optimized for Many-to-One Subscriptions and Memberships
 
-In reality, most web3 streaming protocols only allow users to receive streams from small numbers of other users, and cannot practically support designs like subscription memberships at the scale of hundreds or thousands of subscribers. However Drips v2, by contrast, is architected to be extremely gas-efficient for both one-to-one streaming and many-to-one streaming use cases (like subscription memberships) at real-world scales, targeting Ethereum mainnet.
+Most web3 streaming protocols only allow users to receive streams from small numbers of other users, and cannot practically support designs where hundreds or thousands of subscribers stream to one creator. In contrast, Drips v2 is architected to be extremely gas-efficient for both one-to-one streaming and many-to-one streaming use cases (like subscription memberships) at real-world scales, targeting Ethereum mainnet.
 
 ### Scheduled Drips
 
@@ -27,14 +27,12 @@ scheduling and allowing for more precision around the total amount of funds stre
 While other streaming protocols require users to independently fund and top-up each stream that they create, leading to many transactions and high gas costs
 to maintain streams over time, Drips allows users to fund and top-up multiple streams using a single account balance and a single transaction.
 
-### Hub Identities
+### A Flexible Identity Model
 
-Drips v2 also introduces a new, more flexible model for user identity that provides additional options for app developers around how end-user accounts
-are created and managed in Drips.
+Drips v2 also introduces a new, more flexible model for user identity that provides additional options for app developers around how end-user accounts are created and managed in Drips.
 
-### Streams and Splits Work Together Natively
+### One Smart Contract One Payment Graph
 
-In Drips, when one user streams funds to another, the recipient can set up a Splits configuration to automatically
-and continuously share a portion of all incoming funds streamed to them with whomever they wish.
+Drips uses one smart contract for streaming *and* splitting, enabling effortless and flexible token routing. For instance, in Drips, when one user streams funds to another, the recipient can set up a Splits configuration to automatically and continuously share a portion of all incoming funds streamed to them with whomever they wish.
 
 

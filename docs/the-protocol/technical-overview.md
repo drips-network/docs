@@ -5,56 +5,30 @@ title: Technical Overview
 
 This page offers an introduction to the core mechanics of the Drips smart contracts. The implementation can be found on [Github](https://github.com/radicle-dev/radicle-drips-hub).
 
-## Drips Concepts
+## The Drips Protocol
 
-### Drips - The Protocol
-
-Drips is a protocol for any EVM-based blockchain that allows users to set up and manage streaming payments - continuous transfers of funds from one account to
-another over time. We refer to such streaming payments as "Drips".
+Drips is a protocol for any EVM-based blockchain that allows users to set up and manage one-off or continuous transfers of funds from one account to
+another over time. This is the first way that users can receive funds in the protocol and we refer to such streaming payments as "Drips".
 
 ![](https://i.imgur.com/L3XSop5.png)
 
-Technically, tokens that are dripped are not sent directly to the recipient's address. Instead, the `DripsHub` contract keeps track of the sender and recipient's balances and allows the receiver to collect funds whenever they wish.
-
-### Attributes of Drips
-
-A drip is defined by the following attributes:
-
-- **sender** - A Drips user, typically an Ethereum address.
-- **receiver** - A Drips user, typically an Ethereum address.
-- **amount per second** - (a uint192) The amount per-second being dripped, with high decimal-precision to support all ERC-20 tokens.
-- **start** - The UNIX timestamp at which the drip will start.
-- **duration** - Duration in milliseconds from the time it starts.
-
-### Scheduled Drips
-
-When a Drip is configured, the sender can decide whether funds will start flowing immediately (i.e. in the same block that the transaction is processed)
-or whether the flow of funds will be **scheduled** to start at some future time. Similarly, a user can (optionally) choose to impose an explicit duration for how long funds will be streamed. We refer to Drips with an explicitly defined start time or duration as "scheduled".
-
-### What are Splits?
-
-The Drips protocol also includes built-in features for sharing of funds, or "Splitting". When a user creates a Split, a percentage of all funds sent to them though the Drips protocol will be automatically split to another user of their choice. In Drips, "users" are referenced by user IDs and can be controlled by Ethereum addresses, but can also be governed in other ways, including by NFTs.
+The Drips protocol also includes built-in features for sharing of funds, or "Splitting". When a user creates a Split, a percentage of all funds sent to them through the Drips Protocol will be automatically split to another user of their choice. 
 
 ![](https://i.imgur.com/Cs8Dz0V.png)
 
+Each time a user collects funds sent to them, if they have chosen to define Splits for their account, then splitting is applied. Users can also choose to split any funds they've currently received as a standalone action, without collecting, if they wish. Splitting is the second way that a user can receieve funds in the protocol.
 
-In the Drips protocol, a user can receive funds in three different ways:
-
-- Drips (streams).
-- A direct "Give" (one-time transfer).
-- From other Splits.
-
-Each time a user collects funds sent to them, if they have chosen to define Splits for their account, then splitting is applied. Users can also choose to split any funds they've currently received as a standalone action, without collecting, if they wish.
+The third and final way that funds can be transferred in the protcol is by using a "Give". Gives are one-time transfers of funds similar to ordinary Ethereum transactions, except that they happen within the Drips Protocol, so that any Splits the receiving user has defined are applied to the funds transfered using a Give.
 
 ## DripsHub Smart Contract Architecture
 
-`DripsHub` and the related smart contracts allow users to create and manage real-time streams of funds (Drips) as well as splitting of any funds sent to them (Splits). One can start, alter or end the process of sending their funds at any time with immediate effect. The flow of funds is maintained automatically by the protocol and is continuous over time.
+`DripsHub` and the related smart contracts allow users to create and manage real-time streams of funds (Drips) as well as splitting of any funds sent to them (Splits) and one-time transfers (Gives). One can start, alter or end the process of sending their funds at any time with immediate effect. The flow of funds is maintained automatically by the protocol and is continuous over time.
 
 ### Design Principles
 
-Anyone who has worked with Ethereum and other EVM-based blockchains knows that there are significant limitations with regards to gas and transaction costs. Because of this, the Drips protocol was carefully designed to be as scalable and gas-efficient as possible. In particular, we wanted Drips to be able to support use cases like sponsorship or streaming memberships, where a single user (or org) may be receiving funds from hundreds or thousands of senders.
+Technically, tokens that are dripped are not sent directly to the recipient's address. Instead, the `DripsHub` contract keeps track of the sender and recipient's balances and allows the receiver to collect funds whenever they wish. Anyone who has worked with Ethereum and other EVM-based blockchains knows that there are significant limitations with regards to gas and transaction costs. Because of this, the Drips protocol was carefully designed to be as scalable and gas-efficient as possible. In particular, we wanted Drips to be able to support use cases like sponsorship or streaming memberships, where a single user (or org) may be receiving funds from hundreds or thousands of senders.
 
-With these requirements in mind, let's consider the case of a receiver collecting funds that have been Dripped to them. The obvious technical design for a streaming system like Drips would be to store a list of all Drips being sent to each receiver and then simply iterate the list whenever collect() is called. However, storing and iterating a list with hundreds or thousands of entries quickly becomes cost-prohibitive from a gas perspective on Etheruem and might even exceed the total gas available in a block in the worst case.
+With these requirements in mind, let's consider the case of a receiver collecting funds that have been Dripped to them. The obvious technical design for a streaming system like Drips would be to store a list of all Drips being sent to each receiver and then simply iterate the list whenever collect() is called. However, storing and iterating a list with hundreds or thousands of entries quickly becomes cost-prohibitive from a gas perspective on Ethereum and might even exceed the total gas available in a block in the worst case.
 
 Instead, to increase efficiency, `DripsHub` works internally with the concept of `cycles` and all funds being sent to a given recipient for a given cycle are aggregated and stored together as a pooled amount in the DripsHub smart contracts. In fact, for greater efficiency, it is not even the pooled stream amounts themselves that are stored, but rather the "deltas", or changes in amount streamed, from one cycle to the next.
 
@@ -64,9 +38,14 @@ Each cycle defines a fixed time interval so that every block is assigned to exac
 
 ![](https://i.imgur.com/8yiM2Cq.png)
 
+### Scheduled Drips
+
+When a Drip is configured, the sender can decide whether funds will start flowing immediately (i.e. in the same block that the transaction is processed)
+or whether the flow of funds will be **scheduled** to start at some future time. Similarly, a user can (optionally) choose to impose an explicit duration for how long funds will be streamed. We refer to Drips with an explicitly defined start time or duration as "scheduled".
+
 ### Dripping Funds
 
-Any user can send funds using Drips, which we refer to as "Dripping" funds. The state of sender for a specific ERC20 token can be described with the following attributes:
+Any user can stream funds to another user, which we refer to as "Dripping" funds. The state of sender for a specific ERC20 token can be described with the following attributes:
  - **Balance** - balance of tokens that the sender holds in their account.
  - **Set of DripsConfigs** - configurations for Drips that the sender is streaming to other users (if any).
 
@@ -144,7 +123,6 @@ The stored delta for a cycle in the timeline can be seen as the sum of individua
 
 Here we can see to represent the two senders in the timeline of the receiver, we only modified 5 different cycle deltas.
 
-
 ## Collecting
 
 The receiver can at any time collect the funds sent to them. The contract calculates the total amount and then transfers it out to the receiver's wallet. The collected amount is always everything available to be collected at the given moment.
@@ -198,4 +176,4 @@ In that case, technically the stream is split into two parts and the following o
 
 ## Wrapping Up
 
-Whew! That was quite an adventure -- congratulations! If you've made it this far, you should now have an understanding of the most important technical aspects of the Drips protocol and the DripsHub smart contracts. As a next step, please consider exploring our "Getting Started" guide (coming soon), or you can dive deeper into the techical aspects of how Drips user identities and Apps work in the guide "Drips Apps and User Identities" (coming soon). 
+Whew! If you've made it this far, congrats! You should now have an good high-level understanding of the protocol and how funds are efficiently transferred using Drips, Splits and Gives based on the idea of cycles. In the next section, we take a look at the Drips Protocol's flexible driver-based user identity model, which enables many different types of user identities and accounts, including accounts controlled by Ethereum addresses as well as NFT-based accounts.
