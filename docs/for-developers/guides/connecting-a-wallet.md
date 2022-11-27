@@ -46,8 +46,8 @@ Now that we have a wallet connected, we're ready to see how a third-party app ca
 
 
 
-[c1]: /img/drips_connect1.png
-[c2]: /img/drips_connect2.png
+[c1]: /img/nft_example_app_connect1.png
+[c2]: /img/nft_example_app_connect2.png
 [in]: installing.html
 
 

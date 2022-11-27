@@ -15,11 +15,12 @@
       "for-developers/drips-sdk",
       {
         "type": "subcategory",
-        "label": "Guides",
+        "label": "Developer Guides",
         "ids": [
           "for-developers/guides/installing",
           "for-developers/guides/connecting-a-wallet",
           "for-developers/guides/creating-a-drips-account",
+          "for-developers/guides/listing-accounts",
           "for-developers/guides/topping-up",
           "for-developers/guides/starting-and-updating",
           "for-developers/guides/configuring-splits",
