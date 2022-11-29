@@ -2,7 +2,7 @@
 id: listing-accounts
 title: Listing App Accounts
 ---
-*Note: this guide builds on code included with the NFT Driver example app from the Drips SDK repository. Therefore as a prerequisite to being able to follow the instructions in this guide yourself, you will need to first clone the Drips SDK repo and build the NFT Driver example app as described [here][in]. Additionally, you will need to make sure you have completed the instructions in the [previous guide][ca] "Connecting an App-Specific Drips Account", to ensure that you have at least one NFT-based sub-account to show when you try to list your accounts.*
+*Note: this guide builds on code included with the NFT Driver example app from the Drips SDK repository. Therefore as a prerequisite to being able to follow the instructions in this guide yourself, you will need to first clone the Drips SDK repo and build the NFT Driver example app as described [here][in]. Additionally, you will need to make sure you have completed the instructions in the [previous guide][ca] "Creating an App-Specific Drips Account", to ensure that you have at least one NFT-based sub-account to show when you try to list your accounts.*
 
 ## Go to the 'List an Owner's Accounts' Screen
 
@@ -16,9 +16,15 @@ However before moving on, let's take a look at the code in the NFT Driver Exampl
 
 ![Listing 2][l2]
 
+Here we can see that the function `getNftSubAccountsByOwner()` is being called on the `SubgraphClient` instance, with the address of interest passed in as a parameter. It's that simple!
+
+To add this kind of functionality to your own web3 app, make sure you've created a `SubgraphClient`, as discussed in the [Connecting a Wallet guide][ca] and then copy the code snippet above (from `ListAccounts.svelte`) into your own web app code to execute the query and allow your app to list accounts for any address.
+
 [in]: installing.html
+[cw]: connecting-a-wallet.html
 [ca]: creating-a-drips-account.html
 [l1]: /img/nft_example_app_listing1.png
+[l2]: /img/nft_example_app_listing2.png
 [ui]: /the-protocol/user-identities-in-drips.html
 
 
