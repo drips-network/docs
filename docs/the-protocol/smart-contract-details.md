@@ -5,26 +5,26 @@ title: Smart Contract and Subgraph Details
   
 ## Goerli Testnet
 
-#### Smart Contract Details -- Testnet Deployment #5
+#### Smart Contract Details -- Testnet Deployment #7
 
 <table>
 <tr><td>Network</td><td>goerli</td></tr>
 <tr><td>Deployer address</td><td>0x341a08926dCa7fa7D135F96E4d76b696e5f6d38d</td></tr>
-<tr><td>Reserve</td><td>0xABafF18f39373e70fD0119b7F1167A23Cfa59D91</td></tr>
-<tr><td>DripsHub</td><td>0x4Cf1B4B46840CdCE2198D5404f17A3b967dcDca8</td></tr>
-<tr><td>DripsHub logic</td><td>0xc904A8De767dddC27026391f853092ACB7DD8291</td></tr>
+<tr><td>Caller</td><td>0x439BE0eba834a09bdA50dd6B16499e0AAc2Ca4cd</td></tr>
+<tr><td>Reserve</td><td>0x63Ead9773f5267aabE0A3EdeFc169dF25AbC6b00</td></tr>
+<tr><td>DripsHub</td><td>0xca643F9d363964cE9BCaaEce47De7b05c98F4800</td></tr>
+<tr><td>DripsHub logic</td><td>0x198A2CcD1EFD8CEaEC8EBa2132BEDa09D730FfeC</td></tr>
 <tr><td>DripsHub cycle seconds</td><td>604800</td></tr>
-<tr><td>AddressDriver</td><td>0x77E51F4c1797231D20941101ff6aF28A4289e4dd</td></tr>
-<tr><td>AddressDriver logic</td><td>0x1c40531Abc65A8c16199E8cb7a940cB22F4Bc394</td></tr>
+<tr><td>AddressDriver</td><td>0x6B2dbd707cB9afe4eE912a6fBdBc2fF9784B48D2</td></tr>
+<tr><td>AddressDriver logic</td><td>0x00b374E64f5B2d8e920e4AB0C7a564FDD8d85E17</td></tr>
 <tr><td>AddressDriver ID</td><td>0</td></tr>
-<tr><td>NFTDriver</td><td>0xa12A25C4dda78B2e5a110017a8c82a3d30929115</td></tr>
-<tr><td>NFTDriver logic</td><td>0xCdC5dbB9a12F9A7Db25d0480cCcecCe8D9eA2a16</td></tr>
+<tr><td>NFTDriver</td><td>0x05bb04E7634A47100BE8A1690Ac417045b7f6640</td></tr>
+<tr><td>NFTDriver logic</td><td>0xCe7904034095D272Ca38e410B651Ba52c7109da6</td></tr>
 <tr><td>NFTDriver ID</td><td>1</td></tr>
-<tr><td>ImmutableSplitsDriver</td><td>0x1d953Da768D442c367584c45210012Afc1206eFa</td></tr>
-<tr><td>ImmutableSplitsDriver logic</td><td>0xB48428bCa1519d72aF0F148c9B72e6c009a7AD70</td></tr>
+<tr><td>ImmutableSplitsDriver</td><td>0xE8e2E86e9AD4857E148eD95e8883fC1A5178D52C</td></tr>
+<tr><td>ImmutableSplitsDriver logic</td><td>0x431a517945620d79DccF37a17609F3C6c258A290</td></tr>
 <tr><td>ImmutableSplitsDriver ID</td><td>2</td></tr>
-<tr><td>MetaData</td><td>0xC58cEa5a448A761d2dE80DFa8BfE298780e9dd66</td></tr>
-<tr><td>Commit hash</td><td>5992956f2c70db9cb5135c9aea0252d5041e83e8</td></tr>
+<tr><td>Commit hash</td><td>26cb13ab871c2c8a06761701ea53de5257290a6e</td></tr>
 </table>
 
 #### Subgraph Details
