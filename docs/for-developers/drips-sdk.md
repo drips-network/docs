@@ -8,7 +8,7 @@ repository also includes a fully self-contained example web application that ill
 
 ### API-Level Documentation
 
-API-level (types, methods, parameters) docs are available in a hosted version <a href="https://melodious-bombolone-ca37e0.netlify.app/" target="_blank">here</a>, or can be generated from a local copy of the SDK repository using typedoc.
+API-level (types, methods, parameters) reference docs are available in a hosted version <a href="https://drips-js-sdk-api.netlify.app/index.html" target="_blank">here</a>, or can be generated from a local copy of the SDK repository using typedoc.
 
 
 
