@@ -33,8 +33,8 @@ Drips smart contracts.
 
 
 [v1]: https://docs.drips.network/
-[sd]: /docs/js-sdk/drips-sdk
-[sc]: /docs/for-developers/smart-contract-and-subgraph-details
+[sd]: /docs/for-developers/drips-sdk
+[sc]: /docs/the-protocol/smart-contract-and-subgraph-details
 [dh]: https://goerli.etherscan.io/address/0xB79663c5E27C1a2c93aeE2a35b273b0255638267#code
 [eb]: https://eth.build/
 [me]: https://www.myetherwallet.com/

@@ -1,7 +1,6 @@
 ---
 id: collecting
-title: Collecting
+title: How to Collect
 ---
-**Collecting**
 
 Coming soon

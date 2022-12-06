@@ -13,27 +13,52 @@
     ],
     "For Developers": [
       "for-developers/drips-sdk",
+      "for-developers/installing",
+      "for-developers/initialize-sdk",
       {
         "type": "subcategory",
-        "label": "Developer Guides",
+        "label": "Accounts",
         "ids": [
-          "for-developers/guides/installing",
-          "for-developers/guides/connecting-a-wallet",
-          "for-developers/guides/creating-a-drips-account",
-          "for-developers/guides/listing-accounts",
-          "for-developers/guides/topping-up",
-          "for-developers/guides/starting-and-updating",
-          "for-developers/guides/configuring-splits",
-          "for-developers/guides/collecting"
+          "for-developers/accounts/intro",
+          "for-developers/accounts/create",
+          "for-developers/accounts/list",
+          "for-developers/accounts/add-funds"
         ]
       },
       {
         "type": "subcategory",
-        "label": "Advanced Features",
+        "label": "Streams",
         "ids": [
-          "for-developers/additional/batching-with-caller",
-          "for-developers/additional/account-metadata",
-          "for-developers/additional/squeezing-drips"
+          "for-developers/streams/start-a-stream",
+          "for-developers/streams/update-a-stream",
+          "for-developers/streams/scheduling"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Splitting",
+        "ids": [
+          "for-developers/splits/create-user-splits",
+          "for-developers/splits/edit-user-splits",
+          "for-developers/splits/list-user-splits",
+          "for-developers/splits/immutable-splits"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Collecting",
+        "ids": [
+          "for-developers/collecting/collecting",
+          "for-developers/collecting/squeezing"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Advanced Topics",
+        "ids": [
+          "for-developers/advanced/batching-with-caller",
+          "for-developers/advanced/account-metadata",
+          "for-developers/advanced/fractional-amounts"
         ]
       }
     ],
