@@ -3,7 +3,7 @@ id: initialize-sdk
 title: Initializing the SDK
 ---
 
-The Drips SDK provides two main types for interacting with the Drips Protocol. First, there is `DripsSubgraphClient`, which provides "read", or query-related functionality for events in the protocol, and specifically allows developers to query the Drips subgraph.
+The Drips SDK provides two main types for interacting with the Drips Protocol. First, there is `DripsSubgraphClient`, which provides "read" functionality and, in particular, allows developers to query the Drips subgraph.
 
 You can <a href="https://drips-js-sdk-api.netlify.app/classes/dripssubgraphclient#create" target="_blank">create</a> a DripsSubgraphClient like this:
 

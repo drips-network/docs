@@ -17,7 +17,7 @@ setDrips(
 : Promise<ContractTransaction>
 ```
 
-Take a look at the <a href="https://drips-js-sdk-api.netlify.app/classes/nftdriverclient#setDrips" target="_blank">method's documentation</a> to understand what each parameter represents.
+Take a look at <a href="https://drips-js-sdk-api.netlify.app/classes/nftdriverclient#setDrips" target="_blank">this method's documentation</a> to understand what each parameter represents.
 
 To use this method you will first need to [create a NFTDriverClient and a DripsSubgraphClient][is].
 
