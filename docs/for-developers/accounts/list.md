@@ -6,7 +6,7 @@ title: List Sub-Accounts
 With the SDK, you can query the Drips subgraph to get a list of the NFT-based sub-accounts belonging to a
 given Ethereum address. To do so, you will first need to [DripsSubgraphClient][is].
 
-Once you have it, you can simply call `DripsSubgraphClient.getNftSubAccountsByOwner()`. The full method signature looks like this:
+Once you have it, you can simply call `DripsSubgraphClient.getNftSubAccountsByOwner`. The full method signature looks like this:
 
 ```
 getNftSubAccountsByOwner(ownerAddress: string): Promise<NftSubAccount[]>

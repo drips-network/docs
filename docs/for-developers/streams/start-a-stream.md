@@ -14,8 +14,7 @@ setDrips(
     currentReceivers: DripsReceiverStruct[], 
     newReceivers: DripsReceiverStruct[], 
     transferToAddress: string, 
-    balanceDelta?: BigNumberish
-    )
+    balanceDelta?: BigNumberish)
 : Promise<ContractTransaction>
 ```
 
