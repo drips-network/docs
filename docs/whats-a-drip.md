@@ -9,7 +9,7 @@ Drips 💧 is an Ethereum protocol for streaming and splitting tokens. It allows
 
 ## Status of Drips v2
 
-As of 11/4/2022, Drips v2 is currently available as an alpha pre-release, with smart contracts deployed on the Goerli testnet.
+As of November 2022, Drips v2 is currently available as an alpha pre-release, with smart contracts deployed on the Goerli testnet.
 We expect to deploy the smart contracts to Ethereum mainnet and other major EVM blockchains soon!
 
 
