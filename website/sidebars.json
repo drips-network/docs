@@ -24,7 +24,8 @@
     ],
     "For Developers": [
       "for-developers/technical-overview",
-      "for-developers/smart-contract-and-subgraph-details"
+      "for-developers/smart-contract-and-subgraph-details",
+      "for-developers/security"
     ],
     "Get Involved": [
       "get-involved/join-the-drips-community"
