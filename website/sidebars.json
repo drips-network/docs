@@ -9,7 +9,8 @@
     "The Protocol": [
       "the-protocol/technical-overview",
       "the-protocol/user-identities-in-drips",
-      "the-protocol/smart-contract-and-subgraph-details"
+      "the-protocol/smart-contract-and-subgraph-details",
+      "the-protocol/security"
     ],
     "For Developers": [
       "for-developers/drips-sdk",
