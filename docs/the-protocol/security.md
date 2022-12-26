@@ -13,7 +13,7 @@ Our codebase has a high level of unit test coverage and we used Foundry to fuzz-
 First and foremost, we worked with an independent security auditor to conduct smart contract security reviews during the development.
 
 We performed two external security reviews:
-See [Security Report](/img/drips-audit-report.pdf)
+See [Security Report](/img/Drips_Audit_Report.pdf)
 
 In addition, one team member is a security auditor, so we were able to leverage their expertise in this area and performed an internal audit. 
 
