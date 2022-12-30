@@ -3,7 +3,7 @@ id: collecting
 title: How to Collect
 ---
 
-You can use the SDK to collect funds sent to an NFT-based sub-account by calling the function `NFTDriverClient.collect`:
+You can use the SDK to collect funds that were sent to an NFT-based sub-account in completed cycles by calling the function `NFTDriverClient.collect`:
 
 ```
 collect(
