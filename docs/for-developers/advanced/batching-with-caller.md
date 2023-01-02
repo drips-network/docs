@@ -1,6 +1,6 @@
 ---
 id: batching-with-caller
-title: Batching and Access Control With Caller
+title: Caller
 ---
 
 <a href="https://github.com/radicle-dev/drips-contracts/blob/master/src/Caller.sol" target="_blank">Caller</a> is a smart contract included with the Drips V2 deployment. `Caller` builds on <a href="https://eips.ethereum.org/EIPS/eip-712" target="_blank">EIP-712</a> and <a href="https://eips.ethereum.org/EIPS/eip-2771" target="_blank">EIP-2771</a> to add a number of powerful functionalities to Drips related to batching of function calls and delegation of access control.
