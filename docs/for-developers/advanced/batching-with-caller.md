@@ -3,34 +3,35 @@ id: batching-with-caller
 title: Caller
 ---
 
-<a href="https://github.com/radicle-dev/drips-contracts/blob/master/src/Caller.sol" target="_blank">Caller</a> is a smart contract included with the Drips V2 deployment. `Caller` builds on <a href="https://eips.ethereum.org/EIPS/eip-712" target="_blank">EIP-712</a> and <a href="https://eips.ethereum.org/EIPS/eip-2771" target="_blank">EIP-2771</a> to add a number of powerful functionalities to Drips related to batching of function calls and delegation of access control.
+`Caller` adds a number of powerful functionalities to Drips related to batching of function calls and delegation of access control.
+Specifically, it is also a <a href="https://github.com/radicle-dev/drips-contracts/blob/master/src/Caller.sol" target="_blank">smart contract</a> included with the Drips V2 deployment that builds on <a href="https://eips.ethereum.org/EIPS/eip-712" target="_blank">EIP-712</a> and <a href="https://eips.ethereum.org/EIPS/eip-2771" target="_blank">EIP-2771</a>.
 
 Some examples of use cases that `Caller` enables include:
 
-- Batching sequences of calls to a contract.
-The contract API may consist of many functions which need to be called in sequence, but it may not offer a composite functions performing exactly that sequence. It's expensive, slow and unreliable to create a separate transaction for each step.
+#### *Batching sequences of calls to a contract.*
+The contract API may consist of many functions which need to be called in sequence, but it may not offer a composite function performing exactly that sequence. It's expensive, slow and unreliable to create a separate transaction for each step.
 To solve that problem create a batch of calls and submit it to `callBatched`.
 
-- Batching sequences of calls to multiple contracts.
+#### *Batching sequences of calls to multiple contracts.*
 It's a common pattern to submit an ERC-2612 permit to approve a smart contract
 to spend the user's ERC-20 tokens before running that contract's logic.
 Unfortunately unless the contract's API accepts signed messages for the token it requires
 creating two separate transactions making it as inconvenient as a regular approval.
  The solution is again to use `callBatched` because it can call multiple contracts. Just create a batch first calling the ERC-20 contract and then the contract needing the tokens.
 
-- Setting up a proxy address.
-Sometimes a secure but inconvenient-to-use address like a cold wallet or a multisig needs to have a proxy or an operator. That operator is temporarily trusted, but later it must be revoked or rotated. To achieve this first `authorize` the proxy using the safe address and then use that proxy  to act on behalf of the secure address using `callAs`. Later, when the proxy address needs to be revoked, either the secure address or the proxy itself can `unauthorize` the proxy address and perhaps `authorize` another address.
+#### *Setting up a proxy address.*
+Sometimes a secure but inconvenient-to-use address like a cold wallet or a multisig needs to have a proxy or an operator. That operator is temporarily trusted, but later it must be revoked or rotated. To achieve this, first `authorize` the proxy using the safe address and then use that proxy  to act on behalf of the secure address using `callAs`. Later, when the proxy address needs to be revoked, either the secure address or the proxy itself can `unauthorize` the proxy address and perhaps `authorize` another address.
 
-- Setting up operations callable by others.
+#### *Setting up operations callable by others.*
 Some operations may benefit from being callable either by trusted addresses or by anybody. To achieve this deploy a smart contract executing these operations via `callAs` and, if you need that too, implementing a custom authorization. Finally, `authorize` this smart contract to act on behalf of your address.
 
-- Batching dynamic sequences of calls.
+#### *Batching dynamic sequences of calls.*
 Some operations need to react dynamically to the state of the blockchain. For example an unknown amount of funds is retrieved from a smart contract, which then needs to be dynamically split and used for different purposes. To do this, first deploy a smart contract performing that logic. Next, call `callBatched` which first calls `authorize` on the `Caller` itself authorizing the new contract to perform `callAs`, then calls that contract and finally `unauthorize`'s it. This way the contract can perform any logic it needs on behalf of your address, but only once.
 
-- Gasless transactions.
+#### *Gasless transactions.*
 It's an increasingly common pattern to use smart contracts without necessarily spending Ether. This is achieved with gasless transactions where the wallet signs an ERC-712 message and somebody else submits the actual transaction executing what the message requests. It may be executed by another wallet or by an operator expecting to be repaid for the spent Ether in other assets. You can achieve this with `callSigned`, which allows anybody to execute a call on behalf of the signer of a message. `Caller` doesn't deal with gas, so if you're using a gasless network, it may require you to specify the gas needed for the entire call execution.
 
-- Executing batched calls with authorization or signature.
+#### *Executing batched calls with authorization or signature.*
 You can use both `callAs` and `callSigned` to call `Caller` itself, which in turn can execute batched calls on behalf of the authorizing or signing address. It also applies to `authorize` and `unauthorize`, they too can be called using `callAs`, `callSigned` or `callBatched`.
 
 ## Using Caller Via the SDK
