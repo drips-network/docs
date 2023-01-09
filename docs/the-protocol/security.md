@@ -21,13 +21,13 @@ See [Internal Report](https://hackmd.io/6_EgTHw6TVGlfxls0iKMAQ?view)
 
 
 ### Certora
-Additionally, we are working with [Certora](https://www.certora.com/) team to formally verify certain parts of our smart contracts. This involved mathematically proving the correctness of our code, which helps to identify and eliminate potential vulnerabilities.
+Additionally, we have worked with the [Certora](https://www.certora.com/) team to formally verify certain parts of our smart contracts. This involved mathematically proving the correctness of our code, which helps to identify and eliminate potential vulnerabilities.
 
 While we are excited about the potential of using formal verification to improve the security of our smart contracts, it's important to note that this technology is still in its early stages and at an experimental level for Drips. 
 
 However, we believe that it is important to stay at the forefront of technology and explore new approaches to smart contract security.  By doing so, we hope to gain valuable insights and improve our security measures over time.
 
-See our work on invariants for the [Certora-Prover](https://github.com/radicle-dev/drips-contracts/tree/certora)
+You can read the [report from Certora](/img/Certora_Radicle_Drips_Report.pdf), or explore [our work on invariants with the Certora prover in Github.](https://github.com/radicle-dev/drips-contracts/tree/certora)
 
 
 ### Bug Bounty Immunefi
