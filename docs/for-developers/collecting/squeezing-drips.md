@@ -4,7 +4,7 @@ title: Squeezing Drips
 ---
 ## How to Collect Funds Within a Cycle
 
-In the [Technical Overview][to] section, we discuss how the Drips Protocol organizes transfers of tokens within time "cycles", to achieve high gas-efficiency, particularly in cases where many senders are streaming funds to a single recipient.
+In the [Drips inner workings][diw] section, we discuss how the Drips Protocol organizes transfers of tokens within time "cycles", to achieve high gas-efficiency, particularly in cases where many senders are streaming funds to a single recipient.
 
 While this design is highly efficient, one of its downsides is that the <a href="https://drips-js-sdk-api.netlify.app/classes/nftdriverclient#collect" target="_blank">collect()</a> method described in the previous section only allows a recipient to collect funds streamed to them during past, or *completed*, cycles. On the other hand, if a recipient wishes to collect funds that were streamed to them during the *current* cycle, a different approach is required. We refer to collection of funds streamed during the current cycle as "squeezing Drips".
 
@@ -49,5 +49,4 @@ public async getArgsForSqueezingAllDrips(
 You can then iterate over the array results returned and make a number of `DripsHubClient.squeezeDrips()` calls, as desired, to squeeze Drips for a number of the senders.
 
 
-[to]: /docs/the-protocol/technical-overview
-
+[diw]: /docs/for-developers/advanced/drips-inner-workings
