@@ -3,7 +3,7 @@ id: set-up-splits
 title: Set up & manage splits
 ---
 
-With Splits, you can configure up to 200 individual addresses that receive a pre-set percentage of your earned income within the Drips platform whenever you <a href="docs/the-drips-app/manage-funds/collect-earnings" target="_blank">collect your earnings</a>.
+With Splits, you can configure up to 200 individual addresses that receive a pre-set percentage of your earned income within the Drips platform whenever you <a href="/docs/the-drips-app/manage-funds/collect-earnings" target="_blank">collect your earnings</a>.
 
 Your "Splits configuration" refers to the list of specific recipients and percentages you configure on your Drips account. You can edit this list freely at any time, adding or removing recipients, or changing their split percentages.
 
@@ -19,4 +19,4 @@ Once the transaction is confirmed, you can see your new splits config on the das
 
 > ℹ️ You can navigate through the Drips network's social graph by just clicking your splits recipients within the diagram, and viewing *their* Splits diagram on their profile. Pretty fun!
 
-Once you've configured your Splits, your configuration will be applied whenever you <a href="docs/the-drips-app/manage-funds/collect-earnings" target="_blank">collect funds</a>, which you'll see previewed within the Collect flow.
+Once you've configured your Splits, your configuration will be applied whenever you <a href="/docs/the-drips-app/manage-funds/collect-earnings" target="_blank">collect funds</a>, which you'll see previewed within the Collect flow.
