@@ -16,9 +16,9 @@ The Drips protocol also includes built-in features for sharing of funds, or "Spl
 
 ![](https://i.imgur.com/Cs8Dz0V.png)
 
-Each time a user collects funds sent to them, if they have chosen to define Splits for their account, then splitting is applied. Users can also choose to split any funds they've currently received as a standalone action, without collecting, if they wish. Splitting is the second way that a user can receieve funds in the protocol.
+Each time a user collects funds sent to them, if they have chosen to define Splits for their account, then splitting is applied. Users can also choose to split any funds they've currently received as a standalone action, without collecting, if they wish. Splitting is the second way that a user can receive funds in the protocol.
 
-The third and final way that funds can be transferred in the protcol is by using a "Give". Gives are one-time transfers of funds similar to ordinary Ethereum transactions, except that they happen within the Drips Protocol, so that any Splits the receiving user has defined are applied to the funds transfered using a Give.
+The third and final way that funds can be transferred in the protocol is by using a "Give". Gives are one-time transfers of funds similar to ordinary Ethereum transactions, except that they happen within the Drips Protocol, so that any Splits the receiving user has defined are applied to the funds transferred using a Give.
 
 ## DripsHub Smart Contract Architecture
 
@@ -61,11 +61,11 @@ In order to start sending, the only requirements are that the sender has a non-z
 
 There are no setup steps for one to become a receiver. Any user can receive funds at any time, from any sender. The only function of this role is the collection of funds sent by others.
 
-Each receiver mantains a mapping for all cycles, which can be imagined as a timeline. Here, we see the timeline of a receiver who is receiving funds from two different senders. Each of the senders has sent different amounts over different periods of time. In this example there is a overlap between the two senders:
+Each receiver maintains a mapping for all cycles, which can be imagined as a timeline. Here, we see the timeline of a receiver who is receiving funds from two different senders. Each of the senders has sent different amounts over different periods of time. In this example there is a overlap between the two senders:
 
 ![](https://i.imgur.com/vUifBxW.png)
 
-If a sender starts dripping to a receiver this timeline is modified. For each ERC20 token a seperate timeline of tokens exists. As discussed above, in order to maximize efficiency and minimize gas, we only store deltas of rate changes per-cycle, rather than full details about each Drip configuration. Every second, funds from the sender’s pool account are credited to the sender’s receivers according to the funding rate. 
+If a sender starts dripping to a receiver this timeline is modified. For each ERC20 token a separate timeline of tokens exists. As discussed above, in order to maximize efficiency and minimize gas, we only store deltas of rate changes per-cycle, rather than full details about each Drip configuration. Every second, funds from the sender’s pool account are credited to the sender’s receivers according to the funding rate. 
 
 **Received**
 ![](https://i.imgur.com/HMQ048c.png)
@@ -87,7 +87,7 @@ Which we would store on the timeline of the receiver.
 ### Calculation of Deltas
 Normally, a Drip will not start exactly at the beginning of a cycle. A stream will start most of the time during an ongoing cycle.
 
-Therefore, we need to split the start and end deltas into two seperate deltas.
+Therefore, we need to split the start and end deltas into two separate deltas.
 
 Let’s take a look at the example from **sender A**, how to calculate the deltas.
 
@@ -111,7 +111,7 @@ In this case, the reverting is split into 2 cycles too, one with -4 and the othe
 ## Storing Deltas
 For are complete example, we can see the delta calculation for both **sender 1** and **sender 2**.
 
-From the perspective of the receiver each cycle has one delta value. This delta value is modified if sender start/stops a stream in this speicific cycle.
+From the perspective of the receiver each cycle has one delta value. This delta value is modified if sender start/stops a stream in this specific cycle.
 
 ![](https://i.imgur.com/RxRvxfY.png)
 
@@ -159,7 +159,7 @@ We add a `-5` stop delta for the current timestamp and need to remove the outdat
 
 The sender wants to increase the amount per second and wants to stream for one cycle more. 
 
-This change should happen immediately. (current block.timstamp)
+This change should happen immediately. (current block.timestamp)
 
 ![](https://i.imgur.com/1xRNU3e.png)
 
