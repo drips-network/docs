@@ -27,6 +27,6 @@ You can delete any of your outgoing streams with a single transaction by clickin
 
 You can edit any stream's name, and any *non-paused* stream's stream rate in a single transaction. To do so, simply click "Edit" on the stream view, and enter the new stream details.
 
-![The "Edit Stream"-modal](/img/drips-app/edit-stream/2.png)
+![The "Edit Stream"-modal](/img/drips-app/edit-stream/3.png)
 
 > ℹ️ Currently, the stream rate can only be changed for *active* or *scheduled* streams. If your stream is paused, you'll need to unpause it before editing its rate, or delete it and create a new stream with the new stream rate.
