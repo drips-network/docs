@@ -13,7 +13,7 @@ To get started, click "Edit splits" at the bottom of the Dashboard, which will b
 
 Click the X-button next to an existing Splits entry to remove it, or click "Add recipient" to add a new line. When you're happy with your changes, click "Confirm" and sign the transaction with your connected wallet to apply your new Splits configuration.
 
-Once the transaction is confirmed, you can see your new splits config on the dashboard's "Splits" section. Anyone splitting funds to you will also appear here as an incoming split.
+Once the transaction is confirmed, you can see your new splits configuration on the dashboard's "Splits" section. Anyone splitting funds to you will also appear here as an incoming split.
 
 ![Splits section on dashboard](/img/drips-app/edit-splits/2.png)
 
