@@ -6,6 +6,40 @@
       "accessing-drips",
       "faq"
     ],
+    "The Drips App": [
+      "the-drips-app/getting-started",
+      {
+        "type": "subcategory",
+        "label": "Manage funds",
+        "ids": [
+          "the-drips-app/manage-funds/add-funds",
+          "the-drips-app/manage-funds/withdraw-funds",
+          "the-drips-app/manage-funds/collect-earnings"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Streams",
+        "ids": [
+          "the-drips-app/streams/create-a-stream",
+          "the-drips-app/streams/edit-stream"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Splits",
+        "ids": [
+          "the-drips-app/splits/set-up-splits"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Explore the network",
+        "ids": [
+          "the-drips-app/explore/drips-profiles"
+        ]
+      }
+    ],
     "The Protocol": [
       "the-protocol/technical-overview",
       "the-protocol/user-identities-in-drips",
