@@ -9,7 +9,7 @@ Now that you have some outgoing balance available to stream to others, click "Cr
 
 ![Clicking "Create Stream" on the Drips App Dashboard](/img/drips-app/create-stream/1.png)
 
-This opens the "Create Stream"-modal. Here, simply populate the stream name, recipient, token, and token amount you'd like to stream. The stream name and stream rate may be <a href="/docs/the-drips-app/streams/edit-a-stream" target="_blank">edited freely after stream creation</a>. You can delete any of your streams later at any time too.
+This opens the "Create Stream"-modal. Here, simply populate the stream name, recipient, token, and token amount you'd like to stream. The stream name and stream rate may be <a href="/docs/the-drips-app/streams/edit-stream" target="_blank">edited freely after stream creation</a>. You can delete any of your streams later at any time too.
 
 ![The "Create Stream"-Modal](/img/drips-app/create-stream/2.png)
 
