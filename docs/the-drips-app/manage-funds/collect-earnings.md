@@ -17,9 +17,9 @@ Next, you'll see a breakdown of your collectable amount at the given moment.
 
 ![Clicking "Collect" on the token page](/img/drips-app/collect-earnings/3.png)
 
-The first thing you'll notice is that you can currently only collect funds from incoming streams "once per cycle", which is on a weekly cadence. You can read more about the Drips Cycle in our <a href="/docs/the-protocol/technical-overview" target="_blank">protocol overview</a>. By default, you'll only collect funds from *concluded cycles*, but you can choose to include funds earned during the current cycle as well. However, doing so will slightly increase required gas fees for the collect transaction.
+By default, you'll only collect funds from *concluded cycles*, but you can choose to include funds earned during the current cycle as well. However, doing so will slightly increase required gas fees for the collect transaction. You can read more about the Drips Cycle in our <a href="/docs/the-protocol/technical-overview" target="_blank">protocol overview</a>.
 
-In the balances breakdown, you'll find multiple line items that add up to the total collectable amount. Some of these amounts will be hidden if they're zero.
+First however, let's take a look at the balances breakdown. You'll find multiple line items that add up to the total collectable amount. Some of these amounts may be hidden if they're zero.
 
 - The `UNI from concluded cycles` amount is the amount earned from incoming streams *up until the beginning of the current cycle*.
 - The `Splittable` amount is the amount you've earned from incoming Splits or "Gives" (a plain one-time transfer of funds within the Drips protocol).
@@ -30,7 +30,7 @@ If you want to additionally collect funds that you've earned from incoming strea
 
 ![Including funds from current cycle](/img/drips-app/collect-earnings/4.png)
 
-This brings up a selector of *senders*. If you activate a particular sender, their funds sent during the current cycle will be included with your collect transaction, but each sender you select raises the collect transaction's gas fees.
+This brings up a selector for *senders*. If you activate a particular sender, their funds sent during the current cycle will be included with your collect transaction, but each sender you select raises the collect transaction's gas fees.
 
 > ⚠️ When including funds from the current cycle, the amounts shown within the collect modal are estimates based on your current system time. The actual amount you end up collecting may differ.
 
