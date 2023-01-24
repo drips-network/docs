@@ -41,7 +41,7 @@
       }
     ],
     "The Protocol": [
-      "the-protocol/technical-overview",
+      "the-protocol/overview",
       "the-protocol/user-identities-in-drips",
       "the-protocol/smart-contract-and-subgraph-details",
       "the-protocol/security"
@@ -93,7 +93,8 @@
         "ids": [
           "for-developers/advanced/batching-with-caller",
           "for-developers/advanced/account-metadata",
-          "for-developers/advanced/fractional-amounts"
+          "for-developers/advanced/fractional-amounts",
+          "for-developers/advanced/drips-inner-workings"
         ]
       }
     ],
