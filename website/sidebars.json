@@ -41,6 +41,7 @@
       }
     ],
     "The Protocol": [
+      "the-protocol/overview",
       "the-protocol/user-identities-in-drips",
       "the-protocol/smart-contract-and-subgraph-details",
       "the-protocol/security"
