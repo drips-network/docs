@@ -6,9 +6,5 @@
   },
   "devDependencies": {
     "docusaurus": "^1.14.7"
-  },
-  "dependencies": {
-    "@docusaurus/core": "^2.0.0-beta.22",
-    "@docusaurus/preset-classic": "^2.0.0-beta.22"
   }
 }
