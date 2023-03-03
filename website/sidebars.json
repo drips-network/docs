@@ -38,6 +38,13 @@
         "ids": [
           "the-drips-app/explore/drips-profiles"
         ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Advanced",
+        "ids": [
+          "the-drips-app/advanced/safe"
+        ]
       }
     ],
     "The Protocol": [
