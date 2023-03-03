@@ -25,7 +25,7 @@ When scheduling a stream for the future, ensure that the transaction is executed
 
 #### Some transactions are invalidated by updates to a Drips account's state
 
-Most interactions within the Drips app rely on a specific version of the Drips account's current state of stream- and split receivers, and will fail if said state is altered by a different interaction between such a transaction being proposed and executed. Some of these interactions actively alter your account's state, resulting in any other pending transactions becoming invalid, while others do not alter your account's state but will themselves fail if another state-altering transaction occurs after they're proposed.
+Many interactions within the Drips app rely on a specific version of the Drips account's current state of stream receivers, and will fail if said state is altered by a different interaction between such a transaction being proposed and executed. Some of these interactions actively alter your account's state, resulting in any other pending transactions relying on said state becoming invalid, while others do not alter your account's state but will themselves fail if another state-altering transaction occurs after they're proposed.
 
 These interactions include:
 
@@ -35,7 +35,8 @@ These interactions include:
 - Editing a stream (Invalidates other pending transactions)
 - Deleting a stream (Invalidates other pending transactions)
 - Pausing / Un-pausing a stream (Invalidates other pending transactions)
-- Updating your Splits receivers list (Invalidates other pending transactions)
+
+Additionally, edits to your Splits receivers will invalidate other transactions altering Splits receivers, but are not invalidated by any edits to your account's stream receivers.
 
 Consider the following example:
 
