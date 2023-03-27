@@ -11,7 +11,7 @@ Within your Safe's UI, simply navigate to Apps → Custom Apps → Add custom ap
 
 ![Clicking "Add custom app" within the Safe UI](/img/drips-app/safe/1.png)
 
-In the resulting modal, enter "https://beta.drips.network" as the URL, and all other fields will auto-complete. Add the app, and launch it by clicking. The Drips app will open and auto-connect to your Safe.
+In the resulting modal, enter "https://drips.network" as the URL, and all other fields will auto-complete. Add the app, and launch it by clicking. The Drips app will open and auto-connect to your Safe.
 
 ### Interacting with Drips through a Safe
 
