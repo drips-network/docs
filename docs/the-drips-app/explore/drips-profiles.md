@@ -9,7 +9,7 @@ Due to the open nature of the blockchain, all activity on the Drips network is p
 
 You can view your own profile by hovering over your address or ENS name in the top-right corner, and clicking "Profile". You can share your profile URL with third parties, and they'll be able to see the exact same view, even without connecting a wallet. Social media links and the profile description are taken from the ENS record associated with the given Ethereum address, if any.
 
-To view someone else's profile, navigate to `beta.drips.network/< address >`, where `< address >` can be an ENS name or Ethereum address.
+To view someone else's profile, navigate to `drips.network/< address >`, where `< address >` can be an ENS name or Ethereum address.
 
 You can also use the app's search bar to jump to any ENS name or Ethereum address at any time.
 
