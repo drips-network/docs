@@ -1,7 +1,7 @@
 ---
 id: whats-a-drip
-title: What's Drips?
-sidebar_label: What's Drips?
+title: What's a Drip 💧?
+sidebar_label: What's a Drip?
 ---
 *Note: these docs are for Drips v2. If you are looking for docs for Drips v1, you can find them [here][v1].*
 
