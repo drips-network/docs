@@ -266,3 +266,9 @@ details:hover {
   background-color: var(--color-foreground-level-1);
   color: var(--color-foreground-level-6);
 }
+
+.legal-disclaimer {
+  margin-top: 2rem;
+  color: var(--color-foreground-level-5);
+  font-size: 12px;
+}
