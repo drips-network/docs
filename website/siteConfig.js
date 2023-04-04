@@ -16,7 +16,7 @@ const siteConfig = {
   projectName: "radicle-drips-docs",
   organizationName: "radicle-dev",
   headerLinks: [],
-  headerIcon: "img/drips-logo2.png",
+  headerIcon: "img/drips-logo3.png",
   favicon: "img/favicon.ico",
   colors: {
     primaryColor: "#5555ff",
@@ -30,6 +30,7 @@ const siteConfig = {
   cleanUrl: true,
   ogImage: "img/undraw_online.svg",
   twitterImage: "img/undraw_tweetstorm.svg",
+  docsSideNavCollapsible: true,
   //algolia: {
   //  apiKey: "8bd6e28f1096b67612c18dbc3ba55438",
   //  indexName: "radicle",

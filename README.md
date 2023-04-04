@@ -1,27 +1,21 @@
 # Welcome to Drips Docs 👋
 
-This is the repository for the Drips documentation site
-[docs.drips.network][wi]. This repository accepts contributions via Radicle patches
+This is the repository containing the Docusaurus code that is used to generate
+the docs for v2 of Drips. This branch (v0.2) is the branch
+for the v0.2 version of the documentation, which is deployed at [v2.docs.drips.network][v2].
+
+The drips-docs repository accepts contributions via Radicle patches
 and GitHub pull requests. This document outlines some contributing guidelines,
 contact points, and other resources to make it easier to contribute to
 drips-docs.
 
-[docs.drips.network][wi] was created with [Docusaurus][do]. Full Docusaurus
+[v2.docs.drips.network][v2] was created with [Docusaurus][do]. Full Docusaurus
 documentation can be found on their [website][do].
 
 If you've run into a problem or have a suggestion, browse the open [issues][is]
-before opening a new one. We use the following [label system][la] to organize
-our issues.
+before opening a new one.
 
-- ![][cr] for typos, broken links, and other quick fixes
-- ![][tr] for additions to the FAQ and Troubleshooting sections
-- ![][im] for revisions, rewrites, and larger improvements
-- ![][fe] for feedback on structure & content
-- ![][qu] for questions that can't be answered via documentation
-- ![][fi] for improvements and fixups related to the look and feel of the docs
-  site
-
-### Best practices for managing contributions
+## Best Practices for Managing Contributions
 
 - If a question is asked more than twice in a support channel, it should be
   added as an outstanding ![][tr] issue. If a resolution is found, it should be
@@ -33,14 +27,14 @@ our issues.
 - ![][im] issues should be created to capture upcoming documentation work
   related to new features or releases.
 
-# How to Contribute
+## How to Contribute
 
 - [Get Started](#get-started)
 - [Editing Content](#editing-content)
 - [Adding Content](#adding-content)
 - [Contributing](#contributing)
 
-## Get Started
+### Get Started
 
 1. Make sure all the dependencies for the website are installed:
 
@@ -62,10 +56,7 @@ CURRENT_BRANCH=master \
 USE_SSH=true \
 yarn deploy
 ```
-
-## Editing Content
-
-### Editing an existing docs page
+### Editing an Existing Docs Page
 
 Edit docs by navigating to `docs/` and editing the corresponding document:
 
@@ -80,11 +71,9 @@ title: This Doc Needs To Be Edited
 Edit me...
 ```
 
-For more information about docs, click [here][na]
+For more information about docs, click [here][na].
 
-## Adding Content
-
-### Adding a new docs page to an existing sidebar
+### Adding a New Docs Page to an Existing Sidebar
 
 1. Create the doc as a new markdown file in `/docs`, example
    `docs/newly-created-doc.md`:
@@ -95,13 +84,13 @@ id: newly-created-doc
 title: This Doc Needs To Be Edited
 ---
 
-My new content here..
+My new content here...
 ```
 
 1. Refer to that doc's ID in an existing sidebar in `website/sidebars.json`:
 
 ```javascript
-// Add newly-created-doc to the Getting Started category of docs
+// Add newly-created-doc to the Getting Started category of docs.
 {
   "docs": {
     "Getting Started": [
@@ -114,32 +103,7 @@ My new content here..
 }
 ```
 
-For more information about adding new docs, click [here][na]
-
-## Contributing
-
-💡 We require all commits to be signed for a branch to be merged into master.
-Learn more on setting up commit signing [here][cs].
-
-Contributions to radicle-docs can be made via pull requests on GitHub or
-through Radicle. If opening a PR, please tag any associated parties and
-@abbey-titcomb for visibility.
-
-If contributing via Radicle, submit your patch for review by sending an email
-to abbey@monadic.xyz in the following format:
-
-```
-Subject line:
-
-  *[PATCH] Description of patch*
-
-Message body:
-
-  *[Device ID]*
-  *[Display name]*
-
-  *Description of patch and other relevant information*
-```
+For more information about adding new docs, click [here][na].
 
 [cr]: https://img.shields.io/badge/-fixup-critical
 [cs]: https://docs.github.com/en/github/authenticating-to-github/managing-commit-signature-verification/signing-commits
@@ -153,4 +117,5 @@ Message body:
 [na]: https://docusaurus.io/docs/en/navigation
 [qu]: https://img.shields.io/badge/-question-C0EE59
 [tr]: https://img.shields.io/badge/-troubleshooting-%23FBCA04
-[wi]: https://docs.drips.network
+[wi]: https://drips.network
+[v2]: https:///v2.docs.drips.network
