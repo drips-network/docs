@@ -10,14 +10,17 @@ At Radicle, we take security seriously and have taken a number of steps to ensur
 Our codebase has a high level of unit test coverage and we used Foundry to fuzz-test the key features of our contracts.
 
 ### Security Reviews
-First and foremost, we worked with an independent security auditor to conduct smart contract security reviews during the development.
+First and foremost, we worked with an independent security auditor to conduct smart contract security reviews during the development:
 
-We performed two external security reviews:
-See [Security Report](/img/Drips_Audit_Report.pdf)
+See the [Security Report](/img/Drips_Audit_Report.pdf)
 
 In addition, one team member is a security auditor, so we were able to leverage their expertise in this area and performed an internal audit. 
 
-See [Internal Report](https://hackmd.io/6_EgTHw6TVGlfxls0iKMAQ?view)
+See the [Internal Report](https://hackmd.io/6_EgTHw6TVGlfxls0iKMAQ?view)
+
+We also worked with Code4rena to conduct an audit contest where 26 wardens conducted analysis of the protocol and smart contracts and provided feedback:
+
+See the [Code4rena Report](https://code4rena.com/reports/2023-01-drips)
 
 
 ### Certora
