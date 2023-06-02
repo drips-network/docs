@@ -31,32 +31,39 @@ title: Smart Contract and Subgraph Details
 <tr><td>ImmutableSplitsDriver ID</td><td>2</td></tr>
 </table>
 
-## Goerli Testnet - Deployment #10
+## Sepolia Testnet
 
 <table>
-<tr><td>Chain</td><td>goerli</td></tr>
-<tr><td>Deployment time</td><td>2023-03-14T11:23:53+00:00</td></tr>
-<tr><td>Commit hash</td><td>8980ce57a29f797b53b9f30755f6628185b66c57</td></tr>
+<tr><td>Chain</td><td>sepolia</td></tr>
+<tr><td>Deployment time</td><td>2023-05-30T10:05:12+00:00</td></tr>
+<tr><td>Commit hash</td><td>4d238d987b9262821817b804ae806f5ccc5de011</td></tr>
 <tr><td>Wallet</td><td>0x341a08926dCa7fa7D135F96E4d76b696e5f6d38d</td></tr>
-<tr><td>Wallet nonce</td><td>232</td></tr>
-<tr><td>Deployer</td><td>0xC881Ee954895f1743FEFF7e6014E98BEf988FDc8</td></tr>
-<tr><td>DripsHub</td><td>0x86f226e817aEbf5a4a3ebFA293454Df14460f360</td></tr>
+<tr><td>Wallet nonce</td><td>1</td></tr>
+<tr><td>Deployer</td><td>0xc9241Cf4cD7d9569cA044d8202EF1080405Bc6C9</td></tr>
+<tr><td>DripsHub</td><td>0xA175154911D9Bf062E11083d7e1AaBA3A929d1E4</td></tr>
 <tr><td>DripsHub cycle seconds</td><td>604800</td></tr>
-<tr><td>DripsHub logic</td><td>0xb26378302cd1Bd939C619F7a3fD23F4a646627bD</td></tr>
-<tr><td>DripsHub admin</td><td>0x000000000000000000000000000000000000dEaD</td></tr>
-<tr><td>Caller</td><td>0x7545723692a352a3742Bc967610B55a136E91F16</td></tr>
-<tr><td>AddressDriver</td><td>0x6441C3F2b29c44eDB14F3660C255Aca7bCC40ccE</td></tr>
+<tr><td>DripsHub logic</td><td>0x3779e6cB0A34E9Ae6f48900b091e07275682eA0c</td></tr>
+<tr><td>DripsHub admin</td><td>0x341a08926dCa7fa7D135F96E4d76b696e5f6d38d</td></tr>
+<tr><td>Caller</td><td>0xaB1798935dD4ff222C114C87c5A26F508B90d831</td></tr>
+<tr><td>AddressDriver</td><td>0x270D753B03E97E48898AFd76880FA5390a8fd436</td></tr>
 <tr><td>AddressDriver logic</td><td>0x5C3D4bcFB934ECa7D98fa288E445f1659372FB59</td></tr>
-<tr><td>AddressDriver admin</td><td>0x000000000000000000000000000000000000dEaD</td></tr>
+<tr><td>AddressDriver admin</td><td>0x341a08926dCa7fa7D135F96E4d76b696e5f6d38d</td></tr>
 <tr><td>AddressDriver ID</td><td>0</td></tr>
-<tr><td>NFTDriver</td><td>0x53e019FD9DecF907d314dA416BfA816C2CAEeDef</td></tr>
-<tr><td>NFTDriver logic</td><td>0x84B81DB7e1543e8b9B3212dca8D845eEC5c2B17D</td></tr>
-<tr><td>NFTDriver admin</td><td>0x000000000000000000000000000000000000dEaD</td></tr>
+<tr><td>NFTDriver</td><td>0xf9902185636F953D45C5E53CF524879ED8Ff6da9</td></tr>
+<tr><td>NFTDriver logic</td><td>0xA6452823D0fa02ECAA5D4bb8C432449eBc0d941c</td></tr>
+<tr><td>NFTDriver admin</td><td>0x341a08926dCa7fa7D135F96E4d76b696e5f6d38d</td></tr>
 <tr><td>NFTDriver ID</td><td>1</td></tr>
-<tr><td>ImmutableSplitsDriver</td><td>0xBBA6dbC0a8f7a3c58C9b275d8EDb5F7c6319AA25</td></tr>
-<tr><td>ImmutableSplitsDriver logic</td><td>0x9e30F316D1F9CC07CD17E9DAB41e71f7aD51DBA8</td></tr>
-<tr><td>ImmutableSplitsDriver admin</td><td>0x000000000000000000000000000000000000dEaD</td></tr>
+<tr><td>ImmutableSplitsDriver</td><td>0xaD834E50931370a47aCA7F386Cd9759f29D6d45b</td></tr>
+<tr><td>ImmutableSplitsDriver logic</td><td>0x27dCA2639Df5534CE69ac812FCc37bE68A01Ff57</td></tr>
+<tr><td>ImmutableSplitsDriver admin</td><td>0x341a08926dCa7fa7D135F96E4d76b696e5f6d38d</td></tr>
 <tr><td>ImmutableSplitsDriver ID</td><td>2</td></tr>
+<tr><td>RepoDriver</td><td>0x55222830207c833f9F8a28848D48246A022fdefd</td></tr>
+<tr><td>RepoDriver logic</td><td>0xe41043b765656E3eB044D8B23f80AF617E389288</td></tr>
+<tr><td>RepoDriver admin</td><td>0x341a08926dCa7fa7D135F96E4d76b696e5f6d38d</td></tr>
+<tr><td>RepoDriver ID</td><td>3</td></tr>
+<tr><td>RepoDriver logic</td><td>0x0F9c6BCdE15dfFFD95Cfa8F9167b19B433af1abE</td></tr>
+<tr><td>RepoDriver admin</td><td>9af746c7cfbc415c9737b239df9a30ab</td></tr>
+<tr><td>RepoDriver ID</td><td>150000000000000000</td></tr>
 </table>
 
 ## Mumbai Testnet 
