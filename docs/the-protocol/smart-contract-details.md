@@ -105,18 +105,6 @@ Queries (HTTP):
 Subscriptions (WS):
 <br>wss://api.thegraph.com/subgraphs/name/drips-network-dev/drips-v2-on-ethereum
 
-#### Goerli - Subgraph Page and Endpoints
-
-Subgraph page on The Graph's Hosted Mode website:
-<br><a href="https://thegraph.com/hosted-service/subgraph/jtourkos/drips-v2-on-goerli" target="_blank">https://thegraph.com/hosted-service/subgraph/jtourkos/drips-v2-on-goerli</a>
-
-Subgraph endpoints:
-Queries (HTTP):
-<br>https://api.thegraph.com/subgraphs/name/jtourkos/drips-v2-on-goerli
-
-Subscriptions (WS):
-<br>wss://api.thegraph.com/subgraphs/name/jtourkos/drips-v2-on-goerli
-
 #### Mumbai - Subgraph Page and Endpoints
 
 Subgraph page on The Graph's Hosted Mode website:
@@ -128,21 +116,3 @@ Queries (HTTP):
 
 Subscriptions (WS):
 <br>wss://api.thegraph.com/subgraphs/name/jtourkos/drips-v2-on-mumbai
-
-#### How to Get Testnet Eth and DAI
-
-The main faucet for the Goerli testnet is now operated by Alchemy. You will need to sign up for an Alchemy account to get testnet
-ETH and you can do so [here][gf]. Alternately, you can use [this proof-of-work faucet][gp].
-
-To get DAI on Goerli:
-
-1. First get testnet ETH from the faucet.
-
-2. Go to <a href="https://app.compound.finance/" target="_blank">https://app.compound.finance/</a> and connect a wallet, then make sure your wallet is connected to the Goerli testnet.
-
-3. Click on `DAI`, select `Withdraw` and scroll down to a `Faucet` link.
-
-
-[gf]: https://goerlifaucet.com/
-[gp]: https://goerli-faucet.pk910.de/
-[sb]: https://goerlifaucet.com/
