@@ -31,6 +31,8 @@ title: Smart Contract and Subgraph Details
 <tr><td>ImmutableSplitsDriver ID</td><td>2</td></tr>
 </table>
 
+This deployment is based on the <a href="https://github.com/radicle-dev/drips-contracts/releases/tag/v2_ethereum_deploy" target="_blank">'v2_ethereum_deploy' tag </a>from the Drips Smart Contracts repository.
+
 ## Sepolia Testnet
 
 <table>
