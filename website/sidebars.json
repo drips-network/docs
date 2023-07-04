@@ -2,106 +2,58 @@
   "docs": {
     "Intro and Basics": [
       "whats-a-drip",
-      "drips-v2-features",
       "accessing-drips",
+      "streaming-and-splitting/advanced/safe",
       "faq"
     ],
-    "The Drips App": [
-      "the-drips-app/getting-started",
+    "For Funders": [
+      "for-funders/fund-your-dependencies",
+      "for-funders/create-a-drip-list"
+    ],
+    "For Projects": [
+      "for-projects/how-to-claim-funds"
+    ],
+    "Streaming and Splitting": [
+      "streaming-and-splitting/getting-started",
       {
         "type": "subcategory",
         "label": "Manage funds",
         "ids": [
-          "the-drips-app/manage-funds/add-funds",
-          "the-drips-app/manage-funds/withdraw-funds",
-          "the-drips-app/manage-funds/collect-earnings"
+          "streaming-and-splitting/manage-funds/add-funds",
+          "streaming-and-splitting/manage-funds/withdraw-funds",
+          "streaming-and-splitting/manage-funds/collect-earnings"
         ]
       },
       {
         "type": "subcategory",
         "label": "Streams",
         "ids": [
-          "the-drips-app/streams/create-a-stream",
-          "the-drips-app/streams/edit-stream"
+          "streaming-and-splitting/streams/create-a-stream",
+          "streaming-and-splitting/streams/edit-stream"
         ]
       },
       {
         "type": "subcategory",
         "label": "Splits",
         "ids": [
-          "the-drips-app/splits/set-up-splits"
-        ]
-      },
-      {
-        "type": "subcategory",
-        "label": "Explore the network",
-        "ids": [
-          "the-drips-app/explore/drips-profiles"
-        ]
-      },
-      {
-        "type": "subcategory",
-        "label": "Advanced",
-        "ids": [
-          "the-drips-app/advanced/safe"
+          "streaming-and-splitting/splits/set-up-splits"
         ]
       }
     ],
     "The Protocol": [
       "the-protocol/overview",
+      "the-protocol/drips-v2-features",
       "the-protocol/user-identities-in-drips",
       "the-protocol/smart-contract-and-subgraph-details",
-      "the-protocol/security"
-    ],
-    "For Developers": [
-      "for-developers/drips-sdk",
-      "for-developers/installing",
-      "for-developers/initialize-sdk",
-      {
-        "type": "subcategory",
-        "label": "Accounts",
-        "ids": [
-          "for-developers/accounts/intro",
-          "for-developers/accounts/create",
-          "for-developers/accounts/list",
-          "for-developers/accounts/add-funds"
-        ]
-      },
-      {
-        "type": "subcategory",
-        "label": "Streams",
-        "ids": [
-          "for-developers/streams/start-a-stream",
-          "for-developers/streams/update-a-stream",
-          "for-developers/streams/scheduling"
-        ]
-      },
-      {
-        "type": "subcategory",
-        "label": "Splitting",
-        "ids": [
-          "for-developers/splits/create-user-splits",
-          "for-developers/splits/edit-user-splits",
-          "for-developers/splits/list-user-splits",
-          "for-developers/splits/immutable-splits"
-        ]
-      },
-      {
-        "type": "subcategory",
-        "label": "Collecting",
-        "ids": [
-          "for-developers/collecting/collecting",
-          "for-developers/collecting/squeezing-drips"
-        ]
-      },
+      "the-protocol/security",
       {
         "type": "subcategory",
         "label": "Advanced Topics",
         "ids": [
-          "for-developers/advanced/batching-with-caller",
-          "for-developers/advanced/account-metadata",
-          "for-developers/advanced/fractional-amounts",
-          "for-developers/advanced/drips-inner-workings"
+          "the-protocol/advanced/batching-with-caller",
+          "the-protocol/advanced/account-metadata",
+          "the-protocol/advanced/fractional-amounts",
+          "the-protocol/advanced/drips-inner-workings"
         ]
       }
     ],

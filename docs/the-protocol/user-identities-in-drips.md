@@ -96,6 +96,14 @@ developers wishing to work directly with that data in its raw form will need to 
 At the same time, as time goes on the Drips Team will likely be adding more and more convenience classes and helper code to the SDK to make working with
 user IDs as simple and easy as possible, in cases where it is required.
 
+### RepoDriver
+
+TBD
+
+### ImmutableSplitsDriver
+
+TBD
+
 ## Wrapping Up
 
 In this section, we did a deep dive into some of the technical aspects of Drips Protocol's flexible driver-based approach to managing user identity. We also looked at the two
