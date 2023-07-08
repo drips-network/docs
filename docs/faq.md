@@ -15,3 +15,6 @@ stream or share funds with others. Users to not need to have ETH in their accoun
 funds from other users who are Dripping or Splitting to them. However they will need to have
 a small amount of ETH available in their account when they are ready to collect funds sent to
 them (again, to cover gas costs of sending the collect transaction).
+
+### What happens to funds that have been Dripped to a Github repository that is never claimed by its owner?
+For now, nothing happens to these funds and they will remain in Drips waiting for the respository owner to claim them forever. It's possible that in the future the governance of the Drips protocol will decide to change this, so that funds given to a Github repository that go unclaimed are donated to an alternative public goods fund like Gitcoin, or to some other cause.
