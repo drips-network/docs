@@ -7,11 +7,10 @@
       "faq"
     ],
     "For Funders": [
-      "for-funders/fund-your-dependencies",
-      "for-funders/create-a-drip-list"
+      "for-funders/fund-your-dependencies"
     ],
     "For Fundraisers": [
-      "for-projects/how-to-claim-a-project"
+      "for-fundraisers/how-to-claim-a-project"
     ],
     "Streaming and Splitting": [
       "streaming-and-splitting/getting-started",

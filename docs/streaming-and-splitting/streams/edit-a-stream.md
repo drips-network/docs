@@ -3,7 +3,7 @@ id: edit-stream
 title: Edit, pause or delete a stream
 ---
 
-This guide walks you through pausing, editing or deleting one of your previously-created streams. If you haven't yet created a stream, please read "<a href="/docs/the-drips-app/streams/create-a-stream" target="_blank">Create a stream</a>" first.
+This guide walks you through pausing, editing or deleting one of your previously-created streams. If you haven't yet created a stream, please read "<a href="/docs/streaming-and-splitting/streams/create-a-stream" target="_blank">Create a stream</a>" first.
 
 To get started, select your outgoing stream on the dashboard to open the stream view.
 

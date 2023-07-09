@@ -3,7 +3,7 @@ id: withdraw-funds
 title: Withdraw funds
 ---
 
-In this section, you'll learn how to withdraw funds you've previously <a href="/docs/the-drips-app/manage-funds/add-funds" target="_blank">added to your *outgoing balance*</a> back to your wallet. If you're trying to collect earnings from incoming streams or splits, please read <a href="/docs/the-drips-app/manage-funds/collect-earnings" target="_blank">"Collect earnings"</a> instead.
+In this section, you'll learn how to withdraw funds you've previously <a href="/docs/streaming-and-splitting/manage-funds/add-funds" target="_blank">added to your *outgoing balance*</a> back to your wallet. If you're trying to collect earnings from incoming streams or splits, please read <a href="/docs/streaming-and-splitting/manage-funds/collect-earnings" target="_blank">"Collect earnings"</a> instead.
 
 To get started, first navigate to the Token view for the particular outgoing ERC-20 token balance you're trying to withdraw from. Simply click the token on your dashboard, or search for it by name or token address using the search bar.
 
