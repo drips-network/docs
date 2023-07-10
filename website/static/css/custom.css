@@ -60,14 +60,14 @@
 }
 
 body {
-  background: var(--color-foreground-level-1);
+  background: var(--color-background);
   font-family: var(--font-stack);
-  color: var(--color-foreground-level-6);
+  color: var(--color-foreground);
 }
 
 p {
   font-family: var(--font-stack);
-  color: var(--color-foreground-level-6);
+  color: var(--color-foreground);
   line-height: 150%;
 }
 

@@ -11,7 +11,7 @@
 const siteConfig = {
   title: "Drips Documentation",
   tagline: "When you drip I drip we drip.",
-  url: "https://drips.radicle.network",
+  url: "https://v2.docs.drips.network/",
   baseUrl: "/",
   projectName: "radicle-drips-docs",
   organizationName: "radicle-dev",
