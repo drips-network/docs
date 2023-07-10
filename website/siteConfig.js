@@ -9,15 +9,15 @@
 // site configuration options.
 
 const siteConfig = {
-  title: "Drips docs",
+  title: "Drips Documentation",
   tagline: "When you drip I drip we drip.",
   url: "https://drips.radicle.network",
   baseUrl: "/",
   projectName: "radicle-drips-docs",
   organizationName: "radicle-dev",
   headerLinks: [],
-  headerIcon: "img/drips-logo3.png",
-  favicon: "img/favicon.ico",
+  headerIcon: "img/dripsv2_logo.svg",
+  favicon: "img/dripsv2_icon.png",
   colors: {
     primaryColor: "#5555ff",
     secondaryColor: "#ff55ff",
