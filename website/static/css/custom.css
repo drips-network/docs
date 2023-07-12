@@ -142,12 +142,30 @@ details:hover {
 }
 
 .button {
-  border-radius: 0.5rem;
-  height: 2.5rem;
+  background: #55f;
+  color: #FFF;
+  border-radius: 1rem 0 1rem 1rem;
+  padding: 0.5rem 1rem;
+  border: 0;
+  user-select: none;
+  transition: background-color .3s,color .3s,transform .2s,box-shadow .2s,opacity .3s;
   font-weight: 600;
   text-transform: inherit;
-  border: none;
   font-size: 1rem;
+  box-shadow: 0 0 0 1px #28333d;
+}
+
+.button:hover,
+.button.docs-prev:hover {
+  box-shadow: 0 0 0 1px var(--color-foreground),0 2px 0 1px var(--color-foreground),inset 0 0 0 0 var(--color-foreground);
+  transform: translateY(-2px);
+}
+
+.button.docs-prev {
+  color: #28333d;
+  background: #FFF;
+  box-shadow: 0 0 0 1px #FFF;
+  border: 0;
 }
 
 .navigationSlider .slidingNav ul li a {
