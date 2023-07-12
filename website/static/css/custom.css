@@ -168,12 +168,26 @@ details:hover {
   border: 0;
 }
 
-.navigationSlider .slidingNav ul li a {
-  background: var(--color-foreground-level-3);
-  border-radius: 0.5rem;
-  height: 2.5rem;
+.navigationSlider .slidingNav ul {
+  align-items: center;
+  height: 42px;
+}
+
+.navigationSlider {
+  margin-left: 0;
+  height: 42px;
+}
+
+.navigationSlider .slidingNav ul li a[href*="/docs/whats-a-drip"] {
+  background: #ffe5b2;
+  padding: .125rem .625rem .125rem .75rem;
+  border-radius: 2rem 0 2rem 2rem;
+  /* height: 2.5rem; */
   font-weight: 600;
-  color: var(--color-foreground);
+  color: #b27805;
+  margin-left: 0.5rem;
+  text-transform: uppercase;
+  font-size: 13px;
 }
 
 .fixedHeaderContainer header img {
