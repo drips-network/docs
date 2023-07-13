@@ -114,8 +114,8 @@ blockquote {
 
 .fixedHeaderContainer {
   color: var(--color-foreground);
-  background: var(--color-foreground-level-1);
-  border-bottom: 1px solid var(--color-foreground-level-2);
+  background: #fff;
+  border-bottom: 1px solid var(--color-foreground);
   height: 3.5rem;
 }
 
