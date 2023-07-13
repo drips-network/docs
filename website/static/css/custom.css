@@ -84,12 +84,12 @@ h2,
 h3,
 h4 {
   color: var(--color-foreground);
+  font-weight: 400;
   line-height: 100%;
 }
 
 h1 {
   font-size: 48px;
-  font-weight: 900;
 }
 
 h2 {
