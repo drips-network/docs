@@ -171,6 +171,21 @@ details:hover {
 .navigationSlider .slidingNav ul {
   align-items: center;
   height: 42px;
+  background: #fff;
+}
+
+@media only screen and (max-width: 1024px) {
+  .navigationSlider .slidingNav {
+    position: relative;
+  }
+
+  .navigationSlider .slidingNav ul {
+    margin-top: 0;
+  }
+
+  .navPusher {
+    padding-top: 55px;
+  }
 }
 
 .navigationSlider {
@@ -182,12 +197,12 @@ details:hover {
   background: #ffe5b2;
   padding: .125rem .625rem .125rem .75rem;
   border-radius: 2rem 0 2rem 2rem;
-  /* height: 2.5rem; */
   font-weight: 600;
   color: #b27805;
   margin-left: 0.5rem;
   text-transform: uppercase;
   font-size: 13px;
+  height: 34px;
 }
 
 .fixedHeaderContainer header img {
@@ -214,14 +229,20 @@ details:hover {
 }
 
 @media only screen and (max-width: 1023px) {
+  .headerWrapper {
+    padding: 0 32px;
+  }
   .navPusher {
-    padding-top: 90px;
+    padding-top: 56px;
   }
   .tocActive .onPageNav {
     top: 138px;
   }
   .navigationSlider .slidingNav ul li a {
     border-radius: 0;
+  }
+  .docsNavContainer .toc .navBreadcrumb {
+    padding: 8px 32px; 
   }
   .mainContainer .wrapper .post .postHeaderTitle {
     margin-top: 24px;
