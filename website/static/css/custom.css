@@ -12,6 +12,13 @@
   src: url("https://rsms.me/inter/inter.css");
 }
 
+@font-face {
+ font-family:"Redaction 50";
+ font-weight:400;
+ font-style:normal;
+ src:url(../fonts/Redaction_50-Italic.woff2) format("woff2")
+}
+
 :root {
   --color-primary: #ff55ff;
   --color-primary-level-1: #ffd4ff;
@@ -53,14 +60,14 @@
 }
 
 body {
-  background: var(--color-foreground-level-1);
+  background: var(--color-background);
   font-family: var(--font-stack);
-  color: var(--color-foreground-level-6);
+  color: var(--color-foreground);
 }
 
 p {
   font-family: var(--font-stack);
-  color: var(--color-foreground-level-6);
+  color: var(--color-foreground);
   line-height: 150%;
 }
 
@@ -77,12 +84,12 @@ h2,
 h3,
 h4 {
   color: var(--color-foreground);
+  font-weight: 400;
   line-height: 100%;
 }
 
 h1 {
   font-size: 48px;
-  font-weight: 900;
 }
 
 h2 {
@@ -107,8 +114,8 @@ blockquote {
 
 .fixedHeaderContainer {
   color: var(--color-foreground);
-  background: var(--color-foreground-level-1);
-  border-bottom: 1px solid var(--color-foreground-level-2);
+  background: #fff;
+  border-bottom: 1px solid var(--color-foreground);
   height: 3.5rem;
 }
 
@@ -135,33 +142,80 @@ details:hover {
 }
 
 .button {
-  border-radius: 0.5rem;
-  height: 2.5rem;
+  background: #55f;
+  color: #FFF;
+  border-radius: 1rem 0 1rem 1rem;
+  padding: 0.5rem 1rem;
+  border: 0;
+  user-select: none;
+  transition: background-color .3s,color .3s,transform .2s,box-shadow .2s,opacity .3s;
   font-weight: 600;
   text-transform: inherit;
-  border: none;
   font-size: 1rem;
+  box-shadow: 0 0 0 1px #28333d;
 }
 
-.navigationSlider .slidingNav ul li a {
-  background: var(--color-foreground-level-3);
-  border-radius: 0.5rem;
-  height: 2.5rem;
+.button:hover,
+.button.docs-prev:hover {
+  box-shadow: 0 0 0 1px var(--color-foreground),0 2px 0 1px var(--color-foreground),inset 0 0 0 0 var(--color-foreground);
+  transform: translateY(-2px);
+}
+
+.button.docs-prev {
+  color: #28333d;
+  background: #FFF;
+  box-shadow: 0 0 0 1px #FFF;
+  border: 0;
+}
+
+.navigationSlider .slidingNav ul {
+  align-items: center;
+  height: 42px;
+  background: #fff;
+}
+
+@media only screen and (max-width: 1024px) {
+  .navigationSlider .slidingNav {
+    position: relative;
+  }
+
+  .navigationSlider .slidingNav ul {
+    margin-top: 0;
+  }
+
+  .navPusher {
+    padding-top: 55px;
+  }
+}
+
+.navigationSlider {
+  margin-left: 0;
+  height: 42px;
+}
+
+.navigationSlider .slidingNav ul li a[href*="/docs/whats-a-drip"] {
+  background: #ffe5b2;
+  padding: .125rem .625rem .125rem .75rem;
+  border-radius: 2rem 0 2rem 2rem;
   font-weight: 600;
-  color: var(--color-foreground);
+  color: #b27805;
+  margin-left: 0.5rem;
+  text-transform: uppercase;
+  font-size: 13px;
+  height: 34px;
 }
 
 .fixedHeaderContainer header img {
-  width: 8rem;
-  fill: var(--color-foreground);
+  /* width: 8rem; */
+  fill: rgb(85, 85, 255);
 }
 
 .fixedHeaderContainer a {
   align-items: flex-end;
-  height: 27px;
-  margin-top: 0.25rem;
+  height: 31px;
+  margin-top: 0.4rem;
   color: var(--color-foreground);
-  font-family: ;
+  /* font-family: ; */
 }
 
 .wrapper {
@@ -175,14 +229,20 @@ details:hover {
 }
 
 @media only screen and (max-width: 1023px) {
+  .headerWrapper {
+    padding: 0 32px;
+  }
   .navPusher {
-    padding-top: 90px;
+    padding-top: 56px;
   }
   .tocActive .onPageNav {
     top: 138px;
   }
   .navigationSlider .slidingNav ul li a {
     border-radius: 0;
+  }
+  .docsNavContainer .toc .navBreadcrumb {
+    padding: 8px 32px; 
   }
   .mainContainer .wrapper .post .postHeaderTitle {
     margin-top: 24px;
@@ -271,4 +331,13 @@ details:hover {
   margin-top: 2rem;
   color: var(--color-foreground-level-5);
   font-size: 12px;
+}
+
+/* Markdown styling */
+
+.post h1,
+.post h2,
+.post h3,
+.post h4 {
+  font-family: 'Redaction 50', var(--font-stack);
 }

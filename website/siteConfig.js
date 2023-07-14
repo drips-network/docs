@@ -9,15 +9,15 @@
 // site configuration options.
 
 const siteConfig = {
-  title: "Drips docs",
+  title: "Drips Documentation",
   tagline: "When you drip I drip we drip.",
-  url: "https://drips.radicle.network",
+  url: "https://v2.docs.drips.network/",
   baseUrl: "/",
   projectName: "radicle-drips-docs",
   organizationName: "radicle-dev",
   headerLinks: [],
-  headerIcon: "img/drips-logo3.png",
-  favicon: "img/favicon.ico",
+  headerIcon: "img/dripsv2_logo.svg",
+  favicon: "img/dripsv2_icon.png",
   colors: {
     primaryColor: "#5555ff",
     secondaryColor: "#ff55ff",
@@ -35,6 +35,9 @@ const siteConfig = {
   //  apiKey: "8bd6e28f1096b67612c18dbc3ba55438",
   //  indexName: "radicle",
   //},
+  headerLinks: [
+    { doc: 'whats-a-drip', label: 'Docs' },
+  ],
 };
 
 module.exports = siteConfig;

@@ -32,21 +32,6 @@ However, we believe that it is important to stay at the forefront of technology 
 
 You can read the [report from Certora](/img/Certora_Radicle_Drips_Report.pdf), or explore [our work on invariants with the Certora prover in Github.](https://github.com/radicle-dev/drips-contracts/tree/certora)
 
-
-### Bug Bounty Immunefi
-
-In the upcoming weeks, we will be launching a bug bounty on Immunefi. This will allow the broader community to help identify and report any potential issues with our smart contracts.
-
-We will share the link here.
-https://immunefi.com/
-
-### Code4rena (C4)
-
-Finally, we will be hosting a smart contract contest on Code4rena before our mainnet launch. |
-This will give developers the opportunity to review our code and offer suggestions for improvement.
-
-https://code4rena.com/
-
 ### Risk
 
 Of course, it's important to note that despite our efforts to ensure the security of our smart contracts, there is always a certain level of risk involved.

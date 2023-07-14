@@ -3,7 +3,7 @@ id: collect-earnings
 title: Collect earnings
 ---
 
-In this section, you'll learn how to collect funds you've earned from incoming streams and splits. If you're trying to withdraw funds you've previously added to your *outgoing balance* back to your wallet, please read "<a href="/docs/the-drips-app/manage-funds/add-funds" target="_blank">Withdraw funds"</a>" instead.
+In this section, you'll learn how to collect funds you've earned from incoming streams and splits. If you're trying to withdraw funds you've previously added to your *outgoing balance* back to your wallet, please read "<a href="/docs/streaming-and-splitting/manage-funds/add-funds" target="_blank">Withdraw funds"</a>" instead.
 
 To get started, locate the token balance you want to collect from on your dashboard, and click it to navigate to the token page. You can also use the search bar to find a token by its name or address.
 
@@ -23,7 +23,7 @@ First however, let's take a look at the balances breakdown. You'll find multiple
 
 - The `UNI from concluded cycles` amount is the amount earned from incoming streams *up until the beginning of the current cycle*.
 - The `Splittable` amount is the amount you've earned from incoming Splits or "Gives" (a plain one-time transfer of funds within the Drips protocol).
-- The `Splitting X%` amount indicates how much of your earnings you'll be splitting away to other users according to your <a href="/docs/the-drips-app/splits/set-up-splits" target="_blank">Splits configuration</a>. If you don't have any Splits configured, this amount will be zero.
+- The `Splitting X%` amount indicates how much of your earnings you'll be splitting away to other users according to your <a href="/docs/streaming-and-splitting/splits/set-up-splits" target="_blank">Splits configuration</a>. If you don't have any Splits configured, this amount will be zero.
 - The `You collect` amount is the resulting total and what will be sent to your wallet when you collect.
 
 If you want to additionally collect funds that you've earned from incoming streams during the current cycle, enable "Include funds from current cycle".

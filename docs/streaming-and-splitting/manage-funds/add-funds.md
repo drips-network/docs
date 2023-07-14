@@ -3,7 +3,7 @@ id: add-funds
 title: Add funds
 ---
 
-Before you can stream a token to someone, you'll need to add funds to your Drips account's *outgoing balance*. Your outgoing balance funds any outgoing streams for a given ERC-20 token. Of course, you may freely <a href="/docs/the-drips-app/manage-funds/withdraw-funds" target="_blank">withdraw money</a> back from your outgoing balance to your wallet any time.
+Before you can stream a token to someone, you'll need to add funds to your Drips account's *outgoing balance*. Your outgoing balance funds any outgoing streams for a given ERC-20 token. Of course, you may freely <a href="/docs/streaming-and-splitting/manage-funds/withdraw-funds" target="_blank">withdraw money</a> back from your outgoing balance to your wallet any time.
 
 To get started, locate the "Add funds" button on your dashboard. The first step is to select which ERC-20 token you'd like to add to your account.
 
@@ -29,4 +29,4 @@ Once confirmed, your funds will appear on your dashboard below the "Balances" se
 
 ![Drips App Dashboard displaying the added funds](/img/drips-app/add-funds/4.png)
 
-Congratulations! You're ready to start streaming. Continue with "<a href="/docs/the-drips-app/manage-funds/withdraw-funds">Create a stream</a>", or learn how to withdraw funds back to your wallet.
+Congratulations! You're ready to start streaming. Continue with "<a href="/docs/streaming-and-splitting/manage-funds/withdraw-funds">Create a stream</a>", or learn how to withdraw funds back to your wallet.
