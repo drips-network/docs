@@ -9,11 +9,11 @@ Drips makes it easy for anyone, anywhere to directly fund and support the softwa
 
 Drip Lists are a powerful new feature in Drips V2 that enables anyone to publicly create and fund lists of FOSS projects and maintainers they care about the most. Want to give it a try?
 
-Start by navigating to the <a href="https://drips.network/" target="_blank">Drips App</a> and then click on "Open App" in the top right corner of the page to open the Drips Web app. Next, you will need to connect a web3 wallet to start using the app.
+Start by navigating to <a href="https://drips.network/" target="_blank">drips.network</a> and then click on "Open App" in the top right corner of the page to open the Drips Web app. Next, you will need to connect a web3 wallet to start using the app.
 
 Once your wallet is connected, click on the "Drip Lists" button in the menu on the left and then click on "Create Drip List".
 
-![The Drip Lists button](/img/drips-app/drip-lists/fund_your_dependencies_1.png)
+![The Create Drip List button](/img/drips-app/drip-lists/fund_your_dependencies_1.png)
 
 Next, you can choose the Github projects, Ethereum addresses or ENS names you would like to include in your list. Add these one-by-one by pasting either an Ethereum address, ENS name, or a link to a Github *repository* into the box and clicking "Add" as shown in the screenshot below. Note that if you're pasting a Github link, it must be the URL for a repository, not a link to a user's account or a Github organization.
 
