@@ -42,77 +42,77 @@ title: Smart Contract and Subgraph Details
 
 This deployment is based on the <a href="https://github.com/radicle-dev/drips-contracts/releases/tag/v2_ethereum_deploy" target="_blank">'v2_ethereum_deploy' tag </a>from the Drips Smart Contracts repository.
 
-## Sepolia Testnet Deployment #3
+## Sepolia Testnet Deployment #4
 
 <table>
 <tr><td>Chain</td><td>sepolia</td></tr>
-<tr><td>Deployment time</td><td>2023-07-05T11:49:30+00:00</td></tr>
-<tr><td>Commit hash</td><td>45726d904f65795b8a975574a515f4ed6b25765a</td></tr>
+<tr><td>Deployment time</td><td>2023-07-15T10:41:56Z</td></tr>
+<tr><td>Commit hash</td><td>afeba55f70a968ded7c0797a4211faa856e28fa0</td></tr>
 <tr><td>Wallet</td><td>0x341a08926dCa7fa7D135F96E4d76b696e5f6d38d</td></tr>
 <tr><td>Deterministic deployer</td><td>0x4e59b44847b379578588920cA78FbF26c0B4956C</td></tr>
 <tr><td>CREATE3 factory</td><td>0x6aa3d87e99286946161dca02b97c5806fc5ed46f</td></tr>
-<tr><td>DripsDeployer salt</td><td>DripsDeployer2</td></tr>
-<tr><td>DripsDeployer</td><td>0xE88B6A5FcF0bbaC548DBa902b44b758ac233cCBf</td></tr>
-<tr><td>Drips</td><td>0x3E9A943C73125187f62c073F0f42b8E17Cce37AF</td></tr>
+<tr><td>DripsDeployer salt</td><td>DripsDeployerTest1</td></tr>
+<tr><td>DripsDeployer</td><td>0xa6030dD9D31FA2333Ee9f7feaCa6FB23c42a1d96</td></tr>
+<tr><td>Drips</td><td>0x74A32a38D945b9527524900429b083547DeB9bF4</td></tr>
 <tr><td>Drips cycle seconds</td><td>604800</td></tr>
-<tr><td>Drips logic</td><td>0x67B32D292b1329eC63914a6C93244A0Eb74A3bDD</td></tr>
+<tr><td>Drips logic</td><td>0xf103BDDB82B6177e5fE53c50351E33F4f3df955B</td></tr>
 <tr><td>Drips admin</td><td>0x341a08926dCa7fa7D135F96E4d76b696e5f6d38d</td></tr>
-<tr><td>Caller</td><td>0xD5dBa183dB5fA0fC9A0bf8F26421b8d5E9407f85</td></tr>
-<tr><td>AddressDriver</td><td>0x7703786826fA6cc4b05dE6660E1e7F0C45a29511</td></tr>
+<tr><td>Caller</td><td>0x09e04Cb8168bd0E8773A79Cc2099f19C46776Fee</td></tr>
+<tr><td>AddressDriver</td><td>0x70E1E1437AeFe8024B6780C94490662b45C3B567</td></tr>
 <tr><td>AddressDriver ID</td><td>0</td></tr>
-<tr><td>AddressDriver logic</td><td>0xC9c44ecFd3a407fF34f29A944eDA930B4e6FdEBD</td></tr>
+<tr><td>AddressDriver logic</td><td>0x298F37fFd4B31d216B8954968cEe7EC5273CB891</td></tr>
 <tr><td>AddressDriver admin</td><td>0x341a08926dCa7fa7D135F96E4d76b696e5f6d38d</td></tr>
-<tr><td>NFTDriver</td><td>0x5C9D6b1b95Cc17D671fCA26CcdeD99f861631039</td></tr>
+<tr><td>NFTDriver</td><td>0xdC773a04C0D6EFdb80E7dfF961B6a7B063a28B44</td></tr>
 <tr><td>NFTDriver ID</td><td>1</td></tr>
-<tr><td>NFTDriver logic</td><td>0x79828efeb7a33610A5A51A2Aa7B052FF8510E3FB</td></tr>
+<tr><td>NFTDriver logic</td><td>0xa6bD78d98720E2eA4B3E2887be7bA212C3aC5977</td></tr>
 <tr><td>NFTDriver admin</td><td>0x341a08926dCa7fa7D135F96E4d76b696e5f6d38d</td></tr>
-<tr><td>ImmutableSplitsDriver</td><td>0x92DbEc2E7481e35c6AFE6559bB9c07f985Efd530</td></tr>
+<tr><td>ImmutableSplitsDriver</td><td>0xC3C1955bb50AdA4dC8a55aBC6d4d2a39242685c1</td></tr>
 <tr><td>ImmutableSplitsDriver ID</td><td>2</td></tr>
-<tr><td>ImmutableSplitsDriver logic</td><td>0x0806bEC76cF9C66c4a0ee7eAae20d7198Fb64255</td></tr>
+<tr><td>ImmutableSplitsDriver logic</td><td>0xf5573880ECB9975E1645C8D18ef1A0393c685CC1</td></tr>
 <tr><td>ImmutableSplitsDriver admin</td><td>0x341a08926dCa7fa7D135F96E4d76b696e5f6d38d</td></tr>
-<tr><td>RepoDriver</td><td>0x3E2887E3E156332BE1439be4b8F50FbB1C607CaC</td></tr>
+<tr><td>RepoDriver</td><td>0xa71bdf410D48d4AA9aE1517A69D7E1Ef0c179b2B</td></tr>
 <tr><td>RepoDriver ID</td><td>3</td></tr>
 <tr><td>RepoDriver AnyApi operator</td><td>0x0F9c6BCdE15dfFFD95Cfa8F9167b19B433af1abE</td></tr>
 <tr><td>RepoDriver AnyApi job ID</td><td>9af746c7cfbc415c9737b239df9a30ab</td></tr>
 <tr><td>RepoDriver AnyApi default fee</td><td>150000000000000000</td></tr>
-<tr><td>RepoDriver logic</td><td>0xd87bA837c20D90285FA8B02dE7f486C82DdCDe58</td></tr>
+<tr><td>RepoDriver logic</td><td>0x7A9a2a29B8d98922Ea2E70c73B123e36C95d1515</td></tr>
 <tr><td>RepoDriver admin</td><td>0x341a08926dCa7fa7D135F96E4d76b696e5f6d38d</td></tr>
 </table>
 
-## Goerli Testnet Deployment #12
+## Goerli Testnet Deployment #13
 
 <table>
 <tr><td>Chain</td><td>goerli</td></tr>
-<tr><td>Deployment time</td><td>2023-07-05T11:07:03+00:00</td></tr>
-<tr><td>Commit hash</td><td>45726d904f65795b8a975574a515f4ed6b25765a</td></tr>
+<tr><td>Deployment time</td><td>2023-07-15T10:34:39Z</td></tr>
+<tr><td>Commit hash</td><td>afeba55f70a968ded7c0797a4211faa856e28fa0</td></tr>
 <tr><td>Wallet</td><td>0x341a08926dCa7fa7D135F96E4d76b696e5f6d38d</td></tr>
 <tr><td>Deterministic deployer</td><td>0x4e59b44847b379578588920cA78FbF26c0B4956C</td></tr>
 <tr><td>CREATE3 factory</td><td>0x6aa3d87e99286946161dca02b97c5806fc5ed46f</td></tr>
-<tr><td>DripsDeployer salt</td><td>DripsDeployer1</td></tr>
-<tr><td>DripsDeployer</td><td>0x95c7B066fE5a5aE515f143b931Ad4E0BFbBb7A9D</td></tr>
-<tr><td>Drips</td><td>0x5304DDb08554C45bB7349644C951274cFf7Fd10A</td></tr>
+<tr><td>DripsDeployer salt</td><td>DripsDeployerTest1</td></tr>
+<tr><td>DripsDeployer</td><td>0xa6030dD9D31FA2333Ee9f7feaCa6FB23c42a1d96</td></tr>
+<tr><td>Drips</td><td>0x74A32a38D945b9527524900429b083547DeB9bF4</td></tr>
 <tr><td>Drips cycle seconds</td><td>604800</td></tr>
-<tr><td>Drips logic</td><td>0x0Db1A792B9d140e08B86431Ff00f785A378C01B1</td></tr>
+<tr><td>Drips logic</td><td>0xf103BDDB82B6177e5fE53c50351E33F4f3df955B</td></tr>
 <tr><td>Drips admin</td><td>0x341a08926dCa7fa7D135F96E4d76b696e5f6d38d</td></tr>
-<tr><td>Caller</td><td>0xCa43A39950bB62f67AC9FEdaB3f1D33b7071d797</td></tr>
-<tr><td>AddressDriver</td><td>0xf38892A66654982DD2c528e40211d354CEfB7c5A</td></tr>
+<tr><td>Caller</td><td>0x09e04Cb8168bd0E8773A79Cc2099f19C46776Fee</td></tr>
+<tr><td>AddressDriver</td><td>0x70E1E1437AeFe8024B6780C94490662b45C3B567</td></tr>
 <tr><td>AddressDriver ID</td><td>0</td></tr>
-<tr><td>AddressDriver logic</td><td>0x55bc5485F7476ba89e7979715A3888C8BB1f0362</td></tr>
+<tr><td>AddressDriver logic</td><td>0x298F37fFd4B31d216B8954968cEe7EC5273CB891</td></tr>
 <tr><td>AddressDriver admin</td><td>0x341a08926dCa7fa7D135F96E4d76b696e5f6d38d</td></tr>
-<tr><td>NFTDriver</td><td>0xCB814605a1e7bB1708D7E6AAA4f4Fd917baAa49f</td></tr>
+<tr><td>NFTDriver</td><td>0xdC773a04C0D6EFdb80E7dfF961B6a7B063a28B44</td></tr>
 <tr><td>NFTDriver ID</td><td>1</td></tr>
-<tr><td>NFTDriver logic</td><td>0xaD79619E84ddCE6EE7Cd3c795037b50c7105F589</td></tr>
+<tr><td>NFTDriver logic</td><td>0xa6bD78d98720E2eA4B3E2887be7bA212C3aC5977</td></tr>
 <tr><td>NFTDriver admin</td><td>0x341a08926dCa7fa7D135F96E4d76b696e5f6d38d</td></tr>
-<tr><td>ImmutableSplitsDriver</td><td>0x9956221470D61fc91C47700705eA6df2d7Eb776b</td></tr>
+<tr><td>ImmutableSplitsDriver</td><td>0xC3C1955bb50AdA4dC8a55aBC6d4d2a39242685c1</td></tr>
 <tr><td>ImmutableSplitsDriver ID</td><td>2</td></tr>
-<tr><td>ImmutableSplitsDriver logic</td><td>0x31264a05739CE5F5C43D4DfC0840EC6743324cf9</td></tr>
+<tr><td>ImmutableSplitsDriver logic</td><td>0xf5573880ECB9975E1645C8D18ef1A0393c685CC1</td></tr>
 <tr><td>ImmutableSplitsDriver admin</td><td>0x341a08926dCa7fa7D135F96E4d76b696e5f6d38d</td></tr>
-<tr><td>RepoDriver</td><td>0x654001762Ed1e067980Ad0314F9647F2691BcD97</td></tr>
+<tr><td>RepoDriver</td><td>0xa71bdf410D48d4AA9aE1517A69D7E1Ef0c179b2B</td></tr>
 <tr><td>RepoDriver ID</td><td>3</td></tr>
 <tr><td>RepoDriver AnyApi operator</td><td>0x7ecFBD6CB2D3927Aa68B5F2f477737172F11190a</td></tr>
 <tr><td>RepoDriver AnyApi job ID</td><td>9af746c7cfbc415c9737b239df9a30ab</td></tr>
 <tr><td>RepoDriver AnyApi default fee</td><td>50000000000000000</td></tr>
-<tr><td>RepoDriver logic</td><td>0xB6Ce29D5575c35E75C91b140deDa3C354199036c</td></tr>
+<tr><td>RepoDriver logic</td><td>0x7A9a2a29B8d98922Ea2E70c73B123e36C95d1515</td></tr>
 <tr><td>RepoDriver admin</td><td>0x341a08926dCa7fa7D135F96E4d76b696e5f6d38d</td></tr>
 </table>
 
