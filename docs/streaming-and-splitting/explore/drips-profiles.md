@@ -15,6 +15,6 @@ You can also use the app's search bar to jump to any ENS name or Ethereum addres
 
 ### For developers: Inspecting AddressDriver-controlled Drips User IDs
 
-Alongside addresses or ENS names, you may also enter a numeric AddressDriver Drips User ID into the search bar or URL to inspect said profile.
+Alongside addresses or ENS names, you may also enter a numeric AddressDriver Drips Account ID into the search bar or URL to inspect said profile.
 
 > ⚠️ The Drips App currently does not support inspecting NFTDriver-controlled sub-accounts. This is coming soon!

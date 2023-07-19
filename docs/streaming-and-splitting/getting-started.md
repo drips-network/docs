@@ -3,7 +3,7 @@ id: getting-started
 title: Streams and Splits - Getting Started
 ---
 
-The <a href="https://drips.network/" target="_blank">Drips App</a> allows users to easily create and edit streams on Drips, manage Splits, collect earnings, and explore the Drips network.
+The <a href="https://drips.network/" target="_blank">Drips App</a> allows users to easily create and edit streams, manage Splits, collect earnings, and explore the Drips network.
 
 ### Accessing the app
 

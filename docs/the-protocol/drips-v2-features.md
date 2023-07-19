@@ -19,11 +19,11 @@ Some streaming protocols require users to first wrap their tokens, introducing a
 
 ### Gas-Optimized for Many-to-One Streams
 
-Most web3 streaming protocols only allow users to receive streams from small numbers of other users, and cannot practically support designs where hundreds or thousands of subscribers stream to one creator. In contrast, Drips v2 is architected to be extremely gas-efficient for both one-to-one streaming and many-to-one streaming use cases at real-world scales, targeting Ethereum mainnet.
+Most web3 streaming protocols only allow users to receive streams from small numbers of other users, and cannot practically support designs where hundreds or thousands of subscribers stream to a single recipient. In contrast, Drips v2 is architected to be extremely gas-efficient for both one-to-one streaming and many-to-one streaming use cases at real-world scales, targeting Ethereum mainnet.
 
 ### Scheduled Drips
 
-With Drips v2, users and developers have the ability to schedule Drips to start and end at specific times in the future,  allowing more precision around the total amount of funds streamed.
+With Drips v2, users and developers have the ability to schedule streams to start and end at specific times in the future, allowing more precision around the total amount of funds streamed.
 
 ### Shared Stream Balances
 
@@ -31,7 +31,7 @@ While other streaming protocols require users to top-up each stream that they cr
 
 ### A Flexible Identity Model
 
-Drips v2 also introduces a new, more flexible model for user identity that provides additional options for app developers to create and manage end-user profiles in Drips.
+Drips v2 also introduces a new, more flexible model for user identity and accounts, that provides additional options for different ways that users can create accounts and engage with the protocol. For example, an NFT or a Git repository can control an account in Drips.
 
 ### One Smart Contract / One Graph
 

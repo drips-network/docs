@@ -1,6 +1,6 @@
 ---
 id: withdraw-funds
-title: Withdraw funds
+title: Withdraw Funds
 ---
 
 In this section, you'll learn how to withdraw funds you've previously <a href="/docs/streaming-and-splitting/manage-funds/add-funds" target="_blank">added to your *outgoing balance*</a> back to your wallet. If you're trying to collect earnings from incoming streams or splits, please read <a href="/docs/streaming-and-splitting/manage-funds/collect-earnings" target="_blank">"Collect earnings"</a> instead.

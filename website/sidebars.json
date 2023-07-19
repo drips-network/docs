@@ -42,7 +42,7 @@
     "The Protocol": [
       "the-protocol/overview",
       "the-protocol/drips-v2-features",
-      "the-protocol/user-identities-in-drips",
+      "the-protocol/accounts-in-drips",
       "the-protocol/smart-contract-and-subgraph-details",
       "the-protocol/security",
       {

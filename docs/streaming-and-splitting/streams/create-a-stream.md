@@ -1,6 +1,6 @@
 ---
 id: create-a-stream
-title: Create a stream
+title: Create a Stream
 ---
 
 This guide assumes that you've already <a href="/docs/streaming-and-splitting/manage-funds/add-funds" target="_blank">added ERC-20 funds to your *outgoing balance*</a>. If you haven't yet, please do so before attempting to create a stream.

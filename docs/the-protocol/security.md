@@ -3,7 +3,7 @@ id: security
 title: Security
 ---
 
-At Radicle, we take security seriously and have taken a number of steps to ensure the security of our smart contracts on Ethereum. 
+At Drips, we take security seriously and have taken a number of steps to ensure the security of our smart contracts on Ethereum. 
 
 ### High test coverage and fuzz tests
 

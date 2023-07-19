@@ -1,19 +1,19 @@
 ---
 id: drips-inner-workings
-title: Drips inner workings
+title: Drips Inner Workings
 ---
 
-This page offers an introduction to the core mechanics of dripping implementation in smart contracts. The implementation can be found on [Github](https://github.com/radicle-dev/drips-contracts) in `Drips.sol`.
+This page offers an introduction to the core mechanics of how streaming is implementated in smart contracts. The implementation can be found on [Github](https://github.com/radicle-dev/drips-contracts) in `Drips.sol`.
 
 ## Design Principles
 
-Drips is a protocol for any EVM-based blockchain that allows users to set up and manage continuous transfers of funds from one account to another over time. We refer to such streaming payments as "Drips".
+Drips is a protocol for any EVM-based blockchain that allows users to set up and manage continuous transfers of funds from one account to another over time. We refer to such transfers as "streams".
 
 ![Diagram 1][img1]
 
-Technically, tokens that are dripped are not sent directly to the recipient's address. Instead, the `DripsHub` contract keeps track of the sender and recipient's balances and allows the receiver to collect funds whenever they wish. Anyone who has worked with Ethereum and other EVM-based blockchains knows that there are significant limitations with regards to gas and transaction costs. Because of this, the Drips protocol was carefully designed to be as scalable and gas-efficient as possible. In particular, we wanted Drips to be able to support use cases like sponsorship or streaming memberships, where a single user (or org) may be receiving funds from hundreds or thousands of senders.
+Technically, tokens that are streamed are not sent directly to the recipient's address. Instead, the `DripsHub` contract keeps track of the sender and recipient's balances and allows the receiver to collect funds whenever they wish. Anyone who has worked with Ethereum and other EVM-based blockchains knows that there are significant limitations with regards to gas and transaction costs. Because of this, the Drips protocol was carefully designed to be as scalable and gas-efficient as possible. In particular, we wanted Drips to be able to support use cases like sponsorship or streaming memberships, where a single user (or org) may be receiving funds from hundreds or thousands of senders.
 
-With these requirements in mind, let's consider the case of a receiver collecting funds that have been Dripped to them. The obvious technical design for a streaming system like Drips would be to store a list of all Drips being sent to each receiver and then simply iterate the list whenever collect() is called. However, storing and iterating a list with hundreds or thousands of entries quickly becomes cost-prohibitive from a gas perspective on Ethereum and might even exceed the total gas available in a block in the worst case.
+With these requirements in mind, let's consider the case of a receiver collecting funds that have been streamed to them. The obvious technical design for a streaming system like Drips would be to store a list of all streams being sent to each receiver and then simply iterate the list whenever collect() is called. However, storing and iterating a list with hundreds or thousands of entries quickly becomes cost-prohibitive from a gas perspective on Ethereum and might even exceed the total gas available in a block in the worst case.
 
 Instead, to increase efficiency, `DripsHub` works internally with the concept of `cycles` and all funds being sent to a given recipient for a given cycle are aggregated and stored together as a pooled amount in the DripsHub smart contracts. In fact, for greater efficiency, it is not even the pooled stream amounts themselves that are stored, but rather the "deltas", or changes in amount streamed, from one cycle to the next.
 
@@ -26,21 +26,21 @@ Each cycle defines a fixed time interval so that every block is assigned to exac
 ### Scheduled Drips
 
 When a Drip is configured, the sender can decide whether funds will start flowing immediately (i.e. in the same block that the transaction is processed)
-or whether the flow of funds will be **scheduled** to start at some future time. Similarly, a user can (optionally) choose to impose an explicit duration for how long funds will be streamed. We refer to Drips with an explicitly defined start time or duration as "scheduled".
+or whether the flow of funds will be **scheduled** to start at some future time. Similarly, a user can (optionally) choose to impose an explicit duration for how long funds will be streamed. We refer to streams with an explicitly defined start time or duration as "scheduled".
 
-### Dripping Funds
+### Stream Funds
 
-Any user can stream funds to another user, which we refer to as "Dripping" funds. The state of sender for a specific ERC20 token can be described with the following attributes:
+Any user can stream funds to another user. The state of a sender for a specific ERC20 token can be described with the following attributes:
  - **Balance** - balance of tokens that the sender holds in their account.
  - **Set of DripsConfigs** - configurations for Drips that the sender is streaming to other users (if any).
 
 Based on the set of drips, a total funding rate per cycle can be derived. The balance is automatically reduced by the funding rate every second and the same amount is credited to the sender's receivers.
 
-When the sender's balance reaches an amount lower than the per-second funding rate,the funding is stopped. This process doesn't actually require updates every second. Instead, its effects are calculated on the fly whenever they are needed. Thus the contract state is updated only when the funding parameters are altered by the users.
+When the sender's balance reaches an amount lower than the per-second funding rate, the funding is stopped. This process doesn't actually require updates every second. Instead, its effects are calculated on the fly whenever they are needed. Thus the contract state is updated only when the funding parameters are altered by the users.
 
 The sender balance is manually increased by topping up, which requires sending some ERC-20 tokens from the user's wallet to the `DripsHub` contract. The opposite operation is withdrawal, which results in removing tokens from the contract back to the user wallet.
 
-In order to start sending, the only requirements are that the sender has a non-zero balance and a non-empty list of receivers. As soon as the sender's configuration is updated to match these criteria, the flow of assets starts. First, the funding period is calculated. Its start is the current block timestamp and its end is the moment on which the balance will run out (unless some Drips have been **scheduled** as discussed above).
+In order to start sending, the only requirements are that the sender has a non-zero balance and a non-empty list of receivers. As soon as the sender's configuration is updated to match these criteria, the flow of tokens starts. First, the funding period is calculated. Its start is the current block timestamp and its end is the moment on which the balance will run out (unless some streams have been **scheduled** as discussed above).
 
 ### Receiving Funds
 
@@ -50,12 +50,12 @@ Each receiver maintains a mapping for all cycles, which can be imagined as a tim
 
 ![Diagram 3][img3]
 
-If a sender starts dripping to a receiver this timeline is modified. For each ERC20 token a separate timeline of tokens exists. As discussed above, in order to maximize efficiency and minimize gas, we only store deltas of rate changes per-cycle, rather than full details about each Drip configuration. Every second, funds from the sender’s pool account are credited to the sender’s receivers according to the funding rate.
+If a sender starts streaming to a receiver this timeline is modified. For each ERC20 token a separate timeline of tokens exists. As discussed above, in order to maximize efficiency and minimize gas, we only store deltas of rate changes per-cycle, rather than full details about each stream configuration. Every second, funds from the sender’s pool account are credited to the sender’s receivers according to the funding rate.
 
 **Received**
 ![Diagram 4][img4]
 
-The `DripsHub` needs to be able to keep track of how much was sent to each receiver in a given cycle. We do this by aggregating the amounts being Dripped to the receiver and then representing the aggregate per-cycle amounts in the form of delta-based rate changes between each cycle. This allows us to calculate the funds that the receiver will receive in each not-yet collected cycle.
+The `DripsHub` needs to be able to keep track of how much was sent to each receiver in a given cycle. We do this by aggregating the amounts being streamed to the receiver and then representing the aggregate per-cycle amounts in the form of delta-based rate changes between each cycle. This allows us to calculate the funds that the receiver will receive in each not-yet collected cycle.
 
 ## Receiver Deltas
 
@@ -70,7 +70,7 @@ If the sender would start/end exactly at the beginning of a cycle we would have 
 Which we would store on the timeline of the receiver.
 
 ### Calculation of Deltas
-Normally, a Drip will not start exactly at the beginning of a cycle. A stream will start most of the time during an ongoing cycle.
+Normally, a stream will not start exactly at the beginning of a cycle. A stream will start most of the time during an ongoing cycle.
 
 Therefore, we need to split the start and end deltas into two separate deltas.
 
@@ -94,7 +94,7 @@ When funding is stopped, the deltas need to be reverted. To do that, essentially
 In this case, the reverting is split into 2 cycles too, one with -4 and the other with -1.
 
 ## Storing Deltas
-For are complete example, we can see the delta calculation for both **sender 1** and **sender 2**.
+For our complete example, we can see the delta calculation for both **sender 1** and **sender 2**.
 
 From the perspective of the receiver each cycle has one delta value. This delta value is modified if sender start/stops a stream in this specific cycle.
 
@@ -117,7 +117,7 @@ As shown in the previous sections, the collectable amount is described with delt
 
 ### Updating or Cancelling Drips
 
-Of course it's quite likely that a sender may want to update their Drips at some point in the future, either to change the amount being Dripped, or perhaps to stop streaming entirely. It is important to know that while such changes are permitted, it is only possible to change Drips configurations for the future and never the past. Specifically, any funds already sent to another user in the past cannot be recovered by the sender if they change their mind. In technical terms, it is not possible to change the funding rate of a past cycle, or for any time in the current cycle which has already passed.
+Of course it's quite likely that a sender may want to update their streams at some point in the future, either to change the amount being streamed, or perhaps to stop streaming entirely. It is important to know that while such changes are permitted, it is only possible to change streams configurations for the future and never the past. Specifically, any funds already sent to another user in the past cannot be recovered by the sender if they change their mind. In technical terms, it is not possible to change the funding rate of a past cycle, or for any time in the current cycle which has already passed.
 
 For simplification lets assume, each stream starts and end exactly at cycle beginning. In the real implementation, we need to split each delta into two individual ones.
 

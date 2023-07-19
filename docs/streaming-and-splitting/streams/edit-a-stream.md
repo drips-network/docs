@@ -1,6 +1,6 @@
 ---
 id: edit-stream
-title: Edit, pause or delete a stream
+title: Edit, Pause or Delete a Stream
 ---
 
 This guide walks you through pausing, editing or deleting one of your previously-created streams. If you haven't yet created a stream, please read "<a href="/docs/streaming-and-splitting/streams/create-a-stream" target="_blank">Create a stream</a>" first.
