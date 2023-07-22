@@ -74,7 +74,7 @@ method is being called by the holder of the NFT token. Assuming it is, the call 
 Here again, we can see how NFTDriver acts as a kind of translation layer between the account and the authorization features of interest (i.e. "does the sender hold this NFT?") and the more generalized account IDs required by DripsHub. The end result is that developers building on Drips are able to mint new
 NFT-based accounts, which will each have their own balances and settings for streaming and splitting, whenever they wish. And each such NFT also corresponds to a single underlying account ID in Drips.
 
-Having looked at AddressDriver and NFTDriver in detail, we can now see how the Drips Protocol's extensible account model enables many different types of accounts to be used, all of which still function similarly and interchangably at the lowest level of the protocol.
+Having looked at AddressDriver and NFTDriver in detail, we can now see how the Drips Protocol's extensible account model enables many different types of accounts to be used, all of which still function similarly and interchangeably at the lowest level of the protocol.
 
 ## User Accounts and the Drips Javascript SDK
 
@@ -108,7 +108,7 @@ TBD
 In this section, we did a deep dive into some of the technical aspects of Drips Protocol's flexible driver-based approach to managing user accounts. We also looked at the
 drivers the Drips Team shipped with Drips V2, which provide developers and users with the option to set up and manage Drips accounts based on either Ethereum addresses or NFTs. Hopefully you enjoyed this somewhat technical adventure :)
 
-One last note, that the Drips Team plans to release more account drivers in the coming months, which should enable entirely new and different kinds of accounts in Drips. Stay tuned for more details!
+One last note, the Drips Team plans to release more account drivers in the coming months, which should enable entirely new and different kinds of accounts in Drips. Stay tuned for more details!
 
 
 [ad]: https://github.com/radicle-dev/drips-js-sdk/blob/v2/src/AddressDriver/AddressDriverClient.ts
