@@ -19,7 +19,7 @@ You can generally interact with Drips the same way as you would with an EOA wall
 
 #### Edits to streams or balances only apply at the time the transaction is executed
 
-When you create, pause or edit a stream, the edits will only apply in the exact moment your Safe executes the transaction, not at the timestamp of proposal. For instance, this means that an outgoing stream that you pause will continue streaming until your Safe executes the pause transaction.
+When you create, pause or edit a stream, the edits will only apply at the exact moment your Safe executes the transaction, not at the timestamp of proposal. For instance, this means that an outgoing stream that you pause will continue streaming until your Safe executes the pause transaction.
 
 When scheduling a stream for the future, ensure that the transaction is executed before its scheduled start date. Scheduled streams begin streaming at the time of transaction confirmation *or* any scheduled start date, depending on which date is later.
 
