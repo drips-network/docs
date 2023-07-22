@@ -57,5 +57,5 @@ This is the last step -- here you have the chance to review everything. Make sur
 
 You will be prompted to confirm a transaction and then you will have to wait. Please be patient. Assuming that all goes well, you will be sent to the profile screen for your newly-claimed project. You have now claimed your project on Drips! Any funds streamed or *given* to the project will be split to the different maintainer and dependency accounts you specified in your configuration.
 
-Conratulations and thank you for claiming your project on Drips and helping to bring the interdependent ecosystem of FOSS public goods on-chain!
+Congratulations and thank you for claiming your project on Drips and helping to bring the interdependent ecosystem of FOSS public goods on-chain!
 
