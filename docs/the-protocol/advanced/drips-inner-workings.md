@@ -3,7 +3,7 @@ id: drips-inner-workings
 title: Drips Inner Workings
 ---
 
-This page offers an introduction to the core mechanics of how streaming is implementated in smart contracts. The implementation can be found on [Github](https://github.com/radicle-dev/drips-contracts) in `Drips.sol`.
+This page offers an introduction to the core mechanics of how streaming is implemented in smart contracts. The implementation can be found on [Github](https://github.com/radicle-dev/drips-contracts) in `Drips.sol`.
 
 ## Design Principles
 
@@ -119,7 +119,7 @@ As shown in the previous sections, the collectable amount is described with delt
 
 Of course it's quite likely that a sender may want to update their streams at some point in the future, either to change the amount being streamed, or perhaps to stop streaming entirely. It is important to know that while such changes are permitted, it is only possible to change streams configurations for the future and never the past. Specifically, any funds already sent to another user in the past cannot be recovered by the sender if they change their mind. In technical terms, it is not possible to change the funding rate of a past cycle, or for any time in the current cycle which has already passed.
 
-For simplification lets assume, each stream starts and end exactly at cycle beginning. In the real implementation, we need to split each delta into two individual ones.
+For simplification let's assume, each stream starts and ends exactly at cycle beginning. In the real implementation, we need to split each delta into two individual ones.
 
 **Example: previous Deltas**
 Let say the current configuration is that **sender 1** streams **5** per cycle.
