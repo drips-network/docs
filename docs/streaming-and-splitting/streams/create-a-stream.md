@@ -19,7 +19,7 @@ If you want, you can alternatively specify explicit start- and end times for you
 
 ![Specifying start- and end dates on the "Create Stream"-Modal](/img/drips-app/create-stream/3.png)
 
-> ⚠️ Please ensure that you specify a start time that is distant enough in the future to go into effect after the stream creation transaction is confirmed. Streams that are established on-chain *after* their set start date will start streaming only in the exact moment they're confirmed on-chain.
+> ⚠️ Please ensure that you specify a start time that is distant enough in the future to go into effect after the stream creation transaction is confirmed. Streams that are established on-chain *after* their set start date will start streaming only at the exact moment they're confirmed on-chain.
 
 Once the transaction is confirmed, your new stream appears on your dashboard, and you can immediately see its balance changing in real-time. If you scheduled a stream for the future, you'll see it as an outgoing stream, but it'll only start streaming at the intended start date. If your stream doesn't immediately appear, please refresh the app a few times, as it sometimes might take a short while for it to update.
 
