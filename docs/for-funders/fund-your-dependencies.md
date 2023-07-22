@@ -19,7 +19,7 @@ Next, you can choose the Github projects, Ethereum addresses or ENS names you wo
 
 ![Build your list](/img/drips-app/drip-lists/fund_your_dependencies_2.png)
 
-Once you've added all of the recipients you would like to include, you will need to specify the percentage of funds sent to the list that will be allocated to each recipient. You can either enter a percentage manually in the box next to each entry, or use some of the helpful tools provided by the app like the "Distribue Evenly" button, or "Distribute Remaining". The percentages must sum to 100% in order to continue.
+Once you've added all of the recipients you would like to include, you will need to specify the percentage of funds sent to the list that will be allocated to each recipient. You can either enter a percentage manually in the box next to each entry, or use some of the helpful tools provided by the app like the "Distribute Evenly" button, or "Distribute Remaining". The percentages must sum to 100% in order to continue.
 
 Once you have assigned percentages to each recipient, choose a name to give to your Drip List and click "Continue".
 
@@ -36,10 +36,10 @@ Next, you have the opportunity to review everything you've entered in previous s
 ![Confirm the details of yur Drip List](/img/drips-app/drip-lists/fund_your_dependencies_5.png)
 
 You will be prompted to sign two different transactions by your wallet. The first transaction approves the withdrawal of funds to top-up your drips account based on the top-up amount you chose and the second transaction creates your Drip List on chain based on the details you specified.
-Recpient
+Recipient
 You will need to sign both transactions using your wallet. The exact details of what this will look like will differ based on the type of wallet you're using. See <a href="/streaming-and-splitting/advanced/safe" target="_blank">here</a> for details about how to use a Safe with Drips.
 
-Once you have confirmed both transactions you may need to wait a few moments for them to excute, and assuming they succeed.... voila! You have created your first Drip List and you will be sent to the Drips profile page for your account, where you can see your new Drip List along with your other account details.
+Once you have confirmed both transactions you may need to wait a few moments for them to execute, and assuming they succeed.... voila! You have created your first Drip List and you will be sent to the Drips profile page for your account, where you can see your new Drip List along with your other account details.
 
 Congratulations and thank you for contributing to supporting FOSS as a public good! 
 
