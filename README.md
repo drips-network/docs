@@ -117,5 +117,5 @@ For more information about adding new docs, click [here][na].
 [qu]: https://img.shields.io/badge/-question-C0EE59
 [tr]: https://img.shields.io/badge/-troubleshooting-%23FBCA04
 [wi]: https://drips.network
-[v2]: https://v1.docs.drips.network
+[v1]: https://v1.docs.drips.network
 [v2]: https://docs.drips.network
