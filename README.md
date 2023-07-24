@@ -1,15 +1,14 @@
 # Welcome to Drips Docs 👋
 
 This is the repository containing the Docusaurus code that is used to generate
-the docs for v2 of Drips. This branch (v0.2) is the branch
-for the v0.2 version of the documentation, which is deployed at [v2.docs.drips.network][v2].
+the docs for v2 of Drips. The main branch of this repository contains the docs for V2 of the Drips Protocol and app and is deployed at: [docs.drips.network][v2]. The branch "v1" contains the docs for V1 of the Drips Protocol and app and is deployed at: [v1.docs.drips.network][v1].
 
 The drips-docs repository accepts contributions via Radicle patches
 and GitHub pull requests. This document outlines some contributing guidelines,
 contact points, and other resources to make it easier to contribute to
 drips-docs.
 
-[v2.docs.drips.network][v2] was created with [Docusaurus][do]. Full Docusaurus
+[docs.drips.network][v2] was created with [Docusaurus][do]. Full Docusaurus
 documentation can be found on their [website][do].
 
 If you've run into a problem or have a suggestion, browse the open [issues][is]
@@ -118,4 +117,5 @@ For more information about adding new docs, click [here][na].
 [qu]: https://img.shields.io/badge/-question-C0EE59
 [tr]: https://img.shields.io/badge/-troubleshooting-%23FBCA04
 [wi]: https://drips.network
-[v2]: https:///v2.docs.drips.network
+[v2]: https://v1.docs.drips.network
+[v2]: https://docs.drips.network
