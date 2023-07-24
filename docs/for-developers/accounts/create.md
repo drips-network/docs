@@ -3,7 +3,7 @@ id: create
 title: Create an Account
 ---
 
-Creating a new account in the Drips protocol means creating a new user ID for your end user or application to control. User IDs are created using identity drivers. See [User Identies in Drips][ui] for a more detailed discussion of how user IDs and identity drivers work in Drips.
+Creating a new account in the Drips protocol means creating a new user ID for your end user or application to control. User IDs are created using identity drivers. See [User Identities in Drips][ui] for a more detailed discussion of how user IDs and identity drivers work in Drips.
 
 Most developers building on Drips will likely wish to use NFT-based sub-accounts for their users. To build on NFT-based sub-accounts, you will first need to [create a NFTDriverClient and a DripsSubgraphClient][is].
 
@@ -22,7 +22,7 @@ Calling this method creates a new NFT-based sub-account and transfers that NFT t
 
 As soon as the NFT is minted, the user who controls `transferToAddress` will control the new Drips sub-account and can take actions like adding funds, setting Drips and Splits for the account and so on.
 
-Account creation works differently for each identity driver. For example with `AddressDriver`, each Ethereum address always has exactly one Drips account associated with it and that account is already "created" by default for each address. In other words, no explict action is required to create an account for an Ethereum address in `AddressDriver`. Instead, a user with a connected wallet can simply use <a href="https://drips-js-sdk-api.netlify.app/classes/addressdriverclient" target="_blank">AddressDriverClient</a> to start adding funds and/or configuring Drips and Splits for the account that corresponds to their address.
+Account creation works differently for each identity driver. For example with `AddressDriver`, each Ethereum address always has exactly one Drips account associated with it and that account is already "created" by default for each address. In other words, no explicit action is required to create an account for an Ethereum address in `AddressDriver`. Instead, a user with a connected wallet can simply use <a href="https://drips-js-sdk-api.netlify.app/classes/addressdriverclient" target="_blank">AddressDriverClient</a> to start adding funds and/or configuring Drips and Splits for the account that corresponds to their address.
 
 [ui]: /docs/the-protocol/user-identities-in-drips
 [is]: /docs/for-developers/initialize-sdk

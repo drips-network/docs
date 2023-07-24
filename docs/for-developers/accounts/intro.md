@@ -4,12 +4,12 @@ title: Intro to Accounts
 ---
 
 In the Drips Protocol, an "account" is the set of state associated with a given user ID. Exactly what is included in this state
-will depend on which identity driver the user ID belongs to. See the [User Identies in Drips][ui] section for more discussion of
+will depend on which identity driver the user ID belongs to. See the [User Identities in Drips][ui] section for more discussion of
 identity drivers.
 
 For example, accounts associated with user IDs managed by NFTDriver and AddressDriver include the following state:
 
-* A balance of funds added by the user and avaliable for streaming to others.
+* A balance of funds added by the user and available for streaming to others.
 * A balance of funds received from streams sent by other users.
 * A Drips Configuration.
 * A Splits configuration.

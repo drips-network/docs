@@ -14,10 +14,10 @@ any of the following alternative ways as well:
 [The Drips SDK][sd] is a Javascript SDK that allows any application or user-created code to interact directly with the Drips smart contracts and utilize the full feature set of the protocol in whatever way they wish. Drips contracts can be freely integrated into
 any website, dapp or application at any time using the SDK.
 
-<a href="https://etherscan.io/" target="_blank">Etherscan</a> is a block explorer and analytics platform for Ethereum. Other networks have similar block exploerers,
+<a href="https://etherscan.io/" target="_blank">Etherscan</a> is a block explorer and analytics platform for Ethereum. Other networks have similar block explorers,
 often also operated by Etherscan. The Drips contracts can be accessed using these block explorers at the addresses
 specified on the [Smart Contract and Subgraph Details][sc] Page. For example, the DripsHub smart contract on the Goerli
-testnet can be acessed [here][dh]. Other networks have similar block explorers.
+testnet can be accessed [here][dh]. Other networks have similar block explorers.
 
 [ethBuild][eb] is an educational sandbox for web3, including drag-and-drop programming and open source building blocks. With
 ethBuild, you can call a function on an Ethereum contract (for example, to create a Drip or Split configuration) by
