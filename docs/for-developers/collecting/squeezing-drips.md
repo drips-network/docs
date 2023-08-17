@@ -10,7 +10,7 @@ While this design is highly efficient, one of its downsides is that the <a href=
 
 Unlike `collect()`, which allows a recipient to collect funds from all senders with a single call, when squeezing, a recipient will need to make a new method call for each sender they wish to collect funds from. Note, therefore, that because squeezing is less gas-efficient than ordinary collection, it will typically not make sense to squeeze streams that are  sending small amounts of funds, particularly on Ethereum mainnet.
 
-To squeeze Drips, you will need to interact with the DripsHub contract directly, rather than interacting with a driver contract. For this you will need to first instantiate a `DripsHubClient` using the SDK:
+To squeeze Drips, you will need to interact with the Drips contract directly, rather than interacting with a driver contract. For this you will need to first instantiate a `DripsHubClient` using the SDK:
 
 ```
 const dripsHubClient = await DripsHubClient.create(signer: JsonRpcSigner);
