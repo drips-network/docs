@@ -136,6 +136,9 @@ Subscriptions (WS):
 #### Sepolia Testnet
 
 Subgraph URL:
-https://api.studio.thegraph.com/query/47690/drips-v2-on-sepolia/v0.0.6
+https://api.studio.thegraph.com/query/47690/drips-v2-on-sepolia/version/latest
 
+#### Goerli Testnet
 
+Subgraph URL:
+https://api.studio.thegraph.com/query/47690/drips-v2-on-goerli/version/latest
