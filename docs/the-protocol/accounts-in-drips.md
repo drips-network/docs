@@ -47,13 +47,13 @@ Now let's dive a bit deeper into what an account driver is and how it works. As 
 
 To understand this better through an example, let's consider AddressDriver, which is registered under ID 0 in Drips. This driver was the very first driver created by the Drips Team and its purpose is to enable each Ethereum address to manage a unique account in Drips.
 
-We can see how this works by looking at the code in the code in the <a href="https://github.com/radicle-dev/drips-contracts/blob/master/src/AddressDriver.sol" target="_blank">AddressDriver</a> smart contract.
+We can see how this works by looking at the code in the <a href="https://github.com/radicle-dev/drips-contracts/blob/master/src/AddressDriver.sol" target="_blank">AddressDriver</a> smart contract.
 
 As we can see, AddressDriver contains a `setDrips(...)` method which, when called, "Sets the message sender's drips configuration."
 
 Looking into the code a bit more, we see that AddressDriver also contains the helper methods `callerAccountId()` and `calcAccountId(address userAddr)`, which translate the message sender's address into a unique account ID within the range of account IDs controlled by AddressDriver.
 
-When `setDrips(...)` is called in AddressDriver, we can see that `callerUserId()` is called to get the account ID for the message sender, and then another call is made to the `setDrips(...)` method in the Drips smart contract, passing this calculated account ID as a parameter. The end result is that AddressDriver
+When `setDrips(...)` is called in AddressDriver, we can see that `callerAccountId()` is called to get the account ID for the message sender, and then another call is made to the `setDrips(...)` method in the Drips smart contract, passing this calculated account ID as a parameter. The end result is that AddressDriver
 translates between the identity feature it's interested in (in this case, the message sender's Ethereum address) and the more general account IDs utilized by
 the Drips.
 
