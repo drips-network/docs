@@ -62,7 +62,7 @@ You only can receive streams from the already finished cycles. The entire timeli
 
 Receiving streams is done by calling the `receiveStreams` function on the `Drips` contract. Anybody can call this function for any user ID. This is fine because the users can't be hurt when somebody triggers receiving streams for them, the caller only covers the gas cost, but the effects are the same, the user gets their streams received and prepared to be split. This function can't be used to perform a DoS attack on the user.
 
-## Squeeze streans
+## Squeeze streams
 
 Squeezing streams is a companion to receiving streams. While receiving can be done only on funds streamed during the finished cycles, squeezing can be done only on funds streamed during the current cycle, which isn't finished yet. It allows receiving streams without waiting for the cycle to end, but it's more expensive in terms of gas usage. You must squeeze not only for each ERC-20 token separately, but also for each user from whom you want to squeeze streams. Any funds you don't squeeze will be receivable when the cycle ends.
 
@@ -74,7 +74,7 @@ Squeezing streams is done by calling `squeezeStreams` on the `Drips` contract. A
 
 Splitting distributes funds you've received from all sources among users who you've configured as your [splits receivers](/docs/the-protocol/overview#splitting). Splitting is done on your current splittable balance, which aggregates your received and squeezed streams, funds given to you, and funds split to you. The funds are split according to your current splits receivers list. Each of its entries contains a user ID and a percentage of splittable funds that they will receive. Any funds not split among the receivers will become collectable by you.
 
-Splitting is done by calling the `split` function on the `Drips?  contract. Anybody can call this function for any user ID, but they must pass the splits configuration that is currently set by that user, so their funds are always split according to their will. This makes setting splits receivers list somewhat bonding because right until you update it, anybody can split funds you've received according to that configuration.
+Splitting is done by calling the `split` function on the `Drips`?  contract. Anybody can call this function for any user ID, but they must pass the splits configuration that is currently set by that user, so their funds are always split according to their will. This makes setting splits receivers list somewhat bonding because right until you update it, anybody can split funds you've received according to that configuration.
 
 Receiving streams, squeezing streams and splitting being callable by anybody constitute a highly efficient system where funds are never stuck and can be always pushed to keep flowing in the network of splits. If you have a splits receiver configured, and you have some funds streamed, given or split to you, your splits receiver can perform all the necessary actions to get their splits from you, without bothering you. As the protocol is autonomous it runs without your intervention and the funds will keep moving in the network as long as your receiver benefits from it. This can go even further, because a splits receiver of your splits receiver may trigger a cascade of splitting to get their funds, it can go arbitrarily deep.
 
