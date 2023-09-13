@@ -22,7 +22,7 @@ emitAccountMetadata(
 : Promise<ContractTransaction>
 ```
 
-Take a look at <a href="https://drips-js-sdk-api.netlify.app/classes/nftdriverclient#emitAccountMetadata" target="_blank">this method's documentation</a> to understand what each parameter represents.
+Take a look at <a href="https://drips-js-sdk-api.netlify.app/classes/nftdriverclient#emitUserMetadata" target="_blank">this method's documentation</a> to understand what each parameter represents.
 
 As you can see, calling this method emits an EVM event that contains an array of `AccountMetadataStruct`s, which can be populated by the app developer however they wish:
 
