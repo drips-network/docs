@@ -1,20 +1,19 @@
 ---
-id: overview
 title: Overview
 ---
 
 Drips protocol is a fully decentralized, non-custodial, autonomous, and gas-optimized protocol allowing you to schedule and structure your ERC-20 token transactions to particular addresses. The information provided herein are for educational purposes only.
 
-<div class="legal-disclaimer">
+<div className="legal-disclaimer">
 Disclaimer: The Drips protocol operates in a fully decentralized and autonomous manner, like the Ethereum protocol with which it is integrated. Therefore, no entity or person controls or is in any way responsible for the ongoing operation, running, or functioning of the Drips protocol, nor does any entity or person have custody of any funds raised or streamed in the Drips protocol. You acknowledge that you are solely responsible for any interaction with the Drips protocol and any harm, damage or loss that may occur. There is no warranty, express or implied, for the Drips protocol and/or the software and/or any content. The Drips protocol and in particular the software is of experimental nature and available for use to the public on an “as-is” basis and no representations or warranties of any kind are made with respect to the Drips protocol, its operations and functionality, or its fitness for any specific purpose. BY ACCESSING THE DRIPS PROTOCOL, YOU ACKNOWLEDGE, UNDERSTAND AND AGREE THAT YOU USE THE DRIPS PROTOCOL AND THE SOFTWARE AT YOUR OWN RISK AND YOU ASSUME ANY COSTS, RESPONSIBILITY AND/OR ANY LIABILITY FOR ANY DAMAGES OR LOSSES YOU MAY INCUR, INCLUDING ANY SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF YOUR USE, OR INABILITY TO USE, THE DRIPS PROTOCOL AND/OR THE SOFTWARE.
 </div>
-<br>
+<br />
 
 There are three ways in which funds can be flowing in Drips protocol:
 
-- **Streaming** is moving funds between users over a period of time at a fixed per-second rate.
-- **Giving** is transferring an amount of funds between users immediately.
-- **Splitting** is transferring a fixed fraction of funds received by one user to another user.
+-   **Streaming** is moving funds between users over a period of time at a fixed per-second rate.
+-   **Giving** is transferring an amount of funds between users immediately.
+-   **Splitting** is transferring a fixed fraction of funds received by one user to another user.
 
 # Streaming
 
@@ -42,15 +41,14 @@ The splits receivers list contains between 0 and 200 entries. By default, every 
 
 Splits configuration is updated by calling the `setSplits` function of the [driver](/docs/the-protocol/accounts-in-drips#drips-account-drivers) managing your user ID.
 
-
 # Receiving flow
 
 Received funds go through a few steps before they can be collected.
 
-- **Receiving drips** and **squeezing drips** gathers funds that have been dripped to you.
-- **Splitting** gets all received and squeezed drips, given funds and funds received from splitting,
-and distributes them according to the current splits configuration.
-- **Collecting** transfers out of the protocol funds left after splitting.
+-   **Receiving drips** and **squeezing drips** gathers funds that have been dripped to you.
+-   **Splitting** gets all received and squeezed drips, given funds and funds received from splitting,
+    and distributes them according to the current splits configuration.
+-   **Collecting** transfers out of the protocol funds left after splitting.
 
 ![Diagram 1][img1]
 

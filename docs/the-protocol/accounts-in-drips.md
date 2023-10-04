@@ -1,6 +1,5 @@
 ---
-id: accounts-in-drips
-title: Accounts In Drips
+title: Accounts in Drips
 ---
 
 In this section we take a look at the Drips Protocol's driver-based account model and review the types of user accounts that are available in Drips V2 today.
@@ -15,15 +14,15 @@ Under the hood, each of these account types is enabled by an account driver whic
 
 We'll dive into all of the details below, but from a high-level the most important things to keep in mind are:
 
-- **In Drips, multiple types of user accounts are able to control funds, including Ethereum addresses, NFT-based accounts and even GitHub repositories.**
-- **This is possible because of Drips' use of an extensible system of "account drivers", which govern the implementations of different account types through smart contracts.**
+-   **In Drips, multiple types of user accounts are able to control funds, including Ethereum addresses, NFT-based accounts and even GitHub repositories.**
+-   **This is possible because of Drips' use of an extensible system of "account drivers", which govern the implementations of different account types through smart contracts.**
 
 ### What Do We Mean by "Accounts" in Drips?
 
 First, let's briefly review what we mean by an "account". For the purposes of Drips, what we mean is:
 
-- A unique identifier that corresponds one-to-one to an account that can send and receive funds (e.g. using streams or Splits) in the Drips Protocol.
-- A way to authenticate critical actions on that account, like withdrawing funds, or setting up new streams and Splits configurations.
+-   A unique identifier that corresponds one-to-one to an account that can send and receive funds (e.g. using streams or Splits) in the Drips Protocol.
+-   A way to authenticate critical actions on that account, like withdrawing funds, or setting up new streams and Splits configurations.
 
 With that out of the way, let's take a look at some more of the technical details.
 
@@ -80,15 +79,15 @@ Having looked at AddressDriver and NFTDriver in detail, we can now see how the D
 
 When interacting with Drips through the <a href="/docs/js-sdk/drips-sdk" target="_blank">Javascript SDK</a>, most of these details are abstracted away from developers by convenience classes that hide the full complexity - including account IDs - for most common actions developers will wish to take. For instance, to build on the SDK and allow an end-user to collect funds streamed to them through Drips, a developer simply creates an [AddressDriverClient][ad] and calls the `collect()` method, which has a signature that looks like this:
 
-> public async collect(tokenAddress: string, transferToAddress: string): Promise<ContractTransaction>
+&gt; public async collect(tokenAddress: string, transferToAddress: string): Promisecontracttransaction
 
-You'll notice that this method signature contains no mention of any account IDs - it's all just ordinary Ethereum addresses (here `transferToAddress` is the Ethereum address that the user wishes to collect their funds to).
+You'll notice that this method signature contains no mention of any account IDs - it's all just ordinary Ethereum addresses (here `` is the Ethereum address that the user wishes to collect their funds to).
 
 On the other hand, for developers looking to build more sophisticated applications on top of Drips, it will likely be necessary for them to have a full understanding
 of the Drips account model and in some cases to interact with account IDs rather than simple Ethereum addresses, even if they are building on top of the SDK.
 
 For instance,
-one area where account IDs are heavily used is in the Drips subgraph, where many entity types in <a href="https://github.com/radicle-dev/drips-subgraph/blob/v2/schema.graphql" target="_blank">the subgraph schema</a> refer to account IDs rather than Ethereum addresses and the
+one area where account IDs are heavily used is in the Drips subgraph, where many entity types in the subgraph schema refer to account IDs rather than Ethereum addresses and the
 corresponding query methods in the [DripsSubgraphClient][ds] in the SDK take accountId-based parameter values and also returns data that includes accountIds. So
 developers wishing to work directly with that data in its raw form will need to understand what the account IDs mean and how to unpack them.
 
@@ -110,7 +109,8 @@ drivers the Drips Team shipped with Drips V2, which provide developers and users
 
 One last note, the Drips Team plans to release more account drivers in the coming months, which should enable entirely new and different kinds of accounts in Drips. Stay tuned for more details!
 
-
 [ad]: https://github.com/radicle-dev/drips-js-sdk/blob/v2/src/AddressDriver/AddressDriverClient.ts
+
 [ds]: https://github.com/radicle-dev/drips-js-sdk/blob/v2/src/DripsSubgraph/DripsSubgraphClient.ts
+
 [u1]: /img/drips_user_identity-1.png

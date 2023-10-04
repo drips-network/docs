@@ -1,12 +1,11 @@
 ---
-id: smart-contract-and-subgraph-details
-title: Smart Contract and Subgraph Details
+title: Smart Contract details
 ---
 
 ## Ethereum Mainnet
 
 <table>
-<tr><td>Chain</td><td>mainnet</td></tr>
+<tbody><tr><td>Chain</td><td>mainnet</td></tr>
 <tr><td>Deployment time</td><td>2023-07-13T12:30:27Z</td></tr>
 <tr><td>Commit hash</td><td>afeba55f70a968ded7c0797a4211faa856e28fa0</td></tr>
 <tr><td>Wallet</td><td>0x823204FFd4fAa09fbf2AAc51A290233e829991a1</td></tr>
@@ -38,14 +37,14 @@ title: Smart Contract and Subgraph Details
 <tr><td>RepoDriver AnyApi default fee</td><td>1620000000000000000</td></tr>
 <tr><td>RepoDriver logic</td><td>0xfC446dB5E1255e837E95dB90c818C6fEb8e93ab0</td></tr>
 <tr><td>RepoDriver admin</td><td>0x8dA8f82d2BbDd896822de723F55D6EdF416130ba</td></tr>
-</table>
+</tbody></table>
 
 This deployment is based on the <a href="https://github.com/radicle-dev/drips-contracts/releases/tag/v2_ethereum_deploy" target="_blank">'v2_ethereum_deploy' tag </a>from the Drips Smart Contracts repository.
 
 ## Sepolia Testnet Deployment #4
 
 <table>
-<tr><td>Chain</td><td>sepolia</td></tr>
+<tbody><tr><td>Chain</td><td>sepolia</td></tr>
 <tr><td>Deployment time</td><td>2023-07-15T10:41:56Z</td></tr>
 <tr><td>Commit hash</td><td>afeba55f70a968ded7c0797a4211faa856e28fa0</td></tr>
 <tr><td>Wallet</td><td>0x341a08926dCa7fa7D135F96E4d76b696e5f6d38d</td></tr>
@@ -77,12 +76,12 @@ This deployment is based on the <a href="https://github.com/radicle-dev/drips-co
 <tr><td>RepoDriver AnyApi default fee</td><td>150000000000000000</td></tr>
 <tr><td>RepoDriver logic</td><td>0x7A9a2a29B8d98922Ea2E70c73B123e36C95d1515</td></tr>
 <tr><td>RepoDriver admin</td><td>0x341a08926dCa7fa7D135F96E4d76b696e5f6d38d</td></tr>
-</table>
+</tbody></table>
 
 ## Goerli Testnet Deployment #13
 
 <table>
-<tr><td>Chain</td><td>goerli</td></tr>
+<tbody><tr><td>Chain</td><td>goerli</td></tr>
 <tr><td>Deployment time</td><td>2023-07-15T10:34:39Z</td></tr>
 <tr><td>Commit hash</td><td>afeba55f70a968ded7c0797a4211faa856e28fa0</td></tr>
 <tr><td>Wallet</td><td>0x341a08926dCa7fa7D135F96E4d76b696e5f6d38d</td></tr>
@@ -114,7 +113,7 @@ This deployment is based on the <a href="https://github.com/radicle-dev/drips-co
 <tr><td>RepoDriver AnyApi default fee</td><td>50000000000000000</td></tr>
 <tr><td>RepoDriver logic</td><td>0x7A9a2a29B8d98922Ea2E70c73B123e36C95d1515</td></tr>
 <tr><td>RepoDriver admin</td><td>0x341a08926dCa7fa7D135F96E4d76b696e5f6d38d</td></tr>
-</table>
+</tbody></table>
 
 ## Subgraph Details
 
@@ -124,21 +123,21 @@ The repository for the subgraph's code can be found
 #### Ethereum Mainnet - Subgraph Page and Endpoints
 
 Subgraph page on The Graph's Hosted Mode website:
-<br><a href="https://thegraph.com/hosted-service/subgraph/drips-network-dev/drips-v2-on-ethereum" target="_blank">https://thegraph.com/hosted-service/subgraph/drips-network-dev/drips-v2-on-ethereum</a>
+<br /><a href="https://thegraph.com/hosted-service/subgraph/drips-network-dev/drips-v2-on-ethereum" target="_blank">https://thegraph.com/hosted-service/subgraph/drips-network-dev/drips-v2-on-ethereum</a>
 
 Subgraph endpoints:
 Queries (HTTP):
-<br>https://api.thegraph.com/subgraphs/name/drips-network-dev/drips-v2-on-ethereum
+<br />https:
 
 Subscriptions (WS):
-<br>wss://api.thegraph.com/subgraphs/name/drips-network-dev/drips-v2-on-ethereum
+wss://api.thegraph.com/subgraphs/name/drips-network-dev/drips-v2-on-ethereum
 
 #### Sepolia Testnet
 
 Subgraph URL:
-https://api.studio.thegraph.com/query/47690/drips-v2-on-sepolia/version/latest
+
 
 #### Goerli Testnet
 
 Subgraph URL:
-https://api.studio.thegraph.com/query/47690/drips-v2-on-goerli/version/latest
+

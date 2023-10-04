@@ -1,6 +1,5 @@
 ---
-id: fractional-amounts
-title: Streaming Fractional Amounts
+title: Fractional amounts
 ---
 
 ## Introduction: token decimals
@@ -19,11 +18,11 @@ When setting up streams, each receiver is configured with an integer per-second 
 
 For example, the user wants to stream 0.000,001 USDC per second. USDC has 6 decimals, so the actual rate they want is 1 token unit per second. The streams configuration requires the rate to have 9 extra decimals, so the `amtPerSec` needs to be set to value 1,000,000,000. Streaming 0.000,001 USDC per second adds up to 2.592 USDC per 30 days. Let's say that the user feels that it's too much, now they want to stream only 1 USDC per 30 days. This is 0.385,802,469 token units per second, to which we add 9 decimals and end up passing as `amtPerSec` the integer value 385,802,469.
 
-|| Example token amount representation|
-|-|-
-| Tokens seen by the user | 0.05 USDC
-| Token units handled by smart contracts | 50,000 (USDC has 6 decimals, so we calculate `0.05 * 10 ^ 6`)
-| Passed as `amtPerSec` as a per second streaming rate | 50,000,000,000,000 (`amtPerSec` requires adding 9 extra decimals to the number of token units, so we calculate `50,000 * 10 ^ 9`)
+|                                                             | Example token amount representation                                                                                                             |
+| ----------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| Tokens seen by the user                                     | 0.05 USDC                                                                                                                                       |
+| Token units handled by smart contracts                      | 50,000 (USDC has 6 decimals, so we calculate `0.05 * 10 ^ 6`)                                                                            |
+| Passed as `amtPerSec` as a per second streaming rate | 50,000,000,000,000 (`amtPerSec` requires adding 9 extra decimals to the number of token units, so we calculate `50,000 * 10 ^ 9`) |
 
 ## The API requires 9 extra decimals only in `StreamConfig`'s `amtPerSec`
 
