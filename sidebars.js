@@ -39,6 +39,7 @@ const sidebars = {
         }
       ]
     },
+    'usage-with-a-safe',
     'faq',
   ],
 
