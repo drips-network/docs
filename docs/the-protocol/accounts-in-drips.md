@@ -77,7 +77,7 @@ Having looked at AddressDriver and NFTDriver in detail, we can now see how the D
 
 ## User Accounts and the Drips Javascript SDK
 
-When interacting with Drips through the <a href="/docs/js-sdk/drips-sdk" target="_blank">Javascript SDK</a>, most of these details are abstracted away from developers by convenience classes that hide the full complexity - including account IDs - for most common actions developers will wish to take. For instance, to build on the SDK and allow an end-user to collect funds streamed to them through Drips, a developer simply creates an [AddressDriverClient][ad] and calls the `collect()` method, which has a signature that looks like this:
+When interacting with Drips through the <a href="https://github.com/drips-network/sdk" target="_blank">Javascript SDK</a>, most of these details are abstracted away from developers by convenience classes that hide the full complexity - including account IDs - for most common actions developers will wish to take. For instance, to build on the SDK and allow an end-user to collect funds streamed to them through Drips, a developer simply creates an [AddressDriverClient][ad] and calls the `collect()` method, which has a signature that looks like this:
 
 &gt; public async collect(tokenAddress: string, transferToAddress: string): Promisecontracttransaction
 

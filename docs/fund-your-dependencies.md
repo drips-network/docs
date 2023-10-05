@@ -24,7 +24,7 @@ Once you have assigned percentages to each recipient, choose a name to give to y
 
 ![Assign percentages](/img/drips-app/drip-lists/fund_your_dependencies_3.png)
 
-Next, you'll need to select the type of token you wish to stream to your Drip List and the rate at which the token will be streamed. Tokens streamed to the Drip List are sent continuously, and split amongst the recipients based on the percentages you chose in the previous step. You can learn more about how streaming and splitting work <a href="/docs/the-protocol/overview">here</a>.
+Next, you'll need to select the type of token you wish to stream to your Drip List and the rate at which the token will be streamed. Tokens streamed to the Drip List are sent continuously, and split amongst the recipients based on the percentages you chose in the previous step. You can learn more about how streaming and splitting work <a href="the-protocol/overview">here</a>.
 
 You'll also need to decide how much to top-up. Funds that are topped-up are sent to the Drips smart contracts and stored there as your balance of funds, which your streams continuously send from. You can withdraw funds that have not yet been streamed at any time. When you have entered the amount you wish to top-up, click "Continue".
 
