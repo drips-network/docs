@@ -38,13 +38,13 @@ before opening a new one.
 1. Make sure all the dependencies for the website are installed:
 
 ```sh
-yarn
+npm
 ```
 
 2. Run your dev server:
 
 ```sh
-yarn start
+npm run start
 ```
 
 3. Publish to GH Pages
@@ -53,7 +53,7 @@ yarn start
 GIT_USER=<ENTER_YOUR_GITHUB-USERNAME_HERE> \
 CURRENT_BRANCH=master \
 USE_SSH=true \
-yarn deploy
+npm run deploy
 ```
 ### Editing an Existing Docs Page
 
@@ -63,7 +63,6 @@ Edit docs by navigating to `docs/` and editing the corresponding document:
 
 ```markdown
 ---
-id: page-needs-edit
 title: This Doc Needs To Be Edited
 ---
 
