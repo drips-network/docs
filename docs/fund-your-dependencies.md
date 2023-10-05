@@ -2,48 +2,46 @@
 title: Fund your dependencies
 ---
 
-Drips makes it easy for anyone, anywhere to directly fund and support the software projects they depend on the most! Regardless of whether you represent a large organization building on critical FOSS infrastructure or are an individual interested in giving something back to the open source libraries you use every day, read on to learn how Drips makes it easy to fund your critical dependencies.
+import Figure from './components/Figure'
 
-## Create a Drip List
+On Drips, anyone can create a _Drip List_ to flexibly send funds to a list of up to 200 open-source GitHub repositories and Ethereum addresses at a time. As project maintainers come to Drips to claim their funds, they themselves are asked to provide a list of other projects they depend on, and can choose to automatically forward a percentage of their earnings to them. In this article, we'll go over how you can create your very own _Drip List_ with your critical dependencies, and start supporting it with a stream of any ERC-20 token.
 
-Drip Lists are a powerful new feature in Drips V2 that enables anyone to publicly create and fund lists of FOSS projects and maintainers they care about the most. Want to give it a try?
+## How funds flow through a Drip List
 
-Start by navigating to <a href="https://drips.network/" target="_blank">drips.network</a> and then click on "Open App" in the top right corner of the page to open the Drips Web app. Next, you will need to connect a web3 wallet to start using the app.
+You can think of your Drip List as a personal "money router" that automatically *splits* any incoming funds to its recipients once a week. You yourself can establish one or more *Support Streams* to your own list.
 
-Once your wallet is connected, click on the "Drip Lists" button in the menu on the left and then click on "Create Drip List".
+<Figure caption="You can stream any amount of any ERC-20 token to your Drip List, which will automatically split any received funds to its receipients once per week." src="/img/fund/funding-cashflow.png" />
 
-![The Create Drip List button](/img/drips-app/drip-lists/fund_your_dependencies_1.png)
+### Creating your Drip List
 
-Next, you can choose the Github projects, Ethereum addresses or ENS names you would like to include in your list. Add these one-by-one by pasting either an Ethereum address, ENS name, or a link to a Github _repository_ into the box and clicking "Add" as shown in the screenshot below. Note that if you're pasting a Github link, it must be the URL for a repository, not a link to a user's account or a Github organization.
+To create a Drip List, open the Drips App, connect your wallet, and navigate to **Drip List → Create Drip List**. You'll be asked to specify which up to 200 individual GitHub repositories, Ethereum addresses, or other Drip Lists you'd like to forward what percentage of funds. Then, you'll have a chance to immediately start supporting your list with a *Support Stream*. Once done, funds will start moving immediately, and within a week end up with the recipients you specified.
 
-![Build your list](/img/drips-app/drip-lists/fund_your_dependencies_2.png)
+### Support Streams
 
-Once you've added all of the recipients you would like to include, you will need to specify the percentage of funds sent to the list that will be allocated to each recipient. You can either enter a percentage manually in the box next to each entry, or use some of the helpful tools provided by the app like the "Distribute Evenly" button, or "Distribute Remaining". The percentages must sum to 100% in order to continue.
+A *Support Stream* on Drips is an ongoing *stream* of funds, with per-second settlement.
 
-Once you have assigned percentages to each recipient, choose a name to give to your Drip List and click "Continue".
+Let's say you'd like to support the projects on your Drip List with 500 USDC every month. To do so, you create a *Support Stream* to your list, configure it to stream 500 USDC over 30 days, and then top up your USDC balance on Drips with an initial amount. As soon as your account is funded, you'll see USDC funds stream to your list in real-time. The benefit of *streams* over monthly payments is that you're in full control: You can pause, alter or completely stop your stream even in the middle of the month. As your balance decreases, you can flexibly *top up* your Drips account with additional USDC to keep the stream running, or at any point withdraw any not-yet-streamed funds that are still on your Drips account.
 
-![Assign percentages](/img/drips-app/drip-lists/fund_your_dependencies_3.png)
+:::info
 
-Next, you'll need to select the type of token you wish to stream to your Drip List and the rate at which the token will be streamed. Tokens streamed to the Drip List are sent continuously, and split amongst the recipients based on the percentages you chose in the previous step. You can learn more about how streaming and splitting work <a href="the-protocol/overview">here</a>.
+Apart from supporting your Drip List with a Support Stream, you can also establish arbitrary *Token Streams* to any Ethereum address for any other usecase. To do so, head over to **Streams → Create Stream** in the Drips App.
 
-You'll also need to decide how much to top-up. Funds that are topped-up are sent to the Drips smart contracts and stored there as your balance of funds, which your streams continuously send from. You can withdraw funds that have not yet been streamed at any time. When you have entered the amount you wish to top-up, click "Continue".
+:::
 
-![Choose token and quantity to stream](/img/drips-app/drip-lists/fund_your_dependencies_4.png)
+#### Settlement of funds
 
-Next, you have the opportunity to review everything you've entered in previous steps. Note that this is your last chance to make changes before sending the transactions that create your Drip List, so take some time to review the details before proceeding. If you would like to change anything, you can do so by clicking the "go back" button. When you are ready to go ahead with creating the list, click "Continue".
+While the stream to your Drip List is calculated per-second, funds in the global Drips Dependency Tree are automatically *split* once per week, resulting in effective *weekly settlement*. This means that any funds you stream to your Drip List end up with the projects on the list (and, if applicable, their dependencies) once per week.
 
-![Confirm the details of yur Drip List](/img/drips-app/drip-lists/fund_your_dependencies_5.png)
+You can at any point review the next settlement day within the Drips App's "Projects" tab, but please note that the settlement doesn't occur exactly at midnight, but rather at some point throughout the indicated day, roughly within the UTC time zone.
 
-You will be prompted to sign two different transactions by your wallet. The first transaction approves the withdrawal of funds to top-up your drips account based on the top-up amount you chose and the second transaction creates your Drip List on chain based on the details you specified.
-Recipient
-You will need to sign both transactions using your wallet. The exact details of what this will look like will differ based on the type of wallet you're using. See <a href="/streaming-and-splitting/advanced/safe" target="_blank">here</a> for details about how to use a Safe with Drips.
+As a result of this, you can edit the recipients on your Drip List before the settlement day each week, and this will cause *all* funds sent to your list within the last settlement period to be split according to the new configuration.
 
-Once you have confirmed both transactions you may need to wait a few moments for them to execute, and assuming they succeed.... voila! You have created your first Drip List and you will be sent to the Drips profile page for your account, where you can see your new Drip List along with your other account details.
+:::info
 
-Congratulations and thank you for contributing to supporting FOSS as a public good! 
+If you'd like to learn more about the technical details behind the weekly settlement, you can read through our technical [Drips inner workings](http://localhost:3000/the-protocol/advanced/drips-inner-workings) article.
 
-## Need Help?
+:::
 
-Having trouble creating your Drips List, or simply have additional questions about how it all works? The Drips Team would be happy to help! You can always find us on our Discord Server, where you can share your question or issue in the <a href="https://discord.gg/WuscE6BtBW" target="_blank">#issues</a> channel.  
+#### Supporting other Drip Lists
 
-<Disclaimer />
+Drip Lists are *nestable*, meaning anyone can add anyone elses Drip List to *their* Drip List, and forward a specifc percentage of *its* income to the projects contained on the nested list.
