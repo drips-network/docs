@@ -36,4 +36,6 @@ You can read the [report from Certora](/img/Certora_Radicle_Drips_Report.pdf), o
 
 Of course, it's important to note that despite our efforts to ensure the security of our smart contracts, there is always a certain level of risk involved.
 
-&gt; No system is completely immune to security threats, and it's impossible to guarantee that our smart contracts will never be exploited.
+:::warning
+No system is completely immune to security threats, and it's impossible to guarantee that our smart contracts will never be exploited.
+:::
