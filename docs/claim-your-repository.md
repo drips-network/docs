@@ -1,59 +1,77 @@
 ---
-title: Claim your repository
+title: Claim your open-source project
 ---
 
-With Drips, funders can send financial support (in the form of ERC20 tokens) directly to public software projects and the developers who contribute to them, regardless of whether the developers who own the project have Ethereum addresses or not.
+import Figure from './components/Figure'
 
-The way this works is that the tokens are streamed to a Drips account associated with a software repository on a public forge (Github, Gitlab, Radicle, etc.). And then separately, either before or after that, any developer with commit rights on that repository can show up and claim the funds by adding a FUNDING.json file to the root of the repository's default branch and associating an Ethereum address with the account.
+A _Project_ on Drips represents an open-source repository on GitHub, with support for other Git hosts coming soon. Every GitHub repository starts out on Drips as _unclaimed_. In this state, it can already be funded with a Drip List, or added as a dependency of another project. At any point, the project's maintainers can _claim_ their project on Drips, configure a list of _maintainers_ and _dependencies_, and collect any previously-received earnings. Future incoming funds are then automatically split as configured, resulting in even deeply-nested dependencies receiving their share.
 
-To give this a try with your project, start by navigating to <a href="https://drips.network/" target="_blank">drips.network</a> and then click on "Open App" in the top right corner of the page to open the Drips Web app. Next, you will need to connect a web3 wallet to start using the app.
+:::info
+If you haven't yet, learn more about the Drips Network's fundamentals in our [introduction](/).
+:::
 
-Once your wallet is connected, click on the "Project" button in the menu on the left and then click on "Claim Project".
+## How funds reach projects
 
-![The Claim Project button](/img/drips-app/drip-lists/how_to_claim_a_project_1.png)
+On Drips, individuals or organizations wishing to financially support their dependencies [can do so with a *Drip List*](fund-your-depdendencies). Funds sent to Drip Lists are automatically *split* to its recipients (projects, Ethereum addresses, or other Drip Lists) once per week. When funds reach a project from a Drip List, they are further split according to the project's dependencies and maintainers, resulting in a global, fundable *dependency tree*.
 
-Enter the full URL of the repository you would like to claim and then click "Submit". _Note that currently, only Github is supported and that the repository must be public._
+<Figure caption="Funds enter the Drips Dependency Tree through Drip Lists, and are automatically split down to projects." src="/img/introduction/splitting_graph.png" />
 
-![The Claim Project button](/img/drips-app/drip-lists/how_to_claim_a_project_2.png)
+## Your repository on Drips
 
-Assuming you entered a valid URL, the app will display the amount of funds that have been sent to the account associated with the repository in Drips. Unless you have reason to believe that someone has sent funds to your project, most likely there will be no funds available to claim. But regardless of whether funds are available or not, if you're an owner of the project, you can still move forward with claiming ownership.
+To find your repository's associated Drips project, simply launch the Drips App, paste its GitHub URL into the search bar, and click **Jump to GitHub repo**. On the resulting project screen, you can see whether your project already accumulated any *claimable funds*, and quickly jump into the claim process by clicking **Claim project**.
 
-To do so, click the "Continue" button to proceed.
+<Figure caption="You can check if your project has claimable funds on its project view." src="/img/raise/unclaimed.png" />
 
-![The Claim Project button](/img/drips-app/drip-lists/how_to_claim_a_project_3.png)
+## How Drips manages project access
 
-Now the app will display the address of the wallet you are connected with. Before you move forward, make sure you are connected with the Ethereum address that you wish to associate with the repository to act as its owner, on-chain. If you wish to use a different address, now is a good time to disconnect your wallet, reconnect with the wallet you want to use, and then repeat the steps above to return to this point.
+Drips is built on Ethereum, a global, decentralized blockchain. On Drips, every claimed project is owned by an *Ethereum address*. You can learn more about Ethereum and create your own personal Ethereum address by [downloading and installing an Ethereum wallet app](https://ethereum.org/en/wallets/).
 
-When you're ready to proceed, click "Continue".
+As part of the claim process, the on-chain Drips Smart Contracts ensure that a particular Ethereum address should be able to manage a project and its funds by checking whether its default branch on GitHub includes a `FUNDING.json` file in the root directory. Because Smart Contracts cannot just access the internet, Drips uses an [Oracle service](https://ethereum.org/en/developers/docs/oracles/) to fetch the `FUNDING.json` file.
 
-![The Claim Project button](/img/drips-app/drip-lists/how_to_claim_a_project_4.png)
+<Figure caption="During the claim process, Drips' Smart Contracts check for a FUNDING.json file on the GitHub repository's default branch." src="/img/raise/claim-process.png" />
 
-Now you will need to add a file called FUNDING.json in the root directory of the default branch of your project. As described in the instructions, this file will need to contain the JSON fragment that is shown, in order to correctly associate your Ethereum address with the project.
+The `FUNDING.json` file includes an Ethereum address, which will subsequently be granted access to the repository on Drips. This is an example; your real FUNDING.json file will include your own Ethereum address, and will automatically be generated for you as part of the claiming process.
 
-_Note -- if you are logged into Github, the Drips webapp UI provides a handy shortcut to help stage a commit for the required FUNDING.json file in your Github repo with the correct contents pre-filled. To try this, simply click on the..._
+```json
+{
+  "drips": {
+    "ethereum": {
+      "ownedBy": "0x0000000000000000000000000000000000000000"
+    }
+  }
+}
+```
 
-<br />
-![The Claim Project button](/img/drips-app/drip-lists/how_to_claim_a_project_icon.png)
-<br />
+:::info
+If your project is led by a group of multiple individuals, you may consider using a [Safe multisig](https://safe.global/) to claim it on Drips. This will allow requiring a specific amount of individuals to agree on changes to who the project splits income to in the future. Learn how to use Drips with a Safe multisig [here](usage-with-a-safe).
+:::
 
-_...button in the UI._
+## Claiming your project
 
-After you've added the FUNDING.json file and are ready to proceed, check the box next to "I added the FUNDING.json file..." and finally click "Verify now". Assuming the contents of the file are correct, this will initiate the process of directing the Chainlink-based oracle to query your repository and check for the presence of the file. Please be patient.
+You can enter the claim process by launching the Drips App, connecting your Ethereum wallet, and navigating to **Projects → Claim project**. As part of the flow, you'll be asked to commit a `FUNDING.json` file to the repository's default branch. If in order to do so you need to wait for a PR to be reviewed, you can simply resume the flow later.
 
-Once this has completed, the next step is to set up the splits configuration for your projects. This configuration determines how funds sent to the project by funders will be divided between maintainers and other project that your project depends on. Use the slider in the UI to set this split however you would like. When you're ready, click "Continue".
+Once the `FUNDING.json` file has been verified, you'll be asked to configure a list of *maintainers* and *dependencies* that incoming funds will be split to, and customize your project's appearance on Drips.
 
-![The Claim Project button](/img/drips-app/drip-lists/how_to_claim_a_project_5.png)
+:::info
+In order to claim your project, you will need a small amount of ETH in your connected Ethereum wallet in order to cover Ethereum's network ["gas fee"](https://ethereum.org/en/developers/docs/gas/).
+:::
 
-Now you have a chance to add Ethereum addresses (or ENS names) for other maintainers who contribute to the project. Add any other maintainers who you would like to share funds with and then adjust the values to the right of the entries to specify how the funds going to the "maintainers" part of the split should be divided. When you are ready to proceed, click "Continue" again.
+After you're done, your project will be claimed, and any future earnings will be split according to your configuration.
 
-![The Claim Project button](/img/drips-app/drip-lists/how_to_claim_a_project_6.png)
+<Figure caption="An example claimed project on Drips." src="/img/introduction/project.png" />
 
-This step is similar to the previous one, except here you are specifying how the funds sent to the "dependencies" part of the split should be divided among other projects that your project depends on. Add as many Github repository URLs, or Ethereum addresses as you would like and specify the percentage that you would like each to receive. When you are ready, click "Continue" again.
+### Editing your project
 
-![The Claim Project button](/img/drips-app/drip-lists/how_to_claim_a_project_7.png)
+You can edit your project's appearance and split configuration at any point in the future by navigating to it from the Projects tab, and clicking **Edit** on the thing you'd like to change.
 
-This is the last step -- here you have the chance to review everything. Make sure to look everything over carefully before continuing. Once you are satisfied, click "Confirm in wallet".
+## Collecting earnings
 
-You will be prompted to confirm a transaction and then you will have to wait. Please be patient. Assuming that all goes well, you will be sent to the profile screen for your newly-claimed project. You have now claimed your project on Drips! Any funds streamed or _given_ to the project will be split to the different maintainer and dependency accounts you specified in your configuration.
+If your project already has claimable funds, the claim process will immediately apply the percentage splits to maintainers and dependencies you set up. If you yourself received a portion of the claimable funds, you will be able to immediately transfer them to your Ethereum wallet by navigating to **Projects → Earnings** after you've successfully claimed your project.
 
-Congratulations and thank you for claiming your project on Drips and helping to bring the interdependent ecosystem of FOSS public goods on-chain!
+## Settlement of future funds
+
+Funds in the global Drips Dependency Tree are automatically split *once per week*, resulting in effective *weekly settlement*. This means that after claiming, funds may reach your project weekly, and will automatically be forwarded according to your configured splits to maintainers and dependencies.
+
+You can at any point review the next settlement day within the Drips App's "Projects" tab, but please note that the settlement doesn't occur exactly at midnight, but rather at some point throughout the indicated day, roughly within the UTC time zone.
+
+If you are set as the maintainer of a project, you can check for and collect any earnings by navigating to **Projects → Earnings** within the Drips app.

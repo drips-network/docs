@@ -12,7 +12,7 @@ Drips is an app built on Ethereum that enables flexibly supporting open-source p
 
 On Drips, anyone can create a _Drip List_ to flexibly send funds to a list of up to 200 open-source GitHub repositories and Ethereum addresses at a time. As project maintainers come to Drips to claim their funds, they themselves are asked to provide a list of other projects they depend on, and can choose to automatically forward a percentage of their earnings to them. Over time, this results in a global _dependency tree_, ensuring that even deeply-nested dependencies receive a portion of funds donated to their higher-level dependents. Thanks to our integration with GitHub, anyone can support any public GitHub repository (or list it as one of their own project's dependencies), even if their maintainers haven't yet registered it on Drips.
 
-<Figure caption="The Drips Funding Graph is a fundable representation of real-world software dependencies." src="/img/introduction/splitting_graph.png" />
+<Figure caption="The Drips Dependency Tree is a fundable representation of real-world software dependencies." src="/img/introduction/splitting_graph.png" />
 
 ### Supporting your dependencies with Drip Lists
 

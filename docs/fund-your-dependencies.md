@@ -6,6 +6,10 @@ import Figure from './components/Figure'
 
 On Drips, anyone can create a _Drip List_ to flexibly send funds to a list of up to 200 open-source GitHub repositories and Ethereum addresses at a time. As project maintainers come to Drips to claim their funds, they themselves are asked to provide a list of other projects they depend on, and can choose to automatically forward a percentage of their earnings to them. In this article, we'll go over how you can create your very own _Drip List_ with your critical dependencies, and start supporting it with a stream of any ERC-20 token.
 
+:::info
+If you haven't yet, learn more about the Drips Dependency Tree in our [introduction](/).
+:::
+
 ## Creating your Drip List
 
 To create a Drip List, open the Drips App, connect your wallet, and navigate to **Drip List → Create Drip List**. You'll be asked to specify which up to 200 individual GitHub repositories, Ethereum addresses, or other Drip Lists you'd like to forward what percentage of funds. Then, you'll have a chance to immediately start supporting your list with a *Support Stream*. Once done, funds will start moving immediately, and within a week end up with the recipients you specified.
