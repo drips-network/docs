@@ -12,7 +12,7 @@ If you haven't yet, learn more about the Drips Network's fundamentals in our [in
 
 ## How funds reach projects
 
-On Drips, individuals or organizations wishing to financially support their dependencies [can do so with a *Drip List*](fund-your-depdendencies). Funds sent to Drip Lists are automatically *split* to its recipients (projects, Ethereum addresses, or other Drip Lists) once per week. When funds reach a project from a Drip List, they are further split according to the project's dependencies and maintainers, resulting in a global, fundable *dependency tree*.
+On Drips, individuals or organizations wishing to financially support their dependencies [can do so with a *Drip List*](fund-your-dependencies). Funds sent to Drip Lists are automatically *split* to its recipients (projects, Ethereum addresses, or other Drip Lists) once per week. When funds reach a project from a Drip List, they are further split according to the project's dependencies and maintainers, resulting in a global, fundable *dependency tree*.
 
 <Figure caption="Funds enter the Drips Dependency Tree through Drip Lists, and are automatically split down to projects." src="/img/introduction/splitting_graph.png" />
 
