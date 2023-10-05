@@ -1,5 +1,4 @@
 ---
-id: smart-contract-and-subgraph-details
 title: Smart Contract and Subgraph Details
 ---
 
@@ -118,20 +117,18 @@ This deployment is based on the <a href="https://github.com/radicle-dev/drips-co
 
 ## Subgraph Details
 
-The repository for the subgraph's code can be found 
-<a href="https://github.com/radicle-dev/drips-subgraph/tree/v2" target="_blank">here</a>.
+The repository for the subgraph's code can be found [here](https://github.com/radicle-dev/drips-subgraph/tree/v2).
 
 #### Ethereum Mainnet - Subgraph Page and Endpoints
 
-Subgraph page on The Graph's Hosted Mode website:
-<br><a href="https://thegraph.com/hosted-service/subgraph/drips-network-dev/drips-v2-on-ethereum" target="_blank">https://thegraph.com/hosted-service/subgraph/drips-network-dev/drips-v2-on-ethereum</a>
+Subgraph page on The Graph's Hosted Mode website: <a href="https://thegraph.com/hosted-service/subgraph/drips-network-dev/drips-v2-on-ethereum" target="_blank">https://thegraph.com/hosted-service/subgraph/drips-network-dev/drips-v2-on-ethereum</a>
 
-Subgraph endpoints:
+##### Subgraph endpoints:
 Queries (HTTP):
-<br>https://api.thegraph.com/subgraphs/name/drips-network-dev/drips-v2-on-ethereum
+https://api.thegraph.com/subgraphs/name/drips-network-dev/drips-v2-on-ethereum
 
 Subscriptions (WS):
-<br>wss://api.thegraph.com/subgraphs/name/drips-network-dev/drips-v2-on-ethereum
+wss://api.thegraph.com/subgraphs/name/drips-network-dev/drips-v2-on-ethereum
 
 #### Sepolia Testnet
 

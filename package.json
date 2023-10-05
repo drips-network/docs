@@ -1,10 +1,11 @@
 {
   "scripts": {
-    "start": "cd website && docusaurus-start",
-    "build": "cd website && docusaurus-build",
-    "deploy": "cd website && docusaurus-publish"
+    "start": "docusaurus start",
+    "build": "docusaurus build",
+    "deploy": "docusaurus publish"
   },
-  "devDependencies": {
-    "docusaurus": "^1.14.7"
+  "dependencies": {
+    "@docusaurus/core": "^2.4.3",
+    "@docusaurus/preset-classic": "^2.4.3"
   }
 }

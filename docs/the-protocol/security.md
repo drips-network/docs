@@ -1,5 +1,4 @@
 ---
-id: security
 title: Security
 ---
 
@@ -10,6 +9,7 @@ At Drips, we take security seriously and have taken a number of steps to ensure 
 Our codebase has a high level of unit test coverage and we used Foundry to fuzz-test the key features of our contracts.
 
 ### Security Reviews
+
 First and foremost, we worked with an independent security auditor to conduct smart contract security reviews during the development:
 
 See the [Security Report](/img/Drips_Audit_Report.pdf)
@@ -22,8 +22,8 @@ We also worked with Code4rena to conduct an audit contest where 26 wardens condu
 
 See the [Code4rena Report](https://code4rena.com/reports/2023-01-drips)
 
-
 ### Certora
+
 Additionally, we have worked with the [Certora](https://www.certora.com/) team to formally verify certain parts of our smart contracts. This involved mathematically proving the correctness of our code, which helps to identify and eliminate potential vulnerabilities.
 
 While we are excited about the potential of using formal verification to improve the security of our smart contracts, it's important to note that this technology is still in its early stages and at an experimental level for Drips. 
@@ -36,6 +36,6 @@ You can read the [report from Certora](/img/Certora_Radicle_Drips_Report.pdf), o
 
 Of course, it's important to note that despite our efforts to ensure the security of our smart contracts, there is always a certain level of risk involved.
 
->No system is completely immune to security threats, and it's impossible to guarantee that our smart contracts will never be exploited.
-
-
+:::warning
+No system is completely immune to security threats, and it's impossible to guarantee that our smart contracts will never be exploited.
+:::
