@@ -12,7 +12,7 @@ Knowing that we can't predict every metadata-related use case that developers ma
 
 ### Adding Account Metadata
 
-Associating metadata with an account is simple. After [creating an NFTDriverClient][is], your app can call `NFTDriverClient.emitAccountMetadata`:
+Associating metadata with an account is simple. After creating an NFTDriverClient, your app can call `NFTDriverClient.emitAccountMetadata`:
 
 ```
 
@@ -22,8 +22,6 @@ emitAccountMetadata(
 : Promise<ContractTransaction>
 
 ```
-
-Take a look at <a href="https://drips-js-sdk-api.netlify.app/classes/nftdriverclient#emitUserMetadata" target="_blank">this method's documentation</a> to understand what each parameter represents.
 
 As you can see, calling this method emits an EVM event that contains an array of `AccountMetadataStruct`s, which can be populated by the app developer however they wish:
 
@@ -51,8 +49,6 @@ getMetadataHistory(
 
 ```
 
-Take a look at <a href="https://drips-js-sdk-api.netlify.app/classes/dripssubgraphclient#getMetadataHistory" target="_blank">this method's documentation</a> to understand what each parameter represents.
-
 ### Metadata Formatting Standards
 
 Over time, we hope that standards will emerge around how metadata is formatted, that will allow web3 apps building on Drips to interoperate related to key use cases (e.g. always storing the "name" or "description" of an account based on agreed-upon key values). However, at the same time we also felt it would be too ambitious to try to propose comprehensive formatting standards right from the start. Instead, we would prefer to let conventions emerge based on the use cases and requirements of developers building on Drips.
@@ -76,5 +72,3 @@ createAccount(
 ```
 
 Passing a parameter value for `associatedApp` causes the SDK to automatically emit an `AccountMetadataStruct` at the time the account is created, with a `key='associatedApp'` and value equal to the specified value. By building this convention into the SDK, we hope to establish a standard of using the `associatedApp` key to indicate the app(s) that an account is associated with.
-
-[is]: /docs/for-developers/initialize-sdk

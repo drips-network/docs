@@ -19,17 +19,17 @@ There are three ways in which funds can be flowing in Drips protocol:
 
 The streaming functionality sends funds over a period of time. To start streaming you need to configure a list of stream receivers and top up your streamable balance. Once you configure those, the funds flow will start automatically and will stop when the balance runs out. You can change the balance at any time, either top up more funds or withdraw any amount from what hasn't been streamed yet. The balance is updated every second, and there's no way to withdraw already-streamed funds. The list of receivers can be changed at any time with an immediate effect, but it'll never affect the past, only the streaming behavior during the present timestamp and in the future. For each ERC-20 token every user has a separate streams configuration and a separate balance, so you can configure streaming different tokens independently.
 
-The streams receivers list contains between 0 and 100 entries. By default, every account has an empty receivers list. An empty list means that there are no receivers, so nothing will be streamed to anybody. The list must be sorted, and it can't contain duplicate entries. Only streams receivers on your currently set list are receiving tokens streamed from you, so, when you add a receiver or remove one, it respectively starts or stops streaming to them. Every entry consists of a receiver user ID and a streaming rate, which is expressed in tokens per second. To increase precision the amount streamed every second has 9 extra decimals, so you express streaming rates with precision higher than one full token per second. For example, you can stream 2.5 tokens per second or 0.001 tokens per second. See [Streaming Fractional Amounts](/docs/for-developers/advanced/fractional-amounts) for more details. Optionally, each stream receivers list entry may contain a start timestamp and a maximum duration. If the start timestamp is in the future, streaming will be postponed until that timestamp. If the duration is set, streaming will stop after it elapses. The duration is relative to the start timestamp, or, if the start timestamp isn't set, the timestamp when the stream configuration is updated.
+The streams receivers list contains between 0 and 100 entries. By default, every account has an empty receivers list. An empty list means that there are no receivers, so nothing will be streamed to anybody. The list must be sorted, and it can't contain duplicate entries. Only streams receivers on your currently set list are receiving tokens streamed from you, so, when you add a receiver or remove one, it respectively starts or stops streaming to them. Every entry consists of a receiver user ID and a streaming rate, which is expressed in tokens per second. To increase precision the amount streamed every second has 9 extra decimals, so you express streaming rates with precision higher than one full token per second. For example, you can stream 2.5 tokens per second or 0.001 tokens per second. See [Streaming Fractional Amounts](/the-protocol/advanced/fractional-amounts) for more details. Optionally, each stream receivers list entry may contain a start timestamp and a maximum duration. If the start timestamp is in the future, streaming will be postponed until that timestamp. If the duration is set, streaming will stop after it elapses. The duration is relative to the start timestamp, or, if the start timestamp isn't set, the timestamp when the stream configuration is updated.
 
-Both balance and receivers list updates are done by calling the `setStreams` function of the [driver](/docs/the-protocol/accounts-in-drips#drips-account-drivers) managing your user ID. You can't change the balance without updating the streams receivers list, but it's fine if both the old and the new lists are identical. You also can't update the streams receivers list without changing the balance, but it's fine if the balance change is zero.
+Both balance and receivers list updates are done by calling the `setStreams` function of the [driver](/the-protocol/accounts-in-drips#drips-account-drivers) managing your user ID. You can't change the balance without updating the streams receivers list, but it's fine if both the old and the new lists are identical. You also can't update the streams receivers list without changing the balance, but it's fine if the balance change is zero.
 
-For details about how streaming is implemented see [Drips Inner Workings](/docs/for-developers/advanced/drips-inner-workings).
+For details about how streaming is implemented see [Drips Inner Workings](the-protocol/advanced/drips-inner-workings).
 
 # Giving
 
 The Giving functionality transfers an amount of tokens to the chosen user. It's different from streaming because it's a one-time, immediate operation, and there's no streaming configuration involved. Since the funds are transferred into the protocol while giving, there is no need for a user to have a separate balance dedicated to a specific giving operation.
 
-Giving is done by calling the `give` function of the [driver](/docs/the-protocol/accounts-in-drips#drips-account-drivers) managing your account ID.
+Giving is done by calling the `give` function of the [driver](/the-protocol/accounts-in-drips#drips-account-drivers) managing your account ID.
 
 # Splitting
 
@@ -39,7 +39,7 @@ Updating the splits configuration doesn't split funds that haven't been split ye
 
 The splits receivers list contains between 0 and 200 entries. By default, every user has an empty receivers list set. An empty list means that no funds are split, and 100% of the funds go to the user who received them. Each splits receiver on the list has a percentage assigned to them, which defines the fraction of received funds that will be transferred to that user when splitting. All the list entries must add up to no more than 100%, in which case the receiving user won't get any funds, and will transfer all received funds to others. The list must be sorted, and it can't contain duplicate entries.
 
-Splits configuration is updated by calling the `setSplits` function of the [driver](/docs/the-protocol/accounts-in-drips#drips-account-drivers) managing your user ID.
+Splits configuration is updated by calling the `setSplits` function of the [driver](/the-protocol/accounts-in-drips#drips-account-drivers) managing your user ID.
 
 # Receiving flow
 
@@ -56,7 +56,7 @@ Received funds go through a few steps before they can be collected.
 
 By receiving streams, you get the funds streamed to you in the past from all users. It doesn't matter how many people have been streaming. Receiving funds from them always has the same cost depending only on the length of the period from which you're receiving streams. You must receive streams for each ERC-20 token separately, each of them has an independent state.
 
-You only can receive streams from the already finished cycles. The entire timeline is globally divided into cycles of constant length defined on deployment, usually on a scale of days or weeks. Every timestamp during which somebody is streaming to you falls into a cycle. All the funds that have been streamed from anybody to you during a cycle become receivable only when the cycle ends, so nobody can change their streams anymore during that cycle. This reduces gas cost of receiving streams. See [Streams Inner Workings](/docs/for-developers/advanced/drips-inner-workings) for more technical details.
+You only can receive streams from the already finished cycles. The entire timeline is globally divided into cycles of constant length defined on deployment, usually on a scale of days or weeks. Every timestamp during which somebody is streaming to you falls into a cycle. All the funds that have been streamed from anybody to you during a cycle become receivable only when the cycle ends, so nobody can change their streams anymore during that cycle. This reduces gas cost of receiving streams. See [Streams Inner Workings](/the-protocol/advanced/drips-inner-workings) for more technical details.
 
 Receiving streams is done by calling the `receiveStreams` function on the `Drips` contract. Anybody can call this function for any user ID. This is fine because the users can't be hurt when somebody triggers receiving streams for them, the caller only covers the gas cost, but the effects are the same, the user gets their streams received and prepared to be split. This function can't be used to perform a DoS attack on the user.
 
@@ -70,7 +70,7 @@ Squeezing streams is done by calling `squeezeStreams` on the `Drips` contract. A
 
 ## Split
 
-Splitting distributes funds you've received from all sources among users who you've configured as your [splits receivers](/docs/the-protocol/overview#splitting). Splitting is done on your current splittable balance, which aggregates your received and squeezed streams, funds given to you, and funds split to you. The funds are split according to your current splits receivers list. Each of its entries contains a user ID and a percentage of splittable funds that they will receive. Any funds not split among the receivers will become collectable by you.
+Splitting distributes funds you've received from all sources among users who you've configured as your [splits receivers](/the-protocol/overview#splitting). Splitting is done on your current splittable balance, which aggregates your received and squeezed streams, funds given to you, and funds split to you. The funds are split according to your current splits receivers list. Each of its entries contains a user ID and a percentage of splittable funds that they will receive. Any funds not split among the receivers will become collectable by you.
 
 Splitting is done by calling the `split` function on the `Drips`?  contract. Anybody can call this function for any user ID, but they must pass the splits configuration that is currently set by that user, so their funds are always split according to their will. This makes setting splits receivers list somewhat bonding because right until you update it, anybody can split funds you've received according to that configuration.
 
@@ -80,6 +80,6 @@ Receiving streams, squeezing streams and splitting being callable by anybody con
 
 The Collecting functionality takes the funds left after splitting and transfer them out of the protocol, e.g. into your wallet. Collecting doesn't trigger splitting, you need to split in order to have collectable funds, even if you have an empty splits receivers list.
 
-Collecting is done by calling the `collect` function of the [driver](/docs/the-protocol/accounts-in-drips#drips-account-drivers) managing your user ID.
+Collecting is done by calling the `collect` function of the [driver](/the-protocol/accounts-in-drips#drips-account-drivers) managing your user ID.
 
 [img1]: /img/overview1.png
