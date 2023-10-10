@@ -17,21 +17,20 @@ before opening a new one.
 ## Best Practices for Managing Contributions
 
 - If a question is asked more than twice in a support channel, it should be
-  added as an outstanding ![][tr] issue. If a resolution is found, it should be
+  added as an outstanding ![troubleshooting][tr] issue. If a resolution is found, it should be
   captured in the issue before it's closed or in a following pull request.
   Those involved in the support process should contribute to the documentation
   (i.e. if you answered the question, be sure to capture the outcome in the
   relevant documentation).
 
-- ![][im] issues should be created to capture upcoming documentation work
+- ![improvement][im] issues should be created to capture upcoming documentation work
   related to new features or releases.
 
 ## How to Contribute
 
 - [Get Started](#get-started)
-- [Editing Content](#editing-content)
-- [Adding Content](#adding-content)
-- [Contributing](#contributing)
+- [Editing Content](#editing-an-existing-docs-page)
+- [Adding Content](#adding-a-new-docs-page-to-an-existing-sidebar)
 
 ### Get Started
 
@@ -55,6 +54,7 @@ CURRENT_BRANCH=master \
 USE_SSH=true \
 npm run deploy
 ```
+
 ### Editing an Existing Docs Page
 
 Edit docs by navigating to `docs/` and editing the corresponding document:
@@ -103,18 +103,10 @@ My new content here...
 
 For more information about adding new docs, click [here][na].
 
-[cr]: https://img.shields.io/badge/-fixup-critical
-[cs]: https://docs.github.com/en/github/authenticating-to-github/managing-commit-signature-verification/signing-commits
 [do]: https://docusaurus.io
-[fe]: https://img.shields.io/badge/-feedback-%23DD0BE1
-[fh]: https://github.com/orgs/radicle-dev/projects/19
-[fi]: https://img.shields.io/badge/-ui-1d76db
 [im]: https://img.shields.io/badge/-improvement-blueviolet
 [is]: https://github.com/radicle-dev/radicle-docs/issues
-[la]: https://github.com/radicle-dev/radicle-docs/labels
 [na]: https://docusaurus.io/docs/en/navigation
-[qu]: https://img.shields.io/badge/-question-C0EE59
 [tr]: https://img.shields.io/badge/-troubleshooting-%23FBCA04
-[wi]: https://drips.network
 [v1]: https://v1.docs.drips.network
 [v2]: https://docs.drips.network
