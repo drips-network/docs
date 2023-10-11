@@ -28,7 +28,7 @@ Drips is built on Ethereum, a global, decentralized blockchain. On Drips, every 
 
 As part of the claim process, the on-chain Drips Smart Contracts ensure that a particular Ethereum address should be able to manage a project and its funds by checking whether its default branch on GitHub includes a `FUNDING.json` file in the root directory. Because Smart Contracts cannot just access the internet, Drips uses an [Oracle service](https://ethereum.org/en/developers/docs/oracles/) to fetch the `FUNDING.json` file.
 
-<Figure caption="During the claim process, Drips' Smart Contracts check for a `FUNDING.json` file on the GitHub repository's default branch." src="/img/raise/claim-process.png" />
+<Figure caption="During the claim process, Drips' Smart Contracts check for a `FUNDING.json` file on the GitHub repository's _default_ branch." src="/img/raise/claim-process.png" />
 
 The `FUNDING.json` file includes an Ethereum address, which will subsequently be granted access to the repository on Drips. This is an example; your real FUNDING.json file will include your own Ethereum address, and will automatically be generated for you as part of the claiming process.
 
@@ -48,7 +48,7 @@ If your project is led by a group of multiple individuals, you may consider usin
 
 ## Claiming your project
 
-You can enter the claim process by launching the Drips App, connecting your Ethereum wallet, and navigating to **Projects → Claim project**. As part of the flow, you'll be asked to commit a `FUNDING.json` file to the repository's default branch. If in order to do so you need to wait for a PR to be reviewed, you can simply resume the flow later.
+You can enter the claim process by launching the Drips App, connecting your Ethereum wallet, and navigating to **Projects → Claim project**. As part of the flow, you'll be asked to commit a `FUNDING.json` file to the repository's _default_ branch. If in order to do so you need to wait for a PR to be reviewed, you can simply resume the flow later.
 
 Once the `FUNDING.json` file has been verified, you'll be asked to configure a list of *maintainers* and *dependencies* that incoming funds will be split to, and customize your project's appearance on Drips.
 
