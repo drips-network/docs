@@ -2,7 +2,7 @@
 title: Overview
 ---
 
-Drips protocol is a fully decentralized, non-custodial, autonomous, and gas-optimized protocol allowing you to schedule and structure your ERC-20 token transactions to particular addresses. The information provided herein are for educational purposes only.
+The Drips protocol is a fully decentralized, non-custodial, autonomous, and gas-optimized protocol allowing you to schedule and structure your ERC-20 token transactions to particular addresses. The information provided herein are for educational purposes only.
 
 <div className="legal-disclaimer">
 Disclaimer: The Drips protocol operates in a fully decentralized and autonomous manner, like the Ethereum protocol with which it is integrated. Therefore, no entity or person controls or is in any way responsible for the ongoing operation, running, or functioning of the Drips protocol, nor does any entity or person have custody of any funds raised or streamed in the Drips protocol. You acknowledge that you are solely responsible for any interaction with the Drips protocol and any harm, damage or loss that may occur. There is no warranty, express or implied, for the Drips protocol and/or the software and/or any content. The Drips protocol and in particular the software is of experimental nature and available for use to the public on an “as-is” basis and no representations or warranties of any kind are made with respect to the Drips protocol, its operations and functionality, or its fitness for any specific purpose. BY ACCESSING THE DRIPS PROTOCOL, YOU ACKNOWLEDGE, UNDERSTAND AND AGREE THAT YOU USE THE DRIPS PROTOCOL AND THE SOFTWARE AT YOUR OWN RISK AND YOU ASSUME ANY COSTS, RESPONSIBILITY AND/OR ANY LIABILITY FOR ANY DAMAGES OR LOSSES YOU MAY INCUR, INCLUDING ANY SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF YOUR USE, OR INABILITY TO USE, THE DRIPS PROTOCOL AND/OR THE SOFTWARE.
@@ -11,9 +11,9 @@ Disclaimer: The Drips protocol operates in a fully decentralized and autonomous 
 
 There are three ways in which funds can be flowing in Drips protocol:
 
--   **Streaming** is moving funds between users over a period of time at a fixed per-second rate.
--   **Giving** is transferring an amount of funds between users immediately.
--   **Splitting** is transferring a fixed fraction of funds received by one user to another user.
+- **Streaming** is moving funds between users over a period of time at a fixed per-second rate.
+- **Giving** is transferring an amount of funds between users immediately.
+- **Splitting** is transferring a fixed fraction of funds received by one user to another user.
 
 # Streaming
 
@@ -45,10 +45,10 @@ Splits configuration is updated by calling the `setSplits` function of the [driv
 
 Received funds go through a few steps before they can be collected.
 
--   **Receiving drips** and **squeezing drips** gathers funds that have been dripped to you.
--   **Splitting** gets all received and squeezed drips, given funds and funds received from splitting,
-    and distributes them according to the current splits configuration.
--   **Collecting** transfers out of the protocol funds left after splitting.
+- **Receiving drips** and **squeezing drips** gathers funds that have been dripped to you.
+- **Splitting** gets all received and squeezed drips, given funds and funds received from splitting,
+  and distributes them according to the current splits configuration.
+- **Collecting** transfers out of the protocol funds left after splitting.
 
 ![Diagram 1][img1]
 
@@ -72,7 +72,7 @@ Squeezing streams is done by calling `squeezeStreams` on the `Drips` contract. A
 
 Splitting distributes funds you've received from all sources among users who you've configured as your [splits receivers](/the-protocol/overview#splitting). Splitting is done on your current splittable balance, which aggregates your received and squeezed streams, funds given to you, and funds split to you. The funds are split according to your current splits receivers list. Each of its entries contains a user ID and a percentage of splittable funds that they will receive. Any funds not split among the receivers will become collectable by you.
 
-Splitting is done by calling the `split` function on the `Drips`?  contract. Anybody can call this function for any user ID, but they must pass the splits configuration that is currently set by that user, so their funds are always split according to their will. This makes setting splits receivers list somewhat bonding because right until you update it, anybody can split funds you've received according to that configuration.
+Splitting is done by calling the `split` function on the `Drips`? contract. Anybody can call this function for any user ID, but they must pass the splits configuration that is currently set by that user, so their funds are always split according to their will. This makes setting splits receivers list somewhat bonding because right until you update it, anybody can split funds you've received according to that configuration.
 
 Receiving streams, squeezing streams and splitting being callable by anybody constitute a highly efficient system where funds are never stuck and can be always pushed to keep flowing in the network of splits. If you have a splits receiver configured, and you have some funds streamed, given or split to you, your splits receiver can perform all the necessary actions to get their splits from you, without bothering you. As the protocol is autonomous it runs without your intervention and the funds will keep moving in the network as long as your receiver benefits from it. This can go even further, because a splits receiver of your splits receiver may trigger a cascade of splitting to get their funds, it can go arbitrarily deep.
 
