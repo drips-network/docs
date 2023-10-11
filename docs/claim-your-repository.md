@@ -53,7 +53,7 @@ You can enter the claim process by launching the Drips App, connecting your Ethe
 Once the `FUNDING.json` file has been verified, you'll be asked to configure a list of _maintainers_ and _dependencies_ that incoming funds will be split to, and customize your project's appearance on Drips.
 
 :::info
-In order to claim your project, you will need a small amount of ETH in your connected Ethereum wallet in order to cover Ethereum's network ["gas fee"](https://ethereum.org/en/developers/docs/gas/).
+To claim your project, you will need a small amount of ETH in your connected Ethereum wallet to cover Ethereum's network ["gas fee"](https://ethereum.org/en/developers/docs/gas/).
 :::
 
 After you're done, your project will be claimed, and any future earnings will be split according to your configuration.
