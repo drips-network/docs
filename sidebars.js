@@ -17,7 +17,7 @@ const sidebars = {
   docs: [
     'introduction',
     'access',
-    'fund-your-dependencies',
+    'support-your-dependencies',
     'claim-your-repository',
     {
       type: 'category',

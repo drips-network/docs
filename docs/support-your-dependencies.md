@@ -1,5 +1,5 @@
 ---
-title: Fund your dependencies
+title: Support your dependencies
 ---
 
 import Figure from './components/Figure'
