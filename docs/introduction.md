@@ -24,7 +24,7 @@ Further, _anyone else_ can choose to support someone else's Drip List by simply 
 
 :::info
 
-Learn how to create your Drip List and start supporting your dependencies [here](/fund-your-dependencies#creating-your-drip-list).
+Learn how to create your Drip List and start supporting your dependencies [here](/support-your-dependencies#creating-your-drip-list).
 
 :::
 
