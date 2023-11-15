@@ -10,11 +10,15 @@ Our codebase has a high level of unit test coverage and we used Foundry to fuzz-
 
 ### Security Reviews
 
-First and foremost, we worked with an independent security auditor to conduct smart contract security reviews during the development:
+A complete audit of the smart contracts has been completed by [Spearbit](https://spearbit.com/) as of November 2023:
+
+See the [Spearbit Network Security Review](/img/Spearbit_Drips_Network_Security_Review.pdf)
+
+Previously to the Spearbit audit, we also worked with an independent security auditor to conduct smart contract security reviews during the development of the contracts:
 
 See the [Security Report](/img/Drips_Audit_Report.pdf)
 
-In addition, one team member is a security auditor, so we were able to leverage their expertise in this area and performed an internal audit. 
+In addition, a member of the Drips core team is also a security auditor, so we were able to leverage their expertise in this area to perform an internal audit:
 
 See the [Internal Report](https://hackmd.io/6_EgTHw6TVGlfxls0iKMAQ?view)
 
