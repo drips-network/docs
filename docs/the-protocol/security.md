@@ -26,6 +26,8 @@ We also worked with Code4rena to conduct an audit contest where 26 wardens condu
 
 See the [Code4rena Report](https://code4rena.com/reports/2023-01-drips)
 
+Finally, Drips has a public [bug bounty program with Immunefi](https://immunefi.com/bounty/drips/).
+
 ### Certora
 
 Additionally, we have worked with the [Certora](https://www.certora.com/) team to formally verify certain parts of our smart contracts. This involved mathematically proving the correctness of our code, which helps to identify and eliminate potential vulnerabilities.
