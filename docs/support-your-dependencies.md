@@ -12,7 +12,7 @@ If you haven't yet, learn more about the Drips Dependency Tree in our [introduct
 
 ## Creating your Drip List
 
-To create a Drip List, open the Drips App, connect your wallet, and navigate to **Drip List → Create Drip List**. You'll be asked to specify which up to 200 individual GitHub repositories, Ethereum addresses, or other Drip Lists you'd like to forward what percentage of funds. Then, you'll have a chance to immediately start supporting your list with a _Support Stream_. Once done, funds will start moving immediately, and within a week end up with the recipients you specified.
+To create a Drip List, open the Drips App, connect your wallet, and navigate to **Drip List → Create Drip List**. You'll be asked to specify which up to 200 individual GitHub repositories, Ethereum addresses, or other Drip Lists you'd like to forward what percentage of funds. Then, you'll have a chance to immediately start supporting your list with a _Support Stream_. Once done, funds will start moving immediately, and within a month end up with the recipients you specified.
 
 :::info
 If you choose to include someone's elses Drip List on yours, **make sure that you trust the list's owner**, because they may at any point in the future change its recipients.
@@ -20,9 +20,9 @@ If you choose to include someone's elses Drip List on yours, **make sure that yo
 
 ## How funds flow through a Drip List
 
-You can think of your Drip List as a personal "money router" that automatically _splits_ any incoming funds to its recipients once a week. You yourself can establish one or more _Support Streams_ to your own list.
+You can think of your Drip List as a personal "money router" that automatically _splits_ any incoming funds to its recipients once a month. You yourself can establish one or more _Support Streams_ to your own list.
 
-<Figure caption="You can stream any amount of any ERC-20 token to your Drip List, which will automatically split any received funds to its receipients once per week." src="/img/fund/funding-cashflow.png" />
+<Figure caption="You can stream any amount of any ERC-20 token to your Drip List, which will automatically split any received funds to its receipients once per month." src="/img/fund/funding-cashflow.png" />
 
 ### Support Streams
 
@@ -36,14 +36,14 @@ Apart from supporting your Drip List with a Support Stream, you can also establi
 
 ### Settlement of funds
 
-While the stream to your Drip List is calculated per-second, funds in the global Drips Dependency Tree are automatically _split_ once per week, resulting in effective _weekly settlement_. This means that any funds you stream to your Drip List end up with the projects on the list (and, if applicable, their dependencies) once per week.
+While the stream to your Drip List is calculated per-second, funds in the global Drips Dependency Tree are automatically _split_ once per month (on every month's last Thursday), resulting in effective _monthly settlement_. This means that any funds you stream to your Drip List end up with the projects on the list (and, if applicable, their dependencies) once per month.
 
 You can at any point review the next settlement day within the Drips App's "Projects" tab, but please note that the settlement doesn't occur exactly at midnight, but rather at some point throughout the indicated day, roughly within the UTC time zone.
 
-As a result of this, you can edit the recipients on your Drip List before the settlement day each week, and this will cause _all_ funds sent to your list within the last settlement period to be split according to the new configuration.
+As a result of this, you can edit the recipients on your Drip List before the settlement day anytime, and this will cause _all_ funds sent to your list within the current settlement period to be split according to the new configuration.
 
 :::info
-If you'd like to learn more about the technical details behind the weekly settlement, you can read through our technical [Drips inner workings](the-protocol/advanced/drips-inner-workings) article.
+If you'd like to learn more about the technical details behind settlement, you can read through our technical [Drips inner workings](the-protocol/advanced/drips-inner-workings) article.
 :::
 
 ### Supporting other Drip Lists
