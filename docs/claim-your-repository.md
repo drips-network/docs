@@ -12,7 +12,7 @@ If you haven't yet, learn more about the Drips Network's fundamentals in our [in
 
 ## How funds reach projects
 
-On Drips, individuals or organizations wishing to financially support their dependencies [can do so with a _Drip List_](support-your-dependencies). Funds sent to Drip Lists are automatically _split_ to its recipients (projects, Ethereum addresses, or other Drip Lists) once per week. When funds reach a project from a Drip List, they are further split according to the project's dependencies and maintainers, resulting in a global, fundable _dependency tree_.
+On Drips, individuals or organizations wishing to financially support their dependencies [can do so with a _Drip List_](support-your-dependencies). Funds sent to Drip Lists are automatically _split_ to its recipients (projects, Ethereum addresses, or other Drip Lists) monthly, on the last Thursday of every month. When funds reach a project from a Drip List, they are further split according to the project's dependencies and maintainers, resulting in a global, fundable _dependency tree_.
 
 <Figure caption="Funds enter the Drips Dependency Tree through Drip Lists, and are automatically split down to projects." src="/img/introduction/splitting_graph.png" />
 
@@ -70,8 +70,8 @@ If your project already has claimable funds, the claim process will immediately 
 
 ## Settlement of future funds
 
-Funds in the global Drips Dependency Tree are automatically split _once per week_, resulting in effective _weekly settlement_. This means that after claiming, funds may reach your project weekly, and will automatically be forwarded according to your configured splits to maintainers and dependencies.
+Funds in the global Drips Dependency Tree are automatically split _once per month_ on every last Thursday, resulting in effective _monthly settlement_. This means that after claiming, funds may reach your project monthly, and will automatically be forwarded according to your configured splits to maintainers and dependencies.
 
-You can at any point review the next settlement day within the Drips App's "Projects" tab, but please note that the settlement doesn't occur exactly at midnight, but rather at some point throughout the indicated day, roughly within the UTC time zone.
+You can at any point review the next settlement day in the app's Collect modal, but please note that the settlement doesn't occur exactly at midnight, but rather at some point throughout the indicated day, roughly within the UTC time zone.
 
 If you are set as the maintainer of a project, you can check for and collect any earnings by navigating to **Projects → Earnings** within the Drips app.

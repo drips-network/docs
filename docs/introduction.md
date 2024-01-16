@@ -16,7 +16,7 @@ On Drips, anyone can create a _Drip List_ to flexibly send funds to a list of up
 
 ### Supporting your dependencies with Drip Lists
 
-Individuals and organizations wishing to support their dependencies can do so by creating their _Drip List_; a collection of up to 200 GitHub repositories, Ethereum addresses, or other Drip Lists, which are each assigned a specific percentage of funds sent to the list. The Drip List creator can now start sending a specific amount of any ERC-20 token to their list in form of a _stream_, which they can flexibly alter or stop at any point in the future. Once a week, funds streamed to the list are automatically _split_ to its recipients. Those funds are then further split according to _their_ dependencies, and so on.
+Individuals and organizations wishing to support their dependencies can do so by creating their _Drip List_; a collection of up to 200 GitHub repositories, Ethereum addresses, or other Drip Lists, which are each assigned a specific percentage of funds sent to the list. The Drip List creator can now start sending a specific amount of any ERC-20 token to their list in form of a _stream_, which they can flexibly alter or stop at any point in the future. Once a month (on the last Thursday of every month), funds streamed to the list are automatically _split_ to its recipients. Those funds are then further split according to _their_ dependencies, and so on.
 
 <Figure caption="Drip Lists allow anyone to flexibly and continously support a selection of up two 200 projects." src="/img/introduction/drip_list.png" />
 
@@ -34,7 +34,7 @@ A _Project_ on Drips represents an open-source repository on GitHub, with suppor
 
 <Figure caption="Projects on Drips are fundable representations of GitHub repositories that automatically split income to their maintainers and dependencies." src="/img/introduction/project.png" />
 
-Similarly to Drip Lists, each project can configure up to 200 _splits receivers_, and any funds coming in to the project (from Drip Lists or other projects) are automatically distributed accordingly once a week. The _splits_ of a project include both _maintainers_, which are Ethereum addresses that should directly receive a specific portion of earnings, and _dependencies_, which are _other projects_ that the particular project depends on.
+Similarly to Drip Lists, each project can configure up to 200 _splits receivers_, and any funds coming in to the project (from Drip Lists or other projects) are automatically distributed accordingly once a month. The _splits_ of a project include both _maintainers_, which are Ethereum addresses that should directly receive a specific portion of earnings, and _dependencies_, which are _other projects_ that the particular project depends on.
 
 :::info
 
