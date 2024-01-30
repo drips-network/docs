@@ -23,7 +23,8 @@ The streams receivers list contains between 0 and 100 entries. By default, every
 
 Both balance and receivers list updates are done by calling the `setStreams` function of the [driver](/the-protocol/accounts-in-drips#drips-account-drivers) managing your user ID. You can't change the balance without updating the streams receivers list, but it's fine if both the old and the new lists are identical. You also can't update the streams receivers list without changing the balance, but it's fine if the balance change is zero.
 
-For details about how streaming is implemented see [Drips Inner Workings](the-protocol/advanced/drips-inner-workings).
+For details about how streaming is implemented see [Drips Inner Workings](/the-protocol/advanced/drips-inner-workings).
+
 
 # Giving
 
