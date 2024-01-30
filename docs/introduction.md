@@ -20,7 +20,7 @@ Individuals and organizations wishing to support their dependencies can do so by
 
 <Figure caption="Drip Lists allow anyone to flexibly and continously support a selection of up two 200 projects." src="/img/introduction/drip_list.png" />
 
-Further, _anyone else_ can choose to support someone else's Drip List by simply adding it to _their_ Drip List, or sending one-time donations (coming soon).
+Further, _anyone else_ can choose to support someone else's Drip List by simply adding it to _their_ Drip List, or sending one-time donations.
 
 :::info
 
