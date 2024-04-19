@@ -78,43 +78,6 @@ This deployment is based on the <a href="https://github.com/radicle-dev/drips-co
 <tr><td>RepoDriver admin</td><td>0x341a08926dCa7fa7D135F96E4d76b696e5f6d38d</td></tr>
 </table>
 
-## Goerli Testnet Deployment #13
-
-<table>
-<tr><td>Chain</td><td>goerli</td></tr>
-<tr><td>Deployment time</td><td>2023-07-15T10:34:39Z</td></tr>
-<tr><td>Commit hash</td><td>afeba55f70a968ded7c0797a4211faa856e28fa0</td></tr>
-<tr><td>Wallet</td><td>0x341a08926dCa7fa7D135F96E4d76b696e5f6d38d</td></tr>
-<tr><td>Deterministic deployer</td><td>0x4e59b44847b379578588920cA78FbF26c0B4956C</td></tr>
-<tr><td>CREATE3 factory</td><td>0x6aa3d87e99286946161dca02b97c5806fc5ed46f</td></tr>
-<tr><td>DripsDeployer salt</td><td>DripsDeployerTest1</td></tr>
-<tr><td>DripsDeployer</td><td>0xa6030dD9D31FA2333Ee9f7feaCa6FB23c42a1d96</td></tr>
-<tr><td>Drips</td><td>0x74A32a38D945b9527524900429b083547DeB9bF4</td></tr>
-<tr><td>Drips cycle seconds</td><td>604800</td></tr>
-<tr><td>Drips logic</td><td>0xf103BDDB82B6177e5fE53c50351E33F4f3df955B</td></tr>
-<tr><td>Drips admin</td><td>0x341a08926dCa7fa7D135F96E4d76b696e5f6d38d</td></tr>
-<tr><td>Caller</td><td>0x09e04Cb8168bd0E8773A79Cc2099f19C46776Fee</td></tr>
-<tr><td>AddressDriver</td><td>0x70E1E1437AeFe8024B6780C94490662b45C3B567</td></tr>
-<tr><td>AddressDriver ID</td><td>0</td></tr>
-<tr><td>AddressDriver logic</td><td>0x298F37fFd4B31d216B8954968cEe7EC5273CB891</td></tr>
-<tr><td>AddressDriver admin</td><td>0x341a08926dCa7fa7D135F96E4d76b696e5f6d38d</td></tr>
-<tr><td>NFTDriver</td><td>0xdC773a04C0D6EFdb80E7dfF961B6a7B063a28B44</td></tr>
-<tr><td>NFTDriver ID</td><td>1</td></tr>
-<tr><td>NFTDriver logic</td><td>0xa6bD78d98720E2eA4B3E2887be7bA212C3aC5977</td></tr>
-<tr><td>NFTDriver admin</td><td>0x341a08926dCa7fa7D135F96E4d76b696e5f6d38d</td></tr>
-<tr><td>ImmutableSplitsDriver</td><td>0xC3C1955bb50AdA4dC8a55aBC6d4d2a39242685c1</td></tr>
-<tr><td>ImmutableSplitsDriver ID</td><td>2</td></tr>
-<tr><td>ImmutableSplitsDriver logic</td><td>0xf5573880ECB9975E1645C8D18ef1A0393c685CC1</td></tr>
-<tr><td>ImmutableSplitsDriver admin</td><td>0x341a08926dCa7fa7D135F96E4d76b696e5f6d38d</td></tr>
-<tr><td>RepoDriver</td><td>0xa71bdf410D48d4AA9aE1517A69D7E1Ef0c179b2B</td></tr>
-<tr><td>RepoDriver ID</td><td>3</td></tr>
-<tr><td>RepoDriver AnyApi operator</td><td>0x7ecFBD6CB2D3927Aa68B5F2f477737172F11190a</td></tr>
-<tr><td>RepoDriver AnyApi job ID</td><td>9af746c7cfbc415c9737b239df9a30ab</td></tr>
-<tr><td>RepoDriver AnyApi default fee</td><td>50000000000000000</td></tr>
-<tr><td>RepoDriver logic</td><td>0x7A9a2a29B8d98922Ea2E70c73B123e36C95d1515</td></tr>
-<tr><td>RepoDriver admin</td><td>0x341a08926dCa7fa7D135F96E4d76b696e5f6d38d</td></tr>
-</table>
-
 ## Subgraph Details
 
 The repository for the subgraph's code can be found [here](https://github.com/radicle-dev/drips-subgraph/tree/v2).

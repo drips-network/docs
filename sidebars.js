@@ -17,7 +17,14 @@ const sidebars = {
   docs: [
     'introduction',
     'access',
-    'support-your-dependencies',
+    {
+      type: 'category',
+      label: 'Support your dependencies',
+      items: [
+        'support-your-dependencies/overview',
+        'support-your-dependencies/collaborative-drip-lists',
+      ],
+    },
     'claim-your-repository',
     {
       type: 'category',
