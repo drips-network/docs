@@ -4,7 +4,7 @@ title: Drip Lists
 
 import Figure from '../components/Figure'
 
-On Drips, anyone can create a _Drip List_ to flexibly send funds to a list of up to 200 open-source GitHub repositories and Ethereum addresses at a time. As project maintainers come to Drips to claim their funds, they themselves are asked to provide a list of other projects they depend on, and can choose to automatically forward a percentage of their earnings to them. In this article, we'll go over how you can create your very own _Drip List_ with your critical dependencies, and start supporting it with a stream of any ERC-20 token.
+On Drips, anyone can create a _Drip List_ to flexibly send funds to a list of up to 200 open-source GitHub repositories, Ethereum addresses, or other Drip Lists at a time. As project maintainers come to Drips to claim their funds, they themselves are asked to provide a list of other projects they depend on, and can choose to automatically forward a percentage of their earnings to them. In this article, we'll go over how you can create your own _Drip List_, and start supporting it with a stream of any ERC-20 token.
 
 :::info
 If you haven't yet, learn more about the Drips Dependency Tree in our [introduction](/).
@@ -12,19 +12,19 @@ If you haven't yet, learn more about the Drips Dependency Tree in our [introduct
 
 ## Creating your Drip List
 
-To create a Drip List, open the Drips App, connect your wallet, and navigate to **Drip Lists → Create Drip List**. You'll be asked to specify which up to 200 individual GitHub repositories, Ethereum addresses, or other Drip Lists you'd like to forward what percentage of funds. Then, you'll have a chance to immediately start supporting your list with a *Support Stream*. Once done, funds will start moving immediately, and within a week end up with the recipients you specified.
+To create a Drip List, open the [Drips App](https://www.drips.network/app), connect your wallet, and navigate to **Drip Lists → Create Drip List**. You'll be asked to specify which up to 200 individual GitHub repositories, Ethereum addresses, or other Drip Lists you’d like to forward what percentage of funds. Then, you’ll have a chance to immediately start supporting your list with a *Support Stream*. Once done, funds will start moving immediately, and within a week end up with the recipients you specified.
 
 ### Collaborative Drip Lists
 
 Alternatively, you can invite any number of *collaborators* to vote on the recipients for a new Drip List with a [Collaborative Drip List](/support-your-dependencies/collaborative-drip-lists).
 
 :::info
-If you choose to include someone's elses Drip List on yours, **make sure that you trust the list's owner**, because they may at any point in the future change its recipients. 
+If you choose to include someone else’s Drip List on yours, **make sure that you trust the list’s owner**, because they may at any point in the future change its recipients. 
 :::
 
 ## How funds flow through a Drip List
 
-You can think of your Drip List as a personal "money router" that automatically *splits* any incoming funds to its recipients once a week. You yourself can establish one or more *Support Streams* to your own list.
+You can think of your Drip List as a personal “money router” that automatically *splits* any incoming funds to its recipients once a week. You yourself can establish one or more *Support Streams* to your own list.
 
 <Figure caption="You can stream any amount of any ERC-20 token to your Drip List, which will automatically split any received funds to its receipients once per week." src="/img/fund/funding-cashflow.png" />
 
