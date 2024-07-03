@@ -16,7 +16,6 @@ const sidebars = {
   // By default, Docusaurus generates a sidebar from the docs folder structure
   docs: [
     'introduction',
-    'access',
     {
       type: 'category',
       label: 'Support your dependencies',
@@ -25,7 +24,20 @@ const sidebars = {
         'support-your-dependencies/collaborative-drip-lists',
       ],
     },
-    'claim-your-repository',
+    {
+      type: 'category',
+      label: 'Get support for your project',
+      items: [
+        'get-support/claim-your-repository',
+        {
+          type: 'category',
+          label: 'Advanced',
+          items: [
+            'get-support/advanced/handling-renamed-github-repos',
+          ],
+        },
+      ],
+    },
     {
       type: 'category',
       label: 'The Drips protocol',
@@ -48,21 +60,9 @@ const sidebars = {
       ]
     },
     'usage-with-a-safe',
+    'access',
     'faq',
   ],
-
-  // But you can create a sidebar manually
-  /*
-  tutorialSidebar: [
-    'intro',
-    'hello',
-    {
-      type: 'category',
-      label: 'Tutorial',
-      items: ['tutorial-basics/create-a-document'],
-    },
-  ],
-   */
 };
 
 module.exports = sidebars;

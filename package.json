@@ -1,7 +1,7 @@
 {
   "scripts": {
     "start": "docusaurus start",
-    "build": "docusaurus build",
+    "build": "docusaurus build && cp ./_redirects ./build/",
     "deploy": "docusaurus publish"
   },
   "dependencies": {
