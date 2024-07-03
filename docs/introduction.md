@@ -38,7 +38,7 @@ Similarly to Drip Lists, each project can configure up to 200 _splits receivers_
 
 :::info
 
-Learn how to claim your GitHub repository on Drips [here](/claim-your-repository).
+Learn how to claim your GitHub repository on Drips [here](/get-support/claim-your-repository).
 
 :::
 
