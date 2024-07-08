@@ -2,7 +2,7 @@
 title: Security
 ---
 
-At Drips, we take security seriously and have taken a number of steps to ensure the security of our smart contracts on Ethereum. 
+At Drips, we take security seriously and have taken a number of steps to ensure the security of our smart contracts on Ethereum.
 
 ### High test coverage and fuzz tests
 
@@ -26,13 +26,15 @@ We also worked with Code4rena to conduct an audit contest where 26 wardens condu
 
 See the [Code4rena Report](https://code4rena.com/reports/2023-01-drips)
 
-Finally, Drips has a public [bug bounty program with Immunefi](https://immunefi.com/bounty/drips/).
+Drips has a public [bug bounty program with Immunefi](https://immunefi.com/bounty/drips/).
+
+`BridgedGovernor` and `Giver` contracts were audited separately, see the [Cantina Security Report](/img/cantina-05-july-2024-report-review-drips.pdf).
 
 ### Certora
 
 Additionally, we have worked with the [Certora](https://www.certora.com/) team to formally verify certain parts of our smart contracts. This involved mathematically proving the correctness of our code, which helps to identify and eliminate potential vulnerabilities.
 
-While we are excited about the potential of using formal verification to improve the security of our smart contracts, it's important to note that this technology is still in its early stages and at an experimental level for Drips. 
+While we are excited about the potential of using formal verification to improve the security of our smart contracts, it's important to note that this technology is still in its early stages and at an experimental level for Drips.
 
 However, we believe that it is important to stay at the forefront of technology and explore new approaches to smart contract security.  By doing so, we hope to gain valuable insights and improve our security measures over time.
 
