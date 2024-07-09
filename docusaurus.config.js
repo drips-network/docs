@@ -58,10 +58,13 @@ const config = {
         logo: {
           alt: 'Drips Logo',
           src: 'img/logo.svg',
-          href: 'https://drips.network',
-          target: '_blank',
         },
         items: [
+          {
+            href: 'https://drips.network',
+            label: 'Home',
+            position: 'right',
+          },
           {
             href: 'https://drips.network/app',
             label: 'Launch App',
