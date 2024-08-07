@@ -16,7 +16,7 @@ To create a Drip List, open the [Drips App](https://www.drips.network/app), conn
 
 ### Collaborative Drip Lists
 
-Alternatively, you can invite any number of *collaborators* to vote on the recipients for a new Drip List with a [Collaborative Drip List](/support-your-dependencies/collaborative-drip-lists/creating-a-collaborative-list).
+Alternatively, you can invite any number of *collaborators* to vote on the recipients for a new Drip List with a [Collaborative Drip List](/support-your-dependencies/collaborative-drip-lists/creating-a-collaborative-drip-list).
 
 :::info
 If you choose to include someone else’s Drip List on yours, **make sure that you trust the list’s owner**, because they may at any point in the future change its recipients. 
