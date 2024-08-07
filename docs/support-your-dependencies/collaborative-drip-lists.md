@@ -30,13 +30,23 @@ Collaborative Drip Lists may be shared with their URL, and appear on the publish
 
 ### Collaborators
 
+You can configure up to five thousand individual Ethereum addresses to act as "collaborators" for your collaborative Drip List.
+
 Each collaborator will be able to submit a vote within the voting period you configured. Once the collaborative Drip List has been submitted, a "Submit your vote" button will appear on the Drip List's page if the app is connected to a collaborator's wallet.
 
 While voting, collaborators are asked to submit what they think the recipients of the list should be. All votes are tallied continously, and a preview of what the list would look like if voting were to end right now is displayed (unless you chose to "hide collaborators").
 
 #### Hide collaborators
 
-If you enable "Hide collaborators" during the Drip List creation flow, only you as the publisher may reveal the list of collaborators and their individual votes. Anyone else will only be able to submit and see their own vote. In this mode, votes are only tallied at the end of the voting period, and only the final results are automatically publicized. No-one but the publisher can ever see who voted for what, though it is possible to check whether a particular address has submitted a vote or not.
+If you enable "Hide collaborators" during the Drip List creation flow, only you as the publisher may reveal the list of collaborators and their individual votes. Anyone else will only be able to submit and see their own vote. In this mode, votes are only tallied at the end of the voting period, and only the final results are automatically publicized. No-one but the publisher may see who voted for what, though it is possible to check whether a particular address has submitted a vote or not. Please note that while our systems don't expose the full list of collaborators and their votes to the public in this mode, both are stored off-chain in a private database operated by the Public Goods Association.
+
+### Restricting possible recipients
+
+By default, collaborators can add any possible recipient and assign percentages during the voting process. You can optionally choose to specify up to two hundred Ethereum addresses, open-source GitHub repositories, or other Drip Lists that the possible recipients of the vote will be restricted to.
+
+<Figure caption="Restricting possible recipients of a collaborative Drip List." src="/img/fund/collab-drip-list-restrict-recipients.png" />
+
+In this mode, collaborators can only assign percentages to the specified possible recipients, and not add any others. Collaborators can choose to assign 0% to one or more of the possible recipients, as long as the total percentage allocation of their vote adds up to 100%.
 
 ## How votes are tallied
 
