@@ -21,7 +21,15 @@ const sidebars = {
       label: 'Support your dependencies',
       items: [
         'support-your-dependencies/overview',
-        'support-your-dependencies/collaborative-drip-lists',
+        {
+          type: 'category',
+          label: 'Collaborative Drip Lists',
+          items: [
+            'support-your-dependencies/collaborative-drip-lists/creating-a-collaborative-drip-list',
+            'support-your-dependencies/collaborative-drip-lists/voting-on-a-list',
+          ],
+        },
+        ,
       ],
     },
     {

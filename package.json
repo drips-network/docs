@@ -6,6 +6,7 @@
   },
   "dependencies": {
     "@docusaurus/core": "^2.4.3",
-    "@docusaurus/preset-classic": "^2.4.3"
+    "@docusaurus/preset-classic": "^2.4.3",
+    "react-player": "^2.16.0"
   }
 }
