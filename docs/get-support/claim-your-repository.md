@@ -3,12 +3,16 @@ title: Claim your open-source project
 ---
 
 import Figure from '../components/Figure'
+import Video from '../components/Video'
 
 A _Project_ on Drips represents an open-source repository on GitHub, with support for other Git hosts coming soon. Every GitHub repository starts out on Drips as _unclaimed_. In this state, it can already be funded with a Drip List, or added as a dependency of another project. At any point, the project's maintainers can _claim_ their project on Drips, configure a list of _maintainers_ and _dependencies_, and collect any previously-received earnings. Future incoming funds are then automatically split as configured by the project maintainers, resulting in deeply-nested dependencies receiving their allocation.
+
 
 :::info
 If you haven't yet, learn more about the Drips Network's fundamentals in our [introduction](/).
 :::
+
+<Video playing={false} muted={false} src='/video/claim-your-project.mp4' caption="Overview over how to claim your GitHub repository on Drips." />
 
 ## How funds reach projects
 

@@ -1,8 +1,9 @@
 import React, { useRef, useEffect } from "react";
 import ReactPlayer from "react-player";
-
-export default function Video({ src, caption }) {
+export default function Video({ src, caption, playing = true, muted = true }) {
   const playerRef = useRef(null);
+
+  console.log({ playing, muted })
 
   const updateAspectRatio = () => {
     if (playerRef.current) {
@@ -35,8 +36,8 @@ export default function Video({ src, caption }) {
         <ReactPlayer
           width="100%"
           height="100%"
-          muted
-          playing
+          muted={muted}
+          playing={playing}
           controls
           loop
           url={src}

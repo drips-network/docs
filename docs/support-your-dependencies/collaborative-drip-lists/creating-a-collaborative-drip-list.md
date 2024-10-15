@@ -3,20 +3,22 @@ title: Creating a collaborative Drip List
 ---
 
 import Figure from '../../components/Figure'
+import Video from '../../components/Video'
 
 With a Collaborative Drip Lists, a group of people can come together and vote on the recipients of a Drip List before it gets deployed on-chain. This makes it easy to settle on a list of dependencies with distributed teams, and even allows running larger Public Goods Funding programs on Drips.
 
-<Figure caption="An example collaborative Drip List in voting." src="/img/fund/collab-drip-list.png" />
-
-:::info
-Currently, voting is only possible for creating an entirely new Drip List. Soon, it'll also be possible to vote on a new set of receivers for an existing Drip List.
-:::
+<Video playing={false} muted={false} src='/video/collaborative-lists.mp4' caption="Overview over Collaborative Drip Lists." />
 
 ## Creating a collaborative Drip List
 
 To create a new collaborative Drip List, simply click **Drip Lists → Create Drip List**, and select "Collaborate on recipients". You'll be asked to provide a list of *collaborators*, which can be any selection of ETH addresses, and when the voting should end. Additionally, you can choose to hide the list of collaborators and their votes from the public.
 
 Once created, a collaborative Drip List lives off-chain until *published* after voting is concluded. During the voting period, *collaborators* may submit their votes.
+
+:::info
+Currently, voting is only possible for creating an entirely new Drip List. Soon, it'll also be possible to vote on a new set of receivers for an existing Drip List.
+:::
+
 
 <Figure caption="Lifecycle of a collaborative Drip List." src="/img/fund/collab-drip-list-lifecycle.png" />
 
