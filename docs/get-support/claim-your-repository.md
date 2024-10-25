@@ -7,6 +7,9 @@ import Video from '../components/Video'
 
 A _Project_ on Drips represents an open-source repository on GitHub, with support for other Git hosts coming soon. Every GitHub repository starts out on Drips as _unclaimed_. In this state, it can already be funded with a Drip List, or added as a dependency of another project. At any point, the project's maintainers can _claim_ their project on Drips, configure a list of _maintainers_ and _dependencies_, and collect any previously-received earnings. Future incoming funds are then automatically split as configured by the project maintainers, resulting in deeply-nested dependencies receiving their allocation.
 
+:::caution
+Want to claim your project for FIL-RetroPGF-2? Make sure you're using the [Filecoin deployment of the Drips app](https://filecoin.drips.network).
+:::
 
 :::info
 If you haven't yet, learn more about the Drips Network's fundamentals in our [introduction](/).
@@ -36,10 +39,15 @@ As part of the claim process, the on-chain Drips Smart Contracts ensure that a p
 
 The `FUNDING.json` file includes an Ethereum address, which will subsequently be granted access to the repository on Drips. Your real FUNDING.json file will include your own Ethereum address, and will automatically be generated for you as part of the claiming process.
 
+Access is managed separately for different chains, for example Filecoin. For example, below the same placeholder address has access to the project on Ethereum and Filecoin networks.
+
 ```json
 {
   "drips": {
     "ethereum": {
+      "ownedBy": "0x0000000000000000000000000000000000000000"
+    },
+    "filecoin": {
       "ownedBy": "0x0000000000000000000000000000000000000000"
     }
   }
