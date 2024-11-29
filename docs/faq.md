@@ -15,10 +15,10 @@ No. When an address receives funds on Drips, the owner of that address needs to 
 
 ### Do I need to have ETH in my account to send or receive tokens using Drips?
 
-Users of Drips do need to have ETH (or the analogous gas token to ETH if on a non-mainnet network)
+Users of Drips generally do need to have ETH (or the analogous gas token to ETH on networks other than Ethereum)
 available in their wallet to cover transaction fees, if they wish to create streams or Splits to 
 stream or share funds with others. Users do not need to have ETH in their accounts to receive
-funds from other users who are streaming or Splitting to them. However they will need to have
+funds from other users who are streaming or Splitting to them. However, they will need to have
 a small amount of ETH available in their account when they are ready to collect funds sent to
 them (again, to cover gas costs of sending the collect transaction). In certain situations, Drips may "sponsor" the claiming of projects or collecting of funds. In this case, the transaction screen will indicate that gas is "paid for by Drips".
 
