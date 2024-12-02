@@ -19,7 +19,7 @@ Voting on a collaborative Drip List is quick, easy, and entirely gasless. Here's
 
 ### Voting with a Safe Multisig
 
-If your collaborator address is managed by a Safe Multisig, follow the instructions in [Usage with a Safe](/advanded/usage-with-a-safe) to launch Drips within the Safe{Wallet} web app. You'll be able to vote by following the same steps outlined above, except your vote signature will require reaching quorum on your Safe.
+If your collaborator address is managed by a Safe Multisig, follow the instructions in [Usage with a Safe](/advanced/usage-with-a-safe) to launch Drips within the Safe{Wallet} web app. You'll be able to vote by following the same steps outlined above, except your vote signature will require reaching quorum on your Safe.
 
 ## How votes are tallied
 
