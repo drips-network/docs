@@ -67,7 +67,14 @@ const sidebars = {
         }
       ]
     },
-    'usage-with-a-safe',
+    {
+      type: 'category',
+      label: 'Advanced usage',
+      items: [
+        'advanced/usage-with-a-safe',
+        'advanced/drip-list-and-project-visibility',
+      ]
+    },
     'access',
     'faq',
   ],
