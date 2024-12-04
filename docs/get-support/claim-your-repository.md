@@ -82,7 +82,11 @@ If your project already has claimable funds, the claim process will immediately 
 
 ## Settlement of future funds
 
-Funds in the global Drips Dependency Tree are automatically split _once per month_ on every last Thursday, resulting in a _monthly settlement_. This means that once a project is claimed, funds may reach your project monthly, and will automatically be forwarded according to your configured splits to maintainers and dependencies.
+Funds in the global Drips Dependency Tree are automatically split accordingly:
+- On Ethereum, _once per month_ on every last Thursday, resulting in a _monthly settlement_.
+- On Filecoin, _once per week_ on Thursday, resulting in a _weekly settlement_.
+
+This means that once a project is claimed, funds may reach your project monthly or weekly, and will automatically be forwarded according to your configured splits to maintainers and dependencies.
 
 You can at any point review the next settlement day in the app's Collect modal, but please note that the settlement doesn't occur exactly at midnight, but rather at some point throughout the indicated day, roughly within the UTC time zone.
 
