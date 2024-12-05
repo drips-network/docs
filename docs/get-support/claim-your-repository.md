@@ -55,7 +55,7 @@ Access is managed separately for different chains, for example Filecoin. For exa
 ```
 
 :::info
-If your project is led by a group of multiple individuals, you may consider using a [Safe multisig](https://safe.global/) to claim it on Drips. This will enable a specific set of individuals to agree on changes to how the project splits incoming funds in the future. Learn how to use Drips with a Safe multisig [here](usage-with-a-safe).
+If your project is led by a group of multiple individuals, you may consider using a [Safe multisig](https://safe.global/) to claim it on Drips. This will enable a specific set of individuals to agree on changes to how the project splits incoming funds in the future. Learn how to use Drips with a Safe multisig [here](advanced/usage-with-a-safe).
 :::
 
 ## Claiming your project
