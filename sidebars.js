@@ -42,6 +42,7 @@ const sidebars = {
           label: 'Advanced',
           items: [
             'get-support/advanced/handling-renamed-github-repos',
+            'get-support/advanced/updating-project-owner',
           ],
         },
       ],
