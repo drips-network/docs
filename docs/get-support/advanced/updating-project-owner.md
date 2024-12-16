@@ -10,10 +10,11 @@ In order to do that, follow these steps:
 
 1. Edit your `FUNDING.json` file on your repo's main (default) branch with the desired new owner's Ethereum address. Ensure that you set the expected address for the right chain, for example `ethereum` or `filecoin`. Before editing the file, make sure that it's valid JSON and all Ethereum addresses are valid.
 2. Head to the Drips' app ["Secret Menu" page](https://drips.network/app/secret-menu), which allows accessing some advanced functionality, including updating the owner of a project.
-3. Under "Request project owner update", fill out the URL to your GitHub repository. Note that this field is **case-sensitive**, so the URL must match that on GitHub exactly.
-4. If you haven't already, connect your wallet. It doesn't need to be the old or new owner address.
-5. Click "Request owner update". The transaction will be proposed to your connected wallet. Send the transaction, and wait for it to be confirmed.
-6. The Drips Oracle will pick up the request and update the owner of your project on-chain. After a few minutes, reload your project's page on Drips, and you should see the new owner.
+3. If necessary, switch to the chain that you want to update the owner on using the network picker in the top right.
+4. Under "Request project owner update", fill out the URL to your GitHub repository. Note that this field is **case-sensitive**, so the URL must match that on GitHub exactly.
+5. If you haven't already, connect your wallet. It doesn't need to be the old or new owner address.
+6. Click "Request owner update". The transaction will be proposed to your connected wallet. Send the transaction, and wait for it to be confirmed.
+7. The Drips Oracle will pick up the request and update the owner of your project on-chain. After a few minutes, reload your project's page on Drips, and you should see the new owner.
 
 :::caution
 The above procedure only updates the **owner address** of the project, which is the address that may edit its metadata and splits configuration. It does NOT update your project's splits in any way. If you want to split funds to the new address, head over to the project's profile, click "Edit" next to its splits, and make the desired changes after updating the owner.
