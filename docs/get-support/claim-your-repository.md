@@ -83,11 +83,13 @@ If your project already has claimable funds, the claim process will immediately 
 ## Settlement of future funds
 
 Funds in the global Drips Dependency Tree are automatically split accordingly:
-- On Ethereum, _once per month_ on every last Thursday, resulting in a _monthly settlement_.
-- On Filecoin, _once per week_ on Thursday, resulting in a _weekly settlement_.
+- On Ethereum, _once per month_ on every last Thursday, resulting in _monthly settlement_.
+- On Filecoin, _once per day_, resulting in _daily settlement_.
 
-This means that once a project is claimed, funds may reach your project monthly or weekly, and will automatically be forwarded according to your configured splits to maintainers and dependencies.
+This means that once a project is claimed, funds may reach your project monthly or daily, and will automatically be forwarded according to your configured splits to maintainers and dependencies.
+
+The exact time at which settlement will occur on the indicated day may vary due to gas cost optimization measures.
 
 You can at any point review the next settlement day in the app's Collect modal, but please note that the settlement doesn't occur exactly at midnight, but rather at some point throughout the indicated day, roughly within the UTC time zone.
 
-If you are set as the maintainer of a project, you can check for and collect any earnings by navigating to **Projects → Earnings** within the Drips app.
+If you are a recipient of funding on Drips, you can check for and collect any earnings by clicking "Collect" in the top-right corner after connecting your wallet.
