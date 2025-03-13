@@ -8,7 +8,7 @@ import Video from '../components/Video'
 A _Project_ on Drips represents an open-source repository on GitHub, with support for other Git hosts coming soon. Every GitHub repository starts out on Drips as _unclaimed_. In this state, it can already be funded with a Drip List, or added as a dependency of another project. At any point, the project's maintainers can _claim_ their project on Drips, configure a list of _maintainers_ and _dependencies_, and collect any previously-received earnings. Future incoming funds are then automatically split as configured by the project maintainers, resulting in deeply-nested dependencies receiving their allocation.
 
 :::caution
-Want to claim your project for FIL-RetroPGF-2? Make sure you're using the [Filecoin deployment of the Drips app](https://filecoin.drips.network).
+Want to claim your project for Drips for Privacy? Make sure you're using the [Optimism deployment of the Drips app](https://optimism.drips.network).
 :::
 
 :::info
