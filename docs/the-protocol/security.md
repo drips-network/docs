@@ -32,6 +32,8 @@ Drips has a public [bug bounty program with Immunefi](https://immunefi.com/bount
 
 The `RepoDriver` migration to Gelato was audited separately, see the [Cantina Security Report](/img/report-cantinacode-drips-0722-4.pdf).
 
+The `NetiveTokenUnwrapper`, `NFTDriver` custom URIs, `GelatoTaskOwner`, `RepoSubAccountDriver` and `RepoDeadlineDriver`  were audited separately, see the [Cantina Security Report](/img/report-cantinacode-drips-0327-1.pdf).
+
 ### Certora
 
 Additionally, we have worked with the [Certora](https://www.certora.com/) team to formally verify certain parts of our smart contracts. This involved mathematically proving the correctness of our code, which helps to identify and eliminate potential vulnerabilities.
