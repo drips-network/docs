@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'Inter Bold';
+  src: url('/fonts/Inter-Bold.woff2');
+}
+
+@font-face {
+  font-family: 'Inter Regular';
+  src: url('/fonts/Inter-Regular.woff2');
+}
+
+@font-face {
+  font-family: 'Redaction 50';
+  font-weight: 400;
+  font-style: normal;
+  src: url('/fonts/Redaction_35-Italic.woff2') format('woff2');
+}
+
+:root {
+  --vocs-fontFamily_default: 'Inter Regular', sans-serif;
+}
+
+.vocs_H1 {
+  font-family: 'Redaction 50', sans-serif;
+  font-size: 3rem;
+  line-height: 3rem
+}
+
+.vocs_Strong {
+  font-family: 'Inter Bold', sans-serif;
+  font-weight: 700;
+}

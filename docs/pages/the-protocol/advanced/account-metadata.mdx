@@ -1,0 +1,29 @@
+# Account metadata
+
+The Drips Protocol includes functionality allowing general metadata information to be associated with user accounts. Like setting streams or Splits, the authority to add such metadata ultimately rests with the end-user who controls the account. However apps building on Drips can build on this capability to store any kind of metadata they wish (with their end-users' permission).
+
+Knowing that we can't predict every metadata-related use case that developers may be interested in, we've designed metadata in Drips to be extremely flexible, but some examples of use cases that we envision are:
+
+-   Being able to mark a Drips NFT-based account as "associated" with a specific web3 application.
+-   Being able to attach "user profile"-related information to a Drips account (e.g. name, link to a profile image in IPFS, etc.)
+-   Being able to attach descriptive information to streams and Splits that are configured for the account (perhaps stored as an array or map).
+
+### Adding Account Metadata
+
+Associating metadata with an account is simple. After creating an NFTDriverClient, your app can call `NFTDriverClient.emitAccountMetadata`:
+
+```
+emitAccountMetadata(
+    tokenId: string,
+    accountMetadata: AccountMetadataStruct[])
+: Promise<ContractTransaction>
+```
+
+As you can see, calling this method emits an EVM event that contains an array of `AccountMetadataStruct`s, which can be populated by the app developer however they wish:
+
+```
+AccountMetadataStruct: {
+    key: PromiseOrValue<BytesLike>;
+    value: PromiseOrValue<BytesLike>
+}
+```

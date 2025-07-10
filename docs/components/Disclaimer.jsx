@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Figure({ src, caption }) {
   return (
-    <div class="legal-disclaimer">
+    <div style={{ fontSize: '0.75rem', lineHeight: '1.5rem', color: 'var(--vocs-color_text3)', marginTop: '64px' }}>
       Disclaimer: The Drips protocol operates in a fully decentralized and
       autonomous manner, like the Ethereum protocol with which it is integrated.
       Therefore, no entity or person controls or is in any way responsible for
