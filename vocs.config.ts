@@ -1,4 +1,4 @@
-import { defineConfig } from 'vocs'
+import { defineConfig } from 'vocs';
 
 export default defineConfig({
   title: 'Docs',
@@ -39,10 +39,10 @@ export default defineConfig({
             {
               text: 'Vote on a list',
               link: '/support-your-dependencies/collaborative-drip-lists/voting-on-a-list',
-            }
-          ]
+            },
+          ],
         },
-      ]
+      ],
     },
     {
       text: 'Get support for your project',
@@ -62,10 +62,10 @@ export default defineConfig({
             {
               text: 'Update the owner of a project',
               link: '/get-support/advanced/updating-project-owner',
-            }
-          ]
+            },
+          ],
         },
-      ]
+      ],
     },
     {
       text: 'Advanced usage',
@@ -78,7 +78,53 @@ export default defineConfig({
           text: 'Drip List & Project visibility',
           link: '/advanced/drip-list-and-project-visibility',
         },
-      ]
+        {
+          text: 'Drips SDK',
+          collapsed: true,
+          items: [
+            {
+              text: 'Overview',
+              link: '/advanced/drips-sdk/overview',
+            },
+            {
+              text: 'Installation',
+              link: '/advanced/drips-sdk/installation',
+            },
+            {
+              text: 'Quick Start',
+              link: '/advanced/drips-sdk/quick-start',
+            },
+            {
+              text: 'Initialization',
+              link: '/advanced/drips-sdk/initialization',
+            },
+            {
+              text: 'Blockchain Client Support',
+              link: '/advanced/drips-sdk/blockchain-client-support',
+            },
+            {
+              text: 'IPFS Metadata Uploader',
+              link: '/advanced/drips-sdk/ipfs-metadata-uploader',
+            },
+            {
+              text: 'GraphQL Configuration',
+              link: '/advanced/drips-sdk/graphql-configuration',
+            },
+            {
+              text: 'Modules',
+              link: '/advanced/drips-sdk/modules',
+            },
+            {
+              text: 'Error Handling',
+              link: '/advanced/drips-sdk/error-handling',
+            },
+            {
+              text: 'API Reference',
+              link: '/advanced/drips-sdk/api-reference',
+            },
+          ],
+        },
+      ],
     },
     {
       text: 'The Drips protocol',
@@ -124,11 +170,11 @@ export default defineConfig({
               text: 'Fractional amounts',
               link: '/the-protocol/advanced/fractional-amounts',
             },
-          ]
+          ],
         },
-      ]
+      ],
     },
-    
+
     {
       text: 'FAQ',
       link: '/faq',
@@ -148,8 +194,7 @@ export default defineConfig({
           text: 'Privacy Policy',
           link: 'https://drips.network/legal/privacy',
         },
-      ]
-    }
-    
+      ],
+    },
   ],
 });

@@ -1,0 +1,29 @@
+# Error Handling
+
+The SDK throws `DripsError` instances for all SDK-related failures. These errors extend the standard JavaScript `Error` class with additional context information.
+
+## DripsError Properties
+
+| Property  | Type             | Description                                                     |
+| --------- | ---------------- | --------------------------------------------------------------- |
+| `message` | `string`         | Error message prefixed with `[Drips SDK]`                       |
+| `name`    | `string`         | Always `"DripsError"`                                           |
+| `cause`   | `unknown`        | The underlying error that caused this failure (if any)          |
+| `meta`    | `DripsErrorMeta` | Additional context about the error, including operation details |
+
+## Example Usage
+
+```typescript
+import { DripsError } from '@drips-network/sdk';
+
+try {
+  const result = await sdk.dripLists.getDripListById('123');
+} catch (error) {
+  if (error instanceof DripsError) {
+    console.error('SDK Error:', error.message);
+    console.error('Operation:', error.meta?.operation);
+    console.error('Context:', error.meta);
+    console.error('Underlying cause:', error.cause);
+  }
+}
+```

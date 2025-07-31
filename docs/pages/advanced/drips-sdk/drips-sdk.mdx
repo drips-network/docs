@@ -1,0 +1,1102 @@
+# 💧Drips SDK
+
+The **Drips SDK** is a TypeScript library for building applications that interact with the [Drips protocol](https://github.com/drips-network/contracts).
+It wraps much of the [Drips App](https://www.drips.network)’s functionality to make common operations re-usable.
+
+The Drips SDK exposes a type-safe API for Drip Lists creation and management, one-time and continuous donations, fund collection, and utility functions.
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Quick Start](#quick-start)
+- [Initialization](#initialization)
+- [Blockchain Client Support](#blockchain-client-support)
+- [IPFS Metadata Uploader](#ipfs-metadata-uploader)
+- [GraphQL Configuration](#graphql-configuration)
+- [Modules](#modules)
+- [Error Handling](#error-handling)
+- [API Reference](#api-reference)
+
+## Installation
+
+::::steps
+
+### Install the SDK
+
+:::code-group
+
+```bash [npm]
+npm install @drips-network/sdk
+```
+
+```bash [yarn]
+yarn add @drips-network/sdk
+```
+
+```bash [pnpm]
+pnpm add @drips-network/sdk
+```
+
+:::
+
+### Install Viem Peer Dependency
+
+:::code-group
+
+```bash [npm]
+npm install viem
+```
+
+```bash [yarn]
+yarn add viem
+```
+
+```bash [pnpm]
+pnpm add viem
+```
+
+:::
+
+### Optionally Install Ethers v6
+
+:::code-group
+
+```bash [npm]
+npm install ethers
+```
+
+```bash [yarn]
+yarn add ethers
+```
+
+```bash [pnpm]
+pnpm add ethers
+```
+
+::::
+
+:::info
+The Drips SDK is built on top of Viem, making it a required peer dependency.
+Support for Ethers v6 is included to accommodate applications that rely on Ethers.
+:::
+
+## Quick Start
+
+:::steps
+
+### Import the SDK
+
+```typescript
+import {
+  createDripsSdk,
+  createPinataIpfsMetadataUploader,
+} from '@drips-network/sdk';
+import { createPublicClient, createWalletClient, http } from 'viem';
+import { sepolia } from 'viem/chains';
+```
+
+### Create a blockchain client
+
+```typescript
+// Read-only client for querying data
+const publicClient = createPublicClient({
+  chain: sepolia,
+  transport: http(),
+});
+
+// Or a wallet client for write operations
+const walletClient = createWalletClient({
+  chain: sepolia,
+  transport: http(),
+  account: '0x...', // Your wallet address
+});
+```
+
+### Initialize the SDK
+
+```typescript
+// For read-only operations
+const sdk = createDripsSdk(publicClient);
+
+// For write operations (requires metadata uploader)
+const ipfsUploader = createPinataIpfsMetadataUploader({
+  pinataJwt: 'your-pinata-jwt',
+  pinataGateway: 'your-pinata-gateway',
+});
+
+const sdk = createDripsSdk(walletClient, ipfsUploader);
+```
+
+### Start using the SDK
+
+```typescript
+// Get a Drip List
+const dripList = await sdk.dripLists.getDripListById('123');
+
+// Get withdrawable balances for the connected account
+const balances = await sdk.funds.getWithdrawableBalances(11155111); // Sepolia
+
+// Use the SDK utilities
+const addressId = sdk.utils.calcAddressId('0x...');
+```
+
+:::
+
+## Initialization
+
+### Function Signature
+
+```typescript
+function createDripsSdk(
+  blockchainClient: SupportedBlockchainClient,
+  ipfsMetadataUploaderFn?: IpfsMetadataUploaderFn<Metadata>,
+  options?: DripsSdkOptions
+): DripsSdk;
+```
+
+### Parameters
+
+| Parameter                | Type                               | Required | Description                               |
+| ------------------------ | ---------------------------------- | -------- | ----------------------------------------- |
+| `blockchainClient`       | `SupportedBlockchainClient`        | ✅       | Blockchain client for network interaction |
+| `ipfsMetadataUploaderFn` | `IpfsMetadataUploaderFn<Metadata>` | ⚠️       | Required for write operations only        |
+| `options`                | `DripsSdkOptions`                  | ❌       | Optional configuration                    |
+
+#### Options Configuration
+
+The `options` parameter allows you to customize the SDK's behavior:
+
+```typescript
+type DripsSdkOptions = {
+  readonly graphql?: {
+    readonly url?: string;
+    readonly apiKey?: string;
+  };
+};
+```
+
+| Option                   | Type     | Default                         | Description                                |
+| ------------------------ | -------- | ------------------------------- | ------------------------------------------ |
+| `options.graphql.url`    | `string` | Drips production API deployment | Custom GraphQL endpoint URL                |
+| `options.graphql.apiKey` | `string` | `undefined`                     | API key for authenticated GraphQL requests |
+
+**Example Usage:**
+
+```typescript
+const sdk = createDripsSdk(blockchainClient, ipfsUploader, {
+  graphql: {
+    url: 'https://custom-drips-api.com/graphql',
+    apiKey: 'your-api-key',
+  },
+});
+```
+
+For detailed GraphQL configuration examples, see the [GraphQL Configuration](#graphql-configuration) section.
+
+:::warning
+All **write operations** require:
+
+- A blockchain client with signing capability:
+  - **Viem**: `WalletClient` with a connected `account`
+  - **Ethers**: `Signer` with a connected `provider`
+- Connection to the target **blockchain network**
+- An **IPFS metadata uploader**
+
+:::
+
+## Blockchain Client Support
+
+The SDK supports `Viem`, `Ethers v6` or `custom` blockchain clients.
+
+### Viem Support
+
+#### PublicClient (Read-only)
+
+```typescript
+import { createPublicClient, http } from 'viem';
+import { sepolia } from 'viem/chains';
+
+const publicClient = createPublicClient({
+  chain: sepolia,
+  transport: http(),
+});
+
+const sdk = createDripsSdk(publicClient);
+// ✅ Can query data
+// ❌ Cannot perform write operations
+```
+
+#### WalletClient (Read + Write)
+
+```typescript
+import { createWalletClient, http } from 'viem';
+import { sepolia } from 'viem/chains';
+import { privateKeyToAccount } from 'viem/accounts';
+
+const account = privateKeyToAccount('0x...');
+const walletClient = createWalletClient({
+  account,
+  chain: sepolia,
+  transport: http(),
+});
+
+const ipfsUploader = createPinataIpfsMetadataUploader({
+  pinataJwt: 'your-pinata-jwt',
+  pinataGateway: 'your-pinata-gateway',
+});
+
+const sdk = createDripsSdk(walletClient, ipfsUploader);
+// ✅ Can query data
+// ✅ Can perform write operations
+```
+
+### Ethers v6 Support
+
+#### Provider (Read-only)
+
+```typescript
+import { ethers } from 'ethers';
+
+const provider = new ethers.JsonRpcProvider('rpc-endpoint');
+
+const sdk = createDripsSdk(provider);
+// ✅ Can query data
+// ❌ Cannot perform write operations
+```
+
+#### Signer (Read + Write)
+
+```typescript
+import { ethers } from 'ethers';
+
+const provider = new ethers.JsonRpcProvider('rpc-endpoint');
+const signer = new ethers.Wallet('0x...', provider);
+
+const ipfsUploader = createPinataIpfsMetadataUploader({
+  pinataJwt: 'your-pinata-jwt',
+  pinataGateway: 'your-pinata-gateway',
+});
+
+const sdk = createDripsSdk(signer, ipfsUploader);
+// ✅ Can query data
+// ✅ Can perform write operations
+```
+
+### Custom Adapters
+
+For advanced use cases, you can provide custom blockchain adapters:
+
+#### Read-only Custom Adapter
+
+```typescript
+import { ReadBlockchainAdapter } from '@drips-network/sdk';
+
+const customReadAdapter: ReadBlockchainAdapter & { type: 'custom' } = {
+  type: 'custom',
+  call: async (request) => {
+    // Your custom implementation
+    return result;
+  },
+  // ... other required methods
+};
+
+const sdk = createDripsSdk(customReadAdapter);
+```
+
+#### Write-capable Custom Adapter
+
+```typescript
+import { WriteBlockchainAdapter } from '@drips-network/sdk';
+
+const customWriteAdapter: WriteBlockchainAdapter & { type: 'custom' } = {
+  type: 'custom',
+  call: async (request) => {
+    // Your custom implementation
+    return result;
+  },
+  sendTransaction: async (preparedTx) => {
+    // Your custom transaction sending logic
+    return txResponse;
+  },
+  // ... other required methods
+};
+
+const sdk = createDripsSdk(customWriteAdapter, ipfsUploader);
+```
+
+## IPFS Metadata Uploader
+
+The IPFS metadata uploader is required for "write" SDK instances.
+
+### Built-in Pinata Support
+
+The SDK provides out-of-the-box support for [Pinata](https://docs.pinata.cloud/quickstart):
+
+```typescript
+import { createPinataIpfsMetadataUploader } from '@drips-network/sdk';
+
+const ipfsUploader = createPinataIpfsMetadataUploader({
+  pinataJwt: 'your-pinata-jwt-token',
+  pinataGateway: 'your-pinata-gateway-url',
+});
+```
+
+### Custom IPFS Uploader
+
+You can implement your own IPFS uploader for different services:
+
+```typescript
+import { IpfsMetadataUploaderFn, Metadata } from '@drips-network/sdk';
+
+const customIpfsUploader: IpfsMetadataUploaderFn<Metadata> = async (
+  metadata
+) => {
+  // Upload metadata to your preferred IPFS service
+  const result = await yourIpfsService.upload(metadata);
+  return result.cid; // Return the IPFS CID as Hash
+};
+
+const sdk = createDripsSdk(walletClient, customIpfsUploader);
+```
+
+## GraphQL Configuration
+
+The SDK connects to Drips' GraphQL Multi-Chain API for querying blockchain data and metadata.
+
+### Default Configuration
+
+```typescript
+const sdk = createDripsSdk(blockchainClient);
+// Uses the Drips production API deployment.
+```
+
+### Custom GraphQL Endpoint
+
+```typescript
+const sdk = createDripsSdk(blockchainClient, ipfsUploader, {
+  graphql: {
+    url: 'https://your-custom-drips-api.com/graphql',
+  },
+});
+```
+
+### Authenticated Requests
+
+```typescript
+const sdk = createDripsSdk(blockchainClient, ipfsUploader, {
+  graphql: {
+    url: 'https://your-custom-drips-api.com/graphql',
+    apiKey: 'your-api-key',
+  },
+});
+```
+
+## Modules
+
+The SDK is organized into modules, each handling specific aspects of Drips.
+
+### `dripLists` Module
+
+Manages Drip Lists.
+
+**Features:**
+
+- Create and update Drip Lists
+- Query Drip List metadata and configuration
+- Calculate Drip List IDs
+
+### `donations` Module
+
+Handles one-time and continuous donations.
+
+**Features:**
+
+- One-time donations with immediate transfers
+- Continuous donations with streaming functionality
+- Support for various recipient types
+
+### `funds` Module
+
+Manages fund collection and withdrawal operations.
+
+**Features:**
+
+- Query withdrawable balances
+- Prepare and execute fund collection
+- Multi-token support
+
+### `utils` Module
+
+Provides utility functions for common calculations and operations.
+
+**Features:**
+
+- ID calculations for various entity types
+- Stream configuration encoding/decoding
+- Transaction building helpers
+- Address resolution utilities
+
+## Error Handling
+
+The SDK throws `DripsError` instances for all SDK-related failures. These errors extend the standard JavaScript `Error` class with additional context information.
+
+### DripsError Properties
+
+| Property  | Type             | Description                                                     |
+| --------- | ---------------- | --------------------------------------------------------------- |
+| `message` | `string`         | Error message prefixed with `[Drips SDK]`                       |
+| `name`    | `string`         | Always `"DripsError"`                                           |
+| `cause`   | `unknown`        | The underlying error that caused this failure (if any)          |
+| `meta`    | `DripsErrorMeta` | Additional context about the error, including operation details |
+
+### Example Usage
+
+```typescript
+import { DripsError } from '@drips-network/sdk';
+
+try {
+  const result = await sdk.dripLists.getDripListById('123');
+} catch (error) {
+  if (error instanceof DripsError) {
+    console.error('SDK Error:', error.message);
+    console.error('Operation:', error.meta?.operation);
+    console.error('Context:', error.meta);
+    console.error('Underlying cause:', error.cause);
+  }
+}
+```
+
+## API Reference
+
+### `createDripsSdk(blockchainClient, ipfsMetadataUploaderFn?, options?)`
+
+Creates the main SDK instance with access to all modules.
+
+**Parameters:**
+
+- `blockchainClient`: Viem `PublicClient`/`WalletClient`, Ethers `Provider`/`Signer`, or custom adapter
+- `ipfsMetadataUploaderFn?`: Optional IPFS metadata uploader function (required for write operations)
+- `options?`: Configuration object
+
+**Returns:** `DripsSdk` instance with modules: `dripLists`, `donations`, `utils`, `funds`, `constants`
+
+**Example:**
+
+```typescript
+const sdk = createDripsSdk(walletClient, ipfsUploader);
+```
+
+### `sdk.dripLists.calculateId(salt, minter)`
+
+Calculates the Drip List ID for given minter and salt.
+
+**Parameters:**
+
+- `salt: bigint` - Salt value for uniqueness
+- `minter: Address` - Address that would mint the Drip List
+
+**Returns:** `Promise<bigint>` - The Drip List ID
+
+**Example:**
+
+```typescript
+const id = await sdk.dripLists.calculateId(123n, '0x1234...');
+```
+
+### `sdk.dripLists.getById(id, chainId)`
+
+Fetches a DripList by ID and chain ID.
+
+**Parameters:**
+
+- `id: bigint` - The Drip List ID
+- `chainId: number` - The chain ID
+
+**Returns:** `Promise<DripList | null>` - The DripList or null if not found
+
+```typescript
+type DripList = {
+  id: bigint;
+  name?: string;
+  description?: string;
+  minter: Address;
+  owner: Address;
+  splits: {
+    list: SdkSplitsReceiver[];
+    hash: Hash;
+  };
+  latestVotingRound?: VotingRound;
+  support: SupportData;
+  chainId: number;
+};
+```
+
+**Example:**
+
+```typescript
+const dripList = await sdk.dripLists.getById(123n, 11155111);
+```
+
+### `sdk.dripLists.prepareCreate(dripList)`
+
+Prepares context for creating a new Drip List.
+
+**Parameters:**
+
+- `dripList: NewDripList`
+
+  ```typescript
+  type NewDripList = {
+    isVisible: boolean;
+    receivers: ReadonlyArray<SdkSplitsReceiver>; // Must sum to 1,000,000 weight
+    salt?: bigint; // Optional, random if not provided
+    name?: string;
+    description?: string | null;
+    transferTo?: Address; // Transfer ownership, defaults to minter
+    batchedTxOverrides?: BatchedTxOverrides;
+    latestVotingRoundId?: string;
+  };
+  ```
+
+**Returns:** `Promise<PrepareDripListCreationResult>`
+
+```typescript
+type PrepareDripListCreationResult = {
+  newDripListId: bigint;
+  newDripListName?: string;
+  newDripListDescription?: string;
+  preparedTxs: PreparedTx[];
+  metadataIpfsHash?: Hash;
+};
+```
+
+**Example:**
+
+```typescript
+const result = await sdk.dripLists.prepareCreate({
+  isVisible: true,
+  name: 'My Support List',
+  description: 'Supporting awesome projects',
+  receivers: [
+    { type: 'project', url: 'https://github.com/owner/repo1', weight: 500000 },
+    { type: 'address', address: '0x1234...', weight: 500000 },
+  ],
+});
+```
+
+### `sdk.dripLists.create(dripList)`
+
+Creates a new Drip List.
+
+**Parameters:**
+
+- `dripList: NewDripList`
+
+**Returns:** `Promise<CreateDripListResult>`
+
+```typescript
+type CreateDripListResult = {
+  newDripListId: bigint;
+  newDripListName?: string;
+  newDripListDescription?: string;
+  metadataIpfsHash?: Hash;
+  txResponses: TxResponse[];
+};
+```
+
+**Example:**
+
+```typescript
+const result = await sdk.dripLists.create({
+  isVisible: true,
+  name: 'Developer Fund',
+  receivers: [
+    { type: 'project', url: 'https://github.com/owner/repo', weight: 1000000 },
+  ],
+});
+```
+
+### `sdk.dripLists.prepareUpdate(config)`
+
+Prepares context for updating a Drip List.
+
+**Parameters:**
+
+- `config: DripListUpdateConfig`
+
+**Returns:** `Promise<PrepareDripListUpdateResult>`
+
+```typescript
+type PrepareDripListUpdateResult = {
+  preparedTxs: PreparedTx[];
+  metadataIpfsHash?: Hash;
+};
+```
+
+**Example:**
+
+```typescript
+const result = await sdk.dripLists.prepareUpdate({
+  dripListId: 123n,
+  chainId: 11155111,
+  name: 'Updated Name',
+});
+```
+
+### `sdk.dripLists.update(config)`
+
+Updates a Drip List.
+
+**Parameters:**
+
+- `config: DripListUpdateConfig`
+
+**Returns:** `Promise<UpdateDripListResult>`
+
+```typescript
+type UpdateDripListResult = {
+  txResponses: TxResponse[];
+  metadataIpfsHash?: Hash;
+};
+```
+
+**Example:**
+
+```typescript
+const result = await sdk.dripLists.update({
+  dripListId: 123n,
+  chainId: 11155111,
+  receivers: [{ type: 'address', address: '0x5678...', weight: 1000000 }],
+});
+```
+
+### `sdk.donations.prepareOneTime(donation)`
+
+Prepares a transaction for making a one-time donation.
+
+**Parameters:**
+
+- `donation: OneTimeDonation`
+
+  ```typescript
+  type OneTimeDonation = {
+    receiver: SdkReceiver;
+    amount: string; // Human-readable format (e.g., "10.5")
+    erc20: Address;
+    tokenDecimals: number;
+    batchedTxOverrides?: BatchedTxOverrides;
+  };
+  ```
+
+**Returns:** `Promise<PreparedTx>` - Ready for execution
+
+**Example:**
+
+```typescript
+const preparedTx = await sdk.donations.prepareOneTime({
+  receiver: { type: 'address', address: '0x1234...' },
+  amount: '10.5',
+  erc20: '0xTokenAddress...',
+  tokenDecimals: 18,
+});
+```
+
+### `sdk.donations.sendOneTime(donation)`
+
+Sends a one-time donation.
+
+**Parameters:**
+
+- `donation: OneTimeDonation`
+
+**Returns:** `Promise<TxResponse>` - Transaction response from blockchain
+
+**Example:**
+
+```typescript
+const txResponse = await sdk.donations.sendOneTime({
+  receiver: { type: 'drip-list', accountId: 123n },
+  amount: '50.0',
+  erc20: '0xTokenAddress...',
+  tokenDecimals: 18,
+});
+```
+
+### `sdk.donations.prepareContinuous(donation)`
+
+Prepares context for a continuous donation stream.
+
+**Parameters:**
+
+- `donation: ContinuousDonation`
+
+  ```typescript
+  type ContinuousDonation = {
+    erc20: Address;
+    amount: string; // Amount to stream per timeUnit
+    timeUnit: TimeUnit; // DAY, WEEK, MONTH, etc.
+    tokenDecimals: number;
+    receiver: SdkReceiver;
+    name?: string;
+    startAt?: Date; // Defaults to "now"
+    durationSeconds?: bigint; // If omitted, runs until funds run out
+    topUpAmount?: string; // Amount to add when setting stream
+    batchedTxOverrides?: BatchedTxOverrides;
+  };
+  ```
+
+**Returns:** `Promise<PrepareContinuousDonationResult>`
+
+```typescript
+type PrepareContinuousDonationResult = {
+  preparedTxs: PreparedTx[];
+  metadataIpfsHash?: Hash;
+  streamConfig: StreamConfig;
+};
+```
+
+**Example:**
+
+```typescript
+const result = await sdk.donations.prepareContinuous({
+  receiver: { type: 'project', url: 'https://github.com/owner/repo' },
+  amount: '100',
+  timeUnit: TimeUnit.MONTH,
+  erc20: '0xTokenAddress...',
+  tokenDecimals: 18,
+  name: 'Monthly Support',
+  topUpAmount: '1200', // 12 months worth
+});
+```
+
+### `sdk.donations.sendContinuous(donation)`
+
+Sends a continuous donation by preparing and executing transaction.
+
+**Parameters:**
+
+- `donation: ContinuousDonation`
+
+**Returns:** `Promise<SendContinuousDonationResult>`
+
+```typescript
+type SendContinuousDonationResult = {
+  txResponses: TxResponse[];
+  metadataIpfsHash?: Hash;
+  streamConfig: StreamConfig;
+};
+```
+
+**Example:**
+
+```typescript
+const result = await sdk.donations.sendContinuous({
+  receiver: { type: 'address', address: '0x1234...' },
+  amount: '10',
+  timeUnit: TimeUnit.DAY,
+  erc20: '0xTokenAddress...',
+  tokenDecimals: 18,
+  durationSeconds: 86400n * 30n, // 30 days
+});
+```
+
+### `sdk.funds.getWithdrawableBalances(chainId)`
+
+Fetches withdrawable balances for connected user on specific chain.
+
+**Parameters:**
+
+- `chainId: number` - The chain ID for target network
+
+**Returns:** `Promise<UserWithdrawableBalances>`
+
+```typescript
+type UserWithdrawableBalances = {
+  accountId: bigint;
+  balances: TokenWithdrawableBalance[];
+};
+
+type TokenWithdrawableBalance = {
+  tokenAddress: Address;
+  withdrawableAmount: bigint;
+  receivableAmount: bigint;
+  splittableAmount: bigint;
+  collectedAmount: bigint;
+};
+```
+
+**Example:**
+
+```typescript
+const balances = await sdk.funds.getWithdrawableBalances(11155111);
+```
+
+### `sdk.funds.prepareCollection(config)`
+
+Prepares transaction for collecting funds from streams and splits.
+
+**Parameters:**
+
+- `config: CollectConfig`
+
+  ```typescript
+  type CollectConfig = {
+    accountId: bigint;
+    currentReceivers: SdkSplitsReceiver[];
+    tokenAddresses: ReadonlyArray<Address>;
+    batchedTxOverrides?: BatchedTxOverrides;
+    shouldSkipSplit?: boolean;
+    shouldAutoUnwrap?: boolean; // Unwrap wrapped native tokens
+    shouldSkipReceive?: boolean;
+    squeezeArgs?: SqueezeArgs[]; // For squeezing streams from specific senders
+    transferToAddress?: Address; // Transfer to address, defaults to signer
+  };
+  ```
+
+**Returns:** `Promise<PreparedTx>` - Ready for execution
+
+**Example:**
+
+```typescript
+const preparedTx = await sdk.funds.prepareCollection({
+  accountId: 123n,
+  currentReceivers: [],
+  tokenAddresses: ['0xTokenAddress...'],
+  shouldAutoUnwrap: true,
+});
+```
+
+### `sdk.funds.collect(config)`
+
+Collects funds for an account.
+
+**Parameters:**
+
+- `config: CollectConfig`
+
+**Returns:** `Promise<TxResponse>` - Transaction response from blockchain
+
+**Example:**
+
+```typescript
+const txResponse = await sdk.funds.collect({
+  accountId: 123n,
+  currentReceivers: [],
+  tokenAddresses: ['0xTokenAddress...'],
+});
+```
+
+### `sdk.utils.calcAddressId(address)`
+
+Calculates the AddressDriver account ID for a given address.
+
+**Parameters:**
+
+- `address: Address` - The address to compute account ID for
+
+**Returns:** `Promise<bigint>` - The calculated account ID
+
+**Example:**
+
+```typescript
+const accountId = await sdk.utils.calcAddressId('0x1234...');
+```
+
+### `sdk.utils.calcProjectId(forge, name)`
+
+Calculates the RepoDriver account ID for a project.
+
+**Parameters:**
+
+- `forge: Forge` - The forge provider (currently only 'github')
+- `name: ProjectName` - The project name in format 'owner/repo'
+
+**Returns:** `Promise<bigint>` - The calculated account ID
+
+**Example:**
+
+```typescript
+const projectId = await sdk.utils.calcProjectId('github', 'owner/repo');
+```
+
+### `sdk.utils.encodeStreamConfig(config)`
+
+Encodes a StreamConfig into bigint representation.
+
+**Parameters:**
+
+- `config: StreamConfig` - The stream config to encode
+
+**Returns:** `bigint` - Packed stream config
+
+**Example:**
+
+```typescript
+const packed = sdk.utils.encodeStreamConfig({
+  dripId: 123n,
+  amountPerSec: 1000000000n,
+  start: 1640995200n,
+  duration: 86400n,
+});
+```
+
+### `sdk.utils.decodeStreamConfig(packed)`
+
+Decodes a bigint stream config into StreamConfig object.
+
+**Parameters:**
+
+- `packed: bigint` - The encoded stream config
+
+**Returns:** `StreamConfig` - Validated stream config object
+
+**Example:**
+
+```typescript
+const config = sdk.utils.decodeStreamConfig(packed);
+```
+
+### `sdk.utils.resolveDriverName(accountId)`
+
+Resolves driver name from account ID.
+
+**Parameters:**
+
+- `accountId: bigint` - The account ID
+
+**Returns:** Driver name ("address", "nft", "immutableSplits", "repo", "repoSubAccount")
+
+**Example:**
+
+```typescript
+const driverName = sdk.utils.resolveDriverName(123n);
+```
+
+### `sdk.utils.resolveAddressFromAddressDriverId(accountId)`
+
+Resolves address from AddressDriver account ID.
+
+**Parameters:**
+
+- `accountId: bigint` - The AddressDriver account ID
+
+**Returns:** `Address` - The resolved checksummed address
+
+**Example:**
+
+```typescript
+const address = sdk.utils.resolveAddressFromAddressDriverId(123n);
+```
+
+### `sdk.utils.buildTx(request)`
+
+Builds a `PreparedTx` that can be executed by a blockchain adapter.
+
+**Parameters:**
+
+- `request` - Transaction request with ABI, function name, arguments, and contract address
+
+**Returns:** `PreparedTx` ready for execution
+
+**Example:**
+
+```typescript
+const preparedTx = sdk.utils.buildTx(request);
+```
+
+## Key Data Types
+
+### Receivers
+
+```typescript
+type SdkReceiver =
+  | { type: 'project'; url: string }
+  | { type: 'drip-list'; accountId: bigint }
+  | { type: 'sub-list'; accountId: bigint }
+  | { type: 'address'; address: Address }
+  | { type: 'ecosystem-main-account'; accountId: bigint };
+
+type SdkSplitsReceiver = SdkReceiver & { weight: number };
+```
+
+### Stream Configuration
+
+```typescript
+type StreamConfig = {
+  dripId: bigint;
+  amountPerSec: bigint; // With AMT_PER_SEC_EXTRA_DECIMALS precision
+  start: bigint; // Timestamp in seconds
+  duration: bigint; // Duration in seconds, 0 = until funds run out
+};
+
+enum TimeUnit {
+  SECOND = 1,
+  MINUTE = 60,
+  HOUR = 3600,
+  DAY = 86400,
+  WEEK = 604800,
+  MONTH = 2592000, // 30 days
+  YEAR = 31536000, // 365 days
+}
+```
+
+### Constants (`sdk.constants`)
+
+```typescript
+const dripsConstants = {
+  MAX_SPLITS_RECEIVERS: 200,
+  TOTAL_SPLITS_WEIGHT: 1_000_000,
+  AMT_PER_SEC_MULTIPLIER: 1_000_000_000,
+  AMT_PER_SEC_EXTRA_DECIMALS: 9,
+  CYCLE_SECS: 604800, // 1 week
+};
+```
+
+## Utility Functions (Standalone)
+
+### IPFS Integration
+
+**`createPinataIpfsMetadataUploader(options)`**
+
+Creates IPFS metadata uploader using Pinata.
+
+**Parameters:** `{ pinataJwt: string, pinataGateway: string }`
+
+**Returns:** `IpfsMetadataUploaderFn<Metadata>`
+
+**Example:**
+
+```typescript
+const ipfsUploader = createPinataIpfsMetadataUploader({
+  pinataJwt: 'your-jwt',
+  pinataGateway: 'your-gateway',
+});
+```
+
+### Blockchain Adapters
+
+**Ethers Support:**
+
+- `createEthersReadAdapter(provider)` - Read-only operations
+- `createEthersWriteAdapter(signer)` - Read/write operations
+
+**Viem Support:**
+
+- `createViemReadAdapter(publicClient)` - Read-only operations
+- `createViemWriteAdapter(walletClient)` - Read/write operations
+
+**Example:**
+
+```typescript
+// Ethers
+const readAdapter = createEthersReadAdapter(provider);
+const writeAdapter = createEthersWriteAdapter(signer);
+
+// Viem
+const readAdapter = createViemReadAdapter(publicClient);
+const writeAdapter = createViemWriteAdapter(walletClient);
+```
+
+---
+
+For more detailed TypeScript definitions and advanced usage, please refer to the [GitHub repository](https://github.com/drips-network/sdk).
