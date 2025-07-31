@@ -1,7 +1,8 @@
 import { defineConfig } from 'vocs';
 
 export default defineConfig({
-  title: 'Docs',
+  title: 'Drips Docs',
+  ogImageUrl: 'https://vocs.dev/api/og?logo=%logo&title=%title&description=%description', 
   logoUrl: '/img/logo.svg',
   topNav: [
     {
