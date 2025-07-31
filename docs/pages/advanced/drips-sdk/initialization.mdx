@@ -1,0 +1,61 @@
+# Initialization
+
+## Function Signature
+
+```typescript
+function createDripsSdk(
+  blockchainClient: SupportedBlockchainClient,
+  ipfsMetadataUploaderFn?: IpfsMetadataUploaderFn<Metadata>,
+  options?: DripsSdkOptions
+): DripsSdk;
+```
+
+## Parameters
+
+| Parameter                | Type                               | Required | Description                               |
+| ------------------------ | ---------------------------------- | -------- | ----------------------------------------- |
+| `blockchainClient`       | `SupportedBlockchainClient`        | ✅       | Blockchain client for network interaction |
+| `ipfsMetadataUploaderFn` | `IpfsMetadataUploaderFn<Metadata>` | ⚠️       | Required for write operations only        |
+| `options`                | `DripsSdkOptions`                  | ❌       | Optional configuration                    |
+
+### Options Configuration
+
+The `options` parameter allows you to customize the SDK's behavior:
+
+```typescript
+type DripsSdkOptions = {
+  readonly graphql?: {
+    readonly url?: string;
+    readonly apiKey?: string;
+  };
+};
+```
+
+| Option                   | Type     | Default                         | Description                                |
+| ------------------------ | -------- | ------------------------------- | ------------------------------------------ |
+| `options.graphql.url`    | `string` | Drips production API deployment | Custom GraphQL endpoint URL                |
+| `options.graphql.apiKey` | `string` | `undefined`                     | API key for authenticated GraphQL requests |
+
+**Example Usage:**
+
+```typescript
+const sdk = createDripsSdk(blockchainClient, ipfsUploader, {
+  graphql: {
+    url: 'https://custom-drips-api.com/graphql',
+    apiKey: 'your-api-key',
+  },
+});
+```
+
+For detailed GraphQL configuration examples, see the [GraphQL Configuration](/advanced/drips-sdk/graphql-configuration) section.
+
+:::warning
+All **write operations** require:
+
+- A blockchain client with signing capability:
+  - **Viem**: `WalletClient` with a connected `account`
+  - **Ethers**: `Signer` with a connected `provider`
+- Connection to the target **blockchain network**
+- An **IPFS metadata uploader**
+
+:::

@@ -1,0 +1,119 @@
+# Blockchain Client Support
+
+The SDK supports `Viem`, `Ethers v6` or `custom` blockchain clients.
+
+## Viem Support
+
+### PublicClient (Read-only)
+
+```typescript
+import { createPublicClient, http } from 'viem';
+import { sepolia } from 'viem/chains';
+
+const publicClient = createPublicClient({
+  chain: sepolia,
+  transport: http(),
+});
+
+const sdk = createDripsSdk(publicClient);
+// ✅ Can query data
+// ❌ Cannot perform write operations
+```
+
+### WalletClient (Read + Write)
+
+```typescript
+import { createWalletClient, http } from 'viem';
+import { sepolia } from 'viem/chains';
+import { privateKeyToAccount } from 'viem/accounts';
+
+const account = privateKeyToAccount('0x...');
+const walletClient = createWalletClient({
+  account,
+  chain: sepolia,
+  transport: http(),
+});
+
+const ipfsUploader = createPinataIpfsMetadataUploader({
+  pinataJwt: 'your-pinata-jwt',
+  pinataGateway: 'your-pinata-gateway',
+});
+
+const sdk = createDripsSdk(walletClient, ipfsUploader);
+// ✅ Can query data
+// ✅ Can perform write operations
+```
+
+## Ethers v6 Support
+
+### Provider (Read-only)
+
+```typescript
+import { ethers } from 'ethers';
+
+const provider = new ethers.JsonRpcProvider('rpc-endpoint');
+
+const sdk = createDripsSdk(provider);
+// ✅ Can query data
+// ❌ Cannot perform write operations
+```
+
+### Signer (Read + Write)
+
+```typescript
+import { ethers } from 'ethers';
+
+const provider = new ethers.JsonRpcProvider('rpc-endpoint');
+const signer = new ethers.Wallet('0x...', provider);
+
+const ipfsUploader = createPinataIpfsMetadataUploader({
+  pinataJwt: 'your-pinata-jwt',
+  pinataGateway: 'your-pinata-gateway',
+});
+
+const sdk = createDripsSdk(signer, ipfsUploader);
+// ✅ Can query data
+// ✅ Can perform write operations
+```
+
+## Custom Adapters
+
+For advanced use cases, you can provide custom blockchain adapters:
+
+### Read-only Custom Adapter
+
+```typescript
+import { ReadBlockchainAdapter } from '@drips-network/sdk';
+
+const customReadAdapter: ReadBlockchainAdapter & { type: 'custom' } = {
+  type: 'custom',
+  call: async (request) => {
+    // Your custom implementation
+    return result;
+  },
+  // ... other required methods
+};
+
+const sdk = createDripsSdk(customReadAdapter);
+```
+
+### Write-capable Custom Adapter
+
+```typescript
+import { WriteBlockchainAdapter } from '@drips-network/sdk';
+
+const customWriteAdapter: WriteBlockchainAdapter & { type: 'custom' } = {
+  type: 'custom',
+  call: async (request) => {
+    // Your custom implementation
+    return result;
+  },
+  sendTransaction: async (preparedTx) => {
+    // Your custom transaction sending logic
+    return txResponse;
+  },
+  // ... other required methods
+};
+
+const sdk = createDripsSdk(customWriteAdapter, ipfsUploader);
+```

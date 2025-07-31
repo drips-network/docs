@@ -1,0 +1,34 @@
+# IPFS Metadata Uploader
+
+The IPFS metadata uploader is required for "write" SDK instances.
+
+## Built-in Pinata Support
+
+The SDK provides out-of-the-box support for [Pinata](https://docs.pinata.cloud/quickstart):
+
+```typescript
+import { createPinataIpfsMetadataUploader } from '@drips-network/sdk';
+
+const ipfsUploader = createPinataIpfsMetadataUploader({
+  pinataJwt: 'your-pinata-jwt-token',
+  pinataGateway: 'your-pinata-gateway-url',
+});
+```
+
+## Custom IPFS Uploader
+
+You can implement your own IPFS uploader for different services:
+
+```typescript
+import { IpfsMetadataUploaderFn, Metadata } from '@drips-network/sdk';
+
+const customIpfsUploader: IpfsMetadataUploaderFn<Metadata> = async (
+  metadata
+) => {
+  // Upload metadata to your preferred IPFS service
+  const result = await yourIpfsService.upload(metadata);
+  return result.cid; // Return the IPFS CID as Hash
+};
+
+const sdk = createDripsSdk(walletClient, customIpfsUploader);
+```

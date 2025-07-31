@@ -1,0 +1,61 @@
+# Quick Start
+
+:::steps
+
+### Import the SDK
+
+```typescript
+import {
+  createDripsSdk,
+  createPinataIpfsMetadataUploader,
+} from '@drips-network/sdk';
+import { createPublicClient, createWalletClient, http } from 'viem';
+import { sepolia } from 'viem/chains';
+```
+
+### Create a blockchain client
+
+```typescript
+// Read-only client for querying data
+const publicClient = createPublicClient({
+  chain: sepolia,
+  transport: http(),
+});
+
+// Or a wallet client for write operations
+const walletClient = createWalletClient({
+  chain: sepolia,
+  transport: http(),
+  account: '0x...', // Your wallet address
+});
+```
+
+### Initialize the SDK
+
+```typescript
+// For read-only operations
+const sdk = createDripsSdk(publicClient);
+
+// For write operations (requires metadata uploader)
+const ipfsUploader = createPinataIpfsMetadataUploader({
+  pinataJwt: 'your-pinata-jwt',
+  pinataGateway: 'your-pinata-gateway',
+});
+
+const sdk = createDripsSdk(walletClient, ipfsUploader);
+```
+
+### Start using the SDK
+
+```typescript
+// Get a Drip List
+const dripList = await sdk.dripLists.getDripListById('123');
+
+// Get withdrawable balances for the connected account
+const balances = await sdk.funds.getWithdrawableBalances(11155111); // Sepolia
+
+// Use the SDK utilities
+const addressId = sdk.utils.calcAddressId('0x...');
+```
+
+:::

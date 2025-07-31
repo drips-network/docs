@@ -1,0 +1,31 @@
+# GraphQL Configuration
+
+The SDK connects to Drips' GraphQL Multi-Chain API for querying blockchain data and metadata.
+
+## Default Configuration
+
+```typescript
+const sdk = createDripsSdk(blockchainClient);
+// Uses the Drips production API deployment.
+```
+
+## Custom GraphQL Endpoint
+
+```typescript
+const sdk = createDripsSdk(blockchainClient, ipfsUploader, {
+  graphql: {
+    url: 'https://your-custom-drips-api.com/graphql',
+  },
+});
+```
+
+## Authenticated Requests
+
+```typescript
+const sdk = createDripsSdk(blockchainClient, ipfsUploader, {
+  graphql: {
+    url: 'https://your-custom-drips-api.com/graphql',
+    apiKey: 'your-api-key',
+  },
+});
+```
