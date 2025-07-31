@@ -23,11 +23,36 @@ export default defineConfig({
       link: '/',
     },
     {
-      text: 'Support your dependencies',
+      text: 'Support Open Source',
       items: [
         {
-          text: 'Overview',
+          text: 'Drip Lists',
           link: '/support-your-dependencies/overview',
+        },
+        {
+          text: 'RetroPGF on Drips',
+          items: [
+            {
+              text: 'Overview',
+              link: '/rpgf/overview',
+            },
+            {
+              text: 'Create your round',
+              link: '/rpgf/create-your-round',
+            },
+            {
+              text: 'Administering your round',
+              link: '/rpgf/administering-your-round',
+            },
+            {
+              text: 'Apply to a round',
+              link: '/rpgf/apply-to-a-round',
+            },
+            {
+              text: 'Vote on a round',
+              link: '/rpgf/vote-on-a-round',
+            },
+          ]
         },
         {
           text: 'Collaborative Drip Lists',
