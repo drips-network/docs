@@ -33,14 +33,13 @@ export default function Video({ src, caption, playing = true, muted = true }) {
           margin: "20px 0 20px 0",
         }}
       >
-        <ReactPlayer
-          width="100%"
-          height="100%"
+        <video
+          style={{ width: "100%", height: "100%" }}
           muted={muted}
-          playing={playing}
+          autoPlay={playing}
           controls
           loop
-          url={src}
+          src={src}
         />
       </div>
       <span style={{ color: "var(--ifm-font-color-secondary)" }}>

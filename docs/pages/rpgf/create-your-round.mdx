@@ -1,0 +1,93 @@
+# Create a RetroPGF Round
+
+import Figure from '../../components/Figure'
+
+Retroactive Public Goods Funding (RetroPGF) on Drips allows communities to fund projects and contributors for their past impact. This process is organized into _Rounds_, each with its own timeline, budget, and participants.
+
+Creating a round begins with a private _Draft_. In this state, you and other designated _Admins_ can collaboratively set up all the necessary parameters before making it public. Once all required settings are configured, you can _publish_ the round, opening it up for applications and voting.
+
+:::warning
+Drips RPGF is currently only available for select partners. Interested in using Drips to run your RetroPGF round? [Get in touch](https://drips-network.notion.site/1e4c52c9599781b5a0aeca3e8eb1b3e4).
+:::
+
+<Figure caption="An example round draft." src="/img/retropgf/round-draft.png" />
+
+## Getting Started: Creating a Draft
+
+To start, navigate to the **RetroPGF** tab in the main Drips app menu. You may be asked to sign in with your wallet, which does not require a transaction or gas fees. An RPGF round on Drips always happens on one specific chain, so make sure you select the chain you want to create your round on using the network picker on the top right.
+
+On the "Your rounds" page, you will see all the rounds you are currently managing. Click the **+ New round** button to create a new draft.
+
+You will be taken to the main page for your new draft round. On the right, a **TO-DO** list tracks the required configuration steps you need to complete before you can publish.
+
+## Configuring Your Draft Round
+
+Your round remains a private draft, invisible to the public, until you explicitly publish it. You can configure the settings in any order. The TO-DO list will update as you save your changes for each section.
+
+### Name, Look & Feel
+
+First, give your round a unique identity. In the **Representation** settings (or by clicking **Settings** on the main draft page), you can configure the following:
+
+* **Round name**: The public name of your funding round.
+* **Emoji & Color**: Used to visually distinguish your round across the app.
+* **URL**: A custom, human-readable URL slug for your round's public page.
+* **Description**: A detailed description of your round's goals and purpose. This field supports Markdown for rich text formatting.
+
+<Figure caption="Define your round's public appearance and description." src="/img/retropgf/round-representation-settings.png" />
+
+### Schedule
+
+The **Schedule** section is where you define the timeline for your round's different phases:
+
+* **Application intake**: The period when projects can submit their applications to be considered for funding.
+* **Voting**: The period when designated _badgeholders_ will vote on the submitted applications.
+* **Results**: The date and time when the voting results will be finalized and made public.
+
+:::caution
+Once your round is published, the schedule cannot be changed. Double-check all dates and times before publishing.
+:::
+
+<Figure caption="Set the start and end dates for the application, voting, and results phases." src="/img/retropgf/round-schedule-settings.png" />
+
+### Badgeholders & Voting
+
+In the **Voting** section, you define who can vote and the rules of the voting process:
+
+* **Votes per voter**: The total number of votes each badgeholder can allocate across all projects.
+* **Maximum votes per project**: The maximum number of votes any single project can receive from a single badgeholder.
+* **Badgeholder guidelines link**: A URL pointing to a document that outlines the rules and expectations for badgeholders. Badgeholders will need to confirm having read this page before being able submit their ballot.
+* **Badgeholders**: The list of Ethereum addresses that will be granted voting power in the round. You can add them one by one, or upload a CSV with one Ethereum address per line.
+
+<Figure caption="Add badgeholder addresses and set the rules for voting." src="/img/retropgf/badgeholder-voting-settings.png" />
+
+## Optional Configuration
+
+While in the draft stage, you can also configure several optional settings to tailor the round to your specific needs.
+
+### Customizing the Application Form
+
+By default, applicants must fill out a standard set of fields. You can fully customize the application experience by navigating to the **Application form** section. Here, you can add, edit, reorder, and delete various form fields.
+
+Available field types include text inputs, Markdown content blocks, dividers, URL fields, and more. For each field, you can specify a label, description, and whether it is required.
+
+:::info
+You can mark specific fields as **Private**. The content submitted to private fields will only be visible to the round's admins, which is useful for collecting sensitive information.
+:::
+
+:::danger
+If you ask for any private or otherwise sensitive information, you **must** mark the field as private. All fields not marked as private will be publicly visible, and **immutably written on-chain** as part of the application attestation process.
+:::
+
+<Figure caption="Build a custom application form using various field types like Text, URL, and Markdown." src="/img/retropgf/application-form-builder.png" />
+
+### Adding Round Admins
+
+You can collaborate on configuring a draft round with multiple people. In the **Admins** section, you can add the Ethereum addresses of other users you want to grant administrative access to. Admins can edit all round settings, view private application data, and export voting data.
+
+## Publishing Your Round
+
+Once you have completed all the items on the **TO-DO** list, the **Publish round** button will become active.
+
+Clicking this button will prompt you with a final confirmation. Remember, publishing is a permanent action—the round's URL and schedule cannot be edited later.
+
+After you confirm, your round will be live and accessible at its custom URL! You can use the **Share** button to easily spread the word. Now, projects and contributors can begin submitting their applications according to the schedule you defined.

@@ -1,0 +1,66 @@
+# Administering a RetroPGF Round
+
+import Figure from '../../components/Figure'
+
+As a round administrator, you are responsible for managing the lifecycle of your RetroPGF round—from reviewing applications to publishing results and facilitating payouts. This guide covers the key administrative tasks after your round has been [created and published](/rpgf/create-your-round).
+
+## 1. Reviewing Applications
+
+Once your round's application period begins, submissions will start appearing on the **"All applications"** screen of your round's page. Initially, all new submissions have a `Pending` status.
+
+Before the voting period starts, you must review these pending applications. You can select one or more applications from the list and use the panel on the right-hand side to approve or reject them in bulk.
+
+* **Pending & Rejected Applications**: These are only visible to you (the admins) and the original applicant.
+* **Approved Applications**: These are immediately made public on the round page (excluding any private data fields). Only approved applications will be visible to badgeholders during the voting phase.
+
+## 2. Publishing Results
+
+After the voting period has officially ended, your next step is to tally the votes and publish the final results.
+
+### Tallying Votes
+
+Navigate to the "All applications" screen, where a new card will prompt you to prepare the results. Drips provides several automated methods for tallying votes:
+
+* **Sum**: The total number of votes received by each project across all ballots.
+* **Average**: The average number of votes received by a project across all ballots.
+* **Median**: The median number of votes received by a project across all ballots.
+
+:::info
+If you need to prepare results with a custom allocation logic, please get in touch with the Drips team. We are working on a way to directly upload a CSV with custom result data in the future.
+:::
+
+### Reviewing and Publishing
+
+Once you select a tallying method and calculate the results, they will appear on the "All applications" screen. **At this stage, the results are visible only to you and other round admins.** You can review the outcome and sort the list by the amount of votes received, as well as download a CSV of all applications, which now includes the calculated results as well.
+
+When you are ready, click the **Publish results** button to make the final results public to everyone.
+
+## 3. Distributing Rewards
+
+Rewards for RPGF rounds are paid out via [Drip Lists](/support-your-dependencies/overview) directly to the winners' Drips Projects (their claimed GitHub repositories).
+
+### Automatically Preparing a Drip List
+
+After you publish the results, a button to **"Prepare a Drip List"** will appear. This powerful feature automatically generates a new Drip List where the percentage splits match the final vote distribution.
+
+:::warning
+Percentages on Drip Lists have a maximum resolution of 4 digits past the decimal. This means that depending on the chosen ERC-20 token's resolution, final distribution amounts may not *perfectly* match the round results after being sent to the Drip List.
+:::
+
+Once created, this Drip List will be publicly displayed in the "Distribution" section of your round's page. Anyone—including your organization, sponsors, or community members—can then fund this list with a one-time donation or a continuous stream of any ERC-20 token.
+
+### Manually Linking Drip Lists
+
+You also have the option to create one or more Drip Lists manually and link them to your round. In the "Distribution" section, click **"Edit linked lists"** to add or remove any Drip List. Please note that linking or unlinking a Drip List only affects which lists are displayed publicly on your round's page.
+
+## 4. Exporting Round Data
+
+For transparency, analysis, or record-keeping, you can download raw data from your round at any time.
+
+### Application Data
+
+Navigate to the **"All applications"** page and click the "Download" button in the top right. This will export a CSV file containing all submitted data for every application, with one application per line. **This export includes all private fields.**
+
+### Vote Data
+
+After the voting phase has started, navigate to the **"Ballots"** section of your round. The "Download CSV" button here will export a file containing the raw voting data. The CSV includes one line for application on each ballot, detailing which badgeholder voted for which application, the number of votes they allocated, and an application ID that can be used to cross-reference the data with the applications export.
