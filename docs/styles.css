@@ -17,6 +17,7 @@
 
 :root {
   --vocs-fontFamily_default: 'Inter Regular', sans-serif;
+  --vocs-color_infoText: #5555FF;
 }
 
 .vocs_H1 {
@@ -29,3 +30,4 @@
   font-family: 'Inter Bold', sans-serif;
   font-weight: 700;
 }
+
