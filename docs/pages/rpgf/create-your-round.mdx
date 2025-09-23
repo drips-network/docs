@@ -60,15 +60,16 @@ In the **Voting** section, you define who can vote and the rules of the voting p
 
 <Figure caption="Add badgeholder addresses and set the rules for voting." src="/img/retropgf/badgeholder-voting-settings.png" />
 
-## Optional Configuration
 
-While in the draft stage, you can also configure several optional settings to tailor the round to your specific needs.
+### Forms & Categories
 
-### Customizing the Application Form
+Lastly, set up the application form for your round on the **Applications** tab.
 
-By default, applicants must fill out a standard set of fields. You can fully customize the application experience by navigating to the **Application form** section. Here, you can add, edit, reorder, and delete various form fields.
+<Figure caption="Build a custom application form using various field types like Text, URL, and Markdown." src="/img/retropgf/application-form-builder.png" />
 
-Available field types include text inputs, Markdown content blocks, dividers, URL fields, and more. For each field, you can specify a label, description, and whether it is required.
+#### Creating Forms
+
+First, create one or more custom application forms by choosing from a variety of field types, including email, markdown, URL, and more. You can freely add, configure, and re-order fields within the form creator.
 
 :::info
 You can mark specific fields as **Private**. The content submitted to private fields will only be visible to the round's admins, which is useful for collecting sensitive information.
@@ -78,11 +79,21 @@ You can mark specific fields as **Private**. The content submitted to private fi
 If you ask for any private or otherwise sensitive information, you **must** mark the field as private. All fields not marked as private will be publicly visible, and **immutably written on-chain** as part of the application attestation process.
 :::
 
-<Figure caption="Build a custom application form using various field types like Text, URL, and Markdown." src="/img/retropgf/application-form-builder.png" />
+#### Creating Application Categories
+
+Next, create at least one application category. Each category is linked to a specific application form. When applying, applicants will select which category they are applying to, and the corresponding form will be presented to them.
+
+## Optional Configuration
+
+While in the draft stage, you can also configure several optional settings to tailor the round to your specific needs.
 
 ### Adding Round Admins
 
 You can collaborate on configuring a draft round with multiple people. In the **Admins** section, you can add the Ethereum addresses of other users you want to grant administrative access to. Admins can edit all round settings, view private application data, and export voting data.
+
+### KYC/KYB
+
+Drips has built-in KYC/KYB support to help you comply with regulatory requirements. To enable this, please [get in touch](https://drips-network.notion.site/1e4c52c9599781b5a0aeca3e8eb1b3e4) with the Drips team.
 
 ## Publishing Your Round
 
