@@ -2,36 +2,42 @@
 
 import Figure from '../../components/Figure'
 
-Applying to a RetroPGF round on Drips allows you to showcase your past contributions and be considered for funding. This guide explains the application process from the perspective of an applicant.
+Applying to a RetroPGF round on Drips allows you to showcase your past contributions and be considered for funding by the round organizers. This guide explains the application process from the perspective of an applicant.
+
+You can submit applications to any round that is currently in the "Registration" phase.
 
 ## Before You Apply: Your Drips Project
 
 All applications to an RPGF round must be submitted on behalf of a Drips _Project_. A Project on Drips is a claimed GitHub repository that can receive and split funds automatically.
 
-This means you must first [claim your GitHub repository on Drips](/get-support/claim-your-repository) before you can apply.
-
-### How Payouts Work
-
-If your application is successful, any rewards from the round will be paid out directly to your Drips Project. These funds will then be automatically distributed according to your Project's configured splits between maintainers and dependencies.
-
-For example, if your Project is configured to forward 20% of incoming funds to its dependencies, that same 20% of any RPGF rewards will be automatically sent to the open-source projects you rely on.
-
-:::info
-While entirely optional, forwarding even a small percentage of funds to your software dependencies is a great way to support the projects that enable your success. Consider adding your key dependencies to your Project's splits for a fairer, more equitable open-source ecosystem.
-:::
+This means you must [claim a GitHub repository on Drips](/get-support/claim-your-repository) before or during the application process.
 
 :::info
 **Not an open-source project?**
 If you are an individual or organization without a dedicated GitHub repository, you can still apply by creating an otherwise empty GitHub repository to represent your entity on Drips. We are working on allowing applications with only an Ethereum address in the future.
 :::
 
+:::info
+**On supported networks including Filecoin, Drips will cover the transaction fee ("gas") required for claiming a project.** You can disable gasless transactions under Settings → Gasless transactions. 
+:::
+
+### How Payouts Work
+
+If your application is successful, any rewards from the round will be paid out directly to your Drips Project. These funds will then be automatically distributed according to your Project's configured splits between maintainers and dependencies.
+
+For example, if your Project is configured to forward 20% of incoming funds to its dependencies, that same 20% of any RetroPGF rewards sent to your project by the round organizers will be automatically forwarded to the open-source projects you rely on.
+
+:::info
+While optional, forwarding even a small percentage of funds to your software dependencies is a **great way to support the projects that enable your success**. Consider adding your key dependencies to your Project's splits for a fairer, more equitable open-source ecosystem.
+:::
+
 ## How to Apply
 
-During a round's application phase, you can follow these steps to submit your application.
+During a round's application phase, follow these steps to submit your application.
 
 ### 1. Start Your Application
 
-Navigate to the round's public page. If the application period is open, you will see an **Apply now** button in the top-right corner. Click it, then connect your wallet and sign in with a free signature to begin.
+Navigate to the round's public page. If the application period is open, you will see an **Apply now** button in the top-right corner. Click it, then connect your Ethereum wallet and sign in with a free signature to begin.
 
 ### 2. Select Your Project
 
@@ -39,22 +45,29 @@ You will be asked to select which of your claimed Drips Projects you are applyin
 
 <Figure caption="An example application form." src="/img/retropgf/application-form.png" />
 
-### 3. Fill Out the Application Form
+### 3. Pick a category
 
-Fill out the application form fields truthfully. The questions and required information are configured by the round's organizers to help them evaluate your impact.
+Choose from one of the available categories for the given round. The category you choose determines the application form fields shown in the next step.
+
+### 4. Fill Out the Application Form
+
+Fill out the application form fields truthfully. The questions and required information are configured by the round's organizers to help round voters evaluate your project's impact.
 
 :::danger
-**IMPORTANT: Do not enter private data in public fields!**
-Fields **NOT** marked with a lock icon (🔒) are public. Any information you enter into these fields will be permanently published to the blockchain and will be publicly visible to everyone. Only enter sensitive information into fields that are explicitly marked as private.
+Fields **NOT** marked with a lock icon (🔒) are public. Any information you enter into these fields will be permanently published to the blockchain and will be publicly visible to everyone. Only enter sensitive information into fields that are marked as private.
 :::
 
-### 4. Submit Your Application
+### 5. Submit Your Application
 
 Once you have filled out all the required fields, click submit. Submitting an application requires a blockchain transaction to create a permanent, verifiable record of your submission.
 
-* On supported networks, Drips will cover the transaction fee ("gas") for you.
-* Your application's public information will be uploaded to IPFS and attested to on-chain via the [Ethereum Attestation Service (EAS)](https://attest.sh/), making it publicly visible on Drips after approval.
-* Information in fields marked as private will **not** be made public. It will be stored securely and will only be accessible to the round's administrators.
+:::info
+**On supported networks including Filecoin, Drips will cover the transaction fee ("gas") for you.** You can disable gasless transactions under **Settings** → **Gasless transactions**. 
+:::
+
+:::info
+Your application's public information will be uploaded to IPFS and **attested to on-chain** via the [Ethereum Attestation Service (EAS)](https://attest.sh/). After the round organizers have reviewed and approved your application, it will be publicly visible on Drips.
+:::
 
 ## After You've Applied
 
@@ -64,6 +77,8 @@ After submitting, you can view your application and check its status. Initially,
 
 * **Approved** applications become publicly visible on the round page (excluding any private data).
 * **Pending** and **Rejected** applications are only visible to you and the round admins.
+
+If your application was rejected by the round organizers, you have the option to "re-submit" it by making an edit anytime during the application period (See [Updating An Application](#updating-an-application)). Doing so will move its status back to `Pending`.
 
 To see all your submissions, navigate to the round's main page, sign in, and filter the list of applications by **"Own applications"**.
 
