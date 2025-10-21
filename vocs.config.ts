@@ -53,6 +53,16 @@ export default defineConfig({
               text: 'Vote on a round',
               link: '/rpgf/vote-on-a-round',
             },
+            {
+              text: 'Advanced usage',
+              collapsed: true,
+              items: [
+                {
+                  text: 'Custom datasets',
+                  link: '/rpgf/advanced/custom-datasets',
+                },
+              ]
+            }
           ]
         },
         {

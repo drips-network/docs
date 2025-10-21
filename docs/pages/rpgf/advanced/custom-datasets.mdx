@@ -1,0 +1,69 @@
+# Managing Custom Datasets
+
+Custom datasets allow round admins to enrich applications with additional data, giving badgeholders more context during the voting process. You can upload one or more CSV files, and the data from these sets will be displayed on the relevant application pages.
+
+## 1\. Creating a Custom Dataset
+
+First, you need to define a new dataset for your round.
+
+1. Navigate to your round's **Settings** page from the main round dashboard.  
+2. Select the **"Custom datasets"** tab from the sidebar.  
+3. Click the **"Add custom dataset"** button.  
+4. In the dialog box, provide a **Name** for your dataset. This name will be used as the title for the data block on application pages (e.g., "Code Metrics," "Social Media Engagement").  
+5. Click **"Create custom dataset"**.
+
+Your new dataset will initially be hidden from the public, and is now ready for you to upload data.
+
+## 2\. Uploading Data
+
+Once you've created a dataset, you can upload a CSV file containing the data you want to display.
+
+To link data to the correct application, your CSV file must contain a column that uniquely identifies each project. This identifier must match the project's name or another unique key associated with the application. The remaining columns in your CSV will be displayed as key-value pairs.  
+
+### Example CSV Structure:
+
+| applicationId | Number of PRs | Number of commits |
+| :---- | :---- | :---- |
+| ceb88e03-7c13-479a-bbaa-3609bb075d8d | Many | 345 |
+| 9c35153b-50e4-43f8-89e5-2a66ac903a4a | Some | 120 |
+
+There are a few rules for the CSV:
+1. The first column must always be called `applicationId` and contain the UUID for a particular application. You can get a list of applications by exporting application data from the **All Applications** screen.
+2. All following columns are the contents of your dataset. The column name is the publicly visible name of the field, so ensure it is formatted properly.
+
+To upload your file:
+
+1. Find your dataset in the list and click the **Upload** icon.  
+2. Select the CSV file from your computer.  
+3. Click **"Upload data"** to import it.
+
+:::warning  
+Uploading a new CSV file will completely replace any existing data within that custom dataset.  
+:::
+
+## 3\. Managing Dataset Visibility
+
+By default, newly created datasets are hidden from public view. You must set a dataset to "visible" for it to appear on application pages and be included in exports.
+
+* Hidden Datasets: Visible only to round admins.  
+* Visible Datasets: Displayed publicly on application pages for anyone, and included in CSV exports.
+
+To change the visibility:
+
+1. Click the **Edit** icon (pencil) next to the dataset you want to manage.  
+2. Toggle the **"Visible publicly"** switch.  
+3. Click **"Update custom dataset"** to save your changes.
+
+Once a dataset is visible, its data will automatically appear as a new section on the corresponding application pages.
+
+## 4\. Deleting a Custom Dataset
+
+If you no longer need a dataset, you can permanently remove it.
+
+1. Find the dataset in the list on the **Settings → Custom datasets** page.  
+2. Click the **Delete** icon (trash can).  
+3. Confirm the action in the dialog box.
+
+:::info  
+Deleting a dataset is permanent and will remove it from all application pages and future data exports. This action cannot be undone.  
+:::
