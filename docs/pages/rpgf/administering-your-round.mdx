@@ -13,7 +13,31 @@ Before the voting period starts, you must review these pending applications. You
 * **Pending & Rejected Applications**: These are only visible to you (the admins) and the original applicant.
 * **Approved Applications**: These are immediately made public on the round page (excluding any private data fields). Only approved applications will be visible to badgeholders during the voting phase.
 
-## 2. Publishing Results
+## 2. Badgeholder Voting
+
+After application intake and review, [designated badgeholders can start casting their ballots](/rpgf/vote-on-a-round).
+
+### Reviewing Ballots
+
+Click **Ballots -> View All** on the round screen while signed in as admin to view submitted ballots. You can export a list of all ballots, including which badgeholder voted for which application and how many votes they allocated, by clicking the "Download CSV" button in the top-right corner.
+
+### Editing The Badgeholder List
+
+You can add additional badgeholders freely up until the **Distribution** phase beings. Please note that only badgeholders that have not yet cast a ballot can be *removed* from the round. Once a badgeholder has been added, they can immediately cast their ballot from the round view.
+
+### Advanced: Uploading a ballot on behalf of a badgeholder
+
+In some cases, it may be operationally necessary for an admin to upload a ballot on behalf of a badgeholder. To do so, click the "Manually upload ballot" button on the **Ballots** screen. You will need to choose the Ethereum address of the badgeholder and upload a CSV or Excel file containing their ballot, matching the [format for badgeholder ballot uploads](http://localhost:5174/rpgf/vote-on-a-round#4-alternative-voting-via-spreadsheet-upload).
+
+:::warning
+Uploading a ballot on behalf of a badgeholder should only be done in exceptional circumstances, as it circumvents the standard voting process and may raise concerns about ballot integrity. Ensure you have explicit permission from the badgeholder before proceeding.
+
+A ballot uploaded by an admin will:
+- not be signed by the badgeholder's wallet, but the admin's.
+- be marked in the audit log as having been uploaded by an admin.
+:::
+
+## 3. Publishing Results
 
 After the voting period has officially ended, your next step is to tally the votes and publish the final results.
 
@@ -34,7 +58,7 @@ Once you select a tallying method and calculate the results, they will appear on
 
 When you are ready, click the **Publish results** button to make the final results public to everyone.
 
-## 3. Distributing Rewards
+## 4. Distributing Rewards
 
 Rewards for RPGF rounds are sent via [Drip Lists](/support-your-dependencies/overview) directly to the winners' Drips Projects (their claimed GitHub repositories).
 
@@ -52,7 +76,7 @@ Once created, this Drip List will be publicly displayed in the "Distribution" se
 
 You also have the option to create one or more Drip Lists manually and link them to your round. In the "Distribution" section, click **"Edit linked lists"** to add or remove any Drip List. Please note that linking or unlinking a Drip List only affects which lists are displayed publicly on your round's page.
 
-## 4. Exporting Round Data
+## 5. Exporting Round Data
 
 For transparency, analysis, or record-keeping, you can download raw data from your round at any time.
 
