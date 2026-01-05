@@ -1,0 +1,94 @@
+# Solving Issues & Earning Rewards
+
+import Figure from '../../../components/Figure'
+
+Drips Wave turns open-source contribution into a structured, rewarding experience. As a contributor, you can browse curated issues from top-tier ecosystems, apply to work on them, and earn rewards based on your impact.
+
+By participating in a Wave, you can:
+* **Earn:** Receive a share of the reward pool for every confirmed contribution.
+* **Build:** Create a verifiable portfolio of work in top-tier ecosystems.
+* **Connect:** Engage directly with maintainers and established projects.
+
+## Getting Started
+
+Before you can apply for your first issue, you must configure your account to ensure you can receive payouts.
+
+1.  **Sign In**: Go to [the Drips Wave app](https://www.drips.network/wave) and log in with your GitHub account.
+2.  **Connect Wallet**: Navigate to **Settings → Payouts** and enter the wallet address where you wish to receive funds.
+3.  **Complete KYC**: Drips requires identity verification to process compliant on-chain payments. Follow the link in your settings to complete this process.
+
+:::danger
+**KYC is Mandatory**: You can apply for and solve issues without KYC, but **you cannot receive rewards** until your verification is complete. We recommend doing this immediately to avoid delays at the end of a Wave.
+:::
+
+## Finding Work
+
+Once your profile is ready, navigate to the **Explore** page. Here you will see active **Wave Programs** (e.g., Stellar) and their currently running **Waves**.
+
+Each Wave card displays the **Reward Budget** (the total pot available) and the **Time Window** (when the sprint ends). Click into a Wave to see the list of available issues.
+
+### Applying for an Issue
+When you find an issue that matches your skills:
+
+1.  **Read the Scope**: Ensure you understand the requirements and can complete the task within the Wave's timeframe.
+2.  **Check the Value**: Note the issue's complexity (Trivial, Medium, or High), which determines its Base Points.
+3.  **Click Apply**: This signals your intent to the maintainer.
+   
+You can also browse issues tagged with the Wave Program's name (e.g. `Stellar Wave`) on GitHub, and find the Apply link in the issue comment posted by the Drips Wave bot.
+
+### Writing a Strong Application
+Maintainers often receive multiple applications for a single issue. To stand out:
+* **Be Concise**: Keep your application message short and professional.
+* **Show Relevance**: Briefly mention why you are a good fit (e.g., "I have experience with this library" or "I fixed a similar bug in repo X").
+
+<Figure caption="Browsing active issues and applying to a task in the Drips Wave app." src="/img/wave/wave-program-issues.png" />
+
+## The Contribution Workflow
+
+### 1. Assignment
+Applying notifies the maintainer of your interest.
+* **Wait for Assignment**: Do not start coding yet! The issue is only yours once the maintainer officially assigns you. You will receive a notification when this happens.
+* **Check Your Dashboard**: You can track all your applications and active assignments in the **Contributors → Issues** dashboard.
+
+### 2. Solving the Issue
+Once assigned, work on the issue as you normally would.
+* Fork the repository (if necessary).
+* Create a branch and write your code.
+* Open a **Pull Request (PR)** on GitHub.
+
+### 3. Review and Resolution
+The maintainer will review your PR. They may request changes. Once the maintainer is satisfied, they will **Merge** your PR and mark the issue as **Resolved** in Drips.
+
+**This is the moment you earn your Points.**
+
+You will receive an in-app notification confirming the award. You can also track your total earnings and view a detailed log of every point awarded on the **Points History** screen.
+
+## Understanding Rewards
+
+Your financial reward is calculated based on the **Points** you earn relative to all other contributors in the Wave.
+
+### How Points Work
+Every issue has a base value based on complexity:
+* **Trivial**: 100 Points
+* **Medium**: 150 Points
+* **High**: 200 Points
+
+### Compliments (Bonus Points)
+Maintainers can award **Compliments** for exceptional work. These act as multipliers or bonuses on top of your base points. Compliments can be issued for successfully completed issues within seven days of the Wave ending. When you receive a compliment, we'll notify you.
+
+### The Leaderboard
+You can view the **Leaderboard** by navigating to **Wave Program → Leaderboard**. This shows your real-time standing against other participants. Since the reward pool is shared, your final payout depends on your percentage of the total points earned by the community during the Wave.
+
+```
+Your Reward = (Your Points / Total Points in Wave) * Total Reward Budget
+```
+
+:::warning
+**Important disclaimer**: Drips and Wave Program Organizers reserve the right to adjust the reward formula, manually adjust points, deduct points or withhold rewards for misbehavior, and/or distribute portions of the reward pool outside the standard Points-based formula (e.g., to incentivize maintainers contributing to the program). Depending on the Wave Program, additional rules may apply, such as a maximum cap on rewards per contributor. Please read the [Terms and Rules page](/wave/terms-and-rules) for additional details.
+:::
+
+## Payouts
+
+When the Wave cycle concludes:
+1.  **Calculation**: The leaderboard is finalized and each contributor's share is calculated.
+2.  **Distribution**: If you are eligible for rewards, funds are distributed on-chain to the wallet address you configured in your settings.

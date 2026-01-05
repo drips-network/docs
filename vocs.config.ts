@@ -24,6 +24,49 @@ export default defineConfig({
       link: '/',
     },
     {
+      text: 'Drips Wave',
+      items: [
+        {
+          text: 'Introduction',
+          link: '/wave',
+        },
+        {
+          text: 'Maintainers',
+          items: [
+            {
+              text: 'Participating in a Wave',
+              link: '/wave/maintainers/participating-in-a-wave',
+            },
+            {
+              text: 'FAQ',
+              link: '/wave/maintainers/faq',
+            },
+          ]
+        },
+        {
+          text: 'Contributors',
+          items: [
+            {
+              text: 'Solving issues & earning rewards',
+              link: '/wave/contributors/solving-issues-and-earning-rewards',
+            },
+            {
+              text: 'FAQ',
+              link: '/wave/contributors/faq',
+            },
+          ]
+        },
+        {
+          text: 'Understanding Points & rewards',
+          link: '/wave/points-and-rewards',
+        },
+        {
+          text: 'Terms and rules',
+          link: '/wave/terms-and-rules',
+        },
+      ],
+    },
+    {
       text: 'Support Open Source',
       items: [
         {
