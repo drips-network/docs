@@ -1,0 +1,70 @@
+# Understanding Points & Rewards
+
+import Figure from '../../components/Figure'
+
+Drips Wave uses a transparent, points-based system to quantify value and distribute rewards. Whether you are a Maintainer scoping work or a Contributor solving issues, understanding how points flow is key to maximizing your success in a Wave.
+
+## The Point System
+
+Every contribution in a Wave is valued in **Points**. These points act as shares in the total Reward Pool for that cycle. The more points a contributor earns relative to others, the larger their slice of the funding.
+
+### Base Points & Complexity
+When a Maintainer adds an issue to a Wave Program, they assign a **Complexity Level**. This determines the fixed number of points awarded upon resolution.
+
+| Complexity | Description | Total Points |
+| :--- | :--- | :--- |
+| **Trivial** | Typos, minor copy changes, or very small bug fixes. | **100** |
+| **Medium** | Standard feature work or involved bug fixes. Includes a 50-point complexity bonus. | **150** |
+| **High** | Complex architecture, refactors, or new integrations. Includes a 100-point complexity bonus. | **200** |
+
+### Compliments (Bonuses)
+Beyond the base complexity, Maintainers can award **Compliments** to contributors who go above and beyond. These act as point multipliers or lump-sum bonuses on top of the base reward.
+
+Maintainers have up to **seven days** after a Wave ends to award compliments. These are discretionary awards used to recognize specific behaviors, exceptional quality, or helpful collaboration that the ecosystem values.
+
+:::info
+**For Maintainers**: Compliments are a powerful tool to incentivize behavior. Use them to signal what kind of contributions you value most in your ecosystem.
+:::
+
+## Calculating Rewards
+
+At the end of a Wave cycle, the total Reward Budget (e.g., $50,000) is distributed among all contributors based on their share of the total points earned during that specific Wave.
+
+### The Formula
+Your payout is not a fixed dollar amount per issue. Instead, it is dynamic based on the total activity in the Wave. At the end of each Wave, we calculate your percentage of all points issued during the Wave, and allocate the reward pool accordingly. 
+
+### The Leaderboard
+Participants can track their standing in real-time via **Wave Program → Leaderboard**. A higher rank indicates a higher point total, which directly correlates to a larger payout.
+
+:::warning
+**Important disclaimer**: Drips and Wave Program Organizers reserve the right to adjust the reward formula, manually adjust points, deduct points or withhold rewards for misbehavior, and/or distribute portions of the reward pool outside the standard Points-based formula (e.g., to incentivize maintainers contributing to the program). Depending on the Wave Program, additional rules may apply, such as a maximum cap on rewards per contributor. Please read the [Terms and Rules page](/wave/terms-and-rules) for additional details.
+:::
+
+## Payout Distribution
+
+Once a Wave concludes and the seven-day Compliment window closes, the distribution process begins.
+
+1.  **Calculation**: The leaderboard is finalized and individual allocations are calculated.
+2.  **Distribution**: Funds are distributed on-chain to the wallet addresses configured in the user settings.
+
+### Requirements to Receive Funds
+To ensure you receive your reward, you must meet two requirements **before the Wave ends**:
+1.  **Connect a Wallet**: Set a valid address in **Settings → Payouts**.
+2.  **Complete KYC**: You must complete identity verification via the link in **Settings**.
+
+:::danger
+**No KYC, No Reward**: You can earn points without KYC, but funds cannot be distributed to unverified accounts. To avoid forfeiting your reward, please complete this process early.
+:::
+
+## Frequently Asked Questions
+
+### What happens if an issue isn't finished on time?
+Wave cycles are strict timeboxes. If an issue is not marked as **Resolved** before the Wave ends, no points are awarded for that cycle.
+* **For Contributors**: If you are close to finishing, communicate with your maintainer.
+* **For Maintainers**: If the work is good but blocked by external factors, consider marking it resolved to ensure the contributor is rewarded. Otherwise, the issue rolls over to the next Wave.
+
+### Can Maintainers earn points?
+Generally, points are reserved for Contributors solving issues. However, Wave Programs may have specific separate budgets or mechanisms to reward Maintainers for their administrative work (scoping, reviewing, and merging).
+
+### Who decides the complexity?
+The Maintainer has the final say on an issue's complexity. If a Contributor believes an issue turned out to be much harder than "Trivial," they should discuss this with the Maintainer, who can update the complexity level before the issue is resolved.

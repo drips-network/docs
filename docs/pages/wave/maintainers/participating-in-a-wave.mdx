@@ -1,0 +1,79 @@
+# Participating in a Wave
+
+import Figure from '../../../components/Figure'
+
+As a Project Maintainer, Drips Wave allows you to leverage your community to accelerate development. By identifying "good first issues" or critical maintenance tasks, you can attract contributors who are ready to build. Participation is entirely free for maintainers, and Wave Organizers (e.g. the Stellar Development Foundation) provide a funding pool to reward contributors for their work, allowing you to incentivize contributions without impacting your budget.
+
+To participate, you join a **Wave Program** (e.g., the Stellar Wave Program). A Program is a long-running initiative that spawns recurring **Waves** (sprints). You add issues to the Program, and they become available for contributors to tackle during the next active Wave.
+
+## Setting Up Your Organization
+
+To participate, you must first onboard your GitHub organization and apply your repositories to a Wave Program.
+
+1.  **Sign In**: Go to [the Drips Wave app](https://www.drips.network/wave) and log in with your GitHub account.
+2.  **Navigate to Onboarding**: In the main navigation, select **Maintainers → Orgs and Repos**.
+3.  **Install the App**: Follow the prompts to install the **Drips Wave GitHub App** on the organization hosting your repositories. This allows Drips to track issues and labels.
+4.  **Sync and Apply**: Select the public repositories you wish to sync. You must explicitly apply these repositories to a specific Wave Program. Only apply to Programs that are relevant to your ecosystem.
+5.  **Wait for Approval**: Repository applications require approval from the Wave Program organizers. You will receive an email and an in-app notification once your repositories have been accepted. You can also check the status of your application at any time on the **Maintainers → Orgs and Repos** dashboard.
+
+<Figure caption="Synchronizing repos with Drips Wave." src="/img/wave/sync-repos.png" />
+
+## Adding Issues to a Wave Program
+
+Once your repository is approved, issues from that repo will appear in your **Maintainers → Issues** dashboard. From here, you can select which issues to add to the Wave Program.
+
+### Setting Complexity and Points
+When adding an issue, you must assign a complexity level. This determines the total Points a contributor earns for resolving it:
+
+* **Trivial**: Worth **100 Points** (Base). Best for typos, small bug fixes, or minor copy changes.
+* **Medium**: Worth **150 Points** (Base + 50 Complexity Bonus). Standard features or involved bug fixes.
+* **High**: Worth **200 Points** (Base + 100 Complexity Bonus). Complex features, refactors, or new integrations.
+
+<Figure caption="Selecting issues and assigning complexity levels in the Maintainer dashboard." src="/img/wave/issue-selection.png" />
+
+### The GitHub Label Workflow
+Alternatively, you can manage issues directly from GitHub without leaving your code.
+
+When an issue is added to a Program, the Drips Wave bot will post a comment and apply a label (e.g., `Stellar Wave`). You can also **add** an issue to a Program simply by applying this label yourself on GitHub. This only works if the repository has already been approved for that specific Wave Program.
+
+## During a Wave
+
+As soon as a Wave cycle begins, contributors can start applying to work on the issues you have added to the Program. You will be notified via email and in-app notifications when you receive applications.
+
+### Assigning Contributors
+Speed is critical. Maintainers are urged to review applications and assign contributors quickly to ensure they have enough time to resolve the issue before the Wave ends.
+
+You can accept an application in two ways:
+1.  **Via Dashboard**: Use the **Maintainers → Issues** dashboard to view applicant stats and accept one.
+2.  **Via GitHub**: Simply assign the contributor to the issue directly on GitHub.
+
+### Tracking Progress
+The **Maintainers → Issues** dashboard is your central hub. It allows you to filter and quickly see:
+* Issues with pending applications.
+* Issues with open Pull Requests requiring review.
+* Issues that are assigned but stale.
+
+## Resolution and Rewards
+
+When a contributor submits a Pull Request, you review and merge it as normal. Once the issue is marked as resolved during an active Wave, the contributor earns the Points allocated to that issue.
+
+:::info
+**Timing is Critical:** Issues must be marked as resolved **before the Wave ends** for contributors to receive their points for that cycle. If a submitted PR is high quality but cannot be merged yet for reasons outside the contributor's control (e.g., feature freeze or blocked dependencies), we strongly urge you to mark the issue as resolved anyway. This ensures the contributor is fairly rewarded for their work.
+:::
+
+### Giving Compliments
+For outstanding work, you can award **Compliments** within seven days of the Wave ending. These act as bonuses for criteria such as:
+* **Good Communication**
+* **Fast Shipping**
+* **High Quality Code**
+* **Creative Problem Solving**
+
+:::info
+**Be Selective:** Compliments result in bonus rewards. To maintain their value as a strong incentive for quality, please do not issue them to every contributor by default. Use them strategically to highlight and reward specific behaviors you want to see more of in your community.
+:::
+
+
+<Figure caption="Giving compliments for a job well done." src="/img/wave/making-compliments.png" />
+
+### Issue Rollover
+If an issue is added to a Wave Program but is not resolved during the current Wave, it automatically remains in the Program. It will be eligible for applications again in the next Wave cycle unless you explicitly remove it.
