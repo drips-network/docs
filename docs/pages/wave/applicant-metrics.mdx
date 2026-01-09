@@ -1,0 +1,121 @@
+# Applicant metrics
+
+When contributors apply to work on an issue, maintainers see a **Code Metrics** scorecard summarizing their public GitHub activity. This page explains how each metric is calculated and what the categorical labels mean.
+
+## What Data Is Included
+
+### Rolling 3-Year Window
+
+All Code Metrics are calculated over a rolling **3-year window** (~1096 days), ending at the time metrics are computed.
+
+### Eligible Pull Requests
+
+PR-based metrics only count pull requests that received **at least one comment or one review**. This filters out self-merges and automated dependency bumps, focusing on collaborative work.
+
+### Reviews and Issues
+
+The **Reviews** and **Issues Opened** metrics come from your GitHub activity over the same rolling 3-year window.
+
+## How Bins Work
+
+Each metric value is compared against a GitHub-wide benchmark of ~3.9 million users who opened at least one collaborative PR over a three-year reference period. Your percentile rank determines your categorical bin:
+
+| Percentile Range | Bin |
+| :--- | :--- |
+| 0–24 | Very Low |
+| 25–49 | Low |
+| 50–74 | Medium |
+| 75–89 | High |
+| 90–98 | Very High |
+| 99+ | Exceptional |
+
+:::info
+**Inverse Metrics:** For **PR Drop Rate** and **Average Merge Latency**, lower values are better. The percentile is inverted before assigning a bin, so a low drop rate or fast merge time yields a high bin like "Very High" or "Exceptional."
+:::
+
+## Metric Calculations
+
+### OSS Activity Score
+
+A composite score summarizing open-source collaboration activity.
+
+**Formula:**
+
+`OSS Activity Score = (0.40 × Reviews percentile) + (0.35 × PRs Opened percentile) + (0.25 × Issues Opened percentile)`
+
+Each component is first converted to a percentile against the benchmark, then combined. The resulting score is itself compared to the benchmark for OSS Activity Scores to determine the bin.
+
+### Total Opened PRs
+
+**Formula:** `count(eligible PRs created in window)`
+
+Compared against benchmark thresholds for opened PR counts.
+
+### Total Merged PRs
+
+**Formula:** `count(eligible PRs created in window where state = MERGED)`
+
+Compared against benchmark thresholds for merged PR counts.
+
+### PR Merge Rate
+
+**Formula:** `Total Merged PRs / Total Opened PRs`
+
+A ratio from 0–100%. Compared against benchmark thresholds for merge rates.
+
+### PR Drop Rate
+
+**Formula:** `Closed without merge / Opened non-draft PRs`
+
+Draft PRs are excluded. Uses inverse logic (lower is better).
+
+### Average Merge Latency (hrs)
+
+**Formula:** `mean(merged_at - created_at)` across eligible merged PRs, in hours.
+
+Uses inverse logic (lower is better).
+
+### Reviews
+
+**Formula:** `count(PR reviews submitted in window)`
+
+Compared against benchmark thresholds for review counts.
+
+### Issues Opened
+
+**Formula:** `count(issues opened in window)`
+
+Compared against benchmark thresholds for issue counts.
+
+## When a Bin May Be Hidden
+
+Bins require enough activity to be statistically meaningful. You may see the raw value while the bin is hidden.
+
+| Metric | Bin Appears When |
+| :--- | :--- |
+| Total Opened PRs | ≥ 1 eligible PR |
+| Total Merged PRs | ≥ 1 eligible PR |
+| PR Merge Rate | ≥ 20 eligible PRs opened |
+| PR Drop Rate | ≥ 20 eligible non-draft PRs opened |
+| Average Merge Latency | ≥ 20 eligible merged PRs |
+| Reviews, Issues Opened, OSS Activity Score | ≥ 10 total OSS activities (PRs + Reviews + Issues) and ≥ 1 eligible PR |
+
+## Languages Profile
+
+The **Languages** section shows your programming language breakdown as percentages, computed across your **lifetime PR history** (not windowed).
+
+For each PR, a weight is calculated from `additions + deletions` (or `changed_files` if zero). This weight is distributed across languages using the repository's language breakdown, then normalized into a final percentage.
+
+## Population Baseline
+
+Benchmark thresholds are derived from GitHub Archive data covering **October 2022 through September 2025**. This baseline is fixed because GitHub's Events API changed its payload structure in late 2025, preventing consistent extension. Your individual metrics are still computed fresh from the GitHub GraphQL API—only the population reference points are frozen.
+
+## Frequently Asked Questions
+
+### How often are my metrics updated?
+
+Your metrics are computed when you first sign up for Drips Wave. After that, they are refreshed periodically via a background process. The rolling 3-year window moves forward with each refresh, so your metrics will naturally reflect your most recent activity over time.
+
+### Why don't my GitHub stats match exactly?
+
+The scorecard applies filters that differ from GitHub's default profile views. Only PRs that received at least one comment or review are counted, which excludes self-merges and automated dependency bumps. Additionally, all metrics except the language profile are calculated over a rolling 3-year window rather than your full history, and only public repositories are included.
