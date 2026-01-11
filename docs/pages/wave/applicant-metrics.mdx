@@ -1,6 +1,10 @@
 # Applicant metrics
 
+import Figure from '../../components/Figure'
+
 When contributors apply to work on an issue, maintainers see a **Code Metrics** scorecard summarizing their public GitHub activity. This page explains how each metric is calculated and what the categorical labels mean.
+
+<Figure caption="Example applicant metrics on the Application modal." src="/img/wave/applicant-metrics.png" />
 
 ## What Data Is Included
 
@@ -119,3 +123,7 @@ Your metrics are computed when you first sign up for Drips Wave. After that, the
 ### Why don't my GitHub stats match exactly?
 
 The scorecard applies filters that differ from GitHub's default profile views. Only PRs that received at least one comment or review are counted, which excludes self-merges and automated dependency bumps. Additionally, all metrics except the language profile are calculated over a rolling 3-year window rather than your full history, and only public repositories are included.
+
+### Why do my metrics show "Unknown" or "Not enough data" despite having activity?
+
+If your GitHub account has enough data to satisfy the minimum thresholds for a metric but still shows "Unknown," the metrics may still be computing in the background. This process can take some time after initially signing up. If it's been more than an hour and you still see "Unknown," please [contact support](https://www.drips.network/wave/support).
