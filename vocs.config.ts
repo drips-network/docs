@@ -2,7 +2,7 @@ import { defineConfig } from 'vocs';
 
 export default defineConfig({
   title: 'Drips Docs',
-  ogImageUrl: '/share.png', 
+  ogImageUrl: '/share.png',
   logoUrl: 'https://www.drips.network/logo.svg',
   topNav: [
     {
@@ -36,6 +36,10 @@ export default defineConfig({
             {
               text: 'Participating in a Wave',
               link: '/wave/maintainers/participating-in-a-wave',
+            },
+            {
+              text: 'Applicant metrics',
+              link: '/wave/applicant-metrics',
             },
             {
               text: 'FAQ',
