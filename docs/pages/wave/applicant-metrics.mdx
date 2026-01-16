@@ -31,10 +31,10 @@ Each metric value is compared against a GitHub-wide benchmark of ~3.9 million us
 | 50–74 | Medium |
 | 75–89 | High |
 | 90–98 | Very High |
-| 99+ | Exceptional |
+| 99+ | Extremely High |
 
 :::info
-**Inverse Metrics:** For **PR Drop Rate** and **Average Merge Latency**, lower values are better. The percentile is inverted before assigning a bin, so a low drop rate or fast merge time yields a high bin like "Very High" or "Exceptional."
+For **PR Drop Rate** and **Average Merge Latency**, *lower* values are better. The percentile represents your raw ranking in the population distribution, and the interface indicates that lower values are preferable for these metrics by coloring their lowest bins as green and the highest bins as red.
 :::
 
 ## Metric Calculations
@@ -71,13 +71,13 @@ A ratio from 0–100%. Compared against benchmark thresholds for merge rates.
 
 **Formula:** `Closed without merge / Opened non-draft PRs`
 
-Draft PRs are excluded. Uses inverse logic (lower is better).
+Draft PRs are excluded. Lower values are better for this metric.
 
 ### Average Merge Latency (hrs)
 
 **Formula:** `mean(merged_at - created_at)` across eligible merged PRs, in hours.
 
-Uses inverse logic (lower is better).
+Lower values are better for this metric.
 
 ### Reviews
 
