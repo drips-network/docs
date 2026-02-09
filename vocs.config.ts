@@ -65,6 +65,10 @@ export default defineConfig({
           link: '/wave/points-and-rewards',
         },
         {
+          text: 'Withdrawing rewards',
+          link: '/wave/withdrawing-rewards',
+        },
+        {
           text: 'Terms and rules',
           link: '/wave/terms-and-rules',
         },

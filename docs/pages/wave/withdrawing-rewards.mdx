@@ -1,0 +1,129 @@
+# Withdrawing Your Rewards
+
+After a Wave ends and your contributions have been evaluated, your earnings are converted into **Reward Grants**. Each grant represents a portion of the reward pool you've earned, payable in USDC on the Stellar network. When a new grant is available, you'll receive a notification email.
+
+This guide walks you through the process of withdrawing your rewards to your Stellar wallet.
+
+## Prerequisites
+
+Before you can withdraw rewards, you must:
+
+1. **Complete KYC Verification**: Navigate to **Settings > Identity and Payments** and complete the identity verification process. You cannot withdraw any funds until your KYC status is approved.
+2. **Have a Stellar Wallet**: You'll need a Stellar wallet that supports USDC. Popular options include [Lobstr](https://lobstr.co/) (mobile app), [Ledger](https://www.ledger.com/) (hardware wallet), or any other wallet compatible with the Stellar network, and capable of receiving assets such as USDC.
+3. **Activate the wallet and enable the USDC Trustline**: Stellar wallets require a minimum balance to be active, and you must enable the USDC *trustline* to be able to receive USDC. Follow your wallet provider's instructions to fund your wallet and add the USDC asset. The instructions for enabling USDC on the popular LOBSTR wallet can be found [here](https://lobstr.freshdesk.com/support/solutions/articles/151000001061-adding-custom-assets-in-lobstr).
+
+:::danger
+**Important**: If your wallet does not have the USDC trustline enabled, your transaction may fail. Always verify your wallet is properly configured before requesting a withdrawal. We recommend always using the test transaction feature first to confirm everything is set up correctly.
+:::
+
+## Viewing Your Grants
+
+To view your reward grants:
+
+1. Navigate to **Wave > Reward Grants** in the Drips Wave app.
+2. You'll see a list of all your grants, showing the Wave program name, amount, and current status.
+
+Click on any grant to view its details, including the full transaction history for that grant.
+
+## Grant Statuses
+
+Each grant has a status indicating where it is in the withdrawal process:
+
+| Status | Description |
+|--------|-------------|
+| **Withdrawable** | The grant is ready. You can request a test transaction or full withdrawal. |
+| **Test Requested** | A $1 test transaction has been requested and is being processed. |
+| **Test Sent** | The test transaction was successful. You can now request the full withdrawal or another test. |
+| **Withdrawal Pending** | A full withdrawal has been requested and is being processed. |
+| **Withdrawal Complete** | The full amount has been sent to your wallet. |
+
+## The Withdrawal Process
+
+We recommend a two-step withdrawal process to ensure your wallet is correctly configured:
+
+### Step 1: Request a Test Transaction
+
+Before withdrawing your full grant amount, we strongly recommend requesting a **test transaction** first. This sends $1 to your wallet to verify everything is set up correctly.
+
+1. From the grant details page, click **Request test transaction**.
+2. Enter your Stellar wallet address (starts with `G`).
+3. If your wallet or exchange requires a **memo**, enter it in the memo field. This is common for centralized exchanges.
+4. Review the details on the confirmation screen and check the box to confirm you understand the terms.
+5. Click **Confirm** to submit the request.
+
+The test transaction has now been requested. It's usually sent within a few minutes, but in rare cases may take up to 7 business days.
+
+:::warning
+**Memo Required?** If you're withdrawing to a centralized exchange (like Coinbase or Kraken), you will likely need to include a memo. Check your exchange's deposit instructions carefully. Sending funds without the required memo may result in lost funds.
+:::
+
+### Step 2: Request Full Withdrawal
+
+Once your test transaction has been successfully received:
+
+1. Return to the grant details page and click **Request full withdrawal**.
+2. Your wallet address and memo from the successful test transaction will be pre-filled for convenience.
+3. Review all details carefully on the confirmation screen.
+4. Check the confirmation box to acknowledge the terms and conditions.
+5. Click **Confirm** to submit your withdrawal request.
+
+![Placeholder: Screenshot of the withdrawal confirmation screen showing pre-filled address and memo]
+
+:::tip
+You can request another test transaction at any time if you want to verify a different wallet address before withdrawing.
+:::
+
+## Processing Time
+
+**Test transactions** are usually sent within a few minutes, but in rare cases may take up to 7 business days. **Full withdrawals** are usually processed within 2–7 business days. You'll receive an email notification when your transaction has been completed.
+
+## Transaction History
+
+Every grant maintains a complete transaction history. From the grant details page, you can view:
+
+- **Transaction type**: Test or Withdrawal
+- **Amount**: The USD value of the transaction
+- **Destination**: The Stellar address (hover to see full address and copy)
+- **Memo**: The memo included with the transaction, if any
+- **Status**: Pending, Complete, or Cancelled
+- **Requested date**: When you submitted the request
+- **Completed date**: When the transaction was finalized (if complete)
+- **Transaction hash**: A link to view the transaction on Stellar Expert (if complete)
+
+## Troubleshooting
+
+### My test transaction failed
+- Verify your wallet address is correct and starts with `G`.
+- Ensure your wallet has the USDC trustline enabled and authorized.
+- Check that your wallet is funded (Stellar requires a minimum balance for accounts).
+
+### I sent to the wrong address
+If your transaction is still pending, [contact our support team immediately](https://www.drips.network/wave/support). If it has already been completed, unfortunately, it cannot be reversed due to the nature of blockchain transactions.
+
+### My exchange requires a memo but I forgot to include one
+If your transaction is still pending, [contact our support team immediately](https://www.drips.network/wave/support). If it has already been completed, unfortunately, it cannot be reversed due to the nature of blockchain transactions.
+
+In this case, please **contact your exchange's support team immediately**. Some exchanges can manually credit deposits that are missing memos, but this is not guaranteed.
+
+### My grant expired
+Grants have an expiration date. If you don't withdraw before this date, you may forfeit your rewards. Check the grant details page for the expiration date and ensure you complete the withdrawal process in time.
+
+## Frequently Asked Questions
+
+**Q: Why do I need to complete KYC?**
+A: KYC (Know Your Customer) verification is required for regulatory compliance. We cannot process any withdrawals without completed identity verification.
+
+**Q: Can I withdraw to any wallet?**
+A: You can withdraw to any Stellar wallet that supports USDC and has the USDC trustline enabled. This includes personal wallets and some compatible exchange deposit addresses.
+
+**Q: What currency are rewards paid in?**
+A: All rewards are paid in USDC (USD Coin) on the Stellar network.
+
+**Q: Is there a minimum withdrawal amount?**
+A: If you received a grant, you can withdraw it either in full or request a test transaction of $1 first. Partial withdrawals of amounts other than $1 or the full grant amount are not supported.
+
+**Q: Can I change my wallet address after requesting a withdrawal?**
+A: No, once a withdrawal is submitted, it cannot be modified or cancelled. Always verify your details before confirming.
+
+**Q: What if I have multiple grants?**
+A: Each grant is managed independently. You'll need to request withdrawals for each grant separately.
