@@ -1,5 +1,7 @@
 # Withdrawing Your Rewards
 
+import Figure from '../../components/Figure'
+
 After a Wave ends and your contributions have been evaluated, your earnings are converted into **Reward Grants**. Each grant represents a portion of the reward pool you've earned, payable in USDC on the Stellar network. When a new grant is available, you'll receive a notification email.
 
 This guide walks you through the process of withdrawing your rewards to your Stellar wallet.
@@ -24,6 +26,8 @@ To view your reward grants:
 2. You'll see a list of all your grants, showing the Wave program name, amount, and current status.
 
 Click on any grant to view its details, including the full transaction history for that grant.
+
+<Figure caption="Grant page showing grant details and transactions history." src="/img/wave/grants/grants-page.png" />
 
 ## Grant Statuses
 
@@ -57,6 +61,8 @@ The test transaction has now been requested. It's usually sent within a few minu
 **Memo Required?** If you're withdrawing to a centralized exchange (like Coinbase or Kraken), you will likely need to include a memo. Check your exchange's deposit instructions carefully. Sending funds without the required memo may result in lost funds.
 :::
 
+<Figure caption="Request Test Transaction modal with Stellar address and memo input." src="/img/wave/grants/test.png" />
+
 ### Step 2: Request Full Withdrawal
 
 Once your test transaction has been successfully received:
@@ -66,8 +72,6 @@ Once your test transaction has been successfully received:
 3. Review all details carefully on the confirmation screen.
 4. Check the confirmation box to acknowledge the terms and conditions.
 5. Click **Confirm** to submit your withdrawal request.
-
-![Placeholder: Screenshot of the withdrawal confirmation screen showing pre-filled address and memo]
 
 :::tip
 You can request another test transaction at any time if you want to verify a different wallet address before withdrawing.
@@ -123,7 +127,7 @@ A: All rewards are paid in USDC (USD Coin) on the Stellar network.
 A: If you received a grant, you can withdraw it either in full or request a test transaction of $1 first. Partial withdrawals of amounts other than $1 or the full grant amount are not supported.
 
 **Q: Can I change my wallet address after requesting a withdrawal?**
-A: No, once a withdrawal is submitted, it cannot be modified or cancelled. Always verify your details before confirming.
+A: While a withdrawal request generally cannot be changed once submitted, if you realize you made a mistake before it is processed, please [contact our support team](https://www.drips.network/wave/support) immediately.
 
 **Q: What if I have multiple grants?**
-A: Each grant is managed independently. You'll need to request withdrawals for each grant separately.
+A: Each grant is managed independently. You can request tests and / or full withdrawals for each grant separately.
