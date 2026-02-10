@@ -11,12 +11,14 @@ This guide walks you through the process of withdrawing your rewards to your Ste
 Before you can withdraw rewards, you must:
 
 1. **Complete KYC Verification**: Navigate to **Settings → Identity and Payments** and complete the identity verification process. You cannot withdraw any funds until your KYC status is approved.
-2. **Have a Stellar Wallet**: You'll need a Stellar wallet that supports USDC. Popular options include [Lobstr](https://lobstr.co/) (mobile app), [Ledger](https://www.ledger.com/) (hardware wallet), or any other wallet compatible with the Stellar network, and capable of receiving assets such as USDC. Some centralized exchanges may also support direct USDC deposits on Stellar, but be sure to include a memo if required by the exchange. We recommend always requesting a test transaction to confirm wallet compatibility before withdrawing your full grant amount.
-3. **Activate the wallet and enable the USDC Trustline**: Stellar wallets require a minimum balance to be active, and you must enable the USDC *trustline* to be able to receive USDC. Follow your wallet provider's instructions to fund your wallet and add the USDC asset. The instructions for enabling USDC on the popular LOBSTR wallet can be found [here](https://lobstr.freshdesk.com/support/solutions/articles/151000001061-adding-custom-assets-in-lobstr).
-     - If you are withdrawing to a centralized exchange that supports direct USDC deposits on Stellar, you don't need to set up the trustline yourself. However, you must ensure that you include the correct memo with your withdrawal request, as the exchange uses the memo to credit your account.
+2. **Have a Stellar Wallet**: You'll need a Stellar wallet that supports USDC. Popular options include [LOBSTR](https://lobstr.co/) (mobile app), [Ledger](https://www.ledger.com/) (via Ledger Live or compatible wallet), or any other wallet compatible with the Stellar network. You can also withdraw to a centralized exchange, provided it supports **USDC deposits specifically on the Stellar network**.
+3. **Activate the wallet and enable the USDC Trustline**:
+    * **Activation:** Your wallet must hold a small minimum balance of **XLM** (Stellar Lumens) to be active.
+    * **Trustline:** You must explicitly add the "USDC" asset to your wallet (this is called "setting a trustline"). Instructions for enabling USDC on the popular LOBSTR wallet can be found [here](https://lobstr.freshdesk.com/support/solutions/articles/151000001061-adding-custom-assets-in-lobstr).
+    * **Exchange Users:** If you are withdrawing directly to an exchange that supports USDC deposits on Stellar, the exchange's wallet generally already holds XLM and the trustline. You typically don't need to set this manually, but you **must** provide the correct **Memo** with your withdrawal request.
 
-:::danger
-**Important**: If your withdrawal address does not have the USDC trustline enabled, your transaction may fail. Always verify your wallet is properly configured before requesting a full withdrawal. **We recommend always using the test transaction feature first to confirm everything is set up correctly.**
+:::info
+Our system attempts to detect if your address has a valid USDC trustline to help prevent common errors. However, this check is only for your convenience, and does not guarantee that your wallet or exchange is fully compatible or will successfully credit the funds. **We strongly recommend requesting a test transaction first** to verify that your specific wallet or exchange can receive USDC from our system before requesting the full withdrawal.
 :::
 
 ## Viewing Your Grants
@@ -59,7 +61,13 @@ Before withdrawing your full grant amount, we strongly recommend requesting a **
 The test transaction has now been requested. It's usually sent within a few minutes, but in rare cases may take up to 3 days.
 
 :::warning
-**Memo Required?** If you're withdrawing to a centralized exchange that supports USDC deposits on Stellar (popular choices include Coinbase and Binance), you will likely need to include a memo. Check your exchange's deposit instructions carefully. Sending funds without the required memo may result in lost funds. The memo is distinct from your wallet address.
+**Important:**
+Drips Wave is not responsible for funds lost due to incorrect addresses, missing Memos, incompatible wallets, or exchange policies (such as minimum deposit limits). By requesting a withdrawal, you acknowledge that you have verified the destination details.
+
+**Exchange Users:**
+1. **Network Selection:** Ensure you select the **Stellar (XLM)** network. Do **not** select Ethereum (ERC-20), Solana, or any other chain.
+2. **Memos:** A missing Memo may result in loss of funds on exchanges.
+3. **Minimum Deposits:** Some exchanges require a minimum deposit (e.g., 5 or 10 USDC). If the $1 test transaction is below this limit, it may not appear in your account.
 :::
 
 <Figure caption="Request Test Transaction modal with Stellar address and memo input." src="/img/wave/grants/test.png" />
@@ -73,10 +81,6 @@ Once your test transaction has been successfully received:
 3. Review all details carefully on the confirmation screen.
 4. Check the confirmation box to acknowledge the terms and conditions.
 5. Click **Confirm** to submit your withdrawal request.
-
-:::warning
-**Memo Required?** If you're withdrawing to a centralized exchange that supports USDC deposits on Stellar (popular choices include Coinbase and Binance), you will likely need to include a memo. Check your exchange's deposit instructions carefully. Sending funds without the required memo may result in lost funds. The memo is distinct from your wallet address.
-:::
 
 ## Processing Time
 
@@ -93,14 +97,15 @@ Every grant maintains a complete transaction history. From the grant details pag
 - **Status**: Pending, Complete, or Cancelled
 - **Requested date**: When you submitted the request
 - **Completed date**: When the transaction was finalized (if complete)
-- **Transaction hash**: A link to view the transaction on Stellar Expert (if complete)
+- **Transaction hash**: A link to view the transaction on Stellar Expert (if complete). This link serves as proof that the funds were sent on-chain.
 
 ## Troubleshooting
 
-### My test transaction failed
-- Verify your wallet address is correct and you provided the correct memo, if required.
-- Ensure your wallet has the USDC trustline enabled and authorized.
-- Check that your wallet is funded (Stellar requires a minimum balance for accounts).
+### My test transaction failed or didn't arrive
+- **Check Minimums:** If withdrawing to an exchange, did the $1 transaction meet their minimum deposit requirement? (It may be credited only after you deposit enough to reach the threshold).
+- **Check Address/Memo:** Verify your wallet address is correct and you provided the correct memo, if required.
+- **Check Trustline:** Ensure you have not removed the USDC trustline since requesting the transaction.
+- **Check XLM Balance:** Check that your wallet is funded with enough **XLM** (Stellar requires a minimum balance of Lumens for accounts to receive other assets).
 
 ### I sent to the wrong address
 If your transaction is still pending, [contact our support team immediately](https://www.drips.network/wave/support). If it has already been completed, unfortunately, it cannot be reversed due to the nature of blockchain transactions.
@@ -122,7 +127,7 @@ KYC (Know Your Customer) verification is required for regulatory compliance. We 
 You can withdraw to any Stellar wallet that supports USDC on Stellar and has the USDC trustline enabled.
 
 ### Can I withdraw directly to a centralized exchange?
-If the exchange supports direct USDC deposits on the Stellar network, yes. However, if provided, you must always include the correct memo with your withdrawal request. Exchanges use memos to credit incoming transfers to the right account. Always check your exchange's deposit instructions carefully. **We recommend requesting a test transaction first to ensure the address and memo are correct.**
+If the exchange supports direct USDC deposits on the Stellar network, yes. However, you must always include the correct memo (if provided by your exchange) with your withdrawal request. Exchanges use memos to credit incoming transfers to the right account. Always check your exchange's deposit instructions carefully to ensure USDC-Stellar support is available in your region. **We recommend requesting a test transaction first to ensure the address and memo are correct.**
 
 ### What currency are rewards paid in?
 All rewards are paid in USDC (USD Coin) on the Stellar network.
