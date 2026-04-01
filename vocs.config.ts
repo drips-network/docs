@@ -146,10 +146,6 @@ export default defineConfig({
               text: 'Handle renamed GitHub repos',
               link: '/get-support/advanced/handling-renamed-github-repos',
             },
-            {
-              text: 'Update the owner of a project',
-              link: '/get-support/advanced/updating-project-owner',
-            },
           ],
         },
       ],

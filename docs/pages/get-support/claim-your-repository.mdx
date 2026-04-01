@@ -31,7 +31,7 @@ To find your repository's associated "project" on Drips, simply launch the Drips
 
 Drips is built on Ethereum, a global, decentralized blockchain. On Drips, every claimed project is owned by an _Ethereum address_. You can learn more about Ethereum and create your own personal Ethereum address by [downloading and installing an Ethereum wallet app](https://ethereum.org/en/wallets/).
 
-As part of the claim process, the on-chain Drips Smart Contracts ensure that a particular Ethereum address should be able to manage a project and its funds by checking whether its default branch on GitHub includes a `FUNDING.json` file in the root directory. Because Smart Contracts cannot just access the internet, Drips uses an [Oracle service](https://ethereum.org/en/developers/docs/oracles/) to fetch the `FUNDING.json` file.
+As part of the claim process, the on-chain Drips Smart Contracts ensure that a particular Ethereum address should be able to manage a project and its funds by checking whether its default branch on GitHub includes a `FUNDING.json` file in the root directory. Drips uses [Lit Protocol](https://litprotocol.com/) to compute a cryptographic proof of the `FUNDING.json` file's contents that is verifiable on-chain. This proof is then submitted to the Drips Smart Contracts, which verify it and update the project's owner accordingly.
 
 <Figure caption="During the claim process, Drips' Smart Contracts check for a `FUNDING.json` file on the GitHub repository's _default_ branch." src="/img/raise/claim-process.png" />
 
@@ -73,6 +73,22 @@ After you're done, your project will be claimed, and any future earnings will be
 ### Editing your project
 
 You can edit your project's appearance and split configuration at any point in the future by navigating to it from the Projects tab, and clicking **Edit** on the thing you'd like to change.
+
+### Re-claiming with a different owner
+
+If you need to change the owner of an already-claimed project to a different Ethereum address, you can do so by re-claiming the project:
+
+1. Connect the **new** owner wallet to the Drips app.
+2. Navigate to **Projects → Claim project** and enter the project's GitHub URL.
+3. You'll see a message that the project has already been claimed. Continue the flow to re-claim it.
+4. Update the `FUNDING.json` file on your repo's default branch with the new owner's Ethereum address, and verify it.
+5. Configure maintainers and dependencies as desired, and complete the flow.
+
+The project's owner will be updated to the new wallet address.
+
+:::caution
+Re-claiming a project updates its **owner address** and **splits configuration**. The new owner will have full control over the project's splits and metadata going forward.
+:::
 
 ## Collecting earnings
 
