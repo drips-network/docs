@@ -6,7 +6,7 @@ Wave Programs may have a **per-repo points budget** configured, which caps the t
 
 When a points budget is configured on a Wave Program, each approved repository is individually capped at that budget's worth of **points** (base points plus complexity bonuses, before any featured multiplier). For example, with a budget of 500 points, a single repo could have up to five Trivial issues (100 points each) or a mix of complexities totaling 500 points.
 
-The budget is enforced whenever an issue is added to the Program — whether through the dashboard, the API, or the GitHub label workflow. If adding an issue would cause a repo to exceed its budget, the action is blocked.
+The budget is enforced whenever an issue is added to the Program — whether through the dashboard or the GitHub label workflow. If adding an issue would cause a repo to exceed its budget, the action is blocked.
 
 ## Viewing Your Budget
 
@@ -17,9 +17,9 @@ You can see each repo's current budget status on the **Maintainers → Orgs & Re
 
 ### Budget Enforcement
 
-The budget is checked in three places:
+The budget is checked in two places:
 
-- **Dashboard & API**: Adding an issue or increasing an issue's complexity returns an error if the repo's budget would be exceeded.
+- **Dashboard**: Adding an issue or increasing an issue's complexity returns an error if the repo's budget would be exceeded.
 - **GitHub label**: If someone applies the Wave label to an issue that would push the repo over budget, the label is automatically removed and the Drips Wave bot posts a comment explaining why.
 
 Decreasing an issue's complexity is always allowed, even if the repo is currently over budget.
