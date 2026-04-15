@@ -38,6 +38,10 @@ export default defineConfig({
               link: '/wave/maintainers/participating-in-a-wave',
             },
             {
+              text: 'Points budgets',
+              link: '/wave/maintainers/points-budgets',
+            },
+            {
               text: 'Applicant metrics',
               link: '/wave/applicant-metrics',
             },
