@@ -1,0 +1,45 @@
+# Points Budgets
+
+Wave Programs may have a **per-repo points budget** configured, which caps the total points that any single repository can contribute per Wave cycle. This helps ensure that no one repo dominates the reward pool, encouraging a more balanced distribution of issues across all participating repositories.
+
+## How It Works
+
+When a points budget is configured on a Wave Program, each approved repository is individually capped at that budget's worth of **points** (base points plus complexity bonuses, before any featured multiplier) per Wave. For example, with a budget of 500 points, a single repo could have up to five Trivial issues (100 points each) or a mix of complexities totaling 500 points resolved in each individual Wave.
+
+The budget is enforced whenever an issue is added to the Program — whether through the dashboard or the GitHub label workflow. If adding an issue would cause a repo to exceed its budget, the action is blocked.
+
+Points budgets reset at the end of each Wave cycle. Resolved issues from past Waves no longer count against the budget, while unresolved issues carry over until they are completed or removed.
+
+## How to stay within your budget
+
+- Consider which of your issues are the most impactful every Wave, and prioritize adding those to the Program.
+- Set complexity levels accurately and fairly. Balance trivial and complex issues to maximize your impact while staying within budget.
+
+## Viewing Your Budget
+
+You can see each repo's current budget status on the **Maintainers → Orgs & Repos** page. For each approved repo, you will see:
+
+- **Points used**: The total base points currently counting against the budget.
+- **Points budget**: The per-repo limit set by the Wave Program.
+
+### Budget Enforcement
+
+The budget is checked in two places:
+
+- **Dashboard**: Adding an issue or increasing an issue's complexity returns an error if the repo's budget would be exceeded.
+- **GitHub label**: If someone applies the Wave label to an issue that would push the repo over budget, the label is automatically removed and the Drips Wave bot posts a comment explaining why.
+
+Decreasing an issue's complexity, or removing an issue from a Wave Program is always allowed, even if the repo is currently over budget.
+
+:::info
+If your repo has been **featured** by the Wave Program organizers with a points multiplier, the budget is counted **before** the multiplier is applied. This means featured repos can add the same number of issues as non-featured ones — for example, a repo with a 2x multiplier and a 500-point budget can still add five Trivial issues, not just two.
+:::
+
+### Budget Resets Per Wave
+
+The budget resets at the end of each Wave cycle:
+
+- **Resolved issues** from past Waves fall off the budget entirely — they no longer count toward the limit.
+- **Unresolved issues** carry over and continue to count against the budget until they are completed or removed.
+
+This means that at the start of a new Wave cycle, your available budget depends only on any unresolved issues still active in the Program.
