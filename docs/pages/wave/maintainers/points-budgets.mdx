@@ -8,7 +8,7 @@ When a points budget is configured on a Wave Program, each approved repository i
 
 The budget is enforced whenever an issue is added to the Program — whether through the dashboard or the GitHub label workflow. If adding an issue would cause a repo to exceed its budget, the action is blocked.
 
-Points budgets reset at the end of each Wave cycle. Resolved issues from past Waves no longer count against the budget, while unresolved issues carry over until they are completed or removed.
+Points budgets reset at the end of each Wave. Resolved issues from past Waves no longer count against the budget, while unresolved issues carry over until they are completed or removed.
 
 ## How to stay within your budget
 
@@ -29,8 +29,9 @@ The budget is checked in two places:
 
 - **Dashboard**: Adding an issue or increasing an issue's complexity returns an error if the repo's budget would be exceeded.
 - **GitHub label**: If someone applies the Wave label to an issue that would push the repo over budget, the label is automatically removed and the Drips Wave bot posts a comment explaining why.
+- **Re-opening issues**: If you close an issue that has not been resolved (i.e. no points awarded, for example if "closed as not planned"), it will remain in the Wave Program, but no longer count against the budget. If you later re-open that issue, it will again count against the budget. If re-opening the issue would cause the repo to exceed its current remaining points budget, it will automatically be removed from the Wave Program.
 
-Decreasing an issue's complexity, or removing an issue from a Wave Program is always allowed, even if the repo is currently over budget.
+Decreasing an issue's complexity, or removing an issue from a Wave Program is of course **always allowed**, even if the repo is currently over budget.
 
 :::info
 If your repo has been **featured** by the Wave Program organizers with a points multiplier, the budget is counted **before** the multiplier is applied. This means featured repos can add the same number of issues as non-featured ones — for example, a repo with a 2x multiplier and a 500-point budget can still add five Trivial issues, not just two.
