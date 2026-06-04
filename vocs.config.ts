@@ -42,6 +42,10 @@ export default defineConfig({
               link: '/wave/maintainers/points-budgets',
             },
             {
+              text: 'Repo application limits',
+              link: '/wave/maintainers/repo-application-limits',
+            },
+            {
               text: 'Applicant metrics',
               link: '/wave/applicant-metrics',
             },
