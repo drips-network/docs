@@ -1,0 +1,37 @@
+# Repo Application Limits
+
+Wave Programs may limit how many repositories can be applied within a single Wave cycle. There are two types of repo application limits: a **per-user limit** that caps how many repos any one person can apply across all of their organizations, and a **per-org limit** that caps how many repos can be applied on behalf of a single organization across all of its members. These limits help keep applications manageable and fair when a Program receives more interest than it can review.
+
+Either, both, or neither limit may be set. When a Program has no limits configured, you can apply as many repos as you like each Wave cycle.
+
+## How It Works
+
+Every repo you apply counts as one application toward the current Wave cycle. When limits are configured, each application is counted in two places at once:
+
+- Toward **your personal limit** — a single pool shared across **all** the organizations you belong to.
+- Toward **its organization's limit** — a pool shared across **all** members of that organization.
+
+Because each application counts against both, the number of repos you can actually apply for a given org is whichever limit runs out first. For example, if your personal limit leaves you 2 applications but one of your orgs has only 1 application slot left this cycle, you can apply just 1 more repo from that org — even though you personally have room for 2.
+
+A consequence worth keeping in mind: your personal limit is a shared pool. If you belong to several orgs, applying repos from one org draws down the same personal allowance you'd use for the others.
+
+## Limits Reset Each Wave
+
+Both limits reset at the start of every Wave cycle. Your usage from previous cycles never counts against the current one, so each new Wave begins with your full allowance.
+
+**Rejected applications still count toward the current cycle.** Applying a repo consumes a slot whether or not it's ultimately approved, so a rejected application uses part of your allowance until the cycle resets. Re-applying the *same* rejected repo within the same cycle does not consume an additional slot — it reuses the one the original application already counted.
+
+## What You'll See When Applying
+
+When you apply repos to a Wave Program that has limits configured, the application flow starts with an **Application limits** step:
+
+- It leads with your **personal** remaining applications for the cycle — the single number that governs how much you can apply overall.
+- It surfaces any organization whose own remaining slots are **lower** than your personal remaining, since those are the only ones that would restrict you further. Organizations with more room than your personal allowance aren't shown, because your personal limit is what applies in that case.
+
+The repo selection step then enforces these limits up front: you won't be able to select more repos than your personal allowance permits, and repos belonging to an organization that has reached its limit can't be selected.
+
+## FAQ
+
+### I need to apply more repos than my limit allows
+
+If you have a strong case for needing a higher per-user or per-org application limit — for example an organization with many active repositories — please open a support ticket on the [Drips Discord](https://discord.gg/BakDKKDpHF) and provide details about your situation.
