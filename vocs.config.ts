@@ -31,6 +31,19 @@ export default defineConfig({
           link: '/wave',
         },
         {
+          text: 'Contributors',
+          items: [
+            {
+              text: 'Solving issues & earning rewards',
+              link: '/wave/contributors/solving-issues-and-earning-rewards',
+            },
+            {
+              text: 'FAQ',
+              link: '/wave/contributors/faq',
+            },
+          ]
+        },
+        {
           text: 'Maintainers',
           items: [
             {
@@ -52,19 +65,6 @@ export default defineConfig({
             {
               text: 'FAQ',
               link: '/wave/maintainers/faq',
-            },
-          ]
-        },
-        {
-          text: 'Contributors',
-          items: [
-            {
-              text: 'Solving issues & earning rewards',
-              link: '/wave/contributors/solving-issues-and-earning-rewards',
-            },
-            {
-              text: 'FAQ',
-              link: '/wave/contributors/faq',
             },
           ]
         },
